@@ -4,16 +4,6 @@ This is going to be a Svelte UI library that anyone can contribute and improve/p
 # Are You Ready?
 We use `pnpm`.
 
-# TODO
-- Create a Figma design for the components.
-- Tailwind integration.
-- Migrate the components from React one to here.
-- Create a unit test cases. 
-- Create a integration test cases.
-- Create a documentation website (`src/routes` folder)
-- First release!
-
-
 ## Developing
 
 Once you've created a project and installed dependencies with `pnpm install`, start a development server:

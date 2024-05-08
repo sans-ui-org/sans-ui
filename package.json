@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:doc": "vite dev",
-    "dev:sb": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006",
     "build": "vite build",
     "preview": "vite preview",
     "test": "npm run test:integration && npm run test:unit",

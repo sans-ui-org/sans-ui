@@ -5,7 +5,6 @@
   "scripts": {
     "dev:doc": "vite dev",
     "dev:sb": "storybook dev -p 6006",
-    "dev": "npm run dev:doc && npm run dev:sb",
     "build": "vite build",
     "preview": "vite preview",
     "test": "npm run test:integration && npm run test:unit",

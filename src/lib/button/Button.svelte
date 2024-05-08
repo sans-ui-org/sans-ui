@@ -1,65 +1,46 @@
 <script lang="ts">
-	/**
-	 * Is this the principal call to action on the page?
-	 */
-	export let primary = false;
+	import '$lib/styles/global.css';
+	import { useButton } from './hooks/useButton';
 
 	/**
-	 * What background color to use
+	 * Property that define the variant of the button.
 	 */
-	export let backgroundColor: string | undefined = undefined;
+	export let variant: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'indigo' =
+		'primary';
+
 	/**
-	 * How large should the button be?
+	 * Property that defines the size of the button.
 	 */
-	export let size: 'small' | 'medium' | 'large' = 'medium';
+	export let size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';
+
 	/**
-	 * Button contents
+	 * Property that defines the label of the button.
 	 */
 	export let label: string = '';
 
-	$: mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-	$: style = backgroundColor ? `background-color: ${backgroundColor}` : '';
+	$: props = $$props;
+	$: buttonProps = useButton({ props, variant, size });
 </script>
 
 <button
 	type="button"
-	class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-	{style}
+	{...$$props}
+	{...$$restProps}
+	class={buttonProps.slots.base}
 	on:click
+	on:blur
+	on:mouseover
+	on:mousedown
+	on:mousemove
+	on:mouseleave
+	on:focus
+	on:focusin
+	on:focusout
 >
 	{label}
 </button>
 
-<style>
-	.storybook-button {
-		font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		font-weight: 700;
-		border: 0;
-		border-radius: 3em;
-		cursor: pointer;
-		display: inline-block;
-		line-height: 1;
-	}
-	.storybook-button--primary {
-		color: white;
-		background-color: #1ea7fd;
-	}
-	.storybook-button--secondary {
-		color: #333;
-		background-color: transparent;
-		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-	}
-	.storybook-button--small {
-		font-size: 12px;
-		padding: 10px 16px;
-	}
-	.storybook-button--medium {
-		font-size: 14px;
-		padding: 11px 20px;
-	}
-	.storybook-button--large {
-		font-size: 16px;
-		padding: 12px 24px;
-	}
-</style>
+<!-- 
+	You need to use Tailwind CSS as first priority, however, sometimes they does not support some special CSS syntaxes. So, please use this "style" in that senario. 
+-->
+<style></style>

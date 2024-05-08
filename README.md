@@ -23,14 +23,9 @@ pnpm run dev:sb
 
 *Before you commit, make sure that `pnpm run check` to check your change with Svelte-Kit.
 
-## Building
+## Folder structure
 
-To create a production version of your app:
-
-```bash
-pnpm run build
-```
-
-You can preview the production build(documentation) with `pnpm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+`src`
+ - `lib` - s-ui components 
+ - 'routes` - documentation web application 
+ - `stories` - the storybook examples for each s-ui component

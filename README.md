@@ -12,13 +12,9 @@ Once you've created a project and installed dependencies with `pnpm install`, st
 ```bash
 pnpm run dev:docs
 
-# or start the server and open the app in a new browser tab
-pnpm run dev:docs -- --open
-```
-
-2. Component development
+2. SUI Component development
 ```bash
-pnpm run dev:sb
+pnpm run dev
 ```
 
 *Before you commit, make sure that `pnpm run check` to check your change with Svelte-Kit.
@@ -26,6 +22,6 @@ pnpm run dev:sb
 ## Folder structure
 
 `src`
- - `lib` - s-ui components 
+ - `lib` - SUI components 
  - 'routes` - documentation web application 
- - `stories` - the storybook examples for each s-ui component
+ - `stories` - the storybook examples for each SUI component

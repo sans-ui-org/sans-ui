@@ -11,6 +11,7 @@ Once you've created a project and installed dependencies with `pnpm install`, st
 1. Documentation development
 ```bash
 pnpm run dev:docs
+```
 
 2. SUI Component development
 ```bash

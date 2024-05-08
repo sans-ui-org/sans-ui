@@ -1,47 +1,47 @@
+import { Button } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
-import Button from '$lib/button/Button.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Example/Button',
-  component: Button,
-  tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: {
-      control: { type: 'select' },
-      options: ['small', 'medium', 'large'],
-    },
-  },
+	title: 'Components/Button',
+	component: Button,
+	tags: ['autodocs'],
+	argTypes: {
+		backgroundColor: { control: 'color' },
+		size: {
+			control: { type: 'select' },
+			options: ['xs', 'sm', 'md', 'lg', 'xl']
+		},
+		variant: {
+			control: { type: 'select' },
+			options: ['primary', 'secondary', 'success', 'warning', 'danger', 'indigo']
+		}
+	}
 } satisfies Meta<Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const defaultArgs = {
+	label: 'Button'
+};
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+export const Default: Story = {
+	args: {
+		...defaultArgs,
+	}
 };
 
-export const Secondary: Story = {
-  args: {
-    label: 'Button',
-  },
+export const Variant: Story = {
+	args: {
+		...defaultArgs
+	}
 };
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+export const Size: Story = {
+	args: {
+		...defaultArgs,
+		size: 'lg'
+	}
 };

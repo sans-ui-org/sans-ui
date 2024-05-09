@@ -1,12 +1,8 @@
-name: Feature request
+name: Request
 title: "[Feature Request] YOUR_FEATURE_TITLE_HERE_REPLACE_ME"
 labels: [feature request]
 description:  |
-  💡 Suggest an idea for the `OnePunch UI` project
-  Examples
-    - propose a new component
-    - improve an exiting component
-    - ....etc
+  💡 Propose an idea to the `S-UI` project! 
 body:
   - type: markdown
     attributes:

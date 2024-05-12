@@ -20,9 +20,3 @@ pnpm run dev
 
 *Before you commit, make sure that `pnpm run check` to check your change with Svelte-Kit.
 
-## Folder structure
-
-`src`
- - `lib` - SUI components 
- - 'routes` - documentation web application 
- - `stories` - the storybook examples for each SUI component

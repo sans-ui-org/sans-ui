@@ -1,10 +1,10 @@
-import { Button } from '$lib';
+import { Checkbox } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-	title: 'Components/Button',
-	component: Button,
+	title: 'Components/Checkbox',
+	component: Checkbox,
 	tags: ['autodocs'],
 	argTypes: {
 		backgroundColor: { control: 'color' },
@@ -17,13 +17,12 @@ const meta = {
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
 	}
-} satisfies Meta<Button>;
+} satisfies Meta<Checkbox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	label: 'Button'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -33,15 +32,3 @@ export const Default: Story = {
 	}
 };
 
-export const Variant: Story = {
-	args: {
-		...defaultArgs
-	}
-};
-
-export const Size: Story = {
-	args: {
-		...defaultArgs,
-		size: 'lg'
-	}
-};

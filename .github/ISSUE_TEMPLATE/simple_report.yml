@@ -1,8 +1,0 @@
-name: Request
-title: "[Feature Request] YOUR_FEATURE_TITLE_HERE_REPLACE_ME"
-body:
-  - type: textarea
-    validations:
-      required: true
-    attributes:
-      label: Please describe the thing!

@@ -1,6 +1,5 @@
 name: Request
-title: "You title here"
-labels: [feature request]
+title: "[REQUEST] - YOUR_REQUEST_TITLE_HERE_REPLACE_ME"
 description:  |
   💡 Propose an idea to the `S-UI` project! 
 body:

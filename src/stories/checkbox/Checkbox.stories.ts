@@ -7,7 +7,6 @@ const meta = {
 	component: Checkbox,
 	tags: ['autodocs'],
 	argTypes: {
-		backgroundColor: { control: 'color' },
 		size: {
 			control: { type: 'select' },
 			options: ['xs', 'sm', 'md', 'lg', 'xl']

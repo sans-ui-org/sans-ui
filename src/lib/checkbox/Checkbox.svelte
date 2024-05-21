@@ -48,7 +48,7 @@
 	const { className, disabled } = $$props;
 
 	// --- Stateless logic ---
-	const { slots, indeterminateIconProps, checkIconProps } = useCheckBox({
+	$: checkboxProps = useCheckBox({
 		className,
 		disabled,
 		variant,
@@ -87,7 +87,7 @@
 
 <label
 	{...$$restProps}
-	class={slots.base}
+	class={checkboxProps.slots.base}
 	tabindex="0"
 	aria-checked={checked}
 	aria-disabled={disabled}
@@ -96,9 +96,9 @@
 >
 	<input bind:this={inputElement} {value} type="checkbox" class="hidden" on:change={onchange} />
 	{#if isIndeterminate}
-		<IndeterminateIcon {...indeterminateIconProps} />
+		<IndeterminateIcon {...checkboxProps.indeterminateIconProps} />
 	{:else}
-		<CheckIcon {...checkIconProps} {checked} {isAnimation} />
+		<CheckIcon {...checkboxProps.checkIconProps} {checked} {isAnimation} />
 	{/if}
 	<slot />
 </label>

@@ -1,4 +1,6 @@
 import { Link } from '$lib';
+import type { Meta, StoryObj } from '@storybook/svelte';
+
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
@@ -6,13 +8,17 @@ const meta = {
 	component: Link,
 	tags: ['autodocs'],
 	argTypes: {
+		variant: {
+			control: { type: 'select' },
+			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
 		size: {
 			control: { type: 'select' },
 			options: ['xs', 'sm', 'md', 'lg', 'xl']
 		},
-		variant: {
+		underline: {
 			control: { type: 'select' },
-			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+			options: ['none', 'hover', 'always', 'active']
 		}
 	}
 } satisfies Meta<Link>;

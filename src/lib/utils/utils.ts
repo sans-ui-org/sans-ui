@@ -3,6 +3,8 @@ export type ComponentVariant = 'primary' | 'secondary' | 'success' | 'warning' |
 
 export type ComponentSize = 'sm' | 'md' | 'lg';
 
+export type underlineType= "none" | "hover" | "always" | "active";
+
 export type ComponentColorType =
   | "primary"
   | "secondary"

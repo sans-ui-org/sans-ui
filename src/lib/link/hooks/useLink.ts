@@ -1,13 +1,12 @@
-import { cx, type ComponentSize, type ComponentVariant } from '$lib/utils/utils';
-import { type ComponentColorType, type FontSize, type FontWeight  } from "../../utils/utils";
+import { cx} from '$lib/utils/utils';
+import { type ComponentColorType, type FontSize, type FontWeight, type underlineType  } from "../../utils/utils";
 import { getFontSize, getFontWeight  } from "../../utils/utils";
 
 export type LinkProps = {
 	className?: string;
 	disabled?: boolean;
-	variant: ComponentVariant;
-    underline?: "none" | "hover" | "always" | "active";
-    type?: ComponentColorType;
+    underline?: underlineType;
+    variant?: ComponentColorType;
     size?: FontSize;
     bold?: FontWeight;
 };
@@ -16,7 +15,7 @@ export function useLink({
 	className = '',
 	disabled: isDisabled = false,
     underline = "always",
-    type = "primary",
+    variant = "primary",
     size = "md",
     bold = "medium",
 }: LinkProps) {
@@ -36,7 +35,7 @@ export function useLink({
 
     function getTypeTextColor() {
         if (isDisabled) return "text-gray-500 cursor-not-allowed";
-        switch (type) {
+        switch (variant) {
           case "primary":
             return "text-blue-500 hover:text-blue-800 cursor-pointer";
           case "secondary":
@@ -53,11 +52,6 @@ export function useLink({
       }
 	// classNames
 	const linkClassNames = cx([
-		'sui-button',
-		'relative',
-		'rounded-3xl',
-		'text-white',
-		'outline-offset-4',
 		'transition',
 		'duration-200',
         getUnderline(),

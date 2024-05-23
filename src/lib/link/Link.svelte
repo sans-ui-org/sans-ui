@@ -29,6 +29,6 @@
 
 <a  href="{url}"
     class={linkProps.slots.base}>
-    I am a link
+    Here is the link to storybook.js.org
 </a>
 

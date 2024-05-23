@@ -27,7 +27,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	url: 'https://github.com/s-ui-org'
+	url: 'https://storybook.js.org'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args

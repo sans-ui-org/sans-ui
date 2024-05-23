@@ -19,6 +19,9 @@ const meta = {
 		underline: {
 			control: { type: 'select' },
 			options: ['none', 'hover', 'always', 'active']
+		},
+        isDisabled: {
+			control: { type: 'boolean' },
 		}
 	}
 } satisfies Meta<Link>;
@@ -44,10 +47,10 @@ export const Underline: Story = {
 	}
 };
 
-export const Size: Story = {
-	args: {
-		...defaultArgs,
-		size: 'lg'
-	}
-};
+export const Disabled: Story = {
+    args: {
+	  ...defaultArgs,
+      isDisabled: true,
+    },
+  };
 

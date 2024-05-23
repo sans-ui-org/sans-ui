@@ -17,14 +17,19 @@
 	 */
     export let underline: underlineType = 'always';
 
+    /**
+	 * Property that defines if the link is disalbe.
+	 */
+     export let isDisabled: boolean = false;
+
 	/**
 	 * Property that defines the label of the link.
 	 */
 	export let url: string = '';
 
     $: className = $$props.class;
-	$: disabled = $$props.disabled;
-	$: linkProps = useLink({ className, disabled, variant, size, underline });
+	$: isDisabled = $$props.isDisabled;
+	$: linkProps = useLink({ className, isDisabled, variant, size, underline});
 </script>
 
 <a  href="{url}"

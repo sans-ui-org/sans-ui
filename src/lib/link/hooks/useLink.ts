@@ -4,7 +4,7 @@ import { getFontSize, getFontWeight  } from "../../utils/utils";
 
 export type LinkProps = {
 	className?: string;
-	disabled?: boolean;
+	isDisabled?: boolean;
     underline?: underlineType;
     variant?: ComponentColorType;
     size?: FontSize;
@@ -13,11 +13,11 @@ export type LinkProps = {
 
 export function useLink({
 	className = '',
-	disabled: isDisabled = false,
-    underline = "always",
-    variant = "primary",
-    size = "md",
-    bold = "medium",
+	isDisabled = false,
+  underline = "always",
+  variant = "primary",
+  size = "md",
+  bold = "medium",
 }: LinkProps) {
 
     function getUnderline() {

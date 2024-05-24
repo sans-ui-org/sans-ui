@@ -2,5 +2,6 @@
 
 import Button from './button/Button.svelte';
 import Checkbox from './checkbox/Checkbox.svelte';
+import Link from './link/Link.svelte';
 
-export { Button, Checkbox };
+export { Button, Checkbox, Link };

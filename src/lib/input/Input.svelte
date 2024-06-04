@@ -4,25 +4,74 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getInputSlots } from './Input';
 
+	/**
+	 * Property that defines the id of the input.
+	 */
 	export let id: string;
+	/**
+	 * Property that defines the value of the input.
+	 */
+	export let value: string | number | undefined;
+	/**
+	 * Property that defines the variant of the input.
+	 */
 	export let variant: ComponentVariant = 'primary';
+	/**
+	 * Property that defines the size of the input.
+	 */
 	export let size: ComponentSize = 'md';
+	/**
+	 * Property that defines the label of the input.
+	 */
 	export let label: string = '';
+	/**
+	 * Property that defines if the input is required.
+	 */
 	export let required: boolean = false;
+	/**
+	 * Property that defines if the input is disabled.
+	 */
 	export let disabled: boolean = false;
+	/**
+	 * Property that defines if the input is readonly.
+	 */
 	export let readonly: boolean = false;
+	/**
+	 * Property that defines if the input is clearable.
+	 */
 	export let clearable: boolean = true;
+	/**
+	 * Property that defines if the input has animation.
+	 */
 	export let animation: boolean = true;
+	/**
+	 * Property that defines the placeholder of the input.
+	 */
 	export let placeholder: string = '';
+	/**
+	 * Property that defines the maximum count of the input.
+	 */
 	export let maxCount: number;
+	/**
+	 * Property that defines if the input is invalid.
+	 */
 	export let invalid: boolean = false;
+	/**
+	 * Property that defines the text message shows under this component if the input is invalid.
+	 */
 	export let invalidText: string = '';
+	/**
+	 * Property that defines the start content of the input.
+	 */
 	export let startContent;
+	/**
+	 * Property that defines the end content of the input.
+	 */
 	export let endContent;
 
 	let charCounter: number;
-	let input: string;
-	$: charCounter = input ? input.length : 0;
+
+	$: charCounter = value ? value.toString().length : 0;
 	$: counterText = `${charCounter}/${maxCount}`;
 	$: className = $$props.class;
 	$: slots = getInputSlots({
@@ -40,13 +89,13 @@
 		if (maxCount && target.value.length > maxCount) {
 			target.value = target.value.slice(0, maxCount);
 		}
-		input = target.value;
+		value = target.value;
 
 		$$props.onChange && $$props.onInput(e);
 	};
 	const onClear = () => {
 		if (readonly || disabled) return;
-		input = '';
+		value = '';
 	};
 </script>
 
@@ -63,7 +112,7 @@
 	{/if}
 	<input
 		{...$$restProps}
-		bind:value={input}
+		bind:value
 		on:input={onInput}
 		{id}
 		{disabled}

@@ -1,10 +1,10 @@
-import { Select } from '$lib';
+import { Switch } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-	title: 'Components/Select',
-	component: Select,
+	title: 'Components/Switch',
+	component: Switch,
 	tags: ['autodocs'],
 	argTypes: {
 		size: {
@@ -16,26 +16,15 @@ const meta = {
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
 	}
-} satisfies Meta<Select>;
+} satisfies Meta<Switch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	id: 'Select_id',
-	label: 'This is a label',
-	placeholer: 'Select an option',
-	options: [
-		{ value: '1', label: 'Option 1' },
-		{ value: '2', label: 'Option 2' },
-		{ value: '3', label: 'Option 3' },
-		{ value: '4', label: 'Option 4' },
-		{
-			value: '5',
-			label:
-				'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised.'
-		}
-	]
+	label: 'This is label',
+	optionA: 'On',
+	optionB: 'Off'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -70,13 +59,6 @@ export const Readonly: Story = {
 	args: {
 		...defaultArgs,
 		readonly: true
-	}
-};
-
-export const NoAnimation: Story = {
-	args: {
-		...defaultArgs,
-		animation: false
 	}
 };
 

@@ -6,5 +6,6 @@ import Link from './link/Link.svelte';
 import Select from './select/Select.svelte';
 import Input from './input/Input.svelte';
 import TextArea from './textArea/TextArea.svelte';
+import Switch from './switch/Switch.svelte';
 
-export { Button, Checkbox, Link, Select, Input, TextArea };
+export { Button, Checkbox, Link, Select, Input, TextArea, Switch };

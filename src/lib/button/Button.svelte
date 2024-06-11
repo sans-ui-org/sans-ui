@@ -13,11 +13,6 @@
 	 */
 	export let size: ComponentSize = 'md';
 
-	/**
-	 * Property that defines the label of the button.
-	 */
-	export let label: string = '';
-
 	$: className = $$props.class;
 	$: disabled = $$props.disabled;
 	$: buttonProps = useButton({ className, disabled, variant, size });
@@ -38,6 +33,5 @@
 	on:focusin
 	on:focusout
 >
-	{label}
+	<slot />
 </button>
-

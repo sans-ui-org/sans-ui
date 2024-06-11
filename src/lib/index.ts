@@ -7,5 +7,7 @@ import Select from './select/Select.svelte';
 import Input from './input/Input.svelte';
 import TextArea from './textArea/TextArea.svelte';
 import Switch from './switch/Switch.svelte';
+import Modal from './modal/Modal.svelte';
+import { ripple } from './ripple/ripple.ts';
 
-export { Button, Checkbox, Link, Select, Input, TextArea, Switch };
+export { Button, Checkbox, Link, Select, Input, TextArea, Switch, Modal, ripple };

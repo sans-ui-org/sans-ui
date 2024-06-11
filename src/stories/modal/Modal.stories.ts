@@ -1,6 +1,7 @@
 import { Modal } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
-import ModalTemplate from './ModalTemplate.svelte';
+import ModalTemplate from './examples/ModalTemplate.svelte';
+import NotificationTemplate from './examples/NotificationTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
@@ -36,6 +37,14 @@ export const Sample: Story = {
 	}
 };
 
+export const Notification: Story = {
+	render: () => NotificationTemplate,
+	args: {
+		...defaultArgs
+	}
+};
+
+// TODO: Size should also be introduced
 // export const Size: Story = {
 // 	args: {
 // 		...defaultArgs,

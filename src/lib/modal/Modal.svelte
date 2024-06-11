@@ -3,6 +3,14 @@
 	import { getModalSlots, type ModalSize } from '$lib/modal/Modal';
 	import { autoFocus, focusTrap } from '$lib/modal/actions';
 	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';
+	import type { HTMLAttributes } from 'svelte/elements';
+
+	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+		open?: boolean;
+		title?: string;
+		size: ModalSize;
+		dismissable?: boolean;
+	}
 
 	/**
 	 * Property that defines the size of the button.
@@ -11,11 +19,11 @@
 	/**
 	 * Property that defines the modal is open.
 	 */
-	export let open: boolean;
+	export let open: boolean = false;
 	/**
 	 * Property that defines the title of the modal.
 	 */
-	export let title: string;
+	export let title: string = '';
 	/**
 	 * Property that whether this modal is able to be closed by clicking outside of it.
 	 */
@@ -46,6 +54,7 @@
 	<!-- dialog -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
+		{...$$restProps}
 		role="dialog"
 		aria-modal="true"
 		tabindex="-1"

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ComponentSize } from '$lib/utils/utils';
 	import { getSelectSlots, type Option } from './Select';
-	import { close, select, listbox } from './action';
+	import { close, select, listbox } from './actions';
 	import SelectCheckIcon from './icons/SelectCheckIcon.svelte';
 	import SelectChevronIcon from './icons/SelectChevronIcon.svelte';
 

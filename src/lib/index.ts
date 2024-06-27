@@ -10,5 +10,8 @@ import Switch from './switch/Switch.svelte';
 import Modal from './modal/Modal.svelte';
 import Progress from './progress/Progress.svelte';
 import Spinner from './spinner/Spinner.svelte';
+import Tooltip from './tooltip/Tooltip.svelte';
+// import { ripple } from './ripple/ripple.ts';
 
-export { Button, Checkbox, Link, Select, Input, TextArea, Switch, Modal, Progress, Spinner };
+export { Button, Checkbox, Link, Select, Input, TextArea, Switch, Modal, Progress, Tooltip, Spinner };
+

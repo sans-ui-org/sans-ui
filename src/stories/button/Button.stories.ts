@@ -1,29 +1,27 @@
-import { Button } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import ButtonTemplate from './template/ButtonTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Button',
-	component: Button,
+	component: ButtonTemplate,
 	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
-			options: ['xs', 'sm', 'md', 'lg', 'xl']
+			options: ['sm', 'md', 'lg']
 		},
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
 	}
-} satisfies Meta<Button>;
+} satisfies Meta<ButtonTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {
-	label: 'Button'
-};
+const defaultArgs = {};
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
@@ -34,7 +32,8 @@ export const Default: Story = {
 
 export const Variant: Story = {
 	args: {
-		...defaultArgs
+		...defaultArgs,
+		variant: 'secondary'
 	}
 };
 

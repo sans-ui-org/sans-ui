@@ -5,7 +5,13 @@
 
 	type Component = $$Generic<typeof SvelteComponent>;
 
+	/**
+	 * Property that defines the content of the input.
+	 */
 	export let content: Component | null;
+	/**
+	 * Property that defines if the input is clearable.
+	 */
 	export let clearable: boolean = false;
 
 	let icon = clearable ? ClearableIcon : content;

@@ -1,7 +1,14 @@
 <script lang="ts">
 	import '$lib/styles/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import { getSpinnerSlots, type SpinnerKind } from './Spinner';
+
+	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+		variant?: ComponentVariant;
+		size?: ComponentSize;
+		kind?: SpinnerKind;
+	}
 
 	/**
 	 * Property that define the variant of the button.

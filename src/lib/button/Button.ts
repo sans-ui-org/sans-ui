@@ -7,7 +7,7 @@ export type ButtonProps = {
 	size: ComponentSize;
 };
 
-export function useButton({
+export function getButtonSlots({
 	className = '',
 	disabled: isDisabled = false,
 	variant,
@@ -61,11 +61,7 @@ export function useButton({
 	]);
 
 	// slots
-	const slots = {
-		base: buttonClassNames
-	};
-
 	return {
-		slots
+		base: buttonClassNames
 	};
 }

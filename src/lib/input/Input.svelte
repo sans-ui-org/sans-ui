@@ -2,16 +2,37 @@
 	import InputContent from '$lib/inputContent/InputContent.svelte';
 	import '$lib/styles/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import { getInputSlots } from './Input';
+	import type { SvelteComponent } from 'svelte';
+
+	interface $$Props extends HTMLAttributes<HTMLInputElement> {
+		id?: string;
+		value?: string | number | undefined;
+		variant?: ComponentVariant;
+		size?: ComponentSize;
+		label?: string;
+		required?: boolean;
+		disabled?: boolean;
+		readonly?: boolean;
+		clearable?: boolean;
+		animation?: boolean;
+		placeholder?: string;
+		maxCount?: number;
+		invalid?: boolean;
+		invalidText?: string;
+		startContent?: typeof SvelteComponent;
+		endContent?: typeof SvelteComponent;
+	}
 
 	/**
 	 * Property that defines the id of the input.
 	 */
-	export let id: string;
+	export let id: string | undefined = '';
 	/**
 	 * Property that defines the value of the input.
 	 */
-	export let value: string | number | undefined;
+	export let value: string | number | undefined = undefined;
 	/**
 	 * Property that defines the variant of the input.
 	 */
@@ -51,7 +72,7 @@
 	/**
 	 * Property that defines the maximum count of the input.
 	 */
-	export let maxCount: number;
+	export let maxCount: number | undefined = undefined;
 	/**
 	 * Property that defines if the input is invalid.
 	 */
@@ -63,17 +84,19 @@
 	/**
 	 * Property that defines the start content of the input.
 	 */
-	export let startContent;
+	export let startContent: typeof SvelteComponent | undefined = undefined;
 	/**
 	 * Property that defines the end content of the input.
 	 */
-	export let endContent;
+	export let endContent: typeof SvelteComponent | undefined = undefined;
 
 	let charCounter: number;
+	const className = $$props.class;
 
 	$: charCounter = value ? value.toString().length : 0;
 	$: counterText = `${charCounter}/${maxCount}`;
-	$: className = $$props.class;
+
+	// slots
 	$: slots = getInputSlots({
 		className,
 		variant,
@@ -99,6 +122,7 @@
 	};
 </script>
 
+<!-- Label -->
 <div class={slots.labelWrapper}>
 	<label for={id} class={slots.label}>{label}</label>
 	{#if maxCount}
@@ -106,6 +130,7 @@
 	{/if}
 </div>
 
+<!-- Input -->
 <div class={slots.inputWrapper}>
 	{#if startContent}
 		<InputContent class={slots.startContent} content={startContent} {clearable} />
@@ -133,6 +158,7 @@
 	{/if}
 </div>
 
+<!-- Error text -->
 {#if invalid && invalidText && invalidText !== ''}
 	<span class={slots.invalidText}>{invalidText}</span>
 {/if}

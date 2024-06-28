@@ -1,16 +1,35 @@
 <script lang="ts">
 	import '$lib/styles/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import { getTextAreaSlots } from './TextArea';
+	import { createEventDispatcher } from 'svelte';
+
+	interface $$Props extends HTMLAttributes<HTMLTextAreaElement> {
+		id?: string;
+		value?: string | number;
+		variant?: ComponentVariant;
+		size?: ComponentSize;
+		label?: string;
+		disabled?: boolean;
+		readonly?: boolean;
+		clearable?: boolean;
+		animation?: boolean;
+		maxCount?: number;
+		invalid?: boolean;
+		invalidText?: string;
+		defaultToggled?: boolean;
+		rows?: number;
+	}
 
 	/**
 	 * Property that defines the id of the textarea.
 	 */
-	export let id: string;
+	export let id: string | undefined = undefined;
 	/**
 	 * Property that defines the value of the textarea.
 	 */
-	export let value: string | number | undefined;
+	export let value: string | number | undefined = undefined;
 	/**
 	 * Property that defines the variant of the textarea.
 	 */
@@ -22,7 +41,7 @@
 	/**
 	 * Property that defines the label of the textarea.
 	 */
-	export let label: string = '';
+	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines if the textarea is required.
 	 */
@@ -44,13 +63,9 @@
 	 */
 	export let animation: boolean = true;
 	/**
-	 * Property that defines the placeholder of the textarea.
-	 */
-	export let placeholder: string = '';
-	/**
 	 * Property that defines the maximum count of the textarea.
 	 */
-	export let maxCount: number;
+	export let maxCount: number | undefined = undefined;
 	/**
 	 * Property that defines if the textarea is invalid.
 	 */
@@ -64,11 +79,13 @@
 	 */
 	export let rows: number = 4;
 
-	let charCounter: number;
+	const className = $$props.class;
+	const dispatch = createEventDispatcher();
 
 	$: charCounter = value ? value.toString().length : 0;
 	$: counterText = `${charCounter}/${maxCount}`;
-	$: className = $$props.class;
+
+	// slots
 	$: slots = getTextAreaSlots({
 		className,
 		variant,
@@ -86,17 +103,21 @@
 		}
 		value = target.value;
 
-		$$props.onChange && $$props.onInput(e);
+		dispatch('input', e); // client event
 	};
 </script>
 
-<div class={slots.labelWrapper}>
-	<label for={id} class={slots.label}>{label}</label>
-	{#if maxCount}
-		<span>{counterText}</span>
-	{/if}
-</div>
+<!-- Label -->
+{#if label}
+	<div class={slots.labelWrapper}>
+		<label for={id} class={slots.label}>{label}</label>
+		{#if maxCount}
+			<span>{counterText}</span>
+		{/if}
+	</div>
+{/if}
 
+<!-- Textarea -->
 <textarea
 	{...$$restProps}
 	bind:value
@@ -104,7 +125,6 @@
 	{id}
 	{disabled}
 	{readonly}
-	{placeholder}
 	{rows}
 	aria-disabled={disabled}
 	aria-readonly={readonly}
@@ -113,6 +133,7 @@
 	class={slots.textArea}
 />
 
+<!-- Error Text -->
 {#if invalid && invalidText && invalidText !== ''}
 	<span class={slots.invalidText}>{invalidText}</span>
 {/if}

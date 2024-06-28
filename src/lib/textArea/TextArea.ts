@@ -60,7 +60,7 @@ export function getTextAreaSlots({
 		labelWrapper: cx(['flex flex-row items-center justify-between w-full', getFontSize()]),
 		label: cx(['font-normal', invalid && invalidText && invalidText !== '' ? 'text-red-500' : '']),
 		textArea: cx([
-			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 px-3 py-2 w-full resize-none border-2 focus-visible:outline-0',
+			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 px-3 py-2 mt-2 w-full resize-none border-2 focus-visible:outline-0',
 			invalid ? 'border-red-500 focus-visible:border-red-500' : 'border-transparent',
 			animation ? '' : 'border-transparent border-2',
 			disabled ? 'cursor-not-allowed' : 'cursor-text',

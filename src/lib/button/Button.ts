@@ -34,7 +34,7 @@ export function getButtonSlots({
 		if (isDisabled) return 'bg-gray-400 cursor-not-allowed';
 		switch (variant) {
 			case 'primary':
-				return 'bg-blue-500 hover:bg-blue-400 active:bg-blue-600';
+				return 'bg-blue-500';
 			case 'secondary':
 				return 'bg-neutral-500 hover:bg-neutral-400 active:bg-neutral-600';
 			case 'success':
@@ -48,13 +48,7 @@ export function getButtonSlots({
 
 	// classNames
 	const buttonClassNames = cx([
-		'sui-button',
-		'relative',
-		'rounded-3xl',
-		'text-white',
-		'outline-offset-4',
-		'transition',
-		'duration-200',
+		'relative flex rounded-3xl text-white outline-offset-4 transition duration-200',
 		getSize(),
 		getButtonStyle(),
 		className

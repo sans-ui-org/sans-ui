@@ -27,6 +27,12 @@ const defaultArgs = {};
 export const Default: Story = {
 	args: {
 		...defaultArgs
+	},
+	parameters: {
+		design: {
+			type: 'figma',
+			url: "https://www.figma.com/design/uXtJmwvaMFP8uYqb8ocWgm/harukikuriwada's-team-library?node-id=2311-6768&t=wFZAHl6BOd6IpaFs-4"
+		}
 	}
 };
 

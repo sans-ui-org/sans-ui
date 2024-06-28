@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
-	import type { CheckboxIconSize } from '../InderminateIcon/useIndeterminateIcon';
-	import { useCheckIcon } from './useCheckIcon';
+	import type { CheckboxIconSize } from '../InderminateIcon/IndeterminateIcon';
+	import { getCheckIconSlots } from './CheckIcon';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
@@ -10,10 +10,10 @@
 	export let animation: boolean = false;
 
 	$: notChecked = !checked;
-	$: checkboxIconProps = useCheckIcon({ disabled, size, variant });
+	$: slots = getCheckIconSlots({ disabled, size, variant });
 </script>
 
-<svg class={checkboxIconProps.slots.base} class:notChecked viewBox="0 0 100 100">
+<svg class={slots.base} class:notChecked viewBox="0 0 100 100">
 	<path
 		stroke-width={7}
 		stroke-dasharray={320}

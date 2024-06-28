@@ -1,5 +1,5 @@
 import { cx, type ComponentVariant } from '$lib/utils/utils';
-import type { CheckboxIconSize } from '../InderminateIcon/useIndeterminateIcon';
+import type { CheckboxIconSize } from '../InderminateIcon/IndeterminateIcon';
 
 type IndeterminateIconProps = {
 	// className: string;
@@ -8,7 +8,7 @@ type IndeterminateIconProps = {
 	variant: ComponentVariant;
 };
 
-export function useCheckIcon({
+export function getCheckIconSlots({
 	// className,
 	disabled,
 	size,
@@ -51,9 +51,7 @@ export function useCheckIcon({
 	]);
 
 	// slots
-	const slots = {
-		base: baseClassName,
+	return {
+		base: baseClassName
 	};
-
-	return { slots };
 }

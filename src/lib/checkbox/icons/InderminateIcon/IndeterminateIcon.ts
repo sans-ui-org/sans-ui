@@ -9,7 +9,7 @@ type IndeterminateIconProps = {
 	variant: ComponentVariant;
 };
 
-export function useIndeterminateIcon({
+export function getIndeterminateIconSlots({
 	// className,
 	disabled,
 	size,
@@ -52,9 +52,7 @@ export function useIndeterminateIcon({
 	]);
 
 	// slots
-	const slots = {
+	return {
 		base: baseClassName
 	};
-
-	return { slots };
 }

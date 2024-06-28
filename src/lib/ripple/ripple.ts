@@ -1,4 +1,3 @@
-// ref: https://svelte.dev/repl/61d9178d2b9944f2aa2bfe31612ab09f?version=3.6.7
 function onRipple(color: string, centered?: boolean): (event: MouseEvent) => void {
 	return (event: MouseEvent) => {
 		const target = event.currentTarget as HTMLElement;

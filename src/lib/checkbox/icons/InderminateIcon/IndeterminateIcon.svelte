@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
-	import { useIndeterminateIcon, type CheckboxIconSize } from './useIndeterminateIcon';
+	import { getIndeterminateIconSlots, type CheckboxIconSize } from './IndeterminateIcon';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
 	export let variant: ComponentVariant = 'primary';
 
-	$: indeterminateIconProps = useIndeterminateIcon({ disabled, size, variant });
+	$: slots = getIndeterminateIconSlots({ disabled, size, variant });
 </script>
 
-<svg class={indeterminateIconProps.slots.base} viewBox="0 0 100 100" fill="white">
+<svg class={slots.base} viewBox="0 0 100 100" fill="white">
 	<path
 		class={'box'}
 		stroke-width={7}

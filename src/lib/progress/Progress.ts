@@ -1,6 +1,5 @@
 import { cx, type ComponentVariant } from '$lib/utils/utils';
 
-
 export type IndicatorCap = 'butt' | 'round' | 'square' | 'inherit';
 
 type ProgressProps = {

@@ -1,7 +1,13 @@
 <script lang="ts">
 	import '$lib/styles/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { useButton } from './hooks/useButton';
+	import type { HTMLAttributes } from 'svelte/elements';
+	import { getButtonSlots } from './Button';
+
+	interface $$Props extends HTMLAttributes<HTMLButtonElement> {
+		variant?: ComponentVariant;
+		size?: ComponentSize;
+	}
 
 	/**
 	 * Property that define the variant of the button.
@@ -13,25 +19,23 @@
 	 */
 	export let size: ComponentSize = 'md';
 
-	$: className = $$props.class;
-	$: disabled = $$props.disabled;
-	$: buttonProps = useButton({ className, disabled, variant, size });
+	const className = $$restProps.class;
+	const disabled = $$restProps.disabled;
+	$: slots = getButtonSlots({ className, disabled, variant, size });
 </script>
 
 <button
-	type="button"
-	{...$$props}
 	{...$$restProps}
-	class={buttonProps.slots.base}
+	class={slots.base}
 	on:click
-	on:blur
-	on:mouseover
-	on:mousedown
-	on:mousemove
+	on:change
+	on:keydown
+	on:keyup
+	on:touchstart|passive
+	on:touchend
+	on:touchcancel
+	on:mouseenter
 	on:mouseleave
-	on:focus
-	on:focusin
-	on:focusout
 >
 	<slot />
 </button>

@@ -1,28 +1,28 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Input } from '$lib';
+import { TextArea } from '$lib';
 
-describe('Input component', async () => {
+describe('TextArea component', async () => {
 	test('should render', async () => {
-		render(Input);
-		expect(screen.getByRole('textbox')).toBeTruthy();
+		render(TextArea);
+		expect(screen.getByRole('textarea')).toBeTruthy();
 	});
 
 	test('should render button label correctly', async () => {
-		render(Input, { label: 'Label' });
+		render(TextArea, { label: 'Label' });
 		expect(screen.getByText('Label')).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
-		const button = render(Input, { disabled: true });
+		const button = render(TextArea, { disabled: true });
 
-		expect(button.getByRole('textbox').getAttribute('disabled')).toBe('true');
+		expect(button.getByRole('textarea').getAttribute('disabled')).toBe('true');
 	});
 
 	test('should have readonly attribute', async () => {
-		const button = render(Input, { readonly: true });
+		const button = render(TextArea, { readonly: true });
 
-		expect(button.getByRole('textbox').getAttribute('readonly')).toBe('true');
+		expect(button.getByRole('textarea').getAttribute('readonly')).toBe('true');
 	});
 
 	// TODO: Add tests for Button component

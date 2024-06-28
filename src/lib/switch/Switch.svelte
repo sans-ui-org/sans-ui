@@ -1,41 +1,56 @@
 <script lang="ts">
 	import '$lib/styles/global.css';
-	import type { ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import { getSwitchSlots } from './Switch';
+
+	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+		id?: string;
+		optionA?: string;
+		optionB?: string;
+		label?: string;
+		size?: ComponentSize;
+		variant?: ComponentVariant;
+		readonly?: boolean;
+		disabled?: boolean;
+		invalid?: boolean;
+		invalidText?: string;
+		defaultToggled?: boolean;
+	}
 
 	/**
 	 * Property that defines the id of the switch.
 	 */
-	export let id: string;
+	export let id: string | undefined = undefined;
 
 	/**
 	 * Property that defines the label for A position.
 	 */
-	export let optionA: string;
+	export let optionA: string = '';
 	/**
 	 * Specify the label for the "off" position.(B)
 	 */
-	export let optionB: string;
+	export let optionB: string = '';
 	/**
 	 * Provide the text that will be read by a screen reader when visiting this control.
 	 */
-	export let label: string;
+	export let label: string | undefined = undefined;
 	/**
 	 * Specify the size of the Toggle.
 	 */
-	export let size: 'sm' | 'md';
+	export let size: ComponentSize = 'md';
 	/**
 	 * Switch type.
 	 */
-	export let variant: ComponentVariant;
+	export let variant: ComponentVariant = 'primary';
 	/**
 	 * Property that defines readonly state of the switch.
 	 */
-	export let readonly: boolean;
+	export let readonly: boolean = false;
 	/**
 	 * Property that defines if the switch is disabled.
 	 */
-	export let disabled: boolean;
+	export let disabled: boolean = false;
 	/**
 	 * Property that defines if the switch is invalid.
 	 */
@@ -47,14 +62,13 @@
 	/**
 	 * Property that defines the default toggled value of the switch.
 	 */
-	export let defaultToggled: boolean;
+	export let defaultToggled: boolean = false;
 
-	let toggled = defaultToggled;
-
-	$: toggled = false;
+	$: toggled = defaultToggled;
 	$: toggleLabel = toggled ? optionA : optionB;
-	$: className = $$props.class;
-	$: disabled = $$props.disabled;
+
+	const className = $$props.class;
+
 	$: slots = getSwitchSlots({
 		className,
 		size,
@@ -85,12 +99,13 @@
 	<div class={slots.switchWrapper}>
 		<div
 			{id}
-			role="switch"
-			tabindex="0"
-			class={slots.switch}
 			aria-checked={toggled}
 			aria-readonly={readonly}
 			aria-disabled={disabled}
+			{...$$restProps}
+			role="switch"
+			tabindex="0"
+			class={slots.switch}
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>

@@ -8,21 +8,21 @@ describe('Switch component', async () => {
 		expect(screen.getByRole('switch')).toBeTruthy();
 	});
 
-	test('should render button label correctly', async () => {
+	test('should render swtich label correctly', async () => {
 		render(Switch, { label: 'Switch' });
 		expect(screen.getByText('Switch')).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
-		const button = render(Switch, { disabled: true });
+		const sw = render(Switch, { disabled: true });
 
-		expect(button.getByRole('switch').getAttribute('disabled')).toBe('true');
+		expect(sw.getByRole('switch').getAttribute('disabled')).toBe('true');
 	});
 
 	test('should have readonly attribute', () => {
-		const button = render(Switch, { readonly: true });
+		const sw = render(Switch, { readonly: true });
 
-		expect(button.getByRole('switch').getAttribute('readonly')).toBe('submit');
+		expect(sw.getByRole('switch').getAttribute('readonly')).toBe('submit');
 	});
 
 	// TODO: Add tests for Switch component

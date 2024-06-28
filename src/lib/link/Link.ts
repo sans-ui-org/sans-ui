@@ -1,31 +1,28 @@
 import { cx } from '$lib/utils/utils';
-import {
-	type ComponentColorType,
-	type FontSize,
-	type FontWeight,
-	type underlineType
-} from '../../utils/utils';
-import { getFontSize, getFontWeight } from '../../utils/utils';
+import { type ComponentColorType, type FontSize, type FontWeight } from '../utils/utils';
+import { getFontSize, getFontWeight } from '../utils/utils';
+
+export type UnderlineType = 'none' | 'hover' | 'always' | 'active';
 
 export type LinkProps = {
 	className?: string;
-	isDisabled?: boolean;
-	underline?: underlineType;
+	disabled?: boolean;
+	underlineType?: UnderlineType;
 	variant?: ComponentColorType;
 	size?: FontSize;
 	bold?: FontWeight;
 };
 
-export function useLink({
+export function getLinkSlots({
 	className = '',
-	isDisabled = false,
-	underline = 'always',
+	disabled = false,
+	underlineType = 'always',
 	variant = 'primary',
 	size = 'md',
 	bold = 'medium'
 }: LinkProps) {
 	function getUnderline() {
-		switch (underline) {
+		switch (underlineType) {
 			case 'none':
 				return '';
 			case 'hover':
@@ -38,7 +35,7 @@ export function useLink({
 	}
 
 	function getTypeTextColor() {
-		if (isDisabled) return 'text-gray-500 cursor-not-allowed';
+		if (disabled) return 'text-gray-500 cursor-not-allowed';
 		switch (variant) {
 			case 'primary':
 				return 'text-blue-500 hover:text-blue-800 cursor-pointer';
@@ -66,11 +63,7 @@ export function useLink({
 	]);
 
 	// slots
-	const slots = {
-		base: linkClassNames
-	};
-
 	return {
-		slots
+		base: linkClassNames
 	};
 }

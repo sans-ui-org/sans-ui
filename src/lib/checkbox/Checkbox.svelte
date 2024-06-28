@@ -2,64 +2,79 @@
 	import '$lib/styles/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
-	import { useCheckBox } from './hooks/useCheckbox';
 	import CheckIcon from './icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from './icons/InderminateIcon/IndeterminateIcon.svelte';
+	import { getCheckBoxSlots } from './Checkbox';
+	import type { HTMLAttributes } from 'svelte/elements';
+
+	interface $$Props extends HTMLAttributes<HTMLLabelElement> {
+		id?: string;
+		variant?: ComponentVariant;
+		size?: ComponentSize;
+		label?: string;
+		value?: string;
+		defaultChecked?: boolean;
+		indeterminate?: boolean;
+		animation?: boolean;
+	}
 
 	/**
 	 * Property that define the variant of the checkbox.
 	 */
 	export let variant: ComponentVariant = 'primary';
-
 	/**
 	 * Property that defines the size of the checkobx.
 	 */
 	export let size: ComponentSize = 'md';
-
 	/**
 	 * Property that defines the label of the checkbox.
 	 */
-	export const label: string = '';
-
+	export let label: string = '';
 	/**
 	 * Value for the checkbox
 	 */
 	export let value: string = '';
-
 	/**
 	 * Specify whether the input should be checked by default.
 	 */
-	export const isDefaultChecked: boolean = false;
-
+	export const defaultChecked: boolean = false;
 	/**
 	 * Property that defines the indeterminate state of the checkbox.
 	 */
-	export let isIndeterminate: boolean = false;
-
+	export let indeterminate: boolean = false;
 	/**
 	 * Property that defines the disabled state of the checkbox.
 	 */
-	export let isAnimation: boolean = false;
+	export let animation: boolean = true;
 
-	let checked = isDefaultChecked;
+	let checked = defaultChecked;
 	let inputElement: HTMLInputElement;
 	const dispatcher = createEventDispatcher();
 
-	const { className, disabled } = $$props;
+	const { className, disabled } = $$restProps;
+	const indeterminateIconProps = {
+		disabled,
+		size,
+		variant
+	};
+	const checkIconProps = {
+		...indeterminateIconProps,
+		animation
+	};
 
-	// --- Stateless logic ---
-	$: checkboxProps = useCheckBox({
+	// slots
+	$: slots = getCheckBoxSlots({
 		className,
 		disabled,
 		variant,
 		size,
-		isAnimation
+		animation
 	});
 
 	// TODO: Extractable?
 	// --- Stateful logic ---
 	const onclick = (e: MouseEvent) => {
-		if (disabled || isIndeterminate) return;
+		if (disabled || indeterminate) return;
 		checked = !checked;
 		dispatcher('click', e);
 	};
@@ -68,7 +83,7 @@
 			currentTarget: EventTarget & HTMLLabelElement;
 		}
 	) => {
-		if (disabled || isIndeterminate) return;
+		if (disabled || indeterminate) return;
 		if (e.key == ' ' || e.code == 'Space' || e.keyCode == 32) {
 			inputElement && inputElement.click();
 		}
@@ -79,15 +94,17 @@
 			currentTarget: EventTarget & HTMLInputElement;
 		}
 	) => {
-		if (disabled || isIndeterminate) return;
+		if (disabled || indeterminate) return;
 		checked = !checked;
 		dispatcher('change', e);
 	};
 </script>
 
+<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <label
 	{...$$restProps}
-	class={checkboxProps.slots.base}
+	class={slots.base}
 	tabindex="0"
 	aria-checked={checked}
 	aria-disabled={disabled}
@@ -95,10 +112,10 @@
 	on:keydown={onkeydown}
 >
 	<input bind:this={inputElement} {value} type="checkbox" class="hidden" on:change={onchange} />
-	{#if isIndeterminate}
-		<IndeterminateIcon {...checkboxProps.indeterminateIconProps} />
+	{#if indeterminate}
+		<IndeterminateIcon {...indeterminateIconProps} />
 	{:else}
-		<CheckIcon {...checkboxProps.checkIconProps} {checked} {isAnimation} />
+		<CheckIcon {...checkIconProps} {checked} {animation} />
 	{/if}
 	<slot />
 </label>

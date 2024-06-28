@@ -1,12 +1,10 @@
-import { Modal } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
 import ModalTemplate from './examples/ModalTemplate.svelte';
-import NotificationTemplate from './examples/NotificationTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Modal',
-	component: Modal,
+	component: ModalTemplate,
 	tags: ['autodocs'],
 	argTypes: {
 		size: {
@@ -14,13 +12,13 @@ const meta = {
 			options: ['sm', 'md', 'lg', 'full']
 		}
 	}
-} satisfies Meta<Modal>;
+} satisfies Meta<ModalTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	label: 'Modal'
+	title: 'Here is Modal Title.'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -30,19 +28,26 @@ export const Default: Story = {
 	}
 };
 
-export const Sample: Story = {
-	render: () => ModalTemplate,
+export const Size: Story = {
 	args: {
-		...defaultArgs
+		...defaultArgs,
+		size: 'full'
 	}
 };
 
-export const Notification: Story = {
-	render: () => NotificationTemplate,
+export const Non_Dismissible: Story = {
 	args: {
-		...defaultArgs
+		...defaultArgs,
+		dismissible: false
 	}
 };
+
+// export const Notification: Story = {
+// 	render: () => NotificationTemplate,
+// 	args: {
+// 		...defaultArgs
+// 	}
+// };
 
 // TODO: Size should also be introduced
 // export const Size: Story = {

@@ -6,7 +6,7 @@
 	import type { HTMLAttributes } from 'svelte/elements';
 
 	interface $$Props extends HTMLAttributes<HTMLDivElement> {
-		variant: ComponentVariant;
+		variant?: ComponentVariant;
 		value?: number;
 		size?: number;
 		trackWidth?: number;
@@ -45,7 +45,7 @@
 	 */
 	export let customInnerLabel: string = '';
 
-	// Spinner tracker and indicator calculations.
+	// mostly likely these values are constantly changing
 	$: center = size / 2;
 	$: radius = center - trackWidth;
 	$: dashArray = 2 * Math.PI * radius;

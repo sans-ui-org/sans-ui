@@ -897,12 +897,20 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.animate-\[rippleCentered_0\.4s\] {
-  animation: rippleCentered 0.4s;
+@keyframes ripple {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 
-.animate-\[rippleNormal_1\.0s\] {
-  animation: rippleNormal 1.0s;
+.animate-\[ripple_1\.0s\] {
+  animation: ripple 1.0s;
 }
 
 @keyframes spinnerDotContainer {
@@ -963,38 +971,6 @@ video {
 
 .animate-\[spinnerRotation_1s_linear_infinite\] {
   animation: spinnerRotation 1s linear infinite;
-}
-
-@keyframes ripple {
-  from {
-    transform: scale(0);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-.animate-\[ripple_0\.4s\] {
-  animation: ripple 0.4s;
-}
-
-@keyframes ripple {
-  from {
-    transform: scale(0);
-    opacity: 1;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
-.animate-\[ripple_1\.0s\] {
-  animation: ripple 1.0s;
 }
 
 .cursor-auto {

@@ -1,7 +1,6 @@
 import { Link } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
 
-
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Link',
@@ -14,14 +13,14 @@ const meta = {
 		},
 		size: {
 			control: { type: 'select' },
-			options: ['xs', 'sm', 'md', 'lg', 'xl']
+			options: ['sm', 'md', 'lg']
 		},
 		underline: {
 			control: { type: 'select' },
 			options: ['none', 'hover', 'always', 'active']
 		},
-        isDisabled: {
-			control: { type: 'boolean' },
+		disabled: {
+			control: { type: 'boolean' }
 		}
 	}
 } satisfies Meta<Link>;
@@ -43,14 +42,13 @@ export const Default: Story = {
 export const Underline: Story = {
 	args: {
 		...defaultArgs,
-        underline: "none",
+		underline: 'none'
 	}
 };
 
 export const Disabled: Story = {
-    args: {
-	  ...defaultArgs,
-      isDisabled: true,
-    },
-  };
-
+	args: {
+		...defaultArgs,
+		disabled: true
+	}
+};

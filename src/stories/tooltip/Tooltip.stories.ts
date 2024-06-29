@@ -31,3 +31,17 @@ export const Default: Story = {
 		...defaultArgs
 	}
 };
+
+export const Variant: Story = {
+	args: {
+		...defaultArgs,
+		variant: 'success'
+	}
+};
+
+export const Size: Story = {
+	args: {
+		...defaultArgs,
+		size: 'sm'
+	}
+};

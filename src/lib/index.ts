@@ -11,7 +11,8 @@ import Modal from './modal/Modal.svelte';
 import Progress from './progress/Progress.svelte';
 import Spinner from './spinner/Spinner.svelte';
 import Tooltip from './tooltip/Tooltip.svelte';
-// import { ripple } from './ripple/ripple.ts';
+import { createRipple } from './actions/ripple';
+import { focusTrap, autoFocus } from './actions/focus';
 
 export {
 	Button,
@@ -24,5 +25,8 @@ export {
 	Modal,
 	Progress,
 	Tooltip,
-	Spinner
+	Spinner,
+	createRipple,
+	focusTrap,
+	autoFocus
 };

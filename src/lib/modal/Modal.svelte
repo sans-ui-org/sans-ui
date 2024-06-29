@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import { getModalSlots, type ModalSize } from '$lib/modal/Modal';
-	import { autoFocus, focusTrap } from '$lib/modal/actions/focus';
+	import { autoFocus, focusTrap } from '$lib/actions/focus';
 	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';
 	import type { HTMLAttributes } from 'svelte/elements';
 
@@ -23,7 +23,7 @@
 	/**
 	 * Property that defines the title of the modal.
 	 */
-	export let title: string = '';
+	export let title: string | undefined = undefined;
 	/**
 	 * Property that whether this modal is able to be closed by clicking outside of it.
 	 */

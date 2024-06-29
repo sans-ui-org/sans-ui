@@ -30,7 +30,7 @@ function getRippleEffect(bgColor: string, centered?: boolean): (event: MouseEven
 	};
 }
 
-export function onRipple(bgColor = 'white', centered = false) {
+export function createRipple(bgColor = 'white', centered = false) {
 	return function (node: HTMLElement) {
 		const onMouseDown = getRippleEffect(bgColor, centered);
 		node.addEventListener('mousedown', onMouseDown);

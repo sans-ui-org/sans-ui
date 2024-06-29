@@ -37,7 +37,7 @@
 	/**
 	 * Specify whether the input should be checked by default.
 	 */
-	export const defaultChecked: boolean = false;
+	export let defaultChecked: boolean = false;
 	/**
 	 * Property that defines the indeterminate state of the checkbox.
 	 */
@@ -47,6 +47,7 @@
 	 */
 	export let animation: boolean = true;
 
+	console.log('default', defaultChecked);
 	let checked = defaultChecked;
 	let inputElement: HTMLInputElement;
 	const dispatcher = createEventDispatcher();
@@ -115,7 +116,7 @@
 	{#if indeterminate}
 		<IndeterminateIcon {...indeterminateIconProps} />
 	{:else}
-		<CheckIcon {...checkIconProps} {checked} {animation} />
+		<CheckIcon {...checkIconProps} bind:checked {animation} />
 	{/if}
 	<slot />
 </label>

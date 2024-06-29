@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import type { SvelteComponent } from 'svelte';
 	import ClearableIcon from './ClearableIcon.svelte';
 

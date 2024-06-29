@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { IndicatorCap } from '$lib/progress/Progress';
 	import { getPrgressSlots } from '$lib/progress/Progress';

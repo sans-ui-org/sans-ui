@@ -1,6 +1,6 @@
 <script lang="ts">
 	import InputContent from '$lib/inputContent/InputContent.svelte';
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	import { getInputSlots } from './Input';

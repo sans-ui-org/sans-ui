@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
 	import CheckIcon from './icons/CheckIcon/CheckIcon.svelte';

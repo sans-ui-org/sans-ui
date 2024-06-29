@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import { getModalSlots, type ModalSize } from '$lib/modal/Modal';
 	import { autoFocus, focusTrap } from '$lib/modal/actions/focus';
 	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
+	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	import { getSpinnerSlots, type SpinnerKind } from './Spinner';

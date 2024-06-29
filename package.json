@@ -6,7 +6,7 @@
 		"dev:doc": "vite dev",
 		"dev": "concurrently 'pnpm:watch:*'",
 		"watch:storybook": "storybook dev -p 6006",
-		"watch:tailwind": "tailwindcss -i ./src/lib/index.css -o ./src/lib/styles/global.css --watch",
+		"watch:tailwind": "tailwindcss -i ./src/lib/index.css -o ./src/lib/global.css --watch",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

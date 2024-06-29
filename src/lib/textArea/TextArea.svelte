@@ -79,7 +79,7 @@
 	 */
 	export let rows: number = 4;
 
-	const className = $$props.class;
+	let className = $$props.class;
 	const dispatch = createEventDispatcher();
 
 	$: charCounter = value ? value.toString().length : 0;

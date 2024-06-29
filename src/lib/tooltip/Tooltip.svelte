@@ -23,7 +23,7 @@
 	 */
 	export let title: string;
 
-	$: open = false;
+	let open = false;
 
 	const onFocusIn = () => {
 		open = true;
@@ -32,7 +32,7 @@
 		open = false;
 	};
 
-	const className = $$props.class;
+	let className = $$props.class;
 	$: slots = getTooltipSlots({ variant, size, className });
 </script>
 

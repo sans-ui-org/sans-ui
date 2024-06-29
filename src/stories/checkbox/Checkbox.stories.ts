@@ -14,6 +14,9 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		defaultChecked: {
+			control: { type: 'boolean' }
 		}
 	}
 } satisfies Meta<Checkbox>;
@@ -21,11 +24,25 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const defaultArgs = {};
-
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default: Story = {
+	args: {}
+};
+
+export const DefaultChecked: Story = {
 	args: {
-		...defaultArgs
+		defaultChecked: true
+	}
+};
+
+export const Indeterminate: Story = {
+	args: {
+		indeterminate: true
+	}
+};
+
+export const NoAnimation: Story = {
+	args: {
+		animation: false
 	}
 };

@@ -91,7 +91,7 @@
 	export let endContent: typeof SvelteComponent | undefined = undefined;
 
 	let charCounter: number;
-	const className = $$props.class;
+	let className = $$props.class;
 
 	$: charCounter = value ? value.toString().length : 0;
 	$: counterText = `${charCounter}/${maxCount}`;

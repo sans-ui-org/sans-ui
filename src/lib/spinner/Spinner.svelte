@@ -26,7 +26,7 @@
 	export let kind: SpinnerKind = 'loader1';
 
 	const dotList = [1.1, 1.0, 0.9, 0.8, 0.7, 0.6];
-	const className = $$props.class;
+	let className = $$props.class;
 	$: slots = getSpinnerSlots({ variant, size, kind, className });
 </script>
 

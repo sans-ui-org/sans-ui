@@ -8,9 +8,11 @@ const meta = {
 	tags: ['autodocs'],
 	argTypes: {
 		size: {
-			options: ['xs', 'sm', 'md', 'lg', 'xl']
+			control: { type: 'select' },
+			options: ['sm', 'md', 'lg']
 		},
 		variant: {
+			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
 	}

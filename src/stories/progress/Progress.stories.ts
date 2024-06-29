@@ -36,10 +36,3 @@ export const TrackWidth: Story = {
 		trackWidth: 15
 	}
 };
-
-// TODO: Sample: with animation that gradually increases the value
-// export const TrackWidth: Story = {
-// 	args: {
-// 		trackWidth: 15
-// 	}
-// };

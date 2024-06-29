@@ -13,9 +13,37 @@ const meta = {
 		},
 		size: {
 			control: { type: 'select' },
-			options: ['sm', 'md', 'lg']
+			options: [
+				'xs',
+				'sm',
+				'md',
+				'lg',
+				'xl',
+				'2xl',
+				'3xl',
+				'4xl',
+				'5xl',
+				'6xl',
+				'7xl',
+				'8xl',
+				'9xl'
+			]
 		},
-		underline: {
+		bold: {
+			control: { type: 'select' },
+			options: [
+				'thin',
+				'extralight',
+				'light',
+				'normal',
+				'medium',
+				'semibold',
+				'bold',
+				'extrabold',
+				'black'
+			]
+		},
+		underlineType: {
 			control: { type: 'select' },
 			options: ['none', 'hover', 'always', 'active']
 		},
@@ -39,10 +67,10 @@ export const Default: Story = {
 	}
 };
 
-export const Underline: Story = {
+export const UnderlineType: Story = {
 	args: {
 		...defaultArgs,
-		underline: 'none'
+		underlineType: 'none'
 	}
 };
 

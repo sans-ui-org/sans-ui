@@ -67,7 +67,7 @@
 	$: toggled = defaultToggled;
 	$: toggleLabel = toggled ? optionA : optionB;
 
-	const className = $$props.class;
+	let className = $$props.class;
 
 	$: slots = getSwitchSlots({
 		className,

@@ -3,7 +3,7 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
 	import { getButtonSlots } from './Button';
-	import { onRipple } from '$lib/ripple/ripple';
+	import { createRipple } from '$lib/actions/ripple';
 
 	interface $$Props extends HTMLAttributes<HTMLButtonElement> {
 		variant?: ComponentVariant;
@@ -20,13 +20,13 @@
 	 */
 	export let size: ComponentSize = 'md';
 
-	const className = $$restProps.class;
+	let className = $$restProps.class;
 	const disabled = $$restProps.disabled;
 
 	// slots
 	$: slots = getButtonSlots({ className, disabled, variant, size });
 
-	const ripple = onRipple('white');
+	const ripple = createRipple();
 </script>
 
 <button

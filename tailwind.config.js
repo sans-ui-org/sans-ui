@@ -30,6 +30,10 @@ export default {
 					'50%': { transform: 'scale(0.4)' },
 					'0%': { transform: 'scale(1)' },
 					'100%': { transform: 'scale(1)' }
+				},
+				ripple: {
+					from: { transform: 'scale(0)', opacity: 1 },
+					to: { transform: 'scale(1)', opacity: 0 }
 				}
 			}
 		}

@@ -30,7 +30,7 @@
 	/**
 	 * Property that defines the id of the input.
 	 */
-	export let id: string | undefined = '';
+	export let id: string = '';
 	/**
 	 * Property that defines the value of the input.
 	 */

@@ -3,7 +3,9 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSwitchSlots } from './Switch';
 
-	interface $$Props {
+	type $$BaseProps = Omit<HTMLDivElement, 'size' | 'id'>;
+
+	interface $$Props extends $$BaseProps {
 		id?: string;
 		optionA?: string;
 		optionB?: string;
@@ -20,7 +22,7 @@
 	/**
 	 * Property that defines the id of the switch.
 	 */
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 
 	/**
 	 * Property that defines the label for A position.

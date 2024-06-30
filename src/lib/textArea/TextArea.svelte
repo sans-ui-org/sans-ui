@@ -26,7 +26,7 @@
 	/**
 	 * Property that defines the id of the textarea.
 	 */
-	export let id: string | undefined = undefined;
+	export let id: string = "";
 	/**
 	 * Property that defines the value of the textarea.
 	 */

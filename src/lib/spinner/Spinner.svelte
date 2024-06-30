@@ -3,7 +3,9 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSpinnerSlots, type SpinnerKind } from './Spinner';
 
-	interface $$Props  {
+	type $$BaseProps = Omit<HTMLDivElement, 'size'>;
+
+	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		kind?: SpinnerKind;

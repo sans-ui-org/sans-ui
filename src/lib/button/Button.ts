@@ -34,7 +34,7 @@ export function getButtonSlots({
 		if (isDisabled) return 'bg-gray-400 cursor-not-allowed';
 		switch (variant) {
 			case 'primary':
-				return 'bg-blue-500';
+				return 'bg-blue-500 hover:bg-blue-400 active:bg-blue-600';
 			case 'secondary':
 				return 'bg-neutral-500 hover:bg-neutral-400 active:bg-neutral-600';
 			case 'success':

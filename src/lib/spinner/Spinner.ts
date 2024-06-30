@@ -25,11 +25,12 @@ export function getSpinnerSlots({ variant, size, kind, className = '' }: Spinner
 	function getSpinnerClassNames(kind: SpinnerKind) {
 		switch (kind) {
 			case 'loader1':
-				return 'inline-block box-border text-[48px] rounded-[50%] border-t-4 border-r-4 border-r-transparent relative animate-[spinnerRotation_1s_linear_infinite]';
+				return 'spinner-type-1 inline-block box-border text-[48px] rounded-[50%] border-t-4 border-r-4 border-r-transparent relative animate-[spinnerRotation_1s_linear_infinite]';
 			case 'loader2':
-				return 'relative animate-[spinnerDotContainer_2.5s_linear_infinite]';
+				return 'spinner-type-2 relative animate-[spinnerDotContainer_2.5s_linear_infinite]';
 			case 'loader3':
 				return cx([
+					'spinner-type-3',
 					'after:content-[""] after:inline-block after:box-border after:absolute after:top-[50%] after:left-[50%] after:border-4 after:rounded-full after:animate-[spinnerScaleUp_1s_linear_infinite]',
 					'inline-block box-border text-[48px] rounded-[50%] border-4 relative animate-[spinnerPulse_1s_linear_infinite]'
 				]);

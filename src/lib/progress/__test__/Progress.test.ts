@@ -5,17 +5,15 @@ import { Progress } from '$lib';
 describe('Progress component', async () => {
 	test('should render', async () => {
 		render(Progress);
-		expect(screen.getByRole('progress')).toBeTruthy();
+		expect(screen.getByRole('progressbar')).toBeTruthy();
 	});
 
 	test('should render progress label correctly', async () => {
-		render(Progress, { customInnerLabel: 'progress' });
+		render(Progress, { customInnerLabel: 'Loading...' });
 		expect(screen.getByText('Loading...')).toBeTruthy();
 	});
 
 	// TODO: Add tests for Progress component
-	// on:click
-
 	// EXAMPLE:
 	// test('減算処理', async () => {
 	// 	render(Counter);

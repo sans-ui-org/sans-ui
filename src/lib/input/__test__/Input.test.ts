@@ -16,13 +16,13 @@ describe('Input component', async () => {
 	test('should have disabled attribute', async () => {
 		const button = render(Input, { disabled: true });
 
-		expect(button.getByRole('textbox').getAttribute('disabled')).toBe('true');
+		expect(button.getByRole('textbox').getAttribute('aria-disabled')).toBe('true');
 	});
 
 	test('should have readonly attribute', async () => {
 		const button = render(Input, { readonly: true });
 
-		expect(button.getByRole('textbox').getAttribute('readonly')).toBe('true');
+		expect(button.getByRole('textbox').getAttribute('aria-readonly')).toBe('true');
 	});
 
 	// TODO: Add tests for Button component

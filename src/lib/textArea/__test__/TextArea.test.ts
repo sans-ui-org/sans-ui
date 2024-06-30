@@ -5,24 +5,30 @@ import { TextArea } from '$lib';
 describe('TextArea component', async () => {
 	test('should render', async () => {
 		render(TextArea);
-		expect(screen.getByRole('textarea')).toBeTruthy();
+		expect(screen.getByRole('textbox')).toBeTruthy();
 	});
 
-	test('should render button label correctly', async () => {
+	test('should render textarea label correctly', async () => {
 		render(TextArea, { label: 'Label' });
 		expect(screen.getByText('Label')).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
-		const button = render(TextArea, { disabled: true });
+		const textarea = render(TextArea, { disabled: true });
 
-		expect(button.getByRole('textarea').getAttribute('disabled')).toBe('true');
+		expect(textarea.getByRole('textbox').getAttribute('aria-disabled')).toBe('true');
 	});
 
 	test('should have readonly attribute', async () => {
-		const button = render(TextArea, { readonly: true });
+		const textarea = render(TextArea, { readonly: true });
 
-		expect(button.getByRole('textarea').getAttribute('readonly')).toBe('true');
+		expect(textarea.getByRole('textbox').getAttribute('aria-readonly')).toBe('true');
+	});
+
+	test('should have invalid attribute', async () => {
+		const textarea = render(TextArea, { invalid: true });
+
+		expect(textarea.getByRole('textbox').getAttribute('aria-invalid')).toBe('true');
 	});
 
 	// TODO: Add tests for Button component

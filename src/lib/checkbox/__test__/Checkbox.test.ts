@@ -5,16 +5,22 @@ import { Checkbox } from '$lib';
 describe('Checkbox component', async () => {
 	test('should render', async () => {
 		render(Checkbox);
-		expect(screen.getByRole('label')).toBeTruthy();
+		expect(screen.getByRole('checkbox')).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
-		const button = render(Checkbox, { disabled: true });
+		const checkbox = render(Checkbox, { disabled: true });
 
-		expect(button.getByRole('button').getAttribute('disabled')).toBe('true');
+		expect(checkbox.getByRole('checkbox').getAttribute('aria-disabled')).toBe('true');
 	});
 
-	// TODO: Add tests for Button component
+	test('should have checked attribute', async () => {
+		const checkbox = render(Checkbox, { disabled: true });
+
+		expect(checkbox.getByRole('checkbox').getAttribute('aria-checked')).toBe('false');
+	});
+
+	// TODO: Add tests for Checkbox component
 	// on:click
 
 	// EXAMPLE:

@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import { getButtonSlots } from './Button';
 	import { createRipple } from '$lib/actions/ripple';
 
-	interface $$Props extends HTMLAttributes<HTMLButtonElement> {
+	interface $$Props extends HTMLButtonAttributes {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 	}

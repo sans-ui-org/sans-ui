@@ -1,16 +1,21 @@
 import { describe, expect, test } from 'vitest';
-import { render, screen } from '@testing-library/svelte';
 import { Tooltip } from '$lib';
+import TooltipTest from './examples/TooltipTest.svelte';
+import { render, screen } from '@testing-library/svelte';
+import userEvent from '@testing-library/user-event';
 
 describe('Tooltip component', async () => {
-	test('should render', async () => {
+	test('should render trigger', async () => {
 		render(Tooltip);
-		expect(screen.getByRole('tooltip')).toBeTruthy();
+		expect(screen.getByRole('button')).toBeTruthy();
 	});
 
-	test('should render tooltip label correctly', async () => {
-		render(Tooltip, { label: 'Tooltip' });
-		expect(screen.getByText('Tooltip')).toBeTruthy();
+	test('should render tooltip', async () => {
+		render(TooltipTest);
+		const trigger = screen.getByRole('button');
+
+		await userEvent.hover(trigger);
+		expect(screen.getByRole('tooltip')).toBeTruthy();
 	});
 
 	// TODO: Add tests for Tooltip component

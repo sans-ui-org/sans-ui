@@ -4,19 +4,19 @@ import { Select } from '$lib';
 
 describe('Select component', async () => {
 	test('should render', async () => {
-		render(Select, { id: 'select_id' });
-		expect(screen.getByRole('button', { name: /select_id/i })).toBeTruthy();
+		render(Select);
+		expect(screen.getByRole('combobox')).toBeTruthy();
 	});
 
 	test('should render seleect label correctly', async () => {
 		render(Select, { id: 'select_id' });
-		expect(screen.getByRole('label', { name: /select_id/i })).toBeTruthy();
+		expect(screen.getByRole('combobox', { name: /select_id/i })).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
 		const select = render(Select, { id: 'select_id', disabled: true });
 
-		expect(select.getByRole('button', { name: /select_id/i }).getAttribute('disabled')).toBe(
+		expect(select.getByRole('combobox', { name: /select_id/i }).getAttribute('aria-disabled')).toBe(
 			'true'
 		);
 	});

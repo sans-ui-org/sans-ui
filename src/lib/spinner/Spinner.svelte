@@ -1,10 +1,9 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
 	import { getSpinnerSlots, type SpinnerKind } from './Spinner';
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface $$Props  {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		kind?: SpinnerKind;

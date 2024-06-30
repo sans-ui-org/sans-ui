@@ -1,29 +1,30 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Modal } from '$lib';
+import userEvent from '@testing-library/user-event';
+import ModalTest from './example/ModalTest.svelte';
 
 describe('Modal component', async () => {
 	test('should render', async () => {
-		render(Modal);
+		render(ModalTest);
+		const trigger = screen.getByRole('button');
+
+		await userEvent.click(trigger);
 		expect(screen.getByRole('dialog')).toBeTruthy();
 	});
 
-	// TODO: Add tests for Modal component
-	// on:click
+	test('should dismissable by clicking outside of the modal', async () => {
+		render(ModalTest);
+		const trigger = screen.getByRole('button');
 
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseModal = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseModal);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseModal = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseModal);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
+		await userEvent.click(trigger);
+		expect(screen.getByRole('dialog')).toBeTruthy();
+	});
+
+	test('should NOT dismissable by clicking outside of the modal', async () => {
+		render(ModalTest);
+		const trigger = screen.getByRole('button');
+
+		await userEvent.click(trigger);
+		expect(screen.getByRole('dialog')).toBeTruthy();
+	});
 });

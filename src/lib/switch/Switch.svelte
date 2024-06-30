@@ -1,10 +1,9 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
 	import { getSwitchSlots } from './Switch';
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface $$Props {
 		id?: string;
 		optionA?: string;
 		optionB?: string;

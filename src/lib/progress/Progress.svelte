@@ -3,9 +3,8 @@
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { IndicatorCap } from '$lib/progress/Progress';
 	import { getPrgressSlots } from '$lib/progress/Progress';
-	import type { HTMLAttributes } from 'svelte/elements';
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface $$Props {
 		variant?: ComponentVariant;
 		value?: number;
 		size?: number;
@@ -54,8 +53,8 @@
 	$: slots = getPrgressSlots({ variant });
 </script>
 
-<div class={slots.progressWrapper}>
-	<div {...$$restProps} class={slots.progressIconWrapper} aria-atomic="true">
+<div role="progressbar" class={slots.progressWrapper}>
+	<div class={slots.progressIconWrapper} aria-atomic="true" {...$$restProps}>
 		<svg class={slots.progressIconSvg} style={`width: ${size}px; height: ${size}px;`}>
 			<circle
 				class={slots.progressIconTracker}

@@ -16,13 +16,13 @@ describe('Switch component', async () => {
 	test('should have disabled attribute', async () => {
 		const sw = render(Switch, { disabled: true });
 
-		expect(sw.getByRole('switch').getAttribute('disabled')).toBe('true');
+		expect(sw.getByRole('switch').getAttribute('aria-disabled')).toBe('true');
 	});
 
 	test('should have readonly attribute', () => {
 		const sw = render(Switch, { readonly: true });
 
-		expect(sw.getByRole('switch').getAttribute('readonly')).toBe('submit');
+		expect(sw.getByRole('switch').getAttribute('aria-readonly')).toBe('true');
 	});
 
 	// TODO: Add tests for Switch component

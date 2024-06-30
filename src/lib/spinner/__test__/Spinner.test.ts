@@ -8,9 +8,21 @@ describe('Spinner component', async () => {
 		expect(screen.getByRole('alert')).toBeTruthy();
 	});
 
-	// TODO: Add tests for Spinner component
-	// on:click
+	test('should render spinner type 1', async () => {
+		render(Spinner);
+		expect(screen.getByRole('alert').classList.contains('spinner-type-1')).toBeTruthy();
+	});
 
+	test('should render spinner type 2', async () => {
+		render(Spinner, { kind: 'loader2' });
+		expect(screen.getByRole('alert').classList.contains('spinner-type-2')).toBeTruthy();
+	});
+
+	test('should render spinner type 3', async () => {
+		render(Spinner, { kind: 'loader3' });
+		expect(screen.getByRole('alert').classList.contains('spinner-type-3')).toBeTruthy();
+	});
+	// TODO: Add tests for Spinner component
 	// EXAMPLE:
 	// test('減算処理', async () => {
 	// 	render(Counter);

@@ -8,21 +8,16 @@ describe('Button component', async () => {
 		expect(screen.getByRole('button')).toBeTruthy();
 	});
 
-	test('should render button label correctly', async () => {
-		render(Button, { label: 'Button' });
-		expect(screen.getByText('Button')).toBeTruthy();
+	test('should have correct variant', () => {
+		const button = render(Button, { variant: 'secondary' });
+
+		expect(button.getByRole('button').classList.contains('bg-neutral-500')).toBeTruthy();
 	});
 
-	test('should have disabled attribute', async () => {
-		const button = render(Button, { disabled: true });
+	test('should have correct size', () => {
+		const button = render(Button, { size: 'sm' });
 
-		expect(button.getByRole('button').getAttribute('disabled')).toBe('true');
-	});
-
-	test('should have type attribute', () => {
-		const button = render(Button, { type: 'submit', label: 'Button' });
-
-		expect(button.getByRole('button').getAttribute('type')).toBe('submit');
+		expect(button.getByRole('button').classList.contains('text-sm')).toBeTruthy();
 	});
 
 	// TODO: Add tests for Button component

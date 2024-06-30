@@ -8,7 +8,7 @@ const meta = {
 	tags: ['autodocs'],
 	argTypes: {
 		size: {
-			options: ['xs', 'sm', 'md', 'lg', 'xl']
+			options: ['sm', 'md', 'lg']
 		},
 		variant: {
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']

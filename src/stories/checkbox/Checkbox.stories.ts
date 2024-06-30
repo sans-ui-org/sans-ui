@@ -9,7 +9,7 @@ const meta = {
 	argTypes: {
 		size: {
 			control: { type: 'select' },
-			options: ['xs', 'sm', 'md', 'lg', 'xl']
+			options: ['sm', 'md', 'lg']
 		},
 		variant: {
 			control: { type: 'select' },

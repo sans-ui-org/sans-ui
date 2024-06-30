@@ -25,13 +25,15 @@ export function getModalSlots({ className, size, open }: ModalProps) {
 	// slots
 	return {
 		overlay: cx([
-			open ? 'visible' : 'invisible',
-			'fixed top-0 left-0 w-[100vw] h-[100vh] flex justify-center items-center bg-slate-950/20',
+			open ? 'flex' : 'hidden',
+			'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20',
 			'text-md font-bold font-black',
 			'transition-all duration-300 ease-out'
 		]),
-		dialog:
-			'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full p-4 flex justify-center items-cente transition-all duration-300 ease-out',
+		dialog: cx([
+			open ? 'visible' : 'invisible',
+			'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full p-4 flex justify-center items-cente transition-all duration-300 ease-out'
+		]),
 		modalContentWrapper: cx([
 			open ? 'opacity-1 translate-y-0' : 'opacity-0 -translate-y-[20px]',
 			'transition-all duration-300 ease-out',

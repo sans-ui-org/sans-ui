@@ -46,7 +46,7 @@
 	};
 </script>
 
-{#if open}
+<!-- {#if open} -->
 	<!-- backdrop -->
 	<div role="presentation" class={slots.overlay} />
 	<!-- dialog -->
@@ -90,4 +90,4 @@
 			</div>
 		</div>
 	</div>
-{/if}
+<!-- {/if} -->

@@ -1,15 +1,19 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
 	import { getTooltipSlots } from './Tooltip';
 
-	interface $$Props extends HTMLAttributes<HTMLDivElement> {
+	interface $$Props {
+		id?: string;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		title: string;
 	}
 
+	/**
+	 * Property that define the id of the tooltip.
+	 */
+	export let id: string = '';
 	/**
 	 * Property that define the variant of the button.
 	 */
@@ -38,11 +42,16 @@
 
 <div class={slots.base}>
 	{#if open}
-		<div class={slots.tooltip}>
+		<div role="tooltip" {id} class={slots.tooltip}>
 			<span class={slots.tooltipContent}>{title}</span>
 		</div>
 	{/if}
-	<button class={slots.triggerWrapper} on:mouseenter={onFocusIn} on:mouseleave={onFocusOut}>
+	<button
+		aria-describedby={id}
+		class={slots.triggerWrapper}
+		on:mouseenter={onFocusIn}
+		on:mouseleave={onFocusOut}
+	>
 		<slot />
 	</button>
 </div>

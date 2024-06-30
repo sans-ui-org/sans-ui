@@ -2,11 +2,13 @@
 	import InputContent from '$lib/inputContent/InputContent.svelte';
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { getInputSlots } from './Input';
 	import type { SvelteComponent } from 'svelte';
 
-	interface $$Props extends HTMLAttributes<HTMLInputElement> {
+	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
+
+	interface $$Props extends $$BaseProps {
 		id?: string;
 		value?: string | number | undefined;
 		variant?: ComponentVariant;

@@ -12,7 +12,7 @@ export type SelectProps = {
 	readonly: boolean;
 	disabled: boolean;
 	invalid: boolean;
-	invalidText: string;
+	invalidText: string | undefined;
 };
 
 export function getSelectSlots({

@@ -1,10 +1,10 @@
-import { Link } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import LinkTemplate from './examples/LinkTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Link',
-	component: Link,
+	component: LinkTemplate,
 	tags: ['autodocs'],
 	argTypes: {
 		variant: {
@@ -51,7 +51,7 @@ const meta = {
 			control: { type: 'boolean' }
 		}
 	}
-} satisfies Meta<Link>;
+} satisfies Meta<LinkTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -4,11 +4,28 @@
 	import { close, select, listbox } from './actions/select';
 	import SelectCheckIcon from './icons/SelectCheckIcon.svelte';
 	import SelectChevronIcon from './icons/SelectChevronIcon.svelte';
+	import type { HTMLInputAttributes } from 'svelte/elements';
+
+	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
+
+	interface $$Props extends $$BaseProps {
+		id?: string;
+		size?: ComponentSize;
+		defaultSelected?: Option;
+		options?: Option[];
+		label?: string;
+		placeholder?: string;
+		disabled?: boolean;
+		readonly?: boolean;
+		required?: boolean;
+		invalid?: boolean;
+		invalidText?: string;
+	}
 
 	/**
 	 * Property that defines the id of the select.
 	 */
-	export let id: string;
+	export let id: string | undefined = undefined;
 	/**
 	 * Property that defines the size of the select.
 	 */
@@ -16,7 +33,7 @@
 	/**
 	 * Property that defines the default selected value of the select.
 	 */
-	export let defaultSelected: Option | undefined;
+	export let defaultSelected: Option | undefined = undefined;
 	/**
 	 * Property that defines the options of the select.
 	 */
@@ -24,11 +41,11 @@
 	/**
 	 * Property that defines the label of the select.
 	 */
-	export let label: string = '';
+	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines the placeholder of the select.
 	 */
-	export let placeholder: string = 'Select a value';
+	export let placeholder: string | undefined = undefined;
 	/**
 	 * Property that defines if the select is disabled.
 	 */
@@ -52,7 +69,7 @@
 	/**
 	 * Property that defines the text message shows under this component if the select is invalid.
 	 */
-	export let invalidText: string = '';
+	export let invalidText: string | undefined = undefined;
 
 	let containerElement: HTMLDivElement;
 	let open: boolean;
@@ -105,17 +122,29 @@
 </script>
 
 <!-- Label -->
-<label class={slots.label} for={id} aria-labelledby={id}>{label}</label>
-<div class={slots.base} bind:this={containerElement}>
+{#if label && label !== ''}
+	<label class={slots.label} for={id} aria-labelledby={id}>{label}</label>
+{/if}
+<div
+	{id}
+	aria-label={id}
+	role="combobox"
+	aria-controls="listbox"
+	aria-expanded={open}
+	aria-disabled={disabled}
+	aria-readonly={readonly}
+	aria-invalid={invalid}
+	class={slots.base}
+	bind:this={containerElement}
+>
 	<!-- Trigger -->
 	<button
-		{id}
-		aria-label={id}
-		{...$$restProps}
+		aria-disabled={disabled}
 		class={slots.trigger}
 		on:click={onToggle}
 		use:close={onCloseByClickingOutside}
 		{disabled}
+		{...$$restProps}
 	>
 		<div class={slots.placeholderContainer}>
 			<span class={slots.placeholder}>{(selected && selected.label) || placeholder}</span>
@@ -126,9 +155,14 @@
 	{#if open}
 		<!-- TODO: Extract -->
 		<!-- Listbox -->
-		<ul class={slots.listbox} use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}>
+		<ul
+			role="listbox"
+			class={slots.listbox}
+			use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}
+		>
 			{#each options as option, i}
 				<li
+					role="listitem"
 					class={slots.option}
 					class:selected={selected && selected.value === option.value}
 					class:focus={i === focus}

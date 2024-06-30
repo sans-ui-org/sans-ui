@@ -5,14 +5,15 @@
 	import CheckIcon from './icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from './icons/InderminateIcon/IndeterminateIcon.svelte';
 	import { getCheckBoxSlots } from './Checkbox';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLLabelAttributes } from 'svelte/elements';
 
-	interface $$Props extends HTMLAttributes<HTMLLabelElement> {
+	interface $$Props extends HTMLLabelAttributes {
 		id?: string;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		label?: string;
 		value?: string;
+		disabled?: boolean;
 		defaultChecked?: boolean;
 		indeterminate?: boolean;
 		animation?: boolean;
@@ -35,6 +36,10 @@
 	 */
 	export let value: string = '';
 	/**
+	 * Property that defines the disabled state of the checkbox.
+	 */
+	export let disabled: boolean = false;
+	/**
 	 * Specify whether the input should be checked by default.
 	 */
 	export let defaultChecked: boolean = false;
@@ -47,21 +52,11 @@
 	 */
 	export let animation: boolean = true;
 
-	console.log('default', defaultChecked);
 	let checked = defaultChecked;
 	let inputElement: HTMLInputElement;
 	const dispatcher = createEventDispatcher();
 
-	const { className, disabled } = $$restProps;
-	const indeterminateIconProps = {
-		disabled,
-		size,
-		variant
-	};
-	const checkIconProps = {
-		...indeterminateIconProps,
-		animation
-	};
+	let className = $$restProps.class;
 
 	// slots
 	$: slots = getCheckBoxSlots({
@@ -112,11 +107,21 @@
 	on:click={onclick}
 	on:keydown={onkeydown}
 >
-	<input bind:this={inputElement} {value} type="checkbox" class="hidden" on:change={onchange} />
+	<input
+		bind:this={inputElement}
+		{value}
+		aria-disabled={disabled}
+		aria-checked={checked}
+		{disabled}
+		{checked}
+		type="checkbox"
+		class="hidden"
+		on:change={onchange}
+	/>
 	{#if indeterminate}
-		<IndeterminateIcon {...indeterminateIconProps} />
+		<IndeterminateIcon {variant} {size} {disabled} />
 	{:else}
-		<CheckIcon {...checkIconProps} bind:checked {animation} />
+		<CheckIcon {variant} {size} {disabled} {animation} bind:checked />
 	{/if}
 	<slot />
 </label>

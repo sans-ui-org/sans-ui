@@ -21,7 +21,6 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
 	label: 'This is label',
-	placeholder: 'This is placeholder',
 	animation: true
 };
 

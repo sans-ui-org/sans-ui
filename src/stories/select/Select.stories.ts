@@ -22,9 +22,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	id: 'Select_id',
 	label: 'This is a label',
-	placeholer: 'Select an option',
 	options: [
 		{ value: '1', label: 'Option 1' },
 		{ value: '2', label: 'Option 2' },

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ComponentSize } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSelectSlots, type Option } from './Select';
 	import { close, select, listbox } from './actions/select';
 	import SelectCheckIcon from './icons/SelectCheckIcon.svelte';
@@ -11,13 +11,15 @@
 	interface $$Props extends $$BaseProps {
 		id?: string;
 		size?: ComponentSize;
+		variant?: ComponentVariant;
 		defaultSelected?: Option;
-		options?: Option[];
+		options: Option[];
 		label?: string;
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
 		required?: boolean;
+		animation?: boolean;
 		invalid?: boolean;
 		invalidText?: string;
 	}
@@ -30,6 +32,10 @@
 	 * Property that defines the size of the select.
 	 */
 	export let size: ComponentSize = 'md';
+	/**
+	 * Property that defines the variant of the select.
+	 */
+	export let variant: ComponentVariant = 'primary';
 	/**
 	 * Property that defines the default selected value of the select.
 	 */
@@ -45,7 +51,7 @@
 	/**
 	 * Property that defines the placeholder of the select.
 	 */
-	export let placeholder: string | undefined = undefined;
+	export let placeholder: string = '';
 	/**
 	 * Property that defines if the select is disabled.
 	 */
@@ -59,9 +65,9 @@
 	 */
 	export let required: boolean = false;
 	/**
-	 * TODO: Property that defines if the select is invalid.
+	 * Property that defines if the select is invalid.
 	 */
-	// export let animation: boolean = true;
+	export let animation: boolean = true;
 	/**
 	 * Property that defines if the select is invalid.
 	 */
@@ -107,18 +113,30 @@
 		}
 	};
 	const onMoveDown = () => {
+		if (!open) return;
 		const index =
 			focus !== null ? focus : options.findIndex((option) => option.value === selected?.value);
 		if (index < options.length - 1) focus = index + 1;
 	};
 	const onMoveUp = () => {
+		if (!open) return;
 		const index =
 			focus !== null ? focus : options.findIndex((option) => option.value === selected?.value);
 		if (index > 0) focus = index - 1;
 	};
 
 	$: className = $$props.class;
-	$: slots = getSelectSlots({ className, size, open, readonly, disabled, invalid, invalidText });
+	$: slots = getSelectSlots({
+		className,
+		size,
+		variant,
+		open,
+		animation,
+		readonly,
+		disabled,
+		invalid,
+		invalidText
+	});
 </script>
 
 <!-- Label -->
@@ -149,35 +167,29 @@
 		<div class={slots.placeholderContainer}>
 			<span class={slots.placeholder}>{(selected && selected.label) || placeholder}</span>
 		</div>
-		<SelectChevronIcon size={20} />
+		<SelectChevronIcon bind:open {variant} size={20} />
 	</button>
 
-	{#if open}
-		<!-- TODO: Extract -->
-		<!-- Listbox -->
-		<ul
-			role="listbox"
-			class={slots.listbox}
-			use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}
-		>
-			{#each options as option, i}
-				<li
-					role="listitem"
-					class={slots.option}
-					class:selected={selected && selected.value === option.value}
-					class:focus={i === focus}
-					use:select={() => onSelectByClicking(option)}
-				>
-					<div class={slots.optionTextWrapper}>
-						<span class={slots.optionText}>{option.label}</span>
-					</div>
-					{#if selected && selected.value === option.value}
-						<SelectCheckIcon size={18} />
-					{/if}
-				</li>
-			{/each}
-		</ul>
-	{/if}
+	<!-- Listbox -->
+	<ul role="menu" class={slots.listbox} use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}>
+		{#each options as option, i}
+			<li
+				role="option"
+				class={slots.option}
+				class:selected={selected && selected.value === option.value}
+				class:focus={i === focus}
+				aria-selected={selected && selected.value === option.value}
+				use:select={() => onSelectByClicking(option)}
+			>
+				<div class={slots.optionTextWrapper}>
+					<span class={slots.optionText}>{option.label}</span>
+				</div>
+				{#if selected && selected.value === option.value}
+					<SelectCheckIcon {variant} size={18} />
+				{/if}
+			</li>
+		{/each}
+	</ul>
 </div>
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}

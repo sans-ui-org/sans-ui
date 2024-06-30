@@ -3,8 +3,11 @@
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { IndicatorCap } from '$lib/progress/Progress';
 	import { getPrgressSlots } from '$lib/progress/Progress';
+	import type { HTMLProgressAttributes } from 'svelte/elements';
 
-	interface $$Props {
+	type $$BaseProps = HTMLProgressAttributes;
+
+	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		value?: number;
 		size?: number;
@@ -48,13 +51,13 @@
 	$: center = size / 2;
 	$: radius = center - trackWidth;
 	$: dashArray = 2 * Math.PI * radius;
-	$: dashOffset = dashArray * ((100 - value) / 100);
+	$: dashOffset = (dashArray * value) / 100;
 	$: progressIconText = `${value > 100 ? 100 : value}%`;
 	$: slots = getPrgressSlots({ variant });
 </script>
 
-<div role="progressbar" class={slots.progressWrapper}>
-	<div class={slots.progressIconWrapper} aria-atomic="true" {...$$restProps}>
+<div class={slots.progressWrapper}>
+	<div role="progressbar" class={slots.progressIconWrapper} aria-atomic="true" {...$$restProps}>
 		<svg class={slots.progressIconSvg} style={`width: ${size}px; height: ${size}px;`}>
 			<circle
 				class={slots.progressIconTracker}
@@ -71,6 +74,7 @@
 				cy={center}
 				fill={'transparent'}
 				r={radius}
+				stroke={'#ddd'}
 				stroke-width={trackWidth}
 				stroke-dasharray={dashArray}
 				stroke-dashoffset={dashOffset}

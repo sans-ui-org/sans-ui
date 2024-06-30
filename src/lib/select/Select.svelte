@@ -25,7 +25,7 @@
 	/**
 	 * Property that defines the id of the select.
 	 */
-	export let id: string | undefined = undefined;
+	export let id: string = '';
 	/**
 	 * Property that defines the size of the select.
 	 */

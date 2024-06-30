@@ -27,8 +27,8 @@ export const getPrgressSlots = ({ className = '', variant }: ProgressProps) => {
 		progressWrapper: 'flex flex-col gap-1 items-center',
 		progressIconWrapper: cx(['relative flex flex-col items-center gap-2', className]),
 		progressIconSvg: '-rotate-90',
-		progressIconTracker: '',
-		progressIconIndicator: getVariant(),
+		progressIconTracker: getVariant(),
+		progressIconIndicator: '',
 		progressIconTextWrapper: 'absolute top-1/2 left-1/2 text-center text-xs text-[#333]',
 		progressIconText: 'block font-semibold'
 	};

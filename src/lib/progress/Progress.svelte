@@ -38,11 +38,6 @@
 	export let trackWidth: number = 7;
 
 	/**
-	 * How Indicator's edge look like.
-	 */
-	export let indicatorCap: IndicatorCap = 'butt';
-
-	/**
 	 * The label inside of the spinner.
 	 */
 	export let customInnerLabel: string = '';
@@ -65,7 +60,6 @@
 				cy={center}
 				fill={'transparent'}
 				r={radius}
-				stroke={'#ddd'}
 				stroke-width={trackWidth}
 			/>
 			<circle
@@ -78,7 +72,6 @@
 				stroke-width={trackWidth}
 				stroke-dasharray={dashArray}
 				stroke-dashoffset={dashOffset}
-				stroke-linecap={indicatorCap}
 			/>
 		</svg>
 		<div class={slots.progressIconTextWrapper} style="transform: translate(-50%, -50%);">

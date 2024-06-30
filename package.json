@@ -14,9 +14,8 @@
 		"package": "svelte-package --output ./package",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"test": "pnpm run test:integration && pnpm run test:unit",
 		"test:integration": "playwright test",
-		"test:unit": "vitest",
+		"test": "vitest",
 		"build-storybook": "storybook build",
 		"chromatic": "npx chromatic --project-token=chpt_41caf10e35cdde6",
 		"prettier:format": "prettier --plugin-search-dir . --write ."

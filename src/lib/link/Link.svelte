@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLAnchorAttributes } from 'svelte/elements';
 	import { getLinkSlots } from './Link';
 	import type { FontSize, FontWeight, UnderlineType } from './Link';
 
-	interface $$Props extends HTMLAttributes<HTMLAnchorElement> {
+	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;
 		size?: FontSize;
 		bold?: FontWeight;
@@ -23,6 +23,10 @@
 	 */
 	export let size: FontSize = 'md';
 	/**
+	 * Property that defines the weight of the link.
+	 */
+	export let bold: FontWeight = 'normal';
+	/**
 	 * Property that defines the decoration(underline) of the link.
 	 */
 	export let underlineType: UnderlineType = 'always';
@@ -35,9 +39,9 @@
 	 */
 	export let href: string = '';
 
-	const url = disabled ? undefined : href;
+	let url = disabled ? undefined : href;
 	let className = $$restProps.class;
-	$: slots = getLinkSlots({ className, disabled, variant, size, underlineType });
+	$: slots = getLinkSlots({ className, disabled, underlineType, variant, size, bold });
 </script>
 
-<a {...$$restProps} href={url} class={slots.base}>Here is the link to storybook.js.org </a>
+<a role="link" class={slots.base} aria-disabled={disabled} {...$$restProps} href={url}><slot /></a>

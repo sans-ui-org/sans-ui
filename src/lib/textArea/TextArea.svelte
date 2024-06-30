@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLAttributes } from 'svelte/elements';
+	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { getTextAreaSlots } from './TextArea';
 	import { createEventDispatcher } from 'svelte';
 
-	interface $$Props extends HTMLAttributes<HTMLTextAreaElement> {
+	interface $$Props extends HTMLTextareaAttributes {
 		id?: string;
 		value?: string | number;
 		variant?: ComponentVariant;
@@ -13,6 +13,7 @@
 		label?: string;
 		disabled?: boolean;
 		readonly?: boolean;
+		required?: boolean;
 		clearable?: boolean;
 		animation?: boolean;
 		maxCount?: number;

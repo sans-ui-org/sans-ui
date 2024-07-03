@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getSelectSlots, type Option } from './Select';
-	import { close, select, listbox } from './actions/select';
-	import SelectCheckIcon from './icons/SelectCheckIcon.svelte';
-	import SelectChevronIcon from './icons/SelectChevronIcon.svelte';
+	import { getSelectSlots, type Option } from '$lib/select/Select';
+	import { close, select, listbox } from '$lib/select/actions/select';
+	import SelectCheckIcon from '$lib/select/icons/SelectCheckIcon.svelte';
+	import SelectChevronIcon from '$lib/select/icons/SelectChevronIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;

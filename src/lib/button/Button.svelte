@@ -2,7 +2,7 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
-	import { getButtonSlots } from './Button';
+	import { getButtonSlots } from '$lib/button/Button';
 	import { createRipple } from '$lib/actions/ripple';
 
 	interface $$Props extends HTMLButtonAttributes {

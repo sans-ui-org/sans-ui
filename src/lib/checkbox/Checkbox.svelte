@@ -2,9 +2,9 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
-	import CheckIcon from './icons/CheckIcon/CheckIcon.svelte';
-	import IndeterminateIcon from './icons/InderminateIcon/IndeterminateIcon.svelte';
-	import { getCheckBoxSlots } from './Checkbox';
+	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
+	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
+	import { getCheckBoxSlots } from '$lib/checkbox/Checkbox';
 	import type { HTMLLabelAttributes } from 'svelte/elements';
 
 	interface $$Props extends HTMLLabelAttributes {

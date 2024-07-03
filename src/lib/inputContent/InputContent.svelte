@@ -1,8 +1,7 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { SvelteComponent } from 'svelte';
-	import ClearableIcon from './ClearableIcon.svelte';
-
+	import ClearableIcon from '$lib/inputContent/ClearableIcon.svelte';
 	type Component = $$Generic<typeof SvelteComponent>;
 
 	/**

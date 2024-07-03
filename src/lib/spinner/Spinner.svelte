@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getSpinnerSlots, type SpinnerKind } from './Spinner';
+	import { getSpinnerSlots, type SpinnerKind } from '$lib/spinner/Spinner';
 
 	type $$BaseProps = Omit<HTMLDivElement, 'size'>;
 

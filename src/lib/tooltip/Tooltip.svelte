@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getTooltipSlots } from './Tooltip';
+	import { getTooltipSlots } from '$lib/tooltip/Tooltip';
 
 	interface $$Props {
 		id?: string;

@@ -2,7 +2,7 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
-	import { getTextAreaSlots } from './TextArea';
+	import { getTextAreaSlots } from '$lib/textArea/TextArea';
 	import { createEventDispatcher } from 'svelte';
 
 	interface $$Props extends HTMLTextareaAttributes {

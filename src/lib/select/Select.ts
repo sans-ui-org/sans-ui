@@ -35,7 +35,7 @@ export function getSelectSlots({
 			case 'md':
 				return 'text-sm';
 			case 'lg':
-				return 'text-md';
+				return 'text-base';
 		}
 	};
 	const getButtonHeight = () => {
@@ -82,10 +82,10 @@ export function getSelectSlots({
 			'w-full flex px-4 py-2 justify-between items-center',
 			getButtonHeight(),
 			getButtonOutline(),
-			disabled ? 'cursor-not-allowed text-gray-500' : 'cursor-pointer'
+			disabled ? 'cursor-not-allowed text-gray-500 bg-gray-100' : 'cursor-pointer'
 		]),
 		placeholderContainer: 'w-full truncate flex items-start',
-		placeholder: 'truncate',
+		placeholder: 'text-neutral-500 truncate',
 		listbox: cx([
 			'border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top transition-all',
 			open ? 'scale-y-1 shadow-lg' : 'scale-y-0 opacity-0',

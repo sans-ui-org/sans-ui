@@ -27,7 +27,7 @@ export function getModalSlots({ className, size, open }: ModalProps) {
 		overlay: cx([
 			open ? 'flex' : 'hidden',
 			'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20',
-			'text-md font-bold font-black',
+			'text-base font-bold font-black',
 			'transition-all duration-300 ease-out'
 		]),
 		dialog: cx([

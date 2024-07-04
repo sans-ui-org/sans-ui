@@ -4,6 +4,7 @@ export type InputProps = {
 	className: string;
 	variant: ComponentVariant;
 	size: ComponentSize;
+	clearable: boolean;
 	disabled: boolean;
 	animation: boolean;
 	invalid: boolean;
@@ -14,6 +15,7 @@ export function getInputSlots({
 	className,
 	variant,
 	size,
+	clearable,
 	disabled,
 	animation,
 	invalid,
@@ -26,7 +28,7 @@ export function getInputSlots({
 			case 'md':
 				return 'text-sm';
 			case 'lg':
-				return 'text-md';
+				return 'text-base';
 			default:
 				return 'text-sm';
 		}
@@ -36,15 +38,15 @@ export function getInputSlots({
 		if (invalid) return '';
 		switch (variant) {
 			case 'primary':
-				return 'border-blue-500 focus-visible:border-blue-500';
+				return 'focus-visible:border-blue-500';
 			case 'secondary':
-				return 'border-neutral-500 focus-visible:border-neutral-500';
+				return 'focus-visible:border-neutral-500';
 			case 'success':
-				return 'border-green-500 focus-visible:border-green-500';
+				return 'focus-visible:border-green-500';
 			case 'warning':
-				return 'border-yellow-500 focus-visible:border-yellow-500';
+				return 'focus-visible:border-yellow-500';
 			case 'danger':
-				return 'border-red-500 focus-visible:border-danger-500';
+				return 'focus-visible:border-red-500';
 		}
 	}
 
@@ -64,8 +66,9 @@ export function getInputSlots({
 	const contentClassName = cx([
 		'absolute h-10 w-10',
 		'flex flex-row items-center justify-center',
-		'focus:outline-0 focus:border-2',
+		clearable ? 'focus:outline-0 focus:border-2' : '',
 		disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+		invalid ? 'focus-visible:border-red-500' : '',
 		getBorderColor()
 	]);
 
@@ -79,11 +82,9 @@ export function getInputSlots({
 			'flex flex-row items-center'
 		]),
 		input: cx([
-			'font-normal bg-gray-100 w-full pl-3 pr-10 border focus:outline-0 border-2',
-			// startContent ? 'pl-10' : 'pl-3',
-			// endContent || clearable ? 'pr-10' : 'pr-3',
-			invalid ? 'border-red-500 focus-visible:border-red-500' : 'border-transparent',
-			animation ? '' : 'border-transparent border-2',
+			'font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 focus:outline-0 border-2',
+			invalid ? 'border-red-500 focus-visible:border-red-500' : '',
+			animation ? 'transition-all duration-300 ease-in' : '',
 			disabled ? 'cursor-not-allowed' : 'cursor-text',
 			disabled ? 'text-gray-500' : 'text-black',
 			getInputHeight(),
@@ -92,6 +93,6 @@ export function getInputSlots({
 		]),
 		invalidText: 'text-sm text-red-500 mt-1',
 		startContent: cx([contentClassName, 'left-0']),
-		endContent: cx([contentClassName, 'right-0'])
+		endContent: cx([contentClassName, 'right-1'])
 	};
 }

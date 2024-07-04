@@ -21,7 +21,7 @@ export function getButtonSlots({
 			case 'sm':
 				return 'text-sm py-2 px-4';
 			case 'md':
-				return 'text-md py-2 px-5';
+				return 'text-base py-2 px-5';
 			case 'lg':
 				return 'text-lg py-2 px-6';
 			// case 'xl':

@@ -7,34 +7,17 @@
 	export let size: number = 16;
 
 	/**
-	 * Property that defines the variant of the icon.
-	 */
-	export let variant: ComponentVariant = 'primary';
-
-	/**
 	 * Property that defines the icon is flipped.
 	 */
 	export let open: boolean = false;
 
-	function getIconStyle() {
-		switch (variant) {
-			case 'primary':
-				return 'text-blue-600';
-			case 'secondary':
-				return 'text-black';
-			case 'success':
-				return 'text-green-600';
-			case 'warning':
-				return 'text-yellow-600';
-			case 'danger':
-				return 'text-red-600';
-			// case 'indigo':
-			// 	return 'text-indigo-600';
-		}
-	}
-
 	let className = $$restProps.class;
-	$: svgClassName = cx([className, 'duration-200', open ? 'rotate-180' : '', getIconStyle()]);
+	$: svgClassName = cx([
+		className,
+		'text-black duration-200',
+		open ? 'rotate-180' : '',
+		'text-black'
+	]);
 </script>
 
 <svg viewBox="0 0 20 20" width={size} height={size} class={svgClassName} fill="currentColor">

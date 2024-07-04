@@ -41,11 +41,11 @@
 </script>
 
 <div class={slots.base}>
-	{#if open}
+	<!-- {#if open} -->
 		<div role="tooltip" {id} class={slots.tooltip}>
 			<span class={slots.tooltipContent}>{title}</span>
 		</div>
-	{/if}
+	<!-- {/if} -->
 	<button
 		aria-describedby={id}
 		class={slots.triggerWrapper}

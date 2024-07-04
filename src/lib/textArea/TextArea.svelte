@@ -14,7 +14,6 @@
 		disabled?: boolean;
 		readonly?: boolean;
 		required?: boolean;
-		clearable?: boolean;
 		animation?: boolean;
 		maxCount?: number;
 		invalid?: boolean;
@@ -26,7 +25,7 @@
 	/**
 	 * Property that defines the id of the textarea.
 	 */
-	export let id: string = "";
+	export let id: string = '';
 	/**
 	 * Property that defines the value of the textarea.
 	 */
@@ -55,10 +54,6 @@
 	 * Property that defines if the textarea is readonly.
 	 */
 	export let readonly: boolean = false;
-	/**
-	 * Property that defines if the textarea is clearable.
-	 */
-	export let clearable: boolean = true;
 	/**
 	 * Property that defines if the textarea has animation.
 	 */
@@ -138,30 +133,3 @@
 {#if invalid && invalidText && invalidText !== ''}
 	<span class={slots.invalidText}>{invalidText}</span>
 {/if}
-
-<style>
-	.animation:focus-visible {
-		--_i: 100%;
-	}
-	.animation {
-		-webkit-mask:
-			conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(
-					--_i,
-					8px
-				) border-box no-repeat,
-			conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px)
-				200% border-box no-repeat,
-			linear-gradient(#000 0 0) padding-box no-repeat;
-		mask:
-			conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(
-					--_i,
-					8px
-				) border-box no-repeat,
-			conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px)
-				200% border-box no-repeat,
-			linear-gradient(#000 0 0) padding-box no-repeat;
-		transition:
-			0.4s,
-			-webkit-mask-position 0.4s;
-	}
-</style>

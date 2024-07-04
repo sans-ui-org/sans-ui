@@ -76,7 +76,7 @@ export function getLinkSlots({
 			case 'sm':
 				return 'text-sm';
 			case 'md':
-				return 'text-md';
+				return 'text-base';
 			case 'lg':
 				return 'text-lg';
 			case 'xl':
@@ -101,6 +101,7 @@ export function getLinkSlots({
 	}
 
 	function getUnderline() {
+		if (disabled) return '';
 		switch (underlineType) {
 			case 'none':
 				return '';

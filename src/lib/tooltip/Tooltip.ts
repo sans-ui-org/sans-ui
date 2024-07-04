@@ -13,7 +13,7 @@ export function getTooltipSlots({ variant, size, className = '' }: TooltipProps)
 			case 'sm':
 				return 'text-sm';
 			case 'md':
-				return 'text-md';
+				return 'text-base';
 			case 'lg':
 				return 'text-lg';
 		}
@@ -24,7 +24,7 @@ export function getTooltipSlots({ variant, size, className = '' }: TooltipProps)
 			case 'sm':
 				return 'text-sm py-1 px-2';
 			case 'md':
-				return 'text-md py-2 px-3';
+				return 'text-base py-2 px-3';
 			case 'lg':
 				return 'text-lg py-3 px-4';
 		}

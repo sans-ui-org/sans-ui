@@ -3,7 +3,7 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { getInputSlots } from './Input';
+	import { getInputSlots } from '$lib/input/Input';
 	import type { SvelteComponent } from 'svelte';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;

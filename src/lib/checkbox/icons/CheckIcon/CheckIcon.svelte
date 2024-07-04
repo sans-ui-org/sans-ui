@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
-	import type { CheckboxIconSize } from '../InderminateIcon/IndeterminateIcon';
-	import { getCheckIconSlots } from './CheckIcon';
+	import type { CheckboxIconSize } from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon';
+	import { getCheckIconSlots } from '$lib/checkbox/icons/CheckIcon/CheckIcon';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';

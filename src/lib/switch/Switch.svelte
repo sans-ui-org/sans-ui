@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getSwitchSlots } from './Switch';
+	import { getSwitchSlots } from '$lib/switch/Switch';
 
 	type $$BaseProps = Omit<HTMLDivElement, 'size' | 'id'>;
 

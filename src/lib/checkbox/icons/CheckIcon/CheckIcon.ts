@@ -1,5 +1,5 @@
 import { cx, type ComponentVariant } from '$lib/utils/utils';
-import type { CheckboxIconSize } from '../InderminateIcon/IndeterminateIcon';
+import type { CheckboxIconSize } from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon';
 
 type IndeterminateIconProps = {
 	// className: string;

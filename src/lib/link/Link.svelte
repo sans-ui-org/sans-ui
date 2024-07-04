@@ -2,8 +2,8 @@
 	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
-	import { getLinkSlots } from './Link';
-	import type { FontSize, FontWeight, UnderlineType } from './Link';
+	import { getLinkSlots } from '$lib/link/Link';
+	import type { FontSize, FontWeight, UnderlineType } from '$lib/link/Link';
 
 	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;

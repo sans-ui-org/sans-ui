@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { cx, type ComponentVariant } from '$lib/utils/utils';
+	import { cx } from '$lib/utils/utils';
 
 	/**
 	 * Property that defines the size of the icon.

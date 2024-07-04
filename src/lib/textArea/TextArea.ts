@@ -26,7 +26,7 @@ export function getTextAreaSlots({
 			case 'md':
 				return 'text-sm';
 			case 'lg':
-				return 'text-md';
+				return 'text-base';
 			default:
 				return 'text-sm';
 		}
@@ -44,7 +44,7 @@ export function getTextAreaSlots({
 			case 'warning':
 				return 'border-yellow-500 focus-visible:border-yellow-500';
 			case 'danger':
-				return 'border-red-500 focus-visible:border-danger-500';
+				return 'border-red-500 focus-visible:border-red-500';
 		}
 	}
 
@@ -60,9 +60,9 @@ export function getTextAreaSlots({
 		labelWrapper: cx(['flex flex-row items-center justify-between w-full', getFontSize()]),
 		label: cx(['font-normal', invalid && invalidText && invalidText !== '' ? 'text-red-500' : '']),
 		textArea: cx([
-			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 px-3 py-2 mt-2 w-full resize-none border-2 focus-visible:outline-0',
-			invalid ? 'border-red-500 focus-visible:border-red-500' : 'border-transparent',
-			animation ? '' : 'border-transparent border-2',
+			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2 focus-visible:outline-0',
+			invalid ? 'border-red-500 focus-visible:border-red-500' : '',
+			animation ? 'transition-all duration-300 ease-in' : '',
 			disabled ? 'cursor-not-allowed' : 'cursor-text',
 			disabled ? 'text-gray-500' : 'text-black',
 			getBorderColor(),

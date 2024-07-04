@@ -103,6 +103,7 @@
 		className,
 		variant,
 		size,
+		clearable,
 		disabled,
 		animation,
 		invalid,
@@ -153,7 +154,7 @@
 	/>
 	{#if endContent}
 		<InputContent class={slots.endContent} content={endContent} {clearable} />
-	{:else if clearable}
+	{:else if clearable && value && value !== '' && !disabled && !readonly}
 		<button class={slots.endContent} disabled={disabled || readonly} on:click={onClear}>
 			<InputContent content={null} {clearable} />
 		</button>
@@ -164,30 +165,3 @@
 {#if invalid && invalidText && invalidText !== ''}
 	<span class={slots.invalidText}>{invalidText}</span>
 {/if}
-
-<style>
-	.animation:focus-visible {
-		--_i: 100%;
-	}
-	.animation {
-		-webkit-mask:
-			conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(
-					--_i,
-					8px
-				) border-box no-repeat,
-			conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px)
-				200% border-box no-repeat,
-			linear-gradient(#000 0 0) padding-box no-repeat;
-		mask:
-			conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(
-					--_i,
-					8px
-				) border-box no-repeat,
-			conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%) / var(--_i, 8px)
-				200% border-box no-repeat,
-			linear-gradient(#000 0 0) padding-box no-repeat;
-		transition:
-			0.4s,
-			-webkit-mask-position 0.4s;
-	}
-</style>

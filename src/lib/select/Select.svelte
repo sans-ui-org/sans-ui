@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSelectSlots, type Option } from '$lib/select/Select';
 	import { close, select, listbox } from '$lib/select/actions/select';
@@ -167,7 +168,7 @@
 		<div class={slots.placeholderContainer}>
 			<span class={slots.placeholder}>{(selected && selected.label) || placeholder}</span>
 		</div>
-		<SelectChevronIcon bind:open {variant} size={20} />
+		<SelectChevronIcon bind:open size={20} />
 	</button>
 
 	<!-- Listbox -->

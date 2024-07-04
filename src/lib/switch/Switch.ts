@@ -28,7 +28,7 @@ export function getSwitchSlots({
 			case 'md':
 				return 'text-sm';
 			case 'lg':
-				return 'text-md';
+				return 'text-base';
 		}
 	};
 	const getSwitchBgColor = () => {

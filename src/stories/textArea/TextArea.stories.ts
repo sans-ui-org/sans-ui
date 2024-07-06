@@ -7,9 +7,11 @@ const meta = {
 	component: TextArea,
 	argTypes: {
 		size: {
+			control: { type: 'select' },
 			options: ['sm', 'md', 'lg']
 		},
 		variant: {
+			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		},
 		maxCount: {

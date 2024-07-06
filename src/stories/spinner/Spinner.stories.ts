@@ -13,6 +13,10 @@ const meta = {
 		kind: {
 			control: { type: 'select' },
 			options: ['loader1', 'loader2', 'loader3']
+		},
+		size: {
+			control: { type: 'select' },
+			options: ['sm', 'md', 'lg']
 		}
 	},
 	parameters: {

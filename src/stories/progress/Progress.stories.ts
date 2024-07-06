@@ -5,12 +5,16 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/Progress',
 	component: Progress,
-	tags: ['autodocs'],
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<Progress>;
 

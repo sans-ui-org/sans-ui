@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/Spinner',
 	component: Spinner,
-	tags: ['autodocs'],
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
@@ -15,6 +14,11 @@ const meta = {
 			control: { type: 'select' },
 			options: ['loader1', 'loader2', 'loader3']
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<Spinner>;
 

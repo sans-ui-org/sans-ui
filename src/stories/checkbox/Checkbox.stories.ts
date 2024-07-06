@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/Checkbox',
 	component: Checkbox,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -18,6 +17,11 @@ const meta = {
 		defaultChecked: {
 			control: { type: 'boolean' }
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<Checkbox>;
 

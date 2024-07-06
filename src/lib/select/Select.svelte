@@ -76,7 +76,7 @@
 	/**
 	 * Property that defines the text message shows under this component if the select is invalid.
 	 */
-	export let invalidText: string | undefined = undefined;
+	export let invalidText: string = '';
 
 	let containerElement: HTMLDivElement;
 	let open: boolean;

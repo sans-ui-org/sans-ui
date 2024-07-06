@@ -1,16 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
 import ModalTemplate from './examples/ModalTemplate.svelte';
-import NotificationTemplate from './examples/NotificationTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Modal',
 	component: ModalTemplate,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
 			options: ['sm', 'md', 'lg', 'full']
+		}
+	},
+	parameters: {
+		docs: {
+			page: null
 		}
 	}
 } satisfies Meta<ModalTemplate>;
@@ -44,8 +47,8 @@ export const Non_Dismissible: Story = {
 };
 
 export const Notification: Story = {
-	render: () => NotificationTemplate,
 	args: {
+		size: 'sm',
 		...defaultArgs
 	}
 };

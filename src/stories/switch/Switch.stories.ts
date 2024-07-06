@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/Switch',
 	component: Switch,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -15,6 +14,11 @@ const meta = {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<Switch>;
 
@@ -23,8 +27,8 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
 	label: 'This is label',
-	optionA: 'On',
-	optionB: 'Off'
+	textForOn: 'On',
+	textForOff: 'Off'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args

@@ -5,7 +5,6 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/Select',
 	component: Select,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -15,6 +14,11 @@ const meta = {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<Select>;
 

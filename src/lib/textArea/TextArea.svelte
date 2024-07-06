@@ -11,6 +11,7 @@
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		label?: string;
+		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
 		required?: boolean;
@@ -43,6 +44,10 @@
 	 */
 	export let label: string | undefined = undefined;
 	/**
+	 * Property that defines the placeholder of the textarea.
+	 */
+	export let placeholder: string | undefined = undefined;
+	/**
 	 * Property that defines if the textarea is required.
 	 */
 	export let required: boolean = false;
@@ -61,7 +66,7 @@
 	/**
 	 * Property that defines the maximum count of the textarea.
 	 */
-	export let maxCount: number | undefined = undefined;
+	export let maxCount: number | undefined = 0;
 	/**
 	 * Property that defines if the textarea is invalid.
 	 */
@@ -122,6 +127,7 @@
 	{disabled}
 	{readonly}
 	{rows}
+	{placeholder}
 	aria-disabled={disabled}
 	aria-readonly={readonly}
 	aria-invalid={invalid}

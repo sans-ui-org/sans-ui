@@ -5,14 +5,23 @@ import type { Meta, StoryObj } from '@storybook/svelte';
 const meta = {
 	title: 'Components/TextArea',
 	component: TextArea,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			options: ['sm', 'md', 'lg']
 		},
 		variant: {
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		maxCount: {
+			control: {
+				type: 'number'
+			}
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<TextArea>;
 
@@ -21,6 +30,7 @@ type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
 	label: 'This is label',
+	placeholder: 'This is placeholder',
 	animation: true
 };
 

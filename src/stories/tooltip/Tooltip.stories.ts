@@ -5,7 +5,6 @@ import TooltipTemplate from './examples/TooltipTemplate.svelte';
 const meta = {
 	title: 'Components/Tooltip',
 	component: TooltipTemplate,
-	tags: ['autodocs'],
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
@@ -14,6 +13,11 @@ const meta = {
 		size: {
 			control: { type: 'select' },
 			options: ['sm', 'md', 'lg']
+		}
+	},
+	parameters: {
+		docs: {
+			page: null
 		}
 	}
 } satisfies Meta<TooltipTemplate>;

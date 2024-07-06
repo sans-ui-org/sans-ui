@@ -5,7 +5,6 @@ import ButtonTemplate from './template/ButtonTemplate.svelte';
 const meta = {
 	title: 'Components/Button',
 	component: ButtonTemplate,
-	tags: ['autodocs'],
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -14,6 +13,11 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		}
+	},
+	parameters: {
+		docs: {
+			page: null
 		}
 	}
 } satisfies Meta<ButtonTemplate>;

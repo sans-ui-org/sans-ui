@@ -74,7 +74,7 @@
 	/**
 	 * Property that defines the maximum count of the input.
 	 */
-	export let maxCount: number | undefined = undefined;
+	export let maxCount: number | undefined = 0;
 	/**
 	 * Property that defines if the input is invalid.
 	 */

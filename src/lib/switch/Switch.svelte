@@ -2,13 +2,14 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSwitchSlots } from '$lib/switch/Switch';
+	import type { HTMLBaseAttributes } from 'svelte/elements';
 
-	type $$BaseProps = Omit<HTMLDivElement, 'size' | 'id'>;
+	type $$BaseProps = HTMLBaseAttributes;
 
 	interface $$Props extends $$BaseProps {
 		id?: string;
-		optionA?: string;
-		optionB?: string;
+		textForOn?: string;
+		textForOff?: string;
 		label?: string;
 		size?: ComponentSize;
 		variant?: ComponentVariant;
@@ -23,15 +24,14 @@
 	 * Property that defines the id of the switch.
 	 */
 	export let id: string = '';
-
 	/**
-	 * Property that defines the label for A position.
+	 * Property that defines the label text for the switch is ON.
 	 */
-	export let optionA: string = '';
+	export let textForOn: string = '';
 	/**
-	 * Specify the label for the "off" position.(B)
+	 * Property that defines the label text when the switch is OFF.
 	 */
-	export let optionB: string = '';
+	export let textForOff: string = '';
 	/**
 	 * Provide the text that will be read by a screen reader when visiting this control.
 	 */
@@ -66,7 +66,7 @@
 	export let defaultToggled: boolean = false;
 
 	$: toggled = defaultToggled;
-	$: toggleLabel = toggled ? optionA : optionB;
+	$: toggleLabel = toggled ? textForOn : textForOff;
 
 	let className = $$props.class;
 

@@ -2,8 +2,9 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getSpinnerSlots, type SpinnerKind } from '$lib/spinner/Spinner';
+	import type { HTMLBaseAttributes } from 'svelte/elements';
 
-	type $$BaseProps = Omit<HTMLDivElement, 'size'>;
+	type $$BaseProps = HTMLBaseAttributes;
 
 	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;

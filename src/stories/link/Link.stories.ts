@@ -5,7 +5,6 @@ import LinkTemplate from './examples/LinkTemplate.svelte';
 const meta = {
 	title: 'Components/Link',
 	component: LinkTemplate,
-	tags: ['autodocs'],
 	argTypes: {
 		variant: {
 			control: { type: 'select' },
@@ -50,6 +49,11 @@ const meta = {
 		disabled: {
 			control: { type: 'boolean' }
 		}
+	},
+	parameters: {
+		docs: {
+			page: null
+		}	
 	}
 } satisfies Meta<LinkTemplate>;
 

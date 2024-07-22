@@ -59,8 +59,10 @@ The select input component can be used to gather information from users based on
 
 Select has `variant` prop to decide the color theme of it.
 
-<div class="w-[350px]">
-	<Select variant="success" {options} label='This is a label' placeholder='Select an option' />
+<div class="flex flex-col gap-4">
+	<div class="w-[350px]">
+		<Select variant="primary" {options} label='This is a label' placeholder='Select an option' />
+	</div>
 </div>
 
 ```svelte
@@ -75,21 +77,25 @@ Select has `variant` prop to decide the color theme of it.
 	];
 </script>
 
+<Select variant="primary" {options} label="This is a label" placeholder="Select an option" />
+<Select variant="secondary" {options} label="This is a label" placeholder="Select an option" />
 <Select variant="success" {options} label="This is a label" placeholder="Select an option" />
+<Select variant="warning" {options} label="This is a label" placeholder="Select an option" />
+<Select variant="danger" {options} label="This is a label" placeholder="Select an option" />
 ```
 
 ## Size
 
 Select has `size` prop to decide the size of it.
 
-<div class="flex flex-col gap-2">
-	<div class="w-[350px]">
+<div class="flex flex-row gap-4">
+	<div class="w-[250px]">
 		<Select {options} size="sm" label='This is sm' placeholder='Select an option' />
 	</div>
-	<div class="w-[350px]">
+	<div class="w-[250px]">
 		<Select {options} size="md" label='This is md' placeholder='Select an option' />
 	</div>
-	<div class="w-[350px]">
+	<div class="w-[250px]">
 		<Select {options} size="lg" label='This is lg' placeholder='Select an option' />
 	</div>
 </div>

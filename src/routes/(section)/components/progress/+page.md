@@ -41,14 +41,24 @@ The Progress component allows you to express how much percentage/number by using
 
 Progress has `variant` prop to decide the color theme of it.
 
-<Progress variant="success" />
+<div class="flex flex-row gap-2">
+	<Progress variant="primary" />
+	<Progress variant="secondary" />
+	<Progress variant="success" />
+	<Progress variant="warning" />
+	<Progress variant="danger" />
+</div>
 
 ```svelte
 <script>
 	import { Progress } from '$lib';
 </script>
 
+<Progress variant="primary" />
+<Progress variant="secondary" />
 <Progress variant="success" />
+<Progress variant="warning" />
+<Progress variant="danger" />
 ```
 
 ## Size

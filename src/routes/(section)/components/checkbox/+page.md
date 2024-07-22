@@ -41,14 +41,24 @@ The checkbox component can be used to receive one or more selected options from 
 
 Checkbox has `variant` prop to decide the color theme of it.
 
-<Checkbox variant="success" />
+<div class="flex flex-row gap-2">
+	<Checkbox defaultChecked variant="primary" />
+	<Checkbox defaultChecked variant="secondary" />
+	<Checkbox defaultChecked variant="success" />
+	<Checkbox defaultChecked variant="warning" />
+	<Checkbox defaultChecked variant="danger" />
+</div>
 
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
 </script>
 
-<Checkbox variant="success" />
+<Checkbox defaultChecked variant="primary" />
+<Checkbox defaultChecked variant="secondary" />
+<Checkbox defaultChecked variant="success" />
+<Checkbox defaultChecked variant="warning" />
+<Checkbox defaultChecked variant="danger" />
 ```
 
 ## Size
@@ -58,6 +68,7 @@ Checkbox has `size` prop to decide the size of it.
 <div class="flex flex-row gap-2">
 	<Checkbox size="sm" />
 	<Checkbox size="md" />
+	<Checkbox size="lg" />
 </div>
 
 ```svelte
@@ -68,6 +79,7 @@ Checkbox has `size` prop to decide the size of it.
 <div class="flex flex-row gap-2">
 	<Checkbox size="sm" />
 	<Checkbox size="md" />
+	<Checkbox size="lg" />
 </div>
 ```
 

@@ -48,14 +48,13 @@ export function getTooltipSlots({ variant, size, className = '' }: TooltipProps)
 
 	// slots
 	return {
-		base: cx(['relative flex flex-col gap', className]),
+		triggerWrapper: cx(['relative bg-transparent border-none cursor-auto', className]),
 		tooltip: cx([
-			'absolute z-1 left-1/2 -top-7 transform -translate-x-1/2 -translate-y-1/2 rounded',
+			'absolute z-1 left-1/2 -top-[30px] transform -translate-x-1/2 -translate-y-1/2 rounded w-max',
 			"before:content=[''] before:absolute before:bottom-[-1rem] before:left-1/2 before:ml-[-10px] before:border-8 before:border-solid before:border-transparent before:border-top-8",
 			getTooltipStyle(),
 			getTooltipSize()
 		]),
-		tooltipContent: cx(['text-white', getFontSize()]),
-		triggerWrapper: 'bg-transparent border-none cursor-auto'
+		tooltipContent: cx(['text-white', getFontSize()])
 	};
 }

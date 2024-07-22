@@ -79,13 +79,13 @@ export function getSelectSlots({
 		]),
 		trigger: cx([
 			className,
-			'w-full flex px-4 py-2 justify-between items-center',
+			'w-full flex px-4 py-2 justify-between items-center bg-white',
 			getButtonHeight(),
 			getButtonOutline(),
 			disabled ? 'cursor-not-allowed text-gray-500 bg-gray-100' : 'cursor-pointer'
 		]),
 		placeholderContainer: 'w-full truncate flex items-start',
-		placeholder: 'text-neutral-500 truncate',
+		placeholder: 'placeholder:text-neutral-500 truncate',
 		listbox: cx([
 			'border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top transition-all',
 			open ? 'scale-y-1 shadow-lg' : 'scale-y-0 opacity-0',
@@ -93,7 +93,7 @@ export function getSelectSlots({
 		]),
 		option: cx([
 			open ? 'flex' : 'none',
-			'items-center px-4 py-2 justify-between gap-1 items-center border border-transparent hover:bg-gray-100',
+			'items-center px-4 py-2 justify-between gap-1 items-center border border-transparent bg-white hover:bg-gray-100',
 			readonly ? 'cursor-not-allowed text-gray-500' : 'cursor-pointer'
 		]),
 		optionTextWrapper: 'w-full truncate flex items-start',

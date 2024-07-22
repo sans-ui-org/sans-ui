@@ -44,4 +44,4 @@
 	$: slots = getLinkSlots({ className, disabled, underlineType, variant, size, bold });
 </script>
 
-<a role="link" class={slots.base} aria-disabled={disabled} {...$$restProps} href={url}><slot /></a>
+<a {...$$restProps} class={slots.base} aria-disabled={disabled} href={url}><slot /></a>

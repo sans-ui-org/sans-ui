@@ -19,7 +19,6 @@
 		maxCount?: number;
 		invalid?: boolean;
 		invalidText?: string;
-		defaultToggled?: boolean;
 		rows?: number;
 	}
 
@@ -109,9 +108,13 @@
 </script>
 
 <!-- Label -->
-{#if label}
+{#if label || maxCount}
 	<div class={slots.labelWrapper}>
-		<label for={id} class={slots.label}>{label}</label>
+		{#if label}
+			<label for={id} class={slots.label}>{label}</label>
+		{:else}
+			<label for={id} />
+		{/if}
 		{#if maxCount}
 			<span>{counterText}</span>
 		{/if}

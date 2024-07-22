@@ -12,7 +12,7 @@ export function getCheckBoxSlots({ className = '' }: CheckBoxProps) {
 	// classNames
 	const baseClassNames = cx([
 		'sui-checkbox--wrapper',
-		'flex flex-row items-center gap-2',
+		'inline-flex flex-row items-center gap-2',
 		className
 	]);
 

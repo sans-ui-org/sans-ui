@@ -36,25 +36,17 @@ export function getTextAreaSlots({
 		if (invalid) return '';
 		switch (variant) {
 			case 'primary':
-				return 'border-blue-500 focus-visible:border-blue-500';
+				return 'focus-visible:border-blue-500';
 			case 'secondary':
-				return 'border-neutral-500 focus-visible:border-neutral-500';
+				return 'focus-visible:border-neutral-500';
 			case 'success':
-				return 'border-green-500 focus-visible:border-green-500';
+				return 'focus-visible:border-green-500';
 			case 'warning':
-				return 'border-yellow-500 focus-visible:border-yellow-500';
+				return 'focus-visible:border-yellow-500';
 			case 'danger':
-				return 'border-red-500 focus-visible:border-red-500';
+				return 'focus-visible:border-red-500';
 		}
 	}
-
-	const contentClassName = cx([
-		'absolute h-10 w-10',
-		'flex flex-row items-center justify-center',
-		'focus:outline-0 focus:border-2',
-		disabled ? 'cursor-not-allowed' : 'cursor-pointer',
-		getBorderColor()
-	]);
 
 	return {
 		labelWrapper: cx(['flex flex-row items-center justify-between w-full', getFontSize()]),
@@ -69,8 +61,6 @@ export function getTextAreaSlots({
 			getFontSize(),
 			className
 		]),
-		invalidText: 'text-sm text-red-500 mt-1',
-		startContent: cx([contentClassName, 'left-0']),
-		endContent: cx([contentClassName, 'right-0'])
+		invalidText: 'text-sm text-red-500 mt-1'
 	};
 }

@@ -12,8 +12,6 @@
 		value?: number;
 		size?: number;
 		trackWidth?: number;
-		indicatorWidth?: number;
-		indicatorCap?: IndicatorCap;
 		customInnerLabel?: string;
 	}
 

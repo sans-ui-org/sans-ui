@@ -1,5 +1,7 @@
 // place files you want to import through the `$lib` alias in this folder.
 
+import Accordion from '$lib/accordion/Accordion.svelte';
+import AccordionItem from '$lib/accordion/AccordionItem.svelte';
 import Button from '$lib/button/Button.svelte';
 import Checkbox from '$lib/checkbox/Checkbox.svelte';
 import Link from '$lib/link/Link.svelte';
@@ -11,10 +13,13 @@ import Modal from '$lib/modal/Modal.svelte';
 import Progress from '$lib/progress/Progress.svelte';
 import Spinner from '$lib/spinner/Spinner.svelte';
 import Tooltip from '$lib/tooltip/Tooltip.svelte';
+import { typewriter } from '$lib/actions/typewriter';
 import { createRipple } from '$lib/actions/ripple';
 import { focusTrap, autoFocus } from '$lib/actions/focus';
 
 export {
+	Accordion,
+	AccordionItem,
 	Button,
 	Checkbox,
 	Link,
@@ -28,5 +33,6 @@ export {
 	Spinner,
 	createRipple,
 	focusTrap,
-	autoFocus
+	autoFocus,
+	typewriter
 };

@@ -5,10 +5,11 @@
 	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import { getCheckBoxSlots } from '$lib/checkbox/Checkbox';
-	import type { HTMLLabelAttributes } from 'svelte/elements';
+	import type { HTMLInputAttributes } from 'svelte/elements';
 
-	interface $$Props extends HTMLLabelAttributes {
-		id?: string;
+	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
+
+	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		label?: string;
@@ -27,10 +28,6 @@
 	 * Property that defines the size of the checkobx.
 	 */
 	export let size: ComponentSize = 'md';
-	/**
-	 * Property that defines the label of the checkbox.
-	 */
-	export let label: string = '';
 	/**
 	 * Value for the checkbox
 	 */
@@ -70,13 +67,14 @@
 	// TODO: Extractable?
 	// --- Stateful logic ---
 	const onclick = (e: MouseEvent) => {
+		e.preventDefault(); // prevent the cascade of onchange event.
 		if (disabled || indeterminate) return;
 		checked = !checked;
 		dispatcher('click', e);
 	};
 	const onkeydown = (
 		e: KeyboardEvent & {
-			currentTarget: EventTarget & HTMLLabelElement;
+			currentTarget: EventTarget & HTMLDivElement;
 		}
 	) => {
 		if (disabled || indeterminate) return;
@@ -97,9 +95,10 @@
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<label
+<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
+<div
 	{...$$restProps}
+	role="checkbox"
 	class={slots.base}
 	tabindex="0"
 	aria-checked={checked}
@@ -110,8 +109,6 @@
 	<input
 		bind:this={inputElement}
 		{value}
-		aria-disabled={disabled}
-		aria-checked={checked}
 		{disabled}
 		{checked}
 		type="checkbox"
@@ -121,7 +118,6 @@
 	{#if indeterminate}
 		<IndeterminateIcon {variant} {size} {disabled} />
 	{:else}
-		<CheckIcon {variant} {size} {disabled} {animation} bind:checked />
+		<CheckIcon {variant} {size} {disabled} {animation} {checked} />
 	{/if}
-	<slot />
-</label>
+</div>

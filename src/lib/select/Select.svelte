@@ -66,7 +66,7 @@
 	 */
 	export let required: boolean = false;
 	/**
-	 * Property that defines if the select is invalid.
+	 * Property that defines if the select has animation.
 	 */
 	export let animation: boolean = true;
 	/**

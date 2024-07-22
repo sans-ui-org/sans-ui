@@ -46,7 +46,7 @@
 	/**
 	 * Property that defines the label of the input.
 	 */
-	export let label: string = '';
+	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines if the input is required.
 	 */
@@ -126,13 +126,18 @@
 </script>
 
 <!-- Label -->
-<div class={slots.labelWrapper}>
-	<label for={id} class={slots.label}>{label}</label>
-	{#if maxCount}
-		<span>{counterText}</span>
-	{/if}
-</div>
-
+{#if label || maxCount}
+	<div class={slots.labelWrapper}>
+		{#if label}
+			<label for={id} class={slots.label}>{label}</label>
+		{:else}
+			<label for={id} />
+		{/if}
+		{#if maxCount}
+			<span>{counterText}</span>
+		{/if}
+	</div>
+{/if}
 <!-- Input -->
 <div class={slots.inputWrapper}>
 	{#if startContent}

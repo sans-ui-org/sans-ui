@@ -2,8 +2,9 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import { getTooltipSlots } from '$lib/tooltip/Tooltip';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
 
-	interface $$Props {
+	interface $$Props extends HTMLButtonAttributes {
 		id?: string;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
@@ -25,7 +26,7 @@
 	/**
 	 * Property that defines the title of the tooltip.
 	 */
-	export let title: string;
+	export let title: string = '';
 
 	let open = false;
 
@@ -40,18 +41,16 @@
 	$: slots = getTooltipSlots({ variant, size, className });
 </script>
 
-<div class={slots.base}>
+<button
+	aria-describedby={id}
+	class={slots.triggerWrapper}
+	on:mouseenter={onFocusIn}
+	on:mouseleave={onFocusOut}
+>
 	{#if open}
 		<div role="tooltip" {id} class={slots.tooltip}>
 			<span class={slots.tooltipContent}>{title}</span>
 		</div>
 	{/if}
-	<button
-		aria-describedby={id}
-		class={slots.triggerWrapper}
-		on:mouseenter={onFocusIn}
-		on:mouseleave={onFocusOut}
-	>
-		<slot />
-	</button>
-</div>
+	<slot />
+</button>

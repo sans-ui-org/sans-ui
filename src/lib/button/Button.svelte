@@ -1,14 +1,15 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { getButtonSlots } from '$lib/button/Button';
 	import { createRipple } from '$lib/actions/ripple';
 
-	interface $$Props extends HTMLButtonAttributes {
+	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
-	}
+		href?: string;
+	};
 
 	/**
 	 * Property that define the variant of the button.
@@ -20,6 +21,11 @@
 	 */
 	export let size: ComponentSize = 'md';
 
+	/**
+	 * Property that defines the href of the button.
+	 */
+	export let href: string | undefined = undefined;
+
 	let className = $$restProps.class;
 	const disabled = $$restProps.disabled;
 
@@ -29,7 +35,10 @@
 	const ripple = createRipple();
 </script>
 
-<button
+<svelte:element
+	this={href ? 'a' : 'button'}
+	role={href ? 'link' : 'button'}
+	{href}
 	{...$$restProps}
 	class={slots.base}
 	on:click
@@ -44,4 +53,4 @@
 	use:ripple
 >
 	<slot />
-</button>
+</svelte:element>

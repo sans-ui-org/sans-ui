@@ -45,14 +45,24 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 Buttons has `variant` prop to decide the color theme of it.
 
-<Button variant="success">Button</Button>
+<div class="inline-flex flex-row gap-4">
+	<Button variant="primary">Button</Button>
+	<Button variant="secondary">Button</Button>
+	<Button variant="success">Button</Button>
+	<Button variant="warning">Button</Button>
+	<Button variant="danger">Button</Button>
+</div>
 
 ```svelte
 <script>
 	import { Button } from '$lib';
 </script>
 
+<Button variant="primary">Button</Button>
+<Button variant="secondary">Button</Button>
 <Button variant="success">Button</Button>
+<Button variant="warning">Button</Button>
+<Button variant="danger">Button</Button>
 ```
 
 ## API

@@ -27,22 +27,6 @@ Import a Link component in the script tag.
 
 Buttons allow users to perform actions and choose with a single tap. You can deactivate the ripple effect, so we will state that later on.
 
-<div class="w-[350px]">
-	<Link  />
-</div>
-
-```svelte
-<script>
-	import { Link } from '$lib';
-</script>
-
-<Link />
-```
-
-## Variant
-
-Link has `variant` prop to decide the color theme of it.
-
 <Link href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 
 ```svelte
@@ -50,7 +34,41 @@ Link has `variant` prop to decide the color theme of it.
 	import { Link } from '$lib';
 </script>
 
-<Link href="https://github.com/s-ui-org/s-ui" target="_blank"
+<Link href="https://github.com/s-ui-org/s-ui" target="_blank">
+	This is link to the our Github page
+</Link>
+```
+
+## Variant
+
+Link has `variant` prop to decide the color theme of it.
+
+<div class="flex flex-col gap-2">
+	<Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+	<Link variant="secondary" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+	<Link variant="success" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+	<Link variant="warning" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+	<Link variant="danger" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+</div>
+
+```svelte
+<script>
+	import { Link } from '$lib';
+</script>
+
+<Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is link to the our Github page</Link
+>
+<Link variant="secondary" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is link to the our Github page</Link
+>
+<Link variant="success" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is link to the our Github page</Link
+>
+<Link variant="warning" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is link to the our Github page</Link
+>
+<Link variant="danger" href="https://github.com/s-ui-org/s-ui" target="_blank"
 	>This is link to the our Github page</Link
 >
 ```

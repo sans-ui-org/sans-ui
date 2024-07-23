@@ -987,6 +987,10 @@ video {
   cursor: auto;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -997,10 +1001,6 @@ video {
 
 .cursor-text {
   cursor: text;
-}
-
-.cursor-default {
-  cursor: default;
 }
 
 .resize-none {

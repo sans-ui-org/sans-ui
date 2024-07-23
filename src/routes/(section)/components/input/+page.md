@@ -43,8 +43,12 @@ Use this example as a generic form element which includes multiple input fields 
 
 Input has `variant` prop to decide the color theme of it.
 
-<div class="w-[350px]">
+<div class="w-[350px] flex flex-col gap-2">
+	<Input variant="primary" placeholder="Please type something here" />
+	<Input variant="secondary" placeholder="Please type something here" />
 	<Input variant="success" placeholder="Please type something here" />
+	<Input variant="warning" placeholder="Please type something here" />
+	<Input variant="danger" placeholder="Please type something here" />
 </div>
 
 ```svelte
@@ -52,7 +56,11 @@ Input has `variant` prop to decide the color theme of it.
 	import { Input } from '$lib';
 </script>
 
+<Input variant="primary" placeholder="Please type something here" />
+<Input variant="secondary" placeholder="Please type something here" />
 <Input variant="success" placeholder="Please type something here" />
+<Input variant="warning" placeholder="Please type something here" />
+<Input variant="danger" placeholder="Please type something here" />
 ```
 
 ## Label

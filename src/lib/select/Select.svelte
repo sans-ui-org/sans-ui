@@ -168,7 +168,7 @@
 		<div class={slots.placeholderContainer}>
 			<span class={slots.placeholder}>{(selected && selected.label) || placeholder}</span>
 		</div>
-		<SelectChevronIcon bind:open size={20} />
+		<SelectChevronIcon bind:open size={20} {animation} />
 	</button>
 
 	<!-- Listbox -->

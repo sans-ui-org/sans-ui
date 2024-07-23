@@ -87,9 +87,9 @@ export function getSelectSlots({
 		placeholderContainer: 'w-full truncate flex items-start',
 		placeholder: 'placeholder:text-neutral-500 truncate',
 		listbox: cx([
-			'border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top transition-all',
-			open ? 'scale-y-1 shadow-lg' : 'scale-y-0 opacity-0',
-			animation ? 'duration-200' : ''
+			animation ? 'transition-all duration-200' : '',
+			'border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top',
+			open ? 'scale-y-1 shadow-lg' : 'scale-y-0 opacity-0'
 		]),
 		option: cx([
 			open ? 'flex' : 'none',

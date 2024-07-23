@@ -19,11 +19,11 @@ export function getButtonSlots({
 			// case 'xs':
 			// 	return 'text-xs py-1 px-3';
 			case 'sm':
-				return 'text-sm py-2 px-4';
+				return 'text-sm py-2 px-4 h-8';
 			case 'md':
-				return 'text-base py-2 px-5';
+				return 'text-base py-2 px-5 h-10';
 			case 'lg':
-				return 'text-lg py-2 px-6';
+				return 'text-lg py-2 px-6 h-12';
 			// case 'xl':
 			// 	return 'text-xl py-2 px-7';
 		}
@@ -48,7 +48,7 @@ export function getButtonSlots({
 
 	// classNames
 	const buttonClassNames = cx([
-		'relative flex rounded-3xl text-white outline-offset-4 transition duration-200',
+		'relative inline-flex items-center rounded-3xl text-white outline-offset-4 transition duration-200',
 		getSize(),
 		getButtonStyle(),
 		className

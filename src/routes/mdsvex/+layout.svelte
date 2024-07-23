@@ -6,12 +6,18 @@
 </script>
 
 <script>
+	import { onMount } from 'svelte';
+	import { invalidateAll } from '$app/navigation';
 	import Meta from './components/Meta.svelte';
 	import DocHeader from './components/DocHeader.svelte';
 
 	export let title = '';
 	export let description = '';
 	export let category = '';
+
+	onMount(() => {
+		invalidateAll();
+	});
 </script>
 
 <Meta title={`S-UI - ${title}`} {description} />

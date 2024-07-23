@@ -12,10 +12,15 @@
 	 */
 	export let open: boolean = false;
 
+	/**
+	 * Property that defines the animation of the icon.
+	 */
+	export let animation: boolean = true;
+
 	let className = $$restProps.class;
 	$: svgClassName = cx([
 		className,
-		'text-black duration-200',
+		animation ? 'transform transition-transform ease-in-out duration-200' : '',
 		open ? 'rotate-180' : '',
 		'text-black'
 	]);

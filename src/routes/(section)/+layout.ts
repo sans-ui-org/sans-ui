@@ -1,5 +1,5 @@
 export async function load() {
-	const gettingStartedMenu = [
+	const documentationMenu = [
 		{
 			title: 'Getting started',
 			slug: 'getting-started'
@@ -55,9 +55,24 @@ export async function load() {
 			slug: 'tooltip'
 		}
 	];
+	const actionsMenu = [
+		{
+			title: 'Focus',
+			slug: 'focus'
+		},
+		{
+			title: 'TypeWriter',
+			slug: 'type-writer'
+		},
+		{
+			title: 'Ripple',
+			slug: 'ripple'
+		}
+	];
 
 	return {
-		gettingStartedMenu,
-		componentMenu
+		documentationMenu,
+		componentMenu,
+		actionsMenu
 	};
 }

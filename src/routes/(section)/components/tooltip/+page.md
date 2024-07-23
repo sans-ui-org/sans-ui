@@ -19,7 +19,7 @@ Import a Tooltip component in the script tag.
 
 ```svelte
 <script>
-	import { Tooltip } from '$lib';
+	import { Tooltip, Button } from '$lib';
 </script>
 ```
 
@@ -31,7 +31,7 @@ Use the Tooltip component to show extra description when hovering or focusing on
 
 ```svelte
 <script>
-	import { Tooltip } from '$lib';
+	import { Tooltip, Button } from '$lib';
 </script>
 
 <Tooltip title="This is title" size="md">
@@ -43,7 +43,7 @@ Use the Tooltip component to show extra description when hovering or focusing on
 
 Tooltip has `variant` prop to decide the color theme of it.
 
-<div class="inline-flex flex-col gap-4">
+<div class="inline-flex flex-col items-start gap-4">
 	<Tooltip title="This is title" variant="primary"><Button variant="primary" >Here is primary</Button></Tooltip>
 	<Tooltip title="This is title" variant="secondary"><Button  variant="secondary">Here is secondary</Button></Tooltip>
 	<Tooltip title="This is title" variant="success"><Button variant="success">Here is success</Button></Tooltip>
@@ -53,7 +53,7 @@ Tooltip has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Tooltip } from '$lib';
+	import { Tooltip, Button } from '$lib';
 </script>
 
 <Tooltip title="This is title" variant="primary">
@@ -85,7 +85,7 @@ Tooltip has `size` prop to decide the size of it.
 
 ```svelte
 <script>
-	import { Tooltip } from '$lib';
+	import { Tooltip, Button } from '$lib';
 </script>
 
 <Tooltip title="This is title" variant="primary">

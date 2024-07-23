@@ -29,8 +29,6 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 <Button>Button</Button>
 
-<!-- TODO: <LiveDemo> -->
-
 ```svelte
 <script>
 	import { Button } from '$lib';
@@ -38,8 +36,6 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 <Button>Button</Button>
 ```
-
-<!-- </LiveDemo> -->
 
 ## Variant
 
@@ -63,6 +59,26 @@ Buttons has `variant` prop to decide the color theme of it.
 <Button variant="success">Button</Button>
 <Button variant="warning">Button</Button>
 <Button variant="danger">Button</Button>
+```
+
+## Size
+
+Buttons has `size` prop to decide the size of it.
+
+<div class="flex flex-row gap-4 items-center">
+	<Button size="sm">Button</Button>
+	<Button size="md">Button</Button>
+	<Button size="lg">Button</Button>
+</div>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Button size="sm">Button</Button>
+<Button size="md">Button</Button>
+<Button size="lg">Button</Button>
 ```
 
 ## API

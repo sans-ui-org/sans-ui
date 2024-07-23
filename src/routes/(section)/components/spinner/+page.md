@@ -79,6 +79,26 @@ Spinners has `kind` prop to defines the kind of spinner.
 <Spinner kind="loader3" />
 ```
 
+## Size
+
+Spinners has `size` prop to defines the size of spinner.
+
+<div class="flex flex-row items-center gap-16">
+	<Spinner size="sm" />
+	<Spinner size="md" />
+	<Spinner size="lg" />
+</div>
+
+```svelte
+<script>
+	import { Spinner } from '$lib';
+</script>
+
+<Spinner size="sm" />
+<Spinner size="md" />
+<Spinner size="lg" />
+```
+
 ## API
 
 Spinner provides APIs(Properties) that is necessary for you to configure a Spinner compponent.

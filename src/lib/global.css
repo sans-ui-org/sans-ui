@@ -1052,10 +1052,6 @@ video {
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .overflow-auto {
   overflow: auto;
 }
@@ -1464,6 +1460,10 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.leading-4 {
+  line-height: 1rem;
 }
 
 .text-\[\#333\] {

@@ -16,7 +16,7 @@ export function getSwitchSlots({
 	size = 'md',
 	variant = 'success',
 	disabled = false,
-	// readonly = false,
+	readonly = false,
 	toggled = false,
 	invalid = false,
 	invalidText = ''
@@ -88,11 +88,11 @@ export function getSwitchSlots({
 		]),
 		switchWrapper: cx(['flex flex-row gap-2 items-center']),
 		switch: cx([
-			getSwitchSize(),
-			'rounded-full flex items-center p-1.5',
-			'transition-colors duration-300 ease-in-out',
+			'rounded-full flex items-center p-1.5 transition-colors duration-300 ease-in-out',
 			disabled ? 'cursor-not-allowed' : 'cursor-pointer',
+			readonly ? 'cursor-default' : '',
 			getSwitchBgColor(),
+			getSwitchSize(),
 			className
 		]),
 		switchChip: cx([

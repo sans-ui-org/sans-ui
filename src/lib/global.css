@@ -999,6 +999,10 @@ video {
   cursor: text;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .resize-none {
   resize: none;
 }

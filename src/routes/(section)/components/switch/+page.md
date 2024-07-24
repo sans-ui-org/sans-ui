@@ -39,11 +39,11 @@ Import a Switch component in the script tag.
 Switch has `variant` prop to decide the color theme of it.
 
 <div class="flex flex-col gap-8">
-	<Switch variant="primary" label="This is label" textForOn="On" textForOff="Off"  />
-	<Switch variant="secondary" label="This is label" textForOn="On" textForOff="Off" />
-	<Switch variant="success" label="This is label" textForOn="On" textForOff="Off" />
-	<Switch variant="warning" label="This is label" textForOn="On" textForOff="Off" />
-	<Switch variant="danger" label="This is label" textForOn="On" textForOff="Off" />
+	<Switch variant="primary" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch variant="secondary" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch variant="success" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch variant="warning" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch variant="danger" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
 </div>
 
 ```svelte
@@ -51,11 +51,41 @@ Switch has `variant` prop to decide the color theme of it.
 	import { Switch } from '$lib';
 </script>
 
-<Switch variant="primary" label="This is label" textForOn="On" textForOff="Off" />
-<Switch variant="secondary" label="This is label" textForOn="On" textForOff="Off" />
-<Switch variant="success" label="This is label" textForOn="On" textForOff="Off" />
-<Switch variant="warning" label="This is label" textForOn="On" textForOff="Off" />
-<Switch variant="danger" label="This is label" textForOn="On" textForOff="Off" />
+<Switch
+	variant="primary"
+	label="This is label"
+	textForOn="On"
+	textForOff="Off"
+	defaultToggled={true}
+/>
+<Switch
+	variant="secondary"
+	label="This is label"
+	textForOn="On"
+	textForOff="Off"
+	defaultToggled={true}
+/>
+<Switch
+	variant="success"
+	label="This is label"
+	textForOn="On"
+	textForOff="Off"
+	defaultToggled={true}
+/>
+<Switch
+	variant="warning"
+	label="This is label"
+	textForOn="On"
+	textForOff="Off"
+	defaultToggled={true}
+/>
+<Switch
+	variant="danger"
+	label="This is label"
+	textForOn="On"
+	textForOff="Off"
+	defaultToggled={true}
+/>
 ```
 
 ## Default Toggled

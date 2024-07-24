@@ -1,11 +1,18 @@
+<script lang="ts" context="module">
+	export type Option = {
+		label: string;
+		value: string | number | boolean | symbol;
+	};
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getSelectSlots, type Option } from '$lib/select/Select';
 	import { close, select, listbox } from '$lib/select/actions/select';
 	import SelectCheckIcon from '$lib/select/icons/SelectCheckIcon.svelte';
 	import SelectChevronIcon from '$lib/select/icons/SelectChevronIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
+	import { tv } from '$lib/utils/tailwind-variants';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -87,6 +94,84 @@
 	$: selected = options.find((option) => option.value === defaultSelected?.value) || null;
 	$: focus = null;
 
+	// tailwind-variants
+	const labelVariant = tv({
+		base: ['font-normal'],
+		variants: {
+			size: {
+				sm: ['text-xs'],
+				md: ['text-sm'],
+				lg: ['text-base']
+			},
+			invalid: {
+				true: ['text-red-500']
+			}
+		}
+	});
+	const baseVariant = tv({
+		base: ['relative border mt-1'],
+		variants: {
+			invalid: {
+				true: ['border-red-500']
+			}
+		}
+	});
+	const triggerVariant = tv({
+		base: ['w-full flex px-4 py-2 justify-between items-center bg-white'],
+		variants: {
+			variant: {
+				primary: 'focus-visible:outline-blue-500',
+				secondary: 'focus-visible:outline-gray-500',
+				danger: 'focus-visible:outline-red-500',
+				warning: 'focus-visible:outline-yellow-500',
+				success: 'focus-visible:outline-green-500'
+			},
+			size: {
+				sm: ['h-8'],
+				md: ['h-10'],
+				lg: ['h-12']
+			},
+
+			invalid: { true: 'outline-none' },
+			disabled: { true: 'cursor-not-allowed text-gray-500 bg-gray-100', false: 'cursor-pointer' }
+		}
+	});
+	const placeholderContainerVariant = tv({
+		base: ['w-full truncate flex items-start'],
+		variants: {}
+	});
+	const placeholderVariant = tv({
+		base: ['placeholder:text-neutral-500 truncate'],
+		variants: {}
+	});
+	const listboxVariant = tv({
+		base: ['border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top'],
+		variants: {
+			open: { true: 'scale-y-1 shadow-lg', false: 'scale-y-0 opacity-0' },
+			animation: { true: 'transition-all duration-200', false: '' }
+		}
+	});
+	const optionVariant = tv({
+		base: ['items-center px-4 py-2 justify-between gap-1 items-center border border-transparent bg-white hover:bg-gray-100'],
+		variants: {
+			open: { true: 'flex', false: 'none' },
+			readonly: { true: 'cursor-not-allowed text-gray-500', false: 'cursor-pointer' }
+		}
+	});
+	const optionTextWrapperVariant = tv({
+		base: ['w-full truncate flex items-start'],
+		variants: {}
+	});
+	const optionTextVariant = tv({
+		base: ['truncate'],
+		variants: {}
+	});
+	const invalidTextVariant = tv({
+		base: ['text-sm text-red-500 mt-1'],
+		variants: {}
+	});
+
+	// handlers
 	const onToggle = () => {
 		open = !open;
 		if (!open) focus = null;
@@ -125,24 +210,11 @@
 			focus !== null ? focus : options.findIndex((option) => option.value === selected?.value);
 		if (index > 0) focus = index - 1;
 	};
-
-	$: className = $$props.class;
-	$: slots = getSelectSlots({
-		className,
-		size,
-		variant,
-		open,
-		animation,
-		readonly,
-		disabled,
-		invalid,
-		invalidText
-	});
 </script>
 
 <!-- Label -->
 {#if label && label !== ''}
-	<label class={slots.label} for={id} aria-labelledby={id}>{label}</label>
+	<label class={labelVariant({ size, invalid })} for={id} aria-labelledby={id}>{label}</label>
 {/if}
 <div
 	{id}
@@ -153,37 +225,41 @@
 	aria-disabled={disabled}
 	aria-readonly={readonly}
 	aria-invalid={invalid}
-	class={slots.base}
+	class={baseVariant({ invalid })}
 	bind:this={containerElement}
 >
 	<!-- Trigger -->
 	<button
 		aria-disabled={disabled}
-		class={slots.trigger}
+		class={triggerVariant({ variant, size, invalid, disabled })}
 		on:click={onToggle}
 		use:close={onCloseByClickingOutside}
 		{disabled}
 		{...$$restProps}
 	>
-		<div class={slots.placeholderContainer}>
-			<span class={slots.placeholder}>{(selected && selected.label) || placeholder}</span>
+		<div class={placeholderContainerVariant({})}>
+			<span class={placeholderVariant({})}>{(selected && selected.label) || placeholder}</span>
 		</div>
 		<SelectChevronIcon bind:open size={20} {animation} />
 	</button>
 
 	<!-- Listbox -->
-	<ul role="menu" class={slots.listbox} use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}>
+	<ul
+		role="menu"
+		class={listboxVariant({ open, animation })}
+		use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}
+	>
 		{#each options as option, i}
 			<li
 				role="option"
-				class={slots.option}
+				class={optionVariant({ open, readonly })}
 				class:selected={selected && selected.value === option.value}
 				class:focus={i === focus}
 				aria-selected={selected && selected.value === option.value}
 				use:select={() => onSelectByClicking(option)}
 			>
-				<div class={slots.optionTextWrapper}>
-					<span class={slots.optionText}>{option.label}</span>
+				<div class={optionTextWrapperVariant({})}>
+					<span class={optionTextVariant({})}>{option.label}</span>
 				</div>
 				{#if selected && selected.value === option.value}
 					<SelectCheckIcon {variant} size={18} />
@@ -194,7 +270,7 @@
 </div>
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<p class={slots.invalidText}>{invalidText}</p>
+	<p class={invalidTextVariant({})}>{invalidText}</p>
 {/if}
 
 <!-- Reactive CSS styles only *we want to eliminate these codes as much as possible... -->

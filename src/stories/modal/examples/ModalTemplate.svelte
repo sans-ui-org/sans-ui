@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button, Modal } from '$lib';
-	import type { ModalSize } from '$lib/modal/Modal';
+	import type { ModalSize } from '$lib/modal/Modal.svelte';
 
 	/**
 	 * Property that defines the size of the button.

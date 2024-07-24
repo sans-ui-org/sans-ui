@@ -16,10 +16,10 @@
 			{#each data.documentationMenu as item}
 				<AccordionItem>
 					<Link
-						underlineType="none"
-						variant="secondary"
+						underlineType="hover"
+						variant="primary"
 						href={`/docs/${item.slug}`}
-						class="w-full h-9 flex items-center pl-4 hover:bg-gray-100">{item.title}</Link
+						class="w-full h-9 flex items-center pl-4">{item.title}</Link
 					>
 				</AccordionItem>
 			{/each}
@@ -29,10 +29,10 @@
 			{#each data.componentMenu as component}
 				<AccordionItem>
 					<Link
-						underlineType="none"
-						variant="secondary"
+						underlineType="hover"
+						variant="primary"
 						href={`/components/${component.slug}`}
-						class="w-full h-9 flex items-center pl-4 hover:bg-gray-100">{component.title}</Link
+						class="w-full h-9 flex items-center pl-4">{component.title}</Link
 					>
 				</AccordionItem>
 			{/each}
@@ -42,10 +42,10 @@
 			{#each data.actionsMenu as component}
 				<AccordionItem>
 					<Link
-						underlineType="none"
-						variant="secondary"
+						underlineType="hover"
+						variant="primary"
 						href={`/actions/${component.slug}`}
-						class="w-full h-9 flex items-center pl-4 hover:bg-gray-100">{component.title}</Link
+						class="w-full h-9 flex items-center pl-4">{component.title}</Link
 					>
 				</AccordionItem>
 			{/each}

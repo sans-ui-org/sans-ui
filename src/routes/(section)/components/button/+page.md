@@ -81,6 +81,20 @@ Buttons has `size` prop to decide the size of it.
 <Button size="lg">Button</Button>
 ```
 
+## Disabled
+
+Buttons has `disabled` prop to disable Button component.
+
+<Button disabled>Button</Button>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Button disabled>Button</Button>
+```
+
 ## API
 
 Button provides APIs(Properties) that is necessary for you to configure a Button compponent.

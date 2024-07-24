@@ -1,8 +1,15 @@
+<script lang="ts" context="module">
+	export type ModalSize = 'sm' | 'md' | 'lg' | 'full';
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
-	import { getModalSlots, type ModalSize } from '$lib/modal/Modal';
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
-	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';
+	import { tv } from '$lib/utils/tailwind-variants';
+	import ModalContent from './ModalContent.svelte';
+	import ModalHeader from './ModalHeader.svelte';
+	import ModalBody from './ModalBody.svelte';
+	import { setContext } from 'svelte';
 
 	interface $$Props {
 		open?: boolean;
@@ -28,11 +35,35 @@
 	 */
 	export let dismissible: boolean = true;
 
-	let className = $$props.class;
+	// set context
+	setContext('size', size);
 
-	// slots
-	$: slots = getModalSlots({ className, open, size });
+	// tailwind-variants
+	const overlayVariant = tv({
+		base: [
+			'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20 text-base font-bold font-black transition-all duration-300 ease-out'
+		],
+		variants: {
+			open: {
+				true: 'flex',
+				false: 'hidden'
+			}
+		}
+	});
+	const dialogVariant = tv({
+		base: [
+			'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center transition-all duration-300 ease-out'
+		],
+		variants: {
+			open: {
+				true: 'visible',
+				false: 'invisible'
+			},
+			size: { full: '', lg: 'p-4', md: 'p-4', sm: 'p-4' }
+		}
+	});
 
+	// handlers
 	const onOutsideClose = (e: MouseEvent) => {
 		const target: Element = e.target as Element;
 		if (target === e.currentTarget && dismissible) hide(e); // close on click outside
@@ -47,47 +78,30 @@
 </script>
 
 <!-- {#if open} -->
-	<!-- backdrop -->
-	<div role="presentation" class={slots.overlay} />
-	<!-- dialog -->
-	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-	<div
-		role="dialog"
-		aria-modal="true"
-		tabindex="-1"
-		class={slots.dialog}
-		on:keydown={handleKeys}
-		on:mousedown={onOutsideClose}
-		use:focusTrap
-		use:autoFocus
-		{...$$restProps}
-	>
-		<!-- modal content -->
-		<div class={slots.modalContentWrapper}>
-			<div class={slots.modalContent}>
-				<!-- Modal header -->
-				{#if title}
-					<div class={slots.modalHeaderWrapper}>
-						<h3 class={slots.modalHeader}>
-							{title}
-						</h3>
-						<CloseButtonIcon class={slots.modalHeaderCloseIcon} tabindex="1" on:click={hide} />
-					</div>
-				{/if}
-				<!-- Modal body -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<div
-					role="document"
-					class={slots.modalBody}
-					on:keydown|stopPropagation={handleKeys}
-					on:wheel|stopPropagation|passive
-				>
-					{#if dismissible && !title}
-						<CloseButtonIcon name="Close modal" class={slots.modalBodyCloseIcon} on:click={hide} />
-					{/if}
-					<slot />
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- backdrop -->
+<div role="presentation" class={overlayVariant({ open })} />
+<!-- dialog -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<div
+	role="dialog"
+	aria-modal="true"
+	tabindex="-1"
+	class={dialogVariant({ open, size })}
+	on:keydown={handleKeys}
+	on:mousedown={onOutsideClose}
+	use:focusTrap
+	use:autoFocus
+	{...$$restProps}
+>
+	<ModalContent bind:open>
+		<!-- Modal header -->
+		{#if title}
+			<ModalHeader {title} on:hide={hide} />
+		{/if}
+		<!-- Modal body -->
+		<ModalBody on:keydown={handleKeys}>
+			<slot />
+		</ModalBody>
+	</ModalContent>
+</div>
 <!-- {/if} -->

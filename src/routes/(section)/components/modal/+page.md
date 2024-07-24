@@ -48,7 +48,7 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 
 Modal has `size` prop to decide the size of it.
 
-<ModalTemplate size="lg" title="Modal Title" />
+<ModalTemplate size="full" title="Modal Title" />
 
 ```svelte
 <script lang="ts">
@@ -59,7 +59,7 @@ Modal has `size` prop to decide the size of it.
 
 <Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
-<Modal size="lg" title="ModalTitle" bind:open={popupModal}>
+<Modal size="full" title="Modal Title" bind:open={popupModal}>
 	<!-- Here you can write your own code! -->
 </Modal>
 ```

@@ -148,7 +148,7 @@ Input has `readonly` prop that defines if the input is readonly.
 Input has `clearable` prop that controls the clear button for Input component. (What is clear button? -> As soon as you start typing something in Input component, you will see x button on the left side of the component.)
 
 <div class="w-[350px]">
-	<Input readonly={true} placeholder="Please type something here" />
+	<Input clearable={false} placeholder="Please type something here" />
 </div>
 
 ```svelte
@@ -156,7 +156,7 @@ Input has `clearable` prop that controls the clear button for Input component. (
 	import { Input } from '$lib';
 </script>
 
-<Input readonly={true} placeholder="Please type something here" />
+<Input clearable={false} placeholder="Please type something here" />
 ```
 
 ## Max Count

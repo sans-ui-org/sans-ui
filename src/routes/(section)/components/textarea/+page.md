@@ -140,7 +140,7 @@ TextArea has `maxCount` prop that defines the text limitation of your TextArea c
 TextArea has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
 
 <div class="w-[350px]">
-	<TextArea invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
+	<TextArea label="This is label" invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
 </div>
 
 ```svelte
@@ -149,6 +149,7 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 </script>
 
 <TextArea
+	label="This is label"
 	invalid={true}
 	invalidText="This is invalid text."
 	placeholder="Please type something here"

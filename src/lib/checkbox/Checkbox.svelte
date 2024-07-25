@@ -5,8 +5,8 @@
 	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tailwind-variants';
-	import { twMerge } from '$lib/utils/tailwind-merge';
+	import { cn } from '$lib/utils/cn';
+	import { checkboxVariant } from '$lib/checkbox/Checkbox';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -55,12 +55,8 @@
 	const dispatcher = createEventDispatcher();
 
 	// tailwind-variant
-	const checkboxVariant = tv({
-		base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2'],
-		variants: {}
-	});
+	const slots = checkboxVariant({});
 
-	// TODO: Extractable?
 	// --- Stateful logic ---
 	const onclick = (e: MouseEvent) => {
 		e.preventDefault(); // prevent the cascade of onchange event.
@@ -95,7 +91,7 @@
 <div
 	{...$$restProps}
 	role="checkbox"
-	class={twMerge(checkboxVariant(), $$restProps.class)}
+	class={cn(slots.base({}), $$restProps.class)}
 	tabindex="0"
 	aria-checked={checked}
 	aria-disabled={disabled}

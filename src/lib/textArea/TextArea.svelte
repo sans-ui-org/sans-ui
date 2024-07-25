@@ -3,7 +3,7 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { textareaVariant } from '$lib/textArea/TextArea';
 
 	interface $$Props extends HTMLTextareaAttributes {
 		id?: string;
@@ -85,57 +85,7 @@
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// slots
-	const labelWrapperVariant = tv({
-		base: ['flex flex-row items-center justify-between w-full'],
-		variants: {
-			size: {
-				sm: ['text-xs'],
-				md: ['text-sm'],
-				lg: ['text-base']
-			}
-		}
-	});
-	const labelVariant = tv({
-		base: ['font-normal'],
-		variants: {
-			invalid: {
-				true: ['text-red-500']
-			}
-		}
-	});
-	const textareaVariant = tv({
-		base: [
-			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2 focus-visible:outline-0'
-		],
-		variants: {
-			variant: {
-				primary: 'focus-visible:border-blue-500',
-				secondary: 'focus-visible:border-neutral-500',
-				success: 'focus-visible:border-green-500',
-				warning: 'focus-visible:border-yellow-500',
-				danger: 'focus-visible:border-red-500'
-			},
-			size: {
-				sm: ['text-xs'],
-				md: ['text-sm'],
-				lg: ['text-base']
-			},
-			invalid: {
-				true: ['border-red-500', 'focus-visible:border-red-500']
-			},
-			animation: {
-				true: ['transition-all duration-300 ease-in-out']
-			},
-			disabled: {
-				true: ['text-gray-500 cursor-not-allowed'],
-				false: ['text-black cursor-text']
-			}
-		}
-	});
-	const invalidTextVariant = tv({
-		base: ['text-sm text-red-500 mt-1'],
-		variants: {}
-	});
+	const slots = textareaVariant({ variant, size, invalid, animation, disabled });
 
 	// handler
 	const onInput = (e: Event) => {
@@ -151,9 +101,9 @@
 
 <!-- Label -->
 {#if label || maxCount}
-	<div class={labelWrapperVariant({ size })}>
+	<div class={slots.labelWrapper({ size })}>
 		{#if label}
-			<label for={id} class={labelVariant({ invalid })}>{label}</label>
+			<label for={id} class={slots.label({ invalid })}>{label}</label>
 		{:else}
 			<label for={id} />
 		{/if}
@@ -177,10 +127,10 @@
 	aria-readonly={readonly}
 	aria-invalid={invalid}
 	class:animation={animation && !invalid}
-	class={textareaVariant({ variant, size, invalid, animation, disabled })}
+	class={slots.base({ variant, size, invalid, animation, disabled })}
 />
 
-<!-- Error Text -->
+<!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class={invalidTextVariant({})}>{invalidText}</span>
+	<span class={slots.invalidText({})}>{invalidText}</span>
 {/if}

@@ -2,7 +2,7 @@
 	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLProgressAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { progressVariant } from '$lib/progress/Progress';
 
 	type $$BaseProps = HTMLProgressAttributes;
 
@@ -47,50 +47,14 @@
 	$: progressIconText = `${value > 100 ? 100 : value}%`;
 
 	// tailwind-variants
-	const progressWrapperVariant = tv({
-		base: ['inline-flex flex-col gap-1 items-center'],
-		variants: {}
-	});
-	const progressIconWrapperVariant = tv({
-		base: ['relative flex flex-col items-center gap-2'],
-		variants: {}
-	});
-	const progressIconSvgVariant = tv({
-		base: ['-rotate-90'],
-		variants: {}
-	});
-	const progressIconTrackerVariant = tv({
-		base: ['text-slate-950'],
-		variants: {
-			variant: {
-				primary: 'stroke-blue-500',
-				secondary: 'stroke-neutral-500',
-				success: 'stroke-green-500',
-				warning: 'stroke-yellow-500',
-				danger: 'stroke-red-500'
-			}
-		}
-	});
-	const progressIconTextWrapperVariant = tv({
-		base: ['absolute top-1/2 left-1/2 text-center text-xs text-[#333]'],
-		variants: {}
-	});
-	const progressIconTextVariant = tv({
-		base: ['block font-semibold'],
-		variants: {}
-	});
+	const slots = progressVariant({ variant });
 </script>
 
-<div class={progressWrapperVariant({})}>
-	<div
-		role="progressbar"
-		class={progressIconWrapperVariant({})}
-		aria-atomic="true"
-		{...$$restProps}
-	>
-		<svg class={progressIconSvgVariant({})} style={`width: ${size}px; height: ${size}px;`}>
+<div class={slots.wrapper({})}>
+	<div role="progressbar" class={slots.base({})} aria-atomic="true" {...$$restProps}>
+		<svg class={slots.progressIcon({})} style={`width: ${size}px; height: ${size}px;`}>
 			<circle
-				class={progressIconTrackerVariant({ variant })}
+				class={slots.tracker({ variant })}
 				cx={center}
 				cy={center}
 				fill={'transparent'}
@@ -109,11 +73,11 @@
 				stroke-dashoffset={dashOffset}
 			/>
 		</svg>
-		<div class={progressIconTextWrapperVariant({})} style="transform: translate(-50%, -50%);">
+		<div class={slots.progressTextWrapper({})} style="transform: translate(-50%, -50%);">
 			{#if customInnerLabel}
 				{customInnerLabel}
 			{:else}
-				<span class={progressIconTextVariant({})}>{progressIconText}</span>
+				<span class={slots.progressText({})}>{progressIconText}</span>
 			{/if}
 		</div>
 	</div>

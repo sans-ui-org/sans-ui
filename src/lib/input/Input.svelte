@@ -4,8 +4,8 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import type { SvelteComponent } from 'svelte';
-	import { tv } from '$lib/utils/tailwind-variants';
-	import { twMerge } from '$lib/utils/tailwind-merge';
+	import { cn } from '$lib/utils/cn';
+	import { inputVariant } from '$lib/input/Input';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -98,70 +98,7 @@
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// tailwind-variant
-	const labelWrapperVariant = tv({
-		base: ['flex flex-row items-center justify-between w-full'],
-		variants: { size: { sm: 'text-xs', md: 'text-sm', lg: 'text-lg' } }
-	});
-	const labelVariant = tv({
-		base: ['font-normal'],
-		variants: { invalid: { true: 'text-red-500', false: '' } }
-	});
-	const inputWrapperVariant = tv({
-		base: ['relative font-normal bg-gray-100 mt-2 w-full'],
-		variants: {
-			disabled: { true: 'cursor-not-allowed bg-gray-500', false: 'cursor-text text-black' }
-		}
-	});
-	const inputVariant = tv({
-		base: ['font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 focus:outline-0 border-2'],
-		variants: {
-			variant: {
-				primary: 'focus-visible:border-blue-500',
-				secondary: 'focus-visible:border-neutral-500',
-				success: 'focus-visible:border-green-500',
-				warning: 'focus-visible:border-yellow-500',
-				danger: 'focus-visible:border-red-500'
-			},
-			size: {
-				sm: 'h-10',
-				md: 'h-12',
-				lg: 'h-14'
-			},
-			invalid: { true: 'border-red-500 focus-visible:border-red-500', false: '' },
-			animation: { true: 'transition-all duration-300 ease-in', false: '' },
-			disabled: { true: 'cursor-not-allowed text-gray-500', false: 'cursor-text text-black' }
-		}
-	});
-	const startConteterVariant = tv({
-		base: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 left-0'],
-		variants: {
-			variant: {
-				primary: 'focus-visible:border-blue-500',
-				secondary: 'focus-visible:border-neutral-500',
-				success: 'focus-visible:border-green-500',
-				warning: 'focus-visible:border-yellow-500',
-				danger: 'focus-visible:border-red-500'
-			},
-			clearable: { true: 'focus:outline-0 focus:border-2', false: '' },
-			disabled: { true: 'cursor-not-allowed', false: '' },
-			invalid: { true: 'focus-visible:border-red-500', false: '' }
-		}
-	});
-	const endConteterVariant = tv({
-		base: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 right-1'],
-		variants: {
-			variant: {
-				primary: 'focus-visible:border-blue-500',
-				secondary: 'focus-visible:border-neutral-500',
-				success: 'focus-visible:border-green-500',
-				warning: 'focus-visible:border-yellow-500',
-				danger: 'focus-visible:border-red-500'
-			},
-			clearable: { true: 'focus:outline-0 focus:border-2', false: '' },
-			disabled: { true: 'cursor-not-allowed', false: '' },
-			invalid: { true: 'focus-visible:border-red-500', false: '' }
-		}
-	});
+	const slots = inputVariant({ variant, size, invalid, animation, disabled });
 
 	// handlers
 	const onInput = (e: Event) => {
@@ -181,9 +118,9 @@
 
 <!-- Label -->
 {#if label || maxCount}
-	<div class={labelWrapperVariant({ size })}>
+	<div class={slots.labelWrapper({ size })}>
 		{#if label}
-			<label for={id} class={labelVariant({ invalid })}>{label}</label>
+			<label for={id} class={slots.label({ invalid })}>{label}</label>
 		{:else}
 			<label for={id} />
 		{/if}
@@ -193,10 +130,10 @@
 	</div>
 {/if}
 <!-- Input -->
-<div class={inputWrapperVariant({ disabled })}>
+<div class={slots.inputWrapper({ disabled })}>
 	{#if startContent}
 		<InputContent
-			class={startConteterVariant({ variant, clearable, disabled, invalid })}
+			class={slots.startContent({ variant, clearable, disabled, invalid })}
 			content={startContent}
 			{clearable}
 		/>
@@ -213,20 +150,20 @@
 		aria-readonly={readonly}
 		aria-invalid={invalid}
 		class:animation={animation && !invalid}
-		class={twMerge(
-			inputVariant({ variant, size, invalid, animation, disabled }),
+		class={cn(
+			slots.base({ size, variant, invalid, animation, disabled, clearable }),
 			$$restProps.class
 		)}
 	/>
 	{#if endContent}
 		<InputContent
-			class={endConteterVariant({ variant, clearable, disabled, invalid })}
+			class={slots.endContent({ variant, clearable, disabled, invalid })}
 			content={endContent}
 			{clearable}
 		/>
 	{:else if clearable && value && value !== '' && !disabled && !readonly}
 		<button
-			class={endConteterVariant({ variant, clearable, disabled, invalid })}
+			class={slots.endContent({ variant, clearable, disabled, invalid })}
 			disabled={disabled || readonly}
 			on:click={onClear}
 		>

@@ -30,8 +30,8 @@
 	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
-	import { twMerge } from '$lib/utils/tailwind-merge';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { cn } from '$lib/utils/cn';
+	import { linkVariant } from '$lib/link/Link';
 
 	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;
@@ -70,59 +70,12 @@
 	let url = disabled ? undefined : href;
 
 	// tailwind-variants
-	const linkVariant = tv({
-		base: [''],
-		variants: {
-			variant: {
-				primary: 'text-blue-500 hover:text-blue-600 visited:text-blue-800 cursor-pointer',
-				secondary:
-					'text-neutral-500 hover:text-neutral-600 visited:text-neutral-800 cursor-pointer',
-				success: 'text-green-500 hover:text-green-600 visted:text-green-800 cursor-pointer',
-				warning: 'text-yellow-500 hover:text-yellow-600 visisted:text-yellow-800 cursor-pointer',
-				danger: 'text-red-500 hover:text-red-600 visited:text-red-800 cursor-pointer'
-			},
-			underlineType: {
-				none: '',
-				hover: 'hover:underline',
-				always: 'underline',
-				active: 'active:underline'
-			},
-			size: {
-				xs: 'text-xs',
-				sm: 'text-sm',
-				md: 'text-base',
-				lg: 'text-lg',
-				xl: 'text-xl',
-				'2xl': 'text-2xl',
-				'3xl': 'text-3xl',
-				'4xl': 'text-4xl',
-				'5xl': 'text-5xl',
-				'6xl': 'text-6xl',
-				'7xl': 'text-7xl',
-				'8xl': 'text-xl',
-				'9xl': 'text-9xl'
-			},
-			bold: {
-				bold: 'font-bold',
-				thin: 'font-thin',
-				extralight: 'font-extralight',
-				light: 'font-light',
-				normal: 'font-normal',
-				medium: 'font-medium',
-				semibold: 'font-semibold',
-				extrabold: 'font-extrabold',
-				black: 'font-black'
-			},
-			disabled: {
-				true: 'text-gray-500 cursor-not-allowed'
-			}
-		}
-	});
+	const slots = linkVariant({ variant, underlineType, size, bold, disabled });
 </script>
 
 <a
 	{...$$restProps}
-	class={twMerge(linkVariant({ variant, underlineType, size, bold, disabled }), $$restProps.class)}
+	class={cn(slots.base({ variant, underlineType, size, bold, disabled }), $$restProps.class)}
 	aria-disabled={disabled}
 	href={url}><slot /></a
 >

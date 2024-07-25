@@ -12,7 +12,7 @@
 	import SelectCheckIcon from '$lib/select/icons/SelectCheckIcon.svelte';
 	import SelectChevronIcon from '$lib/select/icons/SelectChevronIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { selectVariant } from '$lib/select/Select';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -95,81 +95,8 @@
 	$: focus = null;
 
 	// tailwind-variants
-	const labelVariant = tv({
-		base: ['font-normal'],
-		variants: {
-			size: {
-				sm: ['text-xs'],
-				md: ['text-sm'],
-				lg: ['text-base']
-			},
-			invalid: {
-				true: ['text-red-500']
-			}
-		}
-	});
-	const baseVariant = tv({
-		base: ['relative border mt-1'],
-		variants: {
-			invalid: {
-				true: ['border-red-500']
-			}
-		}
-	});
-	const triggerVariant = tv({
-		base: ['w-full flex px-4 py-2 justify-between items-center bg-white'],
-		variants: {
-			variant: {
-				primary: 'focus-visible:outline-blue-500',
-				secondary: 'focus-visible:outline-gray-500',
-				danger: 'focus-visible:outline-red-500',
-				warning: 'focus-visible:outline-yellow-500',
-				success: 'focus-visible:outline-green-500'
-			},
-			size: {
-				sm: ['h-8'],
-				md: ['h-10'],
-				lg: ['h-12']
-			},
 
-			invalid: { true: 'outline-none' },
-			disabled: { true: 'cursor-not-allowed text-gray-500 bg-gray-100', false: 'cursor-pointer' }
-		}
-	});
-	const placeholderContainerVariant = tv({
-		base: ['w-full truncate flex items-start'],
-		variants: {}
-	});
-	const placeholderVariant = tv({
-		base: ['placeholder:text-neutral-500 truncate'],
-		variants: {}
-	});
-	const listboxVariant = tv({
-		base: ['border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top'],
-		variants: {
-			open: { true: 'scale-y-1 shadow-lg', false: 'scale-y-0 opacity-0' },
-			animation: { true: 'transition-all duration-200', false: '' }
-		}
-	});
-	const optionVariant = tv({
-		base: ['items-center px-4 py-2 justify-between gap-1 items-center border border-transparent bg-white hover:bg-gray-100'],
-		variants: {
-			open: { true: 'flex', false: 'none' },
-			readonly: { true: 'cursor-not-allowed text-gray-500', false: 'cursor-pointer' }
-		}
-	});
-	const optionTextWrapperVariant = tv({
-		base: ['w-full truncate flex items-start'],
-		variants: {}
-	});
-	const optionTextVariant = tv({
-		base: ['truncate'],
-		variants: {}
-	});
-	const invalidTextVariant = tv({
-		base: ['text-sm text-red-500 mt-1'],
-		variants: {}
-	});
+	const slots = selectVariant({ variant, size, open, readonly, disabled, animation, invalid });
 
 	// handlers
 	const onToggle = () => {
@@ -214,7 +141,7 @@
 
 <!-- Label -->
 {#if label && label !== ''}
-	<label class={labelVariant({ size, invalid })} for={id} aria-labelledby={id}>{label}</label>
+	<label class={slots.label({ size, invalid })} for={id} aria-labelledby={id}>{label}</label>
 {/if}
 <div
 	{id}
@@ -225,20 +152,20 @@
 	aria-disabled={disabled}
 	aria-readonly={readonly}
 	aria-invalid={invalid}
-	class={baseVariant({ invalid })}
+	class={slots.base({ invalid })}
 	bind:this={containerElement}
 >
 	<!-- Trigger -->
 	<button
 		aria-disabled={disabled}
-		class={triggerVariant({ variant, size, invalid, disabled })}
+		class={slots.trigger({ variant, size, invalid, disabled })}
 		on:click={onToggle}
 		use:close={onCloseByClickingOutside}
 		{disabled}
 		{...$$restProps}
 	>
-		<div class={placeholderContainerVariant({})}>
-			<span class={placeholderVariant({})}>{(selected && selected.label) || placeholder}</span>
+		<div class={slots.placeholderWrapper({})}>
+			<span class={slots.placeholder({})}>{(selected && selected.label) || placeholder}</span>
 		</div>
 		<SelectChevronIcon bind:open size={20} {animation} />
 	</button>
@@ -246,20 +173,20 @@
 	<!-- Listbox -->
 	<ul
 		role="menu"
-		class={listboxVariant({ open, animation })}
+		class={slots.listbox({ open, animation })}
 		use:listbox={{ onClose, onMoveDown, onMoveUp, onSelect }}
 	>
 		{#each options as option, i}
 			<li
 				role="option"
-				class={optionVariant({ open, readonly })}
+				class={slots.option({ open, readonly })}
 				class:selected={selected && selected.value === option.value}
 				class:focus={i === focus}
 				aria-selected={selected && selected.value === option.value}
 				use:select={() => onSelectByClicking(option)}
 			>
-				<div class={optionTextWrapperVariant({})}>
-					<span class={optionTextVariant({})}>{option.label}</span>
+				<div class={slots.optionTextWrapper({})}>
+					<span class={slots.optionText({})}>{option.label}</span>
 				</div>
 				{#if selected && selected.value === option.value}
 					<SelectCheckIcon {variant} size={18} />
@@ -270,7 +197,7 @@
 </div>
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<p class={invalidTextVariant({})}>{invalidText}</p>
+	<p class={slots.invalidText({})}>{invalidText}</p>
 {/if}
 
 <!-- Reactive CSS styles only *we want to eliminate these codes as much as possible... -->

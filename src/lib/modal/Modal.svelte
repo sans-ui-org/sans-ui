@@ -5,11 +5,9 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
-	import ModalContent from './ModalContent.svelte';
-	import ModalHeader from './ModalHeader.svelte';
-	import ModalBody from './ModalBody.svelte';
 	import { setContext } from 'svelte';
 	import { modalVariant } from './Modal';
+	import { cn } from '$lib/utils/cn';
 
 	interface $$Props {
 		open?: boolean;
@@ -27,16 +25,9 @@
 	 */
 	export let open: boolean = false;
 	/**
-	 * Property that defines the title of the modal.
-	 */
-	export let title: string | undefined = undefined;
-	/**
 	 * Property that whether this modal is able to be closed by clicking outside of it.
 	 */
 	export let dismissible: boolean = true;
-
-	// set context
-	setContext('size', size);
 
 	// tailwind-variants
 	const slots = modalVariant({ open, size });
@@ -53,6 +44,9 @@
 	const handleKeys = (e: KeyboardEvent) => {
 		if (e.key === 'Escape') return hide(e);
 	};
+
+	// set context
+	setContext('hide', hide);
 </script>
 
 <!-- backdrop -->
@@ -70,12 +64,7 @@
 	use:autoFocus
 	{...$$restProps}
 >
-	<ModalContent bind:open>
-		{#if title}
-			<ModalHeader {title} on:hide={hide} />
-		{/if}
-		<ModalBody on:keydown={handleKeys}>
-			<slot />
-		</ModalBody>
-	</ModalContent>
+	<div class={cn(slots.wrapper({ size, open }))}>
+		<slot />
+	</div>
 </div>

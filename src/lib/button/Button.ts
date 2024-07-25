@@ -134,3 +134,5 @@ export const buttonVariant = tv({
 	// 	}
 	// ]
 });
+
+export type ButtonSlots = keyof ReturnType<typeof buttonVariant>;

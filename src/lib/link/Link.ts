@@ -55,3 +55,5 @@ export const linkVariant = tv({
 		}
 	}
 });
+
+export type LinkSlots = keyof ReturnType<typeof linkVariant>;

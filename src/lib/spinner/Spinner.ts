@@ -41,3 +41,5 @@ export const spinnerVariant = tv({
 		}
 	}
 });
+
+export type SpinnerSlots = keyof ReturnType<typeof spinnerVariant>;

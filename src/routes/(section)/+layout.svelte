@@ -10,7 +10,7 @@
 
 <div class="flex flex-row">
 	<!-- Sidebar -->
-	<div class="fixed w-64 h-[calc(100vh-57px)] border-r bg-white">
+	<div class="fixed w-64 h-[calc(100vh-57px)] border-r bg-white overflow-y-auto">
 		<!-- Documentation -->
 		<Accordion title="Documentations">
 			{#each data.documentationMenu as item}

@@ -34,3 +34,5 @@ export const textareaVariant = tv({
 		}
 	}
 });
+
+export type TextareaSlots = keyof ReturnType<typeof textareaVariant>;

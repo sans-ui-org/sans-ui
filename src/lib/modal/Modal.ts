@@ -7,16 +7,24 @@ export const modalVariant = tv({
 		],
 		base: [
 			'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center transition-all duration-300 ease-out'
-		]
+		],
+		wrapper: ['transition-all duration-300 ease-out flex relative overflow-y']
 	},
 	variants: {
 		open: {
-			true: { overlay: 'flex', base: 'visible' },
-			false: { overlay: 'hidden', base: 'invisible' }
+			true: { overlay: 'flex', base: 'visible', wrapper: 'opacity-1 translate-y-0' },
+			false: { overlay: 'hidden', base: 'invisible', wrapper: 'opacity-0 -translate-y-[20px]' }
 		},
-		size: { full: { base: '' }, lg: { base: 'p-4' }, md: { base: 'p-4' }, sm: { base: 'p-4' } }
+		size: {
+			full: { base: '', wrapper: 'w-full h-full' },
+			lg: { base: 'p-4', wrapper: 'w-[80%] h-[60%]' },
+			md: { base: 'p-4', wrapper: 'w-[70%] h-[50%]' },
+			sm: { base: 'p-4', wrapper: 'w-[60%] h-[40%]' }
+		}
 	}
 });
+
+export type ModalSlots = keyof ReturnType<typeof modalVariant>;
 
 export const modalBodyVariant = tv({
 	slots: {
@@ -27,23 +35,11 @@ export const modalBodyVariant = tv({
 
 export const modalContentVariant = tv({
 	slots: {
-		base: ['transition-all duration-300 ease-out flex relative overflow-y'],
 		content: [
 			'bg-white text-gray-500 rounded border-gray-200 dark:border-gray-700 divide-gray-200 shadow-md relative flex flex-col mx-auto w-full divide-y'
 		]
 	},
-	variants: {
-		open: {
-			true: { base: 'opacity-1 translate-y-0' },
-			false: { base: 'opacity-0 -translate-y-[20px]' }
-		},
-		size: {
-			sm: { base: 'w-[60%] h-[40%]' },
-			md: { base: 'w-[70%] h-[50%]' },
-			lg: { base: 'w-[80%] h-[60%]' },
-			full: { base: 'w-full h-full' }
-		}
-	}
+	variants: {}
 });
 
 export const modalHeaderVariant = tv({
@@ -56,3 +52,5 @@ export const modalHeaderVariant = tv({
 	},
 	variants: {}
 });
+
+export type ModalHeaderSlots = keyof ReturnType<typeof modalHeaderVariant>;

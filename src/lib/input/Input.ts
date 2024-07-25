@@ -7,7 +7,8 @@ export const inputVariant = tv({
 		label: ['font-normal'],
 		inputWrapper: ['relative font-normal bg-gray-100 mt-2 w-full'],
 		startContent: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 left-0'],
-		endContent: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 right-1']
+		endContent: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 right-1'],
+		invalid: ['text-sm text-red-500 mt-1']
 	},
 	variants: {
 		variant: {
@@ -74,3 +75,5 @@ export const inputVariant = tv({
 		}
 	}
 });
+
+export type InputSlots = keyof ReturnType<typeof inputVariant>;

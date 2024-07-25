@@ -2,7 +2,8 @@ import { tv } from '$lib/utils/tv';
 
 export const checkboxVariant = tv({
 	slots: {
-		base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2']
+		base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2'],
+		icon: []
 	},
 	variants: {}
 });
@@ -54,3 +55,5 @@ export const checkIconVariant = tv({
 		}
 	}
 });
+
+export type CheckboxSlots = keyof ReturnType<typeof checkboxVariant>;

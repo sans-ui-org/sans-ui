@@ -630,6 +630,14 @@ video {
   margin-top: 2rem;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.me-2 {
+  margin-inline-end: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -797,6 +805,14 @@ video {
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -953,6 +969,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .uppercase {

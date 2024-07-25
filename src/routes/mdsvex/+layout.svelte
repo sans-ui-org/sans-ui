@@ -23,7 +23,7 @@
 <Meta title={`S-UI - ${title}`} {description} />
 
 <div class="flex w-full">
-	<div class="flex flex-col p-8 divide-y divide-gray-200">
+	<div class="flex flex-col p-8 overflow-y divide-y divide-gray-200">
 		<DocHeader {title} {description} {category} />
 		<div id="mainContent" class="pb-6">
 			<slot />

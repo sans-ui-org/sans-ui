@@ -28,10 +28,10 @@
 
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';
-	import { linkVariant } from '$lib/link/Link';
+	import { linkVariant, type LinkSlots } from '$lib/link/Link';
 
 	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;
@@ -40,6 +40,7 @@
 		underlineType?: UnderlineType;
 		disabled?: boolean;
 		href?: string;
+		classes?: SlotsToClasses<LinkSlots>;
 	}
 
 	/**
@@ -66,6 +67,10 @@
 	 * Property that defines the label of the link.
 	 */
 	export let href: string = '';
+	/**
+	 * Property that defines the class names of the link.
+	 */
+	export let classes: SlotsToClasses<LinkSlots> = {};
 
 	let url = disabled ? undefined : href;
 
@@ -75,7 +80,11 @@
 
 <a
 	{...$$restProps}
-	class={cn(slots.base({ variant, underlineType, size, bold, disabled }), $$restProps.class)}
+	class={cn(
+		slots.base({ variant, underlineType, size, bold, disabled }),
+		classes.base,
+		$$restProps.class
+	)}
 	aria-disabled={disabled}
 	href={url}><slot /></a
 >

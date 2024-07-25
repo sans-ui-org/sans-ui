@@ -48,3 +48,5 @@ export const selectVariant = tv({
 		}
 	}
 });
+
+export type SelectSlots = keyof ReturnType<typeof selectVariant>;

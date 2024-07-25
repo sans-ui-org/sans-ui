@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { createRipple } from '$lib/actions/ripple';
 	import { cn } from '$lib/utils/cn';
+	import type { ButtonSlots } from '$lib/button/Button';
 	import { buttonVariant } from '$lib/button/Button';
 
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
@@ -11,27 +12,29 @@
 		size?: ComponentSize;
 		disabled?: boolean;
 		href?: string;
+		classes?: SlotsToClasses<ButtonSlots>;
 	};
 
 	/**
 	 * Property that define the variant of the button.
 	 */
 	export let variant: ComponentVariant = 'primary';
-
 	/**
 	 * Property that defines the size of the button.
 	 */
 	export let size: ComponentSize = 'md';
-
 	/**
 	 * Property that defines if the button is disabled.
 	 */
 	export let disabled: boolean = false;
-
 	/**
 	 * Property that defines the href of the button.
 	 */
 	export let href: string | undefined = undefined;
+	/*
+	 * Property that defines the class names of the button.
+	 */
+	export let classes: SlotsToClasses<ButtonSlots> = {};
 
 	// tailwind-variants
 	const slots = buttonVariant({ variant, size });
@@ -45,7 +48,7 @@
 	role={href ? 'link' : 'button'}
 	{href}
 	{disabled}
-	class={cn(slots.base({ variant, size }), $$restProps.class)}
+	class={cn(slots.base({ variant, size }), classes.base, $$restProps.class)}
 	on:click
 	on:change
 	on:keydown

@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { cx, type ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentVariant } from '$lib/utils/utils';
+	import { cn } from '$lib/utils/cn';
+	import { tv } from '$lib/utils/tv';
 
 	/**
 	 * Property that defines the size of the icon.
@@ -11,31 +13,25 @@
 	 */
 	export let variant: ComponentVariant = 'primary';
 
-	function getIconStyle() {
-		switch (variant) {
-			case 'primary':
-				return 'text-blue-600';
-			case 'secondary':
-				return 'text-black';
-			case 'success':
-				return 'text-green-600';
-			case 'warning':
-				return 'text-yellow-600';
-			case 'danger':
-				return 'text-red-600';
-			// case 'indigo':
-			// 	return 'text-indigo-600';
+	// tailwind-variant
+	const checkIconVariant = tv({
+		base: ['text-black'],
+		variants: {
+			variant: {
+				primary: ['text-blue-600'],
+				secondary: ['text-black'],
+				success: ['text-green-600'],
+				warning: ['text-yellow-600'],
+				danger: ['text-red-600']
+			}
 		}
-	}
-
-	let className = $$restProps.class;
-	$: svgClassName = cx([getIconStyle(), className]);
+	});
 </script>
 
 <svg
 	focusable="false"
 	fill="currentColor"
-	class={svgClassName}
+	class={cn(checkIconVariant({ variant }), $$restProps.class)}
 	viewBox="0 0 32 32"
 	width={size}
 	height={size}

@@ -5,12 +5,11 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
-	import { tv } from '$lib/utils/tv';
 	import ModalContent from './ModalContent.svelte';
 	import ModalHeader from './ModalHeader.svelte';
 	import ModalBody from './ModalBody.svelte';
 	import { setContext } from 'svelte';
-	import { base } from '$app/paths';
+	import { modalVariant } from './Modal';
 
 	interface $$Props {
 		open?: boolean;
@@ -40,23 +39,6 @@
 	setContext('size', size);
 
 	// tailwind-variants
-	const modalVariant = tv({
-		slots: {
-			overlay: [
-				'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20 text-base font-bold font-black transition-all duration-300 ease-out'
-			],
-			base: [
-				'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center transition-all duration-300 ease-out'
-			]
-		},
-		variants: {
-			open: {
-				true: { overlay: 'flex', base: 'visible' },
-				false: { overlay: 'hidden', base: 'invisible' }
-			},
-			size: { full: { base: '' }, lg: { base: 'p-4' }, md: { base: 'p-4' }, sm: { base: 'p-4' } }
-		}
-	});
 	const slots = modalVariant({ open, size });
 
 	// handlers

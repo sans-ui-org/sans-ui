@@ -2,7 +2,7 @@
 	import '$lib/global.css';
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLProgressAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tv';
+	import { progressVariant } from '$lib/progress/Progress';
 
 	type $$BaseProps = HTMLProgressAttributes;
 
@@ -47,25 +47,6 @@
 	$: progressIconText = `${value > 100 ? 100 : value}%`;
 
 	// tailwind-variants
-	const progressVariant = tv({
-		slots: {
-			wrapper: ['inline-flex flex-col gap-1 items-center'],
-			base: ['relative flex flex-col items-center gap-2'],
-			progressIcon: ['-rotate-90'],
-			tracker: ['text-slate-950'],
-			progressTextWrapper: ['absolute top-1/2 left-1/2 text-center text-xs text-[#333]'],
-			progressText: ['block font-semibold']
-		},
-		variants: {
-			variant: {
-				primary: { tracker: ['stroke-blue-500'] },
-				secondary: { tracker: ['stroke-neutral-500'] },
-				success: { tracker: ['stroke-green-500'] },
-				warning: { tracker: ['stroke-yellow-500'] },
-				danger: { tracker: ['stroke-red-500'] }
-			}
-		}
-	});
 	const slots = progressVariant({ variant });
 </script>
 

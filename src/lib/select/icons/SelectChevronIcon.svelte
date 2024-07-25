@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
-	import { cx } from '$lib/utils/utils';
+	import { cn } from '$lib/utils/cn';
+	import { tv } from '$lib/utils/tv';
 
 	/**
 	 * Property that defines the size of the icon.
@@ -17,13 +18,18 @@
 	 */
 	export let animation: boolean = true;
 
-	let className = $$restProps.class;
-	$: svgClassName = cx([
-		className,
-		animation ? 'transform transition-transform ease-in-out duration-200' : '',
-		open ? 'rotate-180' : '',
-		'text-black'
-	]);
+	// tailwind-variant
+	const chevronIconVariant = tv({
+		base: ['text-black'],
+		variants: {
+			animation: {
+				true: ['transform transition-transform ease-in-out duration-200']
+			},
+			open: {
+				true: ['rotate-180']
+			}
+		}
+	});
 </script>
 
-<ChevronIcon {size} class={svgClassName} />
+<ChevronIcon {size} class={cn(chevronIconVariant({ animation, open }), $$restProps.class)} />

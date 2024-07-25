@@ -1,11 +1,9 @@
+/**
+ * @description Common type that we utilize to define the variant of a component.
+ */
 export type ComponentVariant = 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
 
-export type ComponentSize = 'sm' | 'md' | 'lg';
-
-
 /**
- * Concatenate the className string array into one string which separated by a white space.
+ * @description Common type that we utilize to define the size of a component.
  */
-export function cx(classNameArr: string[]) {
-	return classNameArr.join(' ');
-}
+export type ComponentSize = 'sm' | 'md' | 'lg';

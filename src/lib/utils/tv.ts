@@ -1,7 +1,5 @@
-// eslint-disable-next-line no-restricted-imports
-import { createTV } from 'tailwind-variants';
-// eslint-disable-next-line no-restricted-imports
 import type { VariantProps } from 'tailwind-variants';
+import { createTV } from 'tailwind-variants';
 import { twMergeConfig } from '$lib/utils/tailwind-variants.config';
 
 export type { VariantProps };

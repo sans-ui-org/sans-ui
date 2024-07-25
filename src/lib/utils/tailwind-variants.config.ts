@@ -12,6 +12,7 @@ export const twMergeConfig = {
 		}
 	}
 };
+
 // export const twMergeConfig: Partial<Config> = {
 // 	theme: {
 // 		opacity: ['disabled'],

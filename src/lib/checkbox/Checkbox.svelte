@@ -5,8 +5,8 @@
 	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tv';
 	import { cn } from '$lib/utils/cn';
+	import { checkboxVariant } from '$lib/checkbox/Checkbox';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -55,12 +55,6 @@
 	const dispatcher = createEventDispatcher();
 
 	// tailwind-variant
-	const checkboxVariant = tv({
-		slots: {
-			base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2']
-		},
-		variants: {}
-	});
 	const slots = checkboxVariant({});
 
 	// --- Stateful logic ---

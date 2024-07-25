@@ -3,9 +3,8 @@
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 	import AccordionChevronIcon from './icons/AccordionChevronIcon.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { tv } from 'tailwind-variants';
 	import { setContext } from 'svelte';
-	import { base } from '$app/paths';
+	import { accordionVariant } from '$lib/accordion/Accordion';
 
 	type $$Props = HTMLButtonAttributes & {
 		variant?: ComponentVariant;
@@ -31,42 +30,7 @@
 	 */
 	export let title: string = '';
 
-	// tailwind-variants
-	const accordionVariant = tv({
-		slots: {
-			base: ['w-full flex flex-row items-center justify-between p-4 cursor-pointer']
-		},
-		variants: {
-			variant: {
-				primary: {
-					base: 'bg-blue-100 text-blue-500'
-				},
-				secondary: {
-					base: 'bg-neutral-100 text-neutral-500'
-				},
-				success: {
-					base: 'bg-green-100 text-green-500'
-				},
-				warning: {
-					base: 'bg-yellow-100 text-yellow-500'
-				},
-				danger: {
-					base: 'bg-red-100 text-red-500'
-				}
-			},
-			size: {
-				sm: {
-					base: 'text-sm p-2'
-				},
-				md: {
-					base: 'text-base p-4'
-				},
-				lg: {
-					base: 'text-lg p6'
-				}
-			}
-		}
-	});
+	// tailwind-variant
 	const slots = accordionVariant({ variant, size });
 
 	// Store variant + size in the context

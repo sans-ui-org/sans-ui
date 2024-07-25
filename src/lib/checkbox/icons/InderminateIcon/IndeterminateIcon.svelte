@@ -4,36 +4,14 @@
 
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
-	import { tv } from '$lib/utils/tv';
 	import { cn } from '$lib/utils/cn';
+	import { indeterminateIconVariant } from '$lib/checkbox/Checkbox';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
 	export let variant: ComponentVariant = 'primary';
 
-	const indeterminateIconVariant = tv({
-		slots: {
-			base: ['sui--check-icon', 'rounded', 'hover:bg-gray-100']
-		},
-		variants: {
-			variant: {
-				primary: { base: 'fill-blue-500' },
-				secondary: { base: 'fill-neutral-500' },
-				success: { base: 'fill-green-500' },
-				warning: { base: 'fill-yellow-500' },
-				danger: { base: 'fill-red-500' }
-			},
-			size: {
-				sm: { base: 'w-5 h-5' },
-				md: { base: 'w-7 h-7' },
-				lg: { base: 'w-9 h-9' }
-			},
-			disabled: {
-				true: { base: 'cursor-not-allowed fill-gray-400' },
-				false: { base: 'cursor-pointer' }
-			}
-		}
-	});
+	// tailwind-variant
 	const slots = indeterminateIconVariant({ variant, size, disabled });
 </script>
 

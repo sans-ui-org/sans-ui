@@ -3,8 +3,8 @@
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { createRipple } from '$lib/actions/ripple';
-	import { tv } from '$lib/utils/tailwind-variants';
-	import { twMerge } from '$lib/utils/tailwind-merge';
+	import { tv } from '$lib/utils/tv';
+	import { cn } from '$lib/utils/cn';
 
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;
@@ -35,25 +35,24 @@
 
 	// tailwind-variants
 	const buttonVariant = tv({
-		base: [
-			'relative inline-flex items-center rounded-3xl text-white outline-offset-4 transition duration-200'
-		],
+		slots: {
+			base: [
+				'relative inline-flex items-center rounded-3xl text-white outline-offset-4 transition duration-200',
+				'disabled:bg-gray-400 disabled:text-neutral-350 disabled:cursor-not-allowed'
+			]
+		},
 		variants: {
 			variant: {
-				primary: 'bg-blue-500 hover:bg-blue-400 active:bg-blue-600',
-				secondary: 'bg-neutral-500 hover:bg-neutral-400 active:bg-neutral-600',
-				success: 'bg-green-500 hover:bg-green-400 active:bg-green-600',
-				warning: 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600',
-				danger: 'bg-red-500 hover:bg-red-400 active:bg-red-600'
+				primary: { base: 'bg-blue-500 hover:bg-blue-400 active:bg-blue-600' },
+				secondary: { base: 'bg-neutral-500 hover:bg-neutral-400 active:bg-neutral-600' },
+				success: { base: 'bg-green-500 hover:bg-green-400 active:bg-green-600' },
+				warning: { base: 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600' },
+				danger: { base: 'bg-red-500 hover:bg-red-400 active:bg-red-600' }
 			},
 			size: {
-				sm: 'text-sm py-2 px-4 h-8',
-				md: 'text-base py-2 px-5 h-10',
-				lg: 'text-lg py-2 px-6 h-12'
-			},
-			disabled: {
-				true: 'bg-gray-400 hover:bg-gray-400 active:bg-gray-400 cursor-not-allowed',
-				false: ''
+				sm: { base: 'text-sm py-2 px-4 h-8' },
+				md: { base: 'text-base py-2 px-5 h-10' },
+				lg: { base: 'text-lg py-2 px-6 h-12' }
 			}
 		}
 		// compoundVariants: [
@@ -169,6 +168,7 @@
 		// 	}
 		// ]
 	});
+	const slots = buttonVariant({ variant, size });
 
 	const ripple = disabled ? () => {} : createRipple();
 </script>
@@ -178,7 +178,8 @@
 	{...$$restProps}
 	role={href ? 'link' : 'button'}
 	{href}
-	class={twMerge(buttonVariant({ variant, size, disabled }), $$restProps.class)}
+	{disabled}
+	class={cn(slots.base({ variant, size }), $$restProps.class)}
 	on:click
 	on:change
 	on:keydown

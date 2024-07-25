@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { CheckboxIconSize } from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { tv } from '$lib/utils/tv';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
@@ -11,32 +11,35 @@
 
 	// tailwind-variant
 	const checkIconVariant = tv({
-		base: ['sui--check-icon', 'hover:bg-gray-100 rounded stroke-neutral-500'],
+		slots: {
+			base: ['sui--check-icon', 'hover:bg-gray-100 rounded stroke-neutral-500']
+		},
 		variants: {
 			variant: {
-				primary: 'fill-blue-500',
-				secondary: 'fill-neutral-500',
-				success: 'fill-green-500',
-				warning: 'fill-yellow-500',
-				danger: 'fill-red-500'
+				primary: { base: 'fill-blue-500' },
+				secondary: { base: 'fill-neutral-500' },
+				success: { base: 'fill-green-500' },
+				warning: { base: 'fill-yellow-500' },
+				danger: { base: 'fill-red-500' }
 			},
 			size: {
-				sm: 'w-5 h-5',
-				md: 'w-7 h-7',
-				lg: 'w-9 h-9'
+				sm: { base: 'w-5 h-5' },
+				md: { base: 'w-7 h-7' },
+				lg: { base: 'w-9 h-9' }
 			},
 			disabled: {
-				true: 'cursor-not-allowed fill-gray-400',
-				false: 'cursor-pointer'
+				true: { base: 'cursor-not-allowed fill-gray-400' },
+				false: { base: 'cursor-pointer' }
 			}
 		}
 	});
+	const slots = checkIconVariant({ variant, size, disabled });
 
 	// check state
 	$: notChecked = !checked;
 </script>
 
-<svg class={checkIconVariant({ variant, size, disabled })} class:notChecked viewBox="0 0 100 100">
+<svg class={slots.base({ variant, size, disabled })} class:notChecked viewBox="0 0 100 100">
 	<path
 		stroke-width={7}
 		stroke-dasharray={320}

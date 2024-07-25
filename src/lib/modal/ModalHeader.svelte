@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { tv } from '$lib/utils/tv';
 	import { createEventDispatcher } from 'svelte';
 	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';
 
@@ -12,28 +12,25 @@
 	const dispatch = createEventDispatcher();
 
 	// taiwlind-variants
-	const modalHeaderWrapperVariant = tv({
-		base: [
-			'bg-white text-gray-500 border-gray-200 divide-gray-200 flex justify-between items-center'
-		],
-		variants: {}
-	});
 	const modalHeaderVariant = tv({
-		base: ['text-lg font-semibold text-gray-900 px-5 py-4'],
+		slots: {
+			headerWrapper: [
+				'bg-white text-gray-500 border-gray-200 divide-gray-200 flex justify-between items-center'
+			],
+			base: ['text-lg font-semibold text-gray-900 px-5 py-4'],
+			closeIcon: ['cursor-pointer p-2 mr-4 rounded hover:bg-gray-300']
+		},
 		variants: {}
 	});
-	const modalHeaderCloseIconVariant = tv({
-		base: ['cursor-pointer p-2 mr-4 rounded hover:bg-gray-300'],
-		variants: {}
-	});
+	const slots = modalHeaderVariant({});
 
 	// handler
 	const hide = () => dispatch('hide');
 </script>
 
-<div class={modalHeaderWrapperVariant({})}>
-	<h3 class={modalHeaderVariant({})}>
+<div class={slots.headerWrapper({})}>
+	<h3 class={slots.base({})}>
 		{title}
 	</h3>
-	<CloseButtonIcon class={modalHeaderCloseIconVariant({})} tabindex="1" on:click={hide} />
+	<CloseButtonIcon class={slots.closeIcon({})} tabindex="1" on:click={hide} />
 </div>

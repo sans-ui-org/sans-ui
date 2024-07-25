@@ -2,8 +2,9 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
-	import { tv } from '$lib/utils/tailwind-variants';
-	import { twMerge } from '$lib/utils/tailwind-merge';
+	import { tv } from '$lib/utils/tv';
+	import { cn } from '$lib/utils/cn';
+	import { base } from '$app/paths';
 
 	type $$BaseProps = HTMLBaseAttributes;
 
@@ -70,99 +71,76 @@
 	$: toggleLabel = toggled ? textForOn : textForOff;
 
 	// tailwind-variants
-	const baseVariant = tv({
-		base: ['flex flex-col gap-2 font-normal'],
-		variants: {}
-	});
-	const labelVariant = tv({
-		base: ['font-normal'],
-		variants: {
-			size: {
-				sm: ['text-xs'],
-				md: ['text-sm'],
-				lg: ['text-base']
-			},
-			invalid: {
-				true: ['text-red-500']
-			}
-		}
-	});
-	const switchWrapperVariant = tv({
-		base: ['flex flex-row gap-2 items-center'],
-		variants: {}
-	});
 	const switchVariant = tv({
-		base: ['rounded-full flex items-center p-1.5 transition-colors duration-300 ease-in-out'],
+		slots: {
+			label: ['font-normal'],
+			base: ['flex flex-col gap-2 font-normal'],
+			wrapper: ['flex flex-row gap-2 items-center'],
+			switch: ['rounded-full flex items-center p-1.5 transition-colors duration-300 ease-in-out'],
+			switchChip: ['rounded-full transition-all duration-300 ease'],
+			switchText: ['font-normal'],
+			invalidText: ['text-sm text-red-500 mt-1']
+		},
 		variants: {
-			size: {
-				sm: ['w-[40px] h-[20px]'],
-				md: ['w-[60px] h-[30px]'],
-				lg: ['w-[80px] h-[40px]']
-			},
 			variant: {
-				primary: ['bg-blue-500'],
-				secondary: ['bg-neutral-500'],
-				success: ['bg-green-500'],
-				warning: ['bg-yellow-500'],
-				danger: ['bg-red-500']
+				primary: { switch: ['bg-blue-500'] },
+				secondary: { switch: ['bg-neutral-500'] },
+				success: { switch: ['bg-green-500'] },
+				warning: { switch: ['bg-yellow-500'] },
+				danger: { switch: ['bg-red-500'] }
+			},
+			size: {
+				sm: {
+					label: ['text-xs'],
+					switch: ['w-[40px] h-[20px]'],
+					switchChip: ['w-[10px] h-[10px]']
+				},
+				md: {
+					label: ['text-sm'],
+					switch: ['w-[60px] h-[30px]'],
+					switchChip: ['w-[20px] h-[20px]']
+				},
+				lg: {
+					label: ['text-base'],
+					switch: ['w-[80px] h-[40px]'],
+					switchChip: ['w-[30px] h-[30px]']
+				}
 			},
 			disabled: {
-				true: 'cursor-not-allowed bg-gray-300',
-				false: 'cursor-pointer'
+				true: { switch: 'cursor-not-allowed bg-gray-300', switchChip: 'bg-gray-500' },
+				false: { switch: 'cursor-pointer', switchChip: 'bg-white' }
 			},
 			readonly: {
-				true: 'cursor-default',
+				true: { switch: 'cursor-default' },
 				false: ''
 			},
 			toggled: {
 				true: '',
-				false: 'bg-gray-400'
-			}
-		}
-	});
-	const switchChipVariant = tv({
-		base: ['rounded-full transition-all duration-300 ease'],
-		variants: {
-			size: {
-				sm: 'w-[10px] h-[10px]',
-				md: 'w-[20px] h-[20px]',
-				lg: 'w-[30px] h-[30px]'
+				false: { switch: 'bg-gray-400', switchChip: 'translate-x-0' }
 			},
-			disabled: {
-				true: 'bg-gray-500',
-				false: 'bg-white'
-			},
-			toggled: {
-				true: '',
-				false: 'translate-x-0'
+			invalid: {
+				true: { label: ['text-red-500'] }
 			}
 		},
 		compoundVariants: [
 			{
 				toggled: true,
 				size: 'sm',
-				className: ['translate-x-[20px]']
+				class: { switchChip: ['translate-x-[20px]'] }
 			},
 			{
 				toggled: true,
 				size: 'md',
-				className: ['translate-x-[30px]']
+				class: { switchChip: ['translate-x-[30px]'] }
 			},
 			{
 				toggled: true,
 				size: 'lg',
-				className: ['translate-x-[40px]']
+				className: { switchChip: ['translate-x-[40px]'] }
 			}
 		]
 	});
-	const switchLabelVariant = tv({
-		base: ['font-normal'],
-		variants: {}
-	});
-	const invalidTextVariant = tv({
-		base: ['text-sm text-red-500 mt-1'],
-		variants: {}
-	});
+	const slots = switchVariant({ size, variant, disabled, readonly, toggled, invalid });
 
 	// handlers
 	const onToggle = () => {
@@ -177,11 +155,13 @@
 	};
 </script>
 
-<div class={baseVariant({})}>
+<div class={slots.base({})}>
+	<!-- Label -->
 	{#if label}
-		<label class={labelVariant({ size, invalid })} for={id}>{label}</label>
+		<label class={slots.label({ size, invalid })} for={id}>{label}</label>
 	{/if}
-	<div class={switchWrapperVariant({})}>
+	<!-- Switch -->
+	<div class={slots.wrapper({})}>
 		<div
 			{id}
 			aria-checked={toggled}
@@ -190,16 +170,16 @@
 			{...$$restProps}
 			role="switch"
 			tabindex="0"
-			class={switchVariant({ size, variant, disabled, readonly, toggled })}
+			class={slots.switch({ size, variant, disabled, readonly, toggled })}
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>
-			<div class={switchChipVariant({ size, disabled, toggled })} />
+			<div class={slots.switchChip({ size, disabled, toggled })} />
 		</div>
-		<span class={switchLabelVariant({})}>{toggleLabel}</span>
+		<span class={slots.switchText({})}>{toggleLabel}</span>
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}
-		<p class={invalidTextVariant({})}>{invalidText}</p>
+		<p class={slots.invalidText({})}>{invalidText}</p>
 	{/if}
 </div>

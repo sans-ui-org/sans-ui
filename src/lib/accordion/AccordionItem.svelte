@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { tv } from '$lib/utils/tailwind-variants';
+	import { tv } from '$lib/utils/tv';
 	import { getContext } from 'svelte';
 	import type { HTMLLiAttributes } from 'svelte/elements';
 	import { slide } from 'svelte/transition';
-	import { twMerge } from 'tailwind-merge';
+	import { cn } from '$lib/utils/cn';
 
 	type $$Props = HTMLLiAttributes;
 
@@ -23,14 +23,14 @@
 				danger: 'bg-red-100 hover:bg-red-200 text-red-500'
 			},
 			size: {
-				sm: 'text-sm p-1',
-				md: 'text-base p-2',
-				lg: 'text-lg p-3'
+				sm: 'text-sm',
+				md: 'text-base',
+				lg: 'text-lg'
 			}
 		}
 	});
 </script>
 
-<li class={twMerge(accordionItemVariant({ variant, size }))} transition:slide|global>
+<li class={cn(accordionItemVariant({ variant, size }))} transition:slide|global>
 	<slot />
 </li>

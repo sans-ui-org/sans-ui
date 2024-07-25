@@ -10,6 +10,9 @@ import Input from '$lib/input/Input.svelte';
 import TextArea from '$lib/textArea/TextArea.svelte';
 import Switch from '$lib/switch/Switch.svelte';
 import Modal from '$lib/modal/Modal.svelte';
+import ModalContent from '$lib/modal/ModalContent.svelte';
+import ModalHeader from '$lib/modal/ModalHeader.svelte';
+import ModalBody from '$lib/modal/ModalBody.svelte';
 import Progress from '$lib/progress/Progress.svelte';
 import Spinner from '$lib/spinner/Spinner.svelte';
 import Tooltip from '$lib/tooltip/Tooltip.svelte';
@@ -28,6 +31,9 @@ export {
 	TextArea,
 	Switch,
 	Modal,
+	ModalContent,
+	ModalHeader,
+	ModalBody,
 	Progress,
 	Tooltip,
 	Spinner,

@@ -2,6 +2,7 @@
 	import type { ComponentVariant } from '$lib/utils/utils';
 	import type { CheckboxIconSize } from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import { checkIconVariant } from '$lib/checkbox/Checkbox';
+	import { cn } from '$lib/utils/cn';
 
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
@@ -16,7 +17,11 @@
 	$: notChecked = !checked;
 </script>
 
-<svg class={slots.base({ variant, size, disabled })} class:notChecked viewBox="0 0 100 100">
+<svg
+	class={cn(slots.base({ variant, size, disabled }), $$restProps.class)}
+	class:notChecked
+	viewBox="0 0 100 100"
+>
 	<path
 		stroke-width={7}
 		stroke-dasharray={320}

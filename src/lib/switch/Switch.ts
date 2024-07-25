@@ -69,3 +69,5 @@ export const switchVariant = tv({
 		}
 	]
 });
+
+export type SwitchSlots = keyof ReturnType<typeof switchVariant>;

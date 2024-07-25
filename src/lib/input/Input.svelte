@@ -1,11 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import InputContent from '$lib/inputContent/InputContent.svelte';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import type { SvelteComponent } from 'svelte';
 	import { cn } from '$lib/utils/cn';
-	import { inputVariant } from '$lib/input/Input';
+	import { inputVariant, type InputSlots } from '$lib/input/Input';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -26,6 +26,7 @@
 		invalidText?: string;
 		startContent?: typeof SvelteComponent;
 		endContent?: typeof SvelteComponent;
+		classes?: SlotsToClasses<InputSlots>;
 	}
 
 	/**
@@ -92,6 +93,10 @@
 	 * Property that defines the end content of the input.
 	 */
 	export let endContent: typeof SvelteComponent | undefined = undefined;
+	/**
+	 * Property that defines the class names of the input.
+	 */
+	export let classes: SlotsToClasses<InputSlots> = {};
 
 	let charCounter: number;
 	$: charCounter = value ? value.toString().length : 0;
@@ -118,9 +123,9 @@
 
 <!-- Label -->
 {#if label || maxCount}
-	<div class={slots.labelWrapper({ size })}>
+	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
 		{#if label}
-			<label for={id} class={slots.label({ invalid })}>{label}</label>
+			<label for={id} class={cn(slots.label({ invalid }), classes.label)}>{label}</label>
 		{:else}
 			<label for={id} />
 		{/if}
@@ -130,10 +135,13 @@
 	</div>
 {/if}
 <!-- Input -->
-<div class={slots.inputWrapper({ disabled })}>
+<div class={cn(slots.inputWrapper({ disabled }), classes.inputWrapper)}>
 	{#if startContent}
 		<InputContent
-			class={slots.startContent({ variant, clearable, disabled, invalid })}
+			class={cn(
+				slots.startContent({ variant, clearable, disabled, invalid }),
+				classes.startContent
+			)}
 			content={startContent}
 			{clearable}
 		/>
@@ -152,18 +160,19 @@
 		class:animation={animation && !invalid}
 		class={cn(
 			slots.base({ size, variant, invalid, animation, disabled, clearable }),
+			classes.base,
 			$$restProps.class
 		)}
 	/>
 	{#if endContent}
 		<InputContent
-			class={slots.endContent({ variant, clearable, disabled, invalid })}
+			class={cn(slots.endContent({ variant, clearable, disabled, invalid }), classes.endContent)}
 			content={endContent}
 			{clearable}
 		/>
 	{:else if clearable && value && value !== '' && !disabled && !readonly}
 		<button
-			class={slots.endContent({ variant, clearable, disabled, invalid })}
+			class={cn(slots.endContent({ variant, clearable, disabled, invalid }), classes.endContent)}
 			disabled={disabled || readonly}
 			on:click={onClear}
 		>
@@ -172,7 +181,7 @@
 	{/if}
 </div>
 
-<!-- Error text -->
+<!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class="text-sm text-red-500 mt-1">{invalidText}</span>
+	<span class={cn(slots.invalid({}), classes.invalid)}>{invalidText}</span>
 {/if}

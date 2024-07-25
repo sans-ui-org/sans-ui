@@ -1,12 +1,12 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
 	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';
-	import { checkboxVariant } from '$lib/checkbox/Checkbox';
+	import { checkboxVariant, type CheckboxSlots } from '$lib/checkbox/Checkbox';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -19,6 +19,7 @@
 		defaultChecked?: boolean;
 		indeterminate?: boolean;
 		animation?: boolean;
+		classes?: SlotsToClasses<CheckboxSlots>;
 	}
 
 	/**
@@ -49,6 +50,10 @@
 	 * Property that defines the disabled state of the checkbox.
 	 */
 	export let animation: boolean = true;
+	/**
+	 * Property that defines the class names of the checkbox.
+	 */
+	export let classes: SlotsToClasses<CheckboxSlots> = {};
 
 	let checked = defaultChecked;
 	let inputElement: HTMLInputElement;
@@ -91,7 +96,7 @@
 <div
 	{...$$restProps}
 	role="checkbox"
-	class={cn(slots.base({}), $$restProps.class)}
+	class={cn(slots.base({}), classes.base, $$restProps.class)}
 	tabindex="0"
 	aria-checked={checked}
 	aria-disabled={disabled}
@@ -108,8 +113,15 @@
 		on:change={onchange}
 	/>
 	{#if indeterminate}
-		<IndeterminateIcon {variant} {size} {disabled} />
+		<IndeterminateIcon {variant} {size} {disabled} class={cn(slots.icon(), classes.icon)} />
 	{:else}
-		<CheckIcon {variant} {size} {disabled} {animation} {checked} />
+		<CheckIcon
+			{variant}
+			{size}
+			{disabled}
+			{animation}
+			{checked}
+			class={cn(slots.icon(), classes.icon)}
+		/>
 	{/if}
 </div>

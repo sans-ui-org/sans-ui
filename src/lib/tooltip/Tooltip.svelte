@@ -1,8 +1,8 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
-	import { tooltipVariant } from '$lib/tooltip/Tooltip';
+	import { tooltipVariant, type TooltipSlots } from '$lib/tooltip/Tooltip';
 	import { cn } from '$lib/utils/cn';
 
 	interface $$Props extends HTMLButtonAttributes {
@@ -10,6 +10,7 @@
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		title: string;
+		classes?: SlotsToClasses<TooltipSlots>;
 	}
 
 	/**
@@ -28,6 +29,10 @@
 	 * Property that defines the title of the tooltip.
 	 */
 	export let title: string = '';
+	/**
+	 * Property that defines the classes of the tooltip.
+	 */
+	export let classes: SlotsToClasses<TooltipSlots> = {};
 
 	let open = false;
 
@@ -44,14 +49,21 @@
 </script>
 
 <button
+	{...$$restProps}
 	aria-describedby={id}
-	class={slots.triggerWrapper({ size, variant })}
+	class={cn(slots.triggerWrapper({ size, variant }), classes.triggerWrapper)}
 	on:mouseenter={onFocusIn}
 	on:mouseleave={onFocusOut}
 >
 	{#if open}
-		<div role="tooltip" {id} class={cn(slots.base({ size, variant }), $$restProps.class)}>
-			<span class={slots.tooltipContent({ size, variant })}>{title}</span>
+		<div
+			role="tooltip"
+			{id}
+			class={cn(slots.base({ size, variant }), classes.base, $$restProps.class)}
+		>
+			<span class={cn(slots.tooltipContent({ size, variant }), classes.tooltipContent)}
+				>{title}</span
+			>
 		</div>
 	{/if}
 	<slot />

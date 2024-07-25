@@ -1,23 +1,14 @@
 <script lang="ts">
-	import type { ComponentSize } from '$lib/utils/utils';
-	import { getContext } from 'svelte';
+	import { modalContentVariant } from '$lib/modal/Modal';
 	import { cn } from '$lib/utils/cn';
-	import { modalContentVariant } from "$lib/modal/Modal";
+	import type { HTMLBaseAttributes } from 'svelte/elements';
 
-	type $$Props = {
-		open?: boolean;
-	};
-
-	export let open: boolean = false;
-
-	let size = getContext('size') as ComponentSize;
+	type $$Props = HTMLBaseAttributes;
 
 	// taiwlind-variants
-	const slots = modalContentVariant({ open, size });
+	const slots = modalContentVariant({});
 </script>
 
-<div class={cn(slots.base({ size, open }), $$restProps.class)}>
-	<div class={slots.content({})}>
-		<slot />
-	</div>
+<div class={cn(slots.content({}), $$restProps.class)}>
+	<slot />
 </div>

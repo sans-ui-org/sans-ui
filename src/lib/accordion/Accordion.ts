@@ -36,3 +36,5 @@ export const accordionVariant = tv({
 		}
 	}
 });
+
+export type AccoridonSlots = keyof ReturnType<typeof accordionVariant>;

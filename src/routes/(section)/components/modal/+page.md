@@ -39,8 +39,13 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 
 <Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
-<Modal size="md" title="Modal Title" bind:open={popupModal}>
-	<!-- Here you can write your own code! -->
+<Modal size="md" bind:open={popupModal}>
+	<ModalContent>
+		<ModalHeader title="Modal Title" />
+		<ModalBody>
+			<!-- Here you can write your own code! -->
+		</ModalBody>
+	</ModalContent>
 </Modal>
 ```
 
@@ -59,8 +64,13 @@ Modal has `size` prop to decide the size of it.
 
 <Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
-<Modal size="full" title="Modal Title" bind:open={popupModal}>
-	<!-- Here you can write your own code! -->
+<Modal size="full" bind:open={popupModal}>
+	<ModalContent>
+		<ModalHeader title="Modal Title" />
+		<ModalBody>
+			<!-- Here you can write your own code! -->
+		</ModalBody>
+	</ModalContent>
 </Modal>
 ```
 
@@ -79,8 +89,13 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 
 <Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
-<Modal {size} {title} {dismissible} bind:open={popupModal}>
-	<!-- Here you can write your own code! -->
+<Modal size="md" dismissible={false} bind:open={popupModal}>
+	<ModalContent>
+		<ModalHeader title="Modal Title" />
+		<ModalBody>
+			<!-- Here you can write your own code! -->
+		</ModalBody>
+	</ModalContent>
 </Modal>
 ```
 

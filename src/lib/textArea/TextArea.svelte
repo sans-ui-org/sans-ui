@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
-	import { textareaVariant } from '$lib/textArea/TextArea';
+	import { textareaVariant, type TextareaSlots } from '$lib/textArea/TextArea';
+	import { cn } from '$lib/utils/cn';
 
 	interface $$Props extends HTMLTextareaAttributes {
 		id?: string;
@@ -20,6 +21,7 @@
 		invalid?: boolean;
 		invalidText?: string;
 		rows?: number;
+		classes?: SlotsToClasses<TextareaSlots>;
 	}
 
 	/**
@@ -78,6 +80,10 @@
 	 * Property that defines the rows of the textarea.
 	 */
 	export let rows: number = 4;
+	/**
+	 * Property that defines the classes of the textarea.
+	 */
+	export let classes: SlotsToClasses<TextareaSlots> = {};
 
 	const dispatch = createEventDispatcher();
 
@@ -101,9 +107,9 @@
 
 <!-- Label -->
 {#if label || maxCount}
-	<div class={slots.labelWrapper({ size })}>
+	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
 		{#if label}
-			<label for={id} class={slots.label({ invalid })}>{label}</label>
+			<label for={id} class={cn(slots.label({ invalid }), classes.label)}>{label}</label>
 		{:else}
 			<label for={id} />
 		{/if}
@@ -127,10 +133,10 @@
 	aria-readonly={readonly}
 	aria-invalid={invalid}
 	class:animation={animation && !invalid}
-	class={slots.base({ variant, size, invalid, animation, disabled })}
+	class={cn(slots.base({ variant, size, invalid, animation, disabled }), classes.base)}
 />
 
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class={slots.invalidText({})}>{invalidText}</span>
+	<span class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</span>
 {/if}

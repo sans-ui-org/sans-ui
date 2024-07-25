@@ -19,3 +19,5 @@ export const progressVariant = tv({
 		}
 	}
 });
+
+export type ProgressSlots = keyof ReturnType<typeof progressVariant>;

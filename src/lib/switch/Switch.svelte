@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
-	import { switchVariant } from '$lib/switch/Switch';
+	import { switchVariant, type SwitchSlots } from '$lib/switch/Switch';
+	import { cn } from '$lib/utils/cn';
 
 	type $$BaseProps = HTMLBaseAttributes;
 
@@ -18,6 +19,7 @@
 		invalid?: boolean;
 		invalidText?: string;
 		defaultToggled?: boolean;
+		classes?: SlotsToClasses<SwitchSlots>;
 	}
 
 	/**
@@ -64,6 +66,10 @@
 	 * Property that defines the default toggled value of the switch.
 	 */
 	export let defaultToggled: boolean = false;
+	/**
+	 * Property that defines the classes of the switch.
+	 */
+	export let classes: SlotsToClasses<SwitchSlots> = {};
 
 	$: toggled = defaultToggled;
 	$: toggleLabel = toggled ? textForOn : textForOff;
@@ -84,13 +90,13 @@
 	};
 </script>
 
-<div class={slots.base({})}>
+<div class={cn(slots.base({}), classes.base)}>
 	<!-- Label -->
 	{#if label}
-		<label class={slots.label({ size, invalid })} for={id}>{label}</label>
+		<label class={cn(slots.label({ size, invalid }), classes.label)} for={id}>{label}</label>
 	{/if}
 	<!-- Switch -->
-	<div class={slots.wrapper({})}>
+	<div class={cn(slots.wrapper({}), classes.wrapper)}>
 		<div
 			{id}
 			aria-checked={toggled}
@@ -99,16 +105,16 @@
 			{...$$restProps}
 			role="switch"
 			tabindex="0"
-			class={slots.switch({ size, variant, disabled, readonly, toggled })}
+			class={cn(slots.switch({ size, variant, disabled, readonly, toggled }), classes.switch)}
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>
-			<div class={slots.switchChip({ size, disabled, toggled })} />
+			<div class={cn(slots.switchChip({ size, disabled, toggled }), classes.switchChip)} />
 		</div>
-		<span class={slots.switchText({})}>{toggleLabel}</span>
+		<span class={cn(slots.switchText({}), classes.switchText)}>{toggleLabel}</span>
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}
-		<p class={slots.invalidText({})}>{invalidText}</p>
+		<p class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</p>
 	{/if}
 </div>

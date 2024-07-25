@@ -5,7 +5,6 @@ export const tooltipVariant = tv({
 		base: [
 			'absolute z-1 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded w-max',
 			"before:content=[''] before:absolute before:bottom-[-1rem] before:left-1/2 before:ml-[-10px] before:border-8 before:border-solid  before:border-top-8",
-			// Why is it detached from above? => tailwind-variant does not catch these when it is included in the above array item.
 			'before:border-b-transparent before:border-l-transparent before:border-r-transparent'
 		],
 		triggerWrapper: ['relative bg-transparent border-none cursor-auto'],
@@ -45,3 +44,5 @@ export const tooltipVariant = tv({
 		}
 	}
 });
+
+export type TooltipSlots = keyof ReturnType<typeof tooltipVariant>;

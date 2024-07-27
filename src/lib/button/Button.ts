@@ -50,7 +50,7 @@ export const buttonVariant = tv({
 			class: { base: 'text-base py-2 px-5 h-10' }
 		},
 		{
-			size: 'sm',
+			size: 'lg',
 			iconOnly: false,
 			class: { base: 'text-lg py-2 px-6 h-12' }
 		},

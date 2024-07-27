@@ -94,7 +94,7 @@ export function getLinkSlots({
 			case '7xl':
 				return 'text-7xl';
 			case '8xl':
-				return 'text-xl';
+				return 'text-8xl';
 			case '9xl':
 				return 'text-9xl';
 		}

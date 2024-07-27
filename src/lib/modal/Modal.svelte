@@ -47,47 +47,47 @@
 </script>
 
 <!-- {#if open} -->
-	<!-- backdrop -->
-	<div role="presentation" class={slots.overlay} />
-	<!-- dialog -->
-	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-	<div
-		role="dialog"
-		aria-modal="true"
-		tabindex="-1"
-		class={slots.dialog}
-		on:keydown={handleKeys}
-		on:mousedown={onOutsideClose}
-		use:focusTrap
-		use:autoFocus
-		{...$$restProps}
-	>
-		<!-- modal content -->
-		<div class={slots.modalContentWrapper}>
-			<div class={slots.modalContent}>
-				<!-- Modal header -->
-				{#if title}
-					<div class={slots.modalHeaderWrapper}>
-						<h3 class={slots.modalHeader}>
-							{title}
-						</h3>
-						<CloseButtonIcon class={slots.modalHeaderCloseIcon} tabindex="1" on:click={hide} />
-					</div>
-				{/if}
-				<!-- Modal body -->
-				<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-				<div
-					role="document"
-					class={slots.modalBody}
-					on:keydown|stopPropagation={handleKeys}
-					on:wheel|stopPropagation|passive
-				>
-					{#if dismissible && !title}
-						<CloseButtonIcon name="Close modal" class={slots.modalBodyCloseIcon} on:click={hide} />
-					{/if}
-					<slot />
+<!-- backdrop -->
+<div role="presentation" class={slots.overlay} />
+<!-- dialog -->
+<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+<div
+	role="dialog"
+	aria-modal="true"
+	tabindex="-1"
+	class={slots.dialog}
+	on:keydown={handleKeys}
+	on:mousedown={onOutsideClose}
+	use:focusTrap
+	use:autoFocus
+	{...$$restProps}
+>
+	<!-- modal content -->
+	<div class={slots.modalContentWrapper} data-testid="modal-area">
+		<div class={slots.modalContent}>
+			<!-- Modal header -->
+			{#if title}
+				<div class={slots.modalHeaderWrapper}>
+					<h3 class={slots.modalHeader}>
+						{title}
+					</h3>
+					<CloseButtonIcon class={slots.modalHeaderCloseIcon} tabindex="1" on:click={hide} />
 				</div>
+			{/if}
+			<!-- Modal body -->
+			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+			<div
+				role="document"
+				class={slots.modalBody}
+				on:keydown|stopPropagation={handleKeys}
+				on:wheel|stopPropagation|passive
+			>
+				{#if dismissible && !title}
+					<CloseButtonIcon name="Close modal" class={slots.modalBodyCloseIcon} on:click={hide} />
+				{/if}
+				<slot />
 			</div>
 		</div>
 	</div>
+</div>
 <!-- {/if} -->

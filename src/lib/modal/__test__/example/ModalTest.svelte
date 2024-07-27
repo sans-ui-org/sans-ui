@@ -7,7 +7,9 @@
 	let popupModal = false;
 </script>
 
-<Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
+<Button on:click={() => (popupModal = !popupModal)} data-testid="popup-triggered-button"
+	>Pop-up modal</Button
+>
 
 <Modal dismissible={true} bind:open={popupModal}>
 	<div class="text-center">

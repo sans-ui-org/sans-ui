@@ -181,6 +181,8 @@
 				class:focus={i === focus}
 				aria-selected={selected && selected.value === option.value}
 				use:select={() => onSelectByClicking(option)}
+				data-testid="opt{i}"
+				value={i}
 			>
 				<div class={slots.optionTextWrapper}>
 					<span class={slots.optionText}>{option.label}</span>

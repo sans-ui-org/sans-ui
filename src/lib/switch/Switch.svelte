@@ -112,7 +112,7 @@
 		>
 			<div class={slots.switchChip} />
 		</div>
-		<span class={slots.switchLabel}>{toggleLabel}</span>
+		<span class={slots.switchLabel} data-testid="label-text">{toggleLabel}</span>
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}

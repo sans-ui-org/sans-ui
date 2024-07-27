@@ -8,16 +8,48 @@ describe('Button component', async () => {
 		expect(screen.getByRole('button')).toBeTruthy();
 	});
 
+	// variant
+	test('should have correct variant', () => {
+		const button = render(Button, { variant: 'primary' });
+
+		expect(button.getByRole('button').classList.contains('bg-blue-500')).toBeTruthy();
+	});
+
 	test('should have correct variant', () => {
 		const button = render(Button, { variant: 'secondary' });
 
 		expect(button.getByRole('button').classList.contains('bg-neutral-500')).toBeTruthy();
 	});
 
+	test('should have correct variant', () => {
+		const button = render(Button, { variant: 'success' });
+		expect(button.getByRole('button').classList.contains('bg-green-500')).toBeTruthy();
+	});
+
+	test('should have correct variant', () => {
+		const button = render(Button, { variant: 'warning' });
+		expect(button.getByRole('button').classList.contains('bg-yellow-500')).toBeTruthy();
+	});
+
+	test('should have correct variant', () => {
+		const button = render(Button, { variant: 'danger' });
+		expect(button.getByRole('button').classList.contains('bg-red-500')).toBeTruthy();
+	});
+
+	// size
 	test('should have correct size', () => {
 		const button = render(Button, { size: 'sm' });
-
 		expect(button.getByRole('button').classList.contains('text-sm')).toBeTruthy();
+	});
+
+	test('should have correct size', () => {
+		const button = render(Button, { size: 'md' });
+		expect(button.getByRole('button').classList.contains('text-base')).toBeTruthy();
+	});
+
+	test('should have correct size', () => {
+		const button = render(Button, { size: 'lg' });
+		expect(button.getByRole('button').classList.contains('text-lg')).toBeTruthy();
 	});
 
 	// TODO: Add tests for Button component

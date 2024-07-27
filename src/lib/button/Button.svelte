@@ -1,3 +1,8 @@
+<script lang="ts" context="module">
+	type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
+	type ButtonRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
@@ -11,6 +16,10 @@
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		disabled?: boolean;
+		rippled?: boolean;
+		kind?: ButtonKind;
+		rounded?: ButtonRounded;
+		iconOnly?: boolean;
 		href?: string;
 		classes?: SlotsToClasses<ButtonSlots>;
 	};
@@ -24,9 +33,25 @@
 	 */
 	export let size: ComponentSize = 'md';
 	/**
+	 * Property that defines the rounded corners of the button.
+	 */
+	export let kind: ButtonKind = 'solid';
+	/**
+	 * Property that defines the rounded corners of the button.
+	 */
+	export let rounded: ButtonRounded = 'full';
+	/**
 	 * Property that defines if the button is disabled.
 	 */
 	export let disabled: boolean = false;
+	/**
+	 * Property that defines whether the ripple effect is enabled.
+	 */
+	export let rippled: boolean = true;
+	/**
+	 * Property that defines whether the button is an icon only button.
+	 */
+	export let iconOnly: boolean = false;
 	/**
 	 * Property that defines the href of the button.
 	 */
@@ -37,9 +62,10 @@
 	export let classes: SlotsToClasses<ButtonSlots> = {};
 
 	// tailwind-variants
-	const slots = buttonVariant({ variant, size });
+	const slots = buttonVariant({ variant, size, rounded, kind, iconOnly });
 
-	const ripple = disabled ? () => {} : createRipple();
+	// ripple effect
+	const ripple = disabled || !rippled ? () => {} : createRipple();
 </script>
 
 <svelte:element

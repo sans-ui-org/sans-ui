@@ -1,108 +1,73 @@
-import { cx, type ComponentSize, type ComponentVariant } from '$lib/utils/utils';
+import { tv } from '$lib/utils/tv';
 
-export type SwitchSlotsProps = {
-	className?: string;
-	size: ComponentSize;
-	variant: ComponentVariant;
-	disabled?: boolean;
-	readonly?: boolean;
-	toggled: boolean;
-	invalid?: boolean;
-	invalidText?: string;
-};
+export const switchVariant = tv({
+	slots: {
+		label: ['font-normal'],
+		base: ['flex flex-col gap-2 font-normal'],
+		wrapper: ['flex flex-row gap-2 items-center'],
+		switch: ['rounded-full flex items-center p-1.5 transition-colors duration-300 ease-in-out'],
+		switchChip: ['rounded-full transition-all duration-300 ease'],
+		switchText: ['font-normal'],
+		invalidText: ['text-sm text-red-500 mt-1']
+	},
+	variants: {
+		variant: {
+			primary: { switch: ['bg-blue-500'] },
+			secondary: { switch: ['bg-neutral-500'] },
+			success: { switch: ['bg-green-500'] },
+			warning: { switch: ['bg-yellow-500'] },
+			danger: { switch: ['bg-red-500'] }
+		},
+		size: {
+			sm: {
+				label: ['text-xs'],
+				switch: ['w-[40px] h-[20px]'],
+				switchChip: ['w-[10px] h-[10px]']
+			},
+			md: {
+				label: ['text-sm'],
+				switch: ['w-[60px] h-[30px]'],
+				switchChip: ['w-[20px] h-[20px]']
+			},
+			lg: {
+				label: ['text-base'],
+				switch: ['w-[80px] h-[40px]'],
+				switchChip: ['w-[30px] h-[30px]']
+			}
+		},
+		disabled: {
+			true: { switch: 'cursor-not-allowed bg-gray-300', switchChip: 'bg-gray-500' },
+			false: { switch: 'cursor-pointer', switchChip: 'bg-white' }
+		},
+		readonly: {
+			true: { switch: 'cursor-default' },
+			false: ''
+		},
+		toggled: {
+			true: '',
+			false: { switch: 'bg-gray-400', switchChip: 'translate-x-0' }
+		},
+		invalid: {
+			true: { label: ['text-red-500'] }
+		}
+	},
+	compoundVariants: [
+		{
+			toggled: true,
+			size: 'sm',
+			class: { switchChip: ['translate-x-[20px]'] }
+		},
+		{
+			toggled: true,
+			size: 'md',
+			class: { switchChip: ['translate-x-[30px]'] }
+		},
+		{
+			toggled: true,
+			size: 'lg',
+			className: { switchChip: ['translate-x-[40px]'] }
+		}
+	]
+});
 
-export function getSwitchSlots({
-	className = '',
-	size = 'md',
-	variant = 'success',
-	disabled = false,
-	// readonly = false,
-	toggled = false,
-	invalid = false,
-	invalidText = ''
-}: SwitchSlotsProps) {
-	const getFontSize = () => {
-		switch (size) {
-			case 'sm':
-				return 'text-xs';
-			case 'md':
-				return 'text-sm';
-			case 'lg':
-				return 'text-base';
-		}
-	};
-	const getSwitchBgColor = () => {
-		if (!toggled) return 'bg-gray-400';
-		if (disabled) return 'bg-gray-300';
-		switch (variant) {
-			case 'primary':
-				return 'bg-blue-600';
-			case 'secondary':
-				return 'bg-neutral-600';
-			case 'success':
-				return 'bg-green-600';
-			case 'warning':
-				return 'bg-yellow-600';
-			case 'danger':
-				return 'bg-red-600';
-		}
-	};
-	const getSwitchSize = () => {
-		switch (size) {
-			case 'sm':
-				return 'w-[40px] h-[20px]';
-			case 'md':
-				return 'w-[60px] h-[30px]';
-			case 'lg':
-				return 'w-[80px] h-[40px]';
-		}
-	};
-	const getSwitchChipSize = () => {
-		switch (size) {
-			case 'sm':
-				return 'w-[10px] h-[10px]';
-			case 'md':
-				return 'w-[20px] h-[20px]';
-			case 'lg':
-				return 'w-[30px] h-[30px]';
-		}
-	};
-	const getSwitchChipTranslate = () => {
-		switch (size) {
-			case 'sm':
-				return 'translate-x-[20px]';
-			case 'md':
-				return 'translate-x-[30px]';
-			case 'lg':
-				return 'translate-x-[40px]';
-		}
-	};
-
-	// slots
-	return {
-		base: cx(['flex flex-col gap-2 font-normal']),
-		label: cx([
-			'font-normal',
-			getFontSize(),
-			invalid && invalidText && invalidText !== '' ? 'text-red-500' : ''
-		]),
-		switchWrapper: cx(['flex flex-row gap-2 items-center']),
-		switch: cx([
-			getSwitchSize(),
-			'rounded-full flex items-center p-1.5',
-			'transition-colors duration-300 ease-in-out',
-			disabled ? 'cursor-not-allowed' : 'cursor-pointer',
-			getSwitchBgColor(),
-			className
-		]),
-		switchChip: cx([
-			getSwitchChipSize(),
-			'rounded-full',
-			disabled ? 'bg-gray-500' : 'bg-white',
-			'transition-all duration-300 ease',
-			toggled ? getSwitchChipTranslate() : 'translate-x-0'
-		]),
-		switchLabel: cx(['font-bold']),
-		invalidText: 'text-sm text-red-500 mt-1'
-	};
-}
+export type SwitchSlots = keyof ReturnType<typeof switchVariant>;

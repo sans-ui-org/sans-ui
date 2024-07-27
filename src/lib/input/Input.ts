@@ -1,98 +1,79 @@
-import { cx, type ComponentSize, type ComponentVariant } from '$lib/utils/utils';
+import { tv } from '$lib/utils/tv';
 
-export type InputProps = {
-	className: string;
-	variant: ComponentVariant;
-	size: ComponentSize;
-	clearable: boolean;
-	disabled: boolean;
-	animation: boolean;
-	invalid: boolean;
-	invalidText: string;
-};
-
-export function getInputSlots({
-	className,
-	variant,
-	size,
-	clearable,
-	disabled,
-	animation,
-	invalid,
-	invalidText
-}: InputProps) {
-	const getFontSize = () => {
-		switch (size) {
-			case 'sm':
-				return 'text-xs';
-			case 'md':
-				return 'text-sm';
-			case 'lg':
-				return 'text-base';
-			default:
-				return 'text-sm';
-		}
-	};
-
-	function getBorderColor() {
-		if (invalid) return '';
-		switch (variant) {
-			case 'primary':
-				return 'focus-visible:border-blue-500';
-			case 'secondary':
-				return 'focus-visible:border-neutral-500';
-			case 'success':
-				return 'focus-visible:border-green-500';
-			case 'warning':
-				return 'focus-visible:border-yellow-500';
-			case 'danger':
-				return 'focus-visible:border-red-500';
+export const inputVariant = tv({
+	slots: {
+		base: ['font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 focus:outline-0 border-2'],
+		labelWrapper: ['flex flex-row items-center justify-between w-full'],
+		label: ['font-normal'],
+		inputWrapper: ['relative font-normal bg-gray-100 mt-2 w-full'],
+		startContent: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 left-0'],
+		endContent: ['absolute h-10 w-10 flex flex-row items-center justify-center top-1 right-1'],
+		invalid: ['text-sm text-red-500 mt-1']
+	},
+	variants: {
+		variant: {
+			primary: {
+				base: 'focus-visible:border-blue-500',
+				startContent: 'focus-visible:border-blue-500',
+				endContent: 'focus-visible:border-blue-500'
+			},
+			secondary: {
+				base: 'focus-visible:border-neutral-500',
+				startContent: 'focus-visible:border-neutral-500',
+				endContent: 'focus-visible:border-neutral-500'
+			},
+			success: {
+				base: 'focus-visible:border-green-500',
+				startContent: 'focus-visible:border-green-500',
+				endContent: 'focus-visible:border-green-500'
+			},
+			warning: {
+				base: 'focus-visible:border-yellow-500',
+				startContent: 'focus-visible:border-yellow-500',
+				endContent: 'focus-visible:border-yellow-500'
+			},
+			danger: {
+				base: 'focus-visible:border-red-500',
+				startContent: 'focus-visible:border-red-500',
+				endContent: 'focus-visible:border-red-500'
+			}
+		},
+		size: {
+			sm: {
+				base: 'h-10'
+			},
+			md: {
+				base: 'h-12'
+			},
+			lg: {
+				base: 'h-14'
+			}
+		},
+		invalid: {
+			true: {
+				base: 'border-red-500 focus-visible:border-red-500',
+				label: 'text-red-500',
+				startContent: 'focus-visible:border-red-500',
+				endContent: 'focus-visible:border-red-500'
+			},
+			false: { base: '' }
+		},
+		animation: { true: { base: 'transition-all duration-300 ease-in' }, false: { base: '' } },
+		disabled: {
+			true: {
+				base: 'cursor-not-allowed text-gray-500',
+				inputWrapper: 'cursor-not-allowed bg-gray-500'
+			},
+			false: { base: 'cursor-text text-black', inputWrapper: 'cursor-text text-black' }
+		},
+		clearable: {
+			true: {
+				startContent: 'focus:outline-0 focus:border-2',
+				endContent: 'focus:outline-0 focus:border-2'
+			},
+			false: ''
 		}
 	}
+});
 
-	function getInputHeight() {
-		switch (size) {
-			case 'sm':
-				return 'h-10';
-			case 'md':
-				return 'h-12';
-			case 'lg':
-				return 'h-14';
-			default:
-				return 'text-sm';
-		}
-	}
-
-	const contentClassName = cx([
-		'absolute h-10 w-10',
-		'flex flex-row items-center justify-center',
-		clearable ? 'focus:outline-0 focus:border-2' : '',
-		disabled ? 'cursor-not-allowed' : 'cursor-pointer',
-		invalid ? 'focus-visible:border-red-500' : '',
-		getBorderColor()
-	]);
-
-	return {
-		labelWrapper: cx(['flex flex-row items-center justify-between w-full', getFontSize()]),
-		label: cx(['font-normal', invalid && invalidText && invalidText !== '' ? 'text-red-500' : '']),
-		inputWrapper: cx([
-			'relative font-normal bg-gray-100 mt-2 w-full',
-			disabled ? 'cursor-not-allowed' : 'cursor-text',
-			disabled ? 'text-gray-500' : 'text-black',
-			'flex flex-row items-center'
-		]),
-		input: cx([
-			'font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 focus:outline-0 border-2',
-			invalid ? 'border-red-500 focus-visible:border-red-500' : '',
-			animation ? 'transition-all duration-300 ease-in' : '',
-			disabled ? 'cursor-not-allowed' : 'cursor-text',
-			disabled ? 'text-gray-500' : 'text-black',
-			getInputHeight(),
-			getBorderColor(),
-			className
-		]),
-		invalidText: 'text-sm text-red-500 mt-1',
-		startContent: cx([contentClassName, 'left-0']),
-		endContent: cx([contentClassName, 'right-1'])
-	};
-}
+export type InputSlots = keyof ReturnType<typeof inputVariant>;

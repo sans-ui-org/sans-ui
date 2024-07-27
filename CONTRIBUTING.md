@@ -1,0 +1,55 @@
+# Are You Ready?
+
+We are going to use `pnpm` or `npm`.
+
+## Developing
+
+Once you've created a project and installed dependencies with `pnpm install`, start a development server:
+
+1. Documentation development
+
+```bash
+pnpm run dev:doc
+# OR
+npm run dev:doc
+```
+
+2. SUI Component(Storybook) development
+
+```bash
+pnpm run dev:storybook
+# OR
+npm run dev:storybook
+```
+
+3. You can just run both(1 and 2) by execuing this.
+
+```bash
+pnpm run dev
+# OR
+npm run dev
+```
+
+\*Before you commit, make sure that `pnpm run check` to check your change with Svelte-Kit.
+
+## Commit
+
+<p>When we make a commit, we shall use <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional commits</a>.</p>
+
+```sh
+feat: introduce a new component/feature for a component
+fix: fix a bug of component
+chore: some clean-ups
+docs: add/fix the documentation
+test: add/fix test
+```
+
+\*We will recommend you to not make a huge code amount commit... (It's going to be hard to review...)
+
+## Testing
+
+<p>Before submitting a PR, please run a test:</p>
+
+```sh
+pnpm run test
+```

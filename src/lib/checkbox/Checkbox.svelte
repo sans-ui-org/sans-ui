@@ -1,14 +1,16 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
 	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
 	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
-	import { getCheckBoxSlots } from '$lib/checkbox/Checkbox';
-	import type { HTMLLabelAttributes } from 'svelte/elements';
+	import type { HTMLInputAttributes } from 'svelte/elements';
+	import { cn } from '$lib/utils/cn';
+	import { checkboxVariant, type CheckboxSlots } from '$lib/checkbox/Checkbox';
 
-	interface $$Props extends HTMLLabelAttributes {
-		id?: string;
+	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
+
+	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		label?: string;
@@ -17,6 +19,7 @@
 		defaultChecked?: boolean;
 		indeterminate?: boolean;
 		animation?: boolean;
+		classes?: SlotsToClasses<CheckboxSlots>;
 	}
 
 	/**
@@ -27,10 +30,6 @@
 	 * Property that defines the size of the checkobx.
 	 */
 	export let size: ComponentSize = 'md';
-	/**
-	 * Property that defines the label of the checkbox.
-	 */
-	export let label: string = '';
 	/**
 	 * Value for the checkbox
 	 */
@@ -51,32 +50,28 @@
 	 * Property that defines the disabled state of the checkbox.
 	 */
 	export let animation: boolean = true;
+	/**
+	 * Property that defines the class names of the checkbox.
+	 */
+	export let classes: SlotsToClasses<CheckboxSlots> = {};
 
 	let checked = defaultChecked;
 	let inputElement: HTMLInputElement;
 	const dispatcher = createEventDispatcher();
 
-	let className = $$restProps.class;
+	// tailwind-variant
+	const slots = checkboxVariant({});
 
-	// slots
-	$: slots = getCheckBoxSlots({
-		className,
-		disabled,
-		variant,
-		size,
-		animation
-	});
-
-	// TODO: Extractable?
 	// --- Stateful logic ---
 	const onclick = (e: MouseEvent) => {
+		e.preventDefault(); // prevent the cascade of onchange event.
 		if (disabled || indeterminate) return;
 		checked = !checked;
 		dispatcher('click', e);
 	};
 	const onkeydown = (
 		e: KeyboardEvent & {
-			currentTarget: EventTarget & HTMLLabelElement;
+			currentTarget: EventTarget & HTMLDivElement;
 		}
 	) => {
 		if (disabled || indeterminate) return;
@@ -97,10 +92,11 @@
 </script>
 
 <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<label
+<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
+<div
 	{...$$restProps}
-	class={slots.base}
+	role="checkbox"
+	class={cn(slots.base({}), classes.base, $$restProps.class)}
 	tabindex="0"
 	aria-checked={checked}
 	aria-disabled={disabled}
@@ -110,8 +106,6 @@
 	<input
 		bind:this={inputElement}
 		{value}
-		aria-disabled={disabled}
-		aria-checked={checked}
 		{disabled}
 		{checked}
 		type="checkbox"
@@ -119,9 +113,15 @@
 		on:change={onchange}
 	/>
 	{#if indeterminate}
-		<IndeterminateIcon {variant} {size} {disabled} />
+		<IndeterminateIcon {variant} {size} {disabled} class={cn(slots.icon(), classes.icon)} />
 	{:else}
-		<CheckIcon {variant} {size} {disabled} {animation} bind:checked />
+		<CheckIcon
+			{variant}
+			{size}
+			{disabled}
+			{animation}
+			{checked}
+			class={cn(slots.icon(), classes.icon)}
+		/>
 	{/if}
-	<slot />
-</label>
+</div>

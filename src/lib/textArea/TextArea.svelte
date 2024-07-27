@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
-	import { getTextAreaSlots } from '$lib/textArea/TextArea';
 	import { createEventDispatcher } from 'svelte';
+	import { textareaVariant, type TextareaSlots } from '$lib/textArea/TextArea';
+	import { cn } from '$lib/utils/cn';
 
 	interface $$Props extends HTMLTextareaAttributes {
 		id?: string;
@@ -19,8 +20,8 @@
 		maxCount?: number;
 		invalid?: boolean;
 		invalidText?: string;
-		defaultToggled?: boolean;
 		rows?: number;
+		classes?: SlotsToClasses<TextareaSlots>;
 	}
 
 	/**
@@ -79,24 +80,20 @@
 	 * Property that defines the rows of the textarea.
 	 */
 	export let rows: number = 4;
+	/**
+	 * Property that defines the classes of the textarea.
+	 */
+	export let classes: SlotsToClasses<TextareaSlots> = {};
 
-	let className = $$props.class;
 	const dispatch = createEventDispatcher();
 
 	$: charCounter = value ? value.toString().length : 0;
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// slots
-	$: slots = getTextAreaSlots({
-		className,
-		variant,
-		size,
-		disabled,
-		animation,
-		invalid,
-		invalidText
-	});
+	const slots = textareaVariant({ variant, size, invalid, animation, disabled });
 
+	// handler
 	const onInput = (e: Event) => {
 		const target = e.target as HTMLInputElement;
 		if (maxCount && target.value.length > maxCount) {
@@ -109,9 +106,13 @@
 </script>
 
 <!-- Label -->
-{#if label}
-	<div class={slots.labelWrapper}>
-		<label for={id} class={slots.label}>{label}</label>
+{#if label || maxCount}
+	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
+		{#if label}
+			<label for={id} class={cn(slots.label({ invalid }), classes.label)}>{label}</label>
+		{:else}
+			<label for={id} />
+		{/if}
 		{#if maxCount}
 			<span>{counterText}</span>
 		{/if}
@@ -132,10 +133,10 @@
 	aria-readonly={readonly}
 	aria-invalid={invalid}
 	class:animation={animation && !invalid}
-	class={slots.textArea}
+	class={cn(slots.base({ variant, size, invalid, animation, disabled }), classes.base)}
 />
 
-<!-- Error Text -->
+<!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class={slots.invalidText}>{invalidText}</span>
+	<span class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</span>
 {/if}

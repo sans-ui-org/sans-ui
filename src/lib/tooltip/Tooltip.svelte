@@ -1,13 +1,16 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getTooltipSlots } from '$lib/tooltip/Tooltip';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import { tooltipVariant, type TooltipSlots } from '$lib/tooltip/Tooltip';
+	import { cn } from '$lib/utils/cn';
 
-	interface $$Props {
+	interface $$Props extends HTMLButtonAttributes {
 		id?: string;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		title: string;
+		classes?: SlotsToClasses<TooltipSlots>;
 	}
 
 	/**
@@ -25,33 +28,43 @@
 	/**
 	 * Property that defines the title of the tooltip.
 	 */
-	export let title: string;
+	export let title: string = '';
+	/**
+	 * Property that defines the classes of the tooltip.
+	 */
+	export let classes: SlotsToClasses<TooltipSlots> = {};
 
 	let open = false;
 
+	// tailwind-variant
+	const slots = tooltipVariant({ size, variant });
+
+	// handlers
 	const onFocusIn = () => {
 		open = true;
 	};
 	const onFocusOut = () => {
 		open = false;
 	};
-
-	let className = $$props.class;
-	$: slots = getTooltipSlots({ variant, size, className });
 </script>
 
-<div class={slots.base}>
+<button
+	{...$$restProps}
+	aria-describedby={id}
+	class={cn(slots.triggerWrapper({ size, variant }), classes.triggerWrapper)}
+	on:mouseenter={onFocusIn}
+	on:mouseleave={onFocusOut}
+>
 	{#if open}
-		<div role="tooltip" {id} class={slots.tooltip}>
-			<span class={slots.tooltipContent}>{title}</span>
+		<div
+			role="tooltip"
+			{id}
+			class={cn(slots.base({ size, variant }), classes.base, $$restProps.class)}
+		>
+			<span class={cn(slots.tooltipContent({ size, variant }), classes.tooltipContent)}
+				>{title}</span
+			>
 		</div>
 	{/if}
-	<button
-		aria-describedby={id}
-		class={slots.triggerWrapper}
-		on:mouseenter={onFocusIn}
-		on:mouseleave={onFocusOut}
-	>
-		<slot />
-	</button>
-</div>
+	<slot />
+</button>

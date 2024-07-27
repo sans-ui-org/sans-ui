@@ -1,23 +1,59 @@
-import { cx, type ComponentSize, type ComponentVariant } from '$lib/utils/utils';
+import { tv } from '$lib/utils/tv';
 
-export type CheckBoxProps = {
-	className?: string;
-	disabled?: boolean;
-	variant: ComponentVariant;
-	size: ComponentSize;
-	animation?: boolean;
-};
+export const checkboxVariant = tv({
+	slots: {
+		base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2'],
+		icon: []
+	},
+	variants: {}
+});
 
-export function getCheckBoxSlots({ className = '' }: CheckBoxProps) {
-	// classNames
-	const baseClassNames = cx([
-		'sui-checkbox--wrapper',
-		'flex flex-row items-center gap-2',
-		className
-	]);
+export const indeterminateIconVariant = tv({
+	slots: {
+		base: ['sui--check-icon', 'rounded', 'hover:bg-gray-100']
+	},
+	variants: {
+		variant: {
+			primary: { base: 'fill-blue-500' },
+			secondary: { base: 'fill-neutral-500' },
+			success: { base: 'fill-green-500' },
+			warning: { base: 'fill-yellow-500' },
+			danger: { base: 'fill-red-500' }
+		},
+		size: {
+			sm: { base: 'w-5 h-5' },
+			md: { base: 'w-7 h-7' },
+			lg: { base: 'w-9 h-9' }
+		},
+		disabled: {
+			true: { base: 'cursor-not-allowed fill-gray-400' },
+			false: { base: 'cursor-pointer' }
+		}
+	}
+});
 
-	// slots
-	return {
-		base: baseClassNames
-	};
-}
+export const checkIconVariant = tv({
+	slots: {
+		base: ['sui--check-icon', 'hover:bg-gray-100 rounded stroke-neutral-500']
+	},
+	variants: {
+		variant: {
+			primary: { base: 'fill-blue-500' },
+			secondary: { base: 'fill-neutral-500' },
+			success: { base: 'fill-green-500' },
+			warning: { base: 'fill-yellow-500' },
+			danger: { base: 'fill-red-500' }
+		},
+		size: {
+			sm: { base: 'w-5 h-5' },
+			md: { base: 'w-7 h-7' },
+			lg: { base: 'w-9 h-9' }
+		},
+		disabled: {
+			true: { base: 'cursor-not-allowed fill-gray-400' },
+			false: { base: 'cursor-pointer' }
+		}
+	}
+});
+
+export type CheckboxSlots = keyof ReturnType<typeof checkboxVariant>;

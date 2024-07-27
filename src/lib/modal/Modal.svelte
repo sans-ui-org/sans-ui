@@ -1,8 +1,13 @@
+<script lang="ts" context="module">
+	export type ModalSize = 'sm' | 'md' | 'lg' | 'full';
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
-	import { getModalSlots, type ModalSize } from '$lib/modal/Modal';
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
-	import CloseButtonIcon from '$lib/modal/icons/CloseButtonIcon.svelte';
+	import { setContext } from 'svelte';
+	import { modalVariant } from './Modal';
+	import { cn } from '$lib/utils/cn';
 
 	interface $$Props {
 		open?: boolean;
@@ -20,19 +25,14 @@
 	 */
 	export let open: boolean = false;
 	/**
-	 * Property that defines the title of the modal.
-	 */
-	export let title: string | undefined = undefined;
-	/**
 	 * Property that whether this modal is able to be closed by clicking outside of it.
 	 */
 	export let dismissible: boolean = true;
 
-	let className = $$props.class;
+	// tailwind-variants
+	const slots = modalVariant({ open, size });
 
-	// slots
-	$: slots = getModalSlots({ className, open, size });
-
+	// handlers
 	const onOutsideClose = (e: MouseEvent) => {
 		const target: Element = e.target as Element;
 		if (target === e.currentTarget && dismissible) hide(e); // close on click outside
@@ -44,24 +44,37 @@
 	const handleKeys = (e: KeyboardEvent) => {
 		if (e.key === 'Escape') return hide(e);
 	};
+
+	// set context
+	setContext('hide', hide);
 </script>
 
+<<<<<<< HEAD
 <!-- {#if open} -->
 <!-- backdrop -->
 <div role="presentation" class={slots.overlay} />
+=======
+<!-- backdrop -->
+<div role="presentation" class={slots.overlay({ open })} />
+>>>>>>> main
 <!-- dialog -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <div
 	role="dialog"
 	aria-modal="true"
 	tabindex="-1"
+<<<<<<< HEAD
 	class={slots.dialog}
+=======
+	class={slots.base({ open, size })}
+>>>>>>> main
 	on:keydown={handleKeys}
 	on:mousedown={onOutsideClose}
 	use:focusTrap
 	use:autoFocus
 	{...$$restProps}
 >
+<<<<<<< HEAD
 	<!-- modal content -->
 	<div class={slots.modalContentWrapper} data-testid="modal-area">
 		<div class={slots.modalContent}>
@@ -91,3 +104,9 @@
 	</div>
 </div>
 <!-- {/if} -->
+=======
+	<div class={cn(slots.wrapper({ size, open }))}>
+		<slot />
+	</div>
+</div>
+>>>>>>> main

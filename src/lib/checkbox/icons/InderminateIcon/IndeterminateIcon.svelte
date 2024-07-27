@@ -1,17 +1,32 @@
+<script lang="ts" context="module">
+	export type CheckboxIconSize = 'sm' | 'md' | 'lg';
+</script>
+
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
+<<<<<<< HEAD
 	import {
 		getIndeterminateIconSlots,
 		type CheckboxIconSize
 	} from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon';
+=======
+	import { cn } from '$lib/utils/cn';
+	import { indeterminateIconVariant } from '$lib/checkbox/Checkbox';
+
+>>>>>>> main
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
 	export let variant: ComponentVariant = 'primary';
 
-	$: slots = getIndeterminateIconSlots({ disabled, size, variant });
+	// tailwind-variant
+	const slots = indeterminateIconVariant({ variant, size, disabled });
 </script>
 
-<svg class={slots.base} viewBox="0 0 100 100" fill="white">
+<svg
+	class={cn(slots.base({ variant, size, disabled }), $$restProps.class)}
+	viewBox="0 0 100 100"
+	fill="white"
+>
 	<path
 		class={'box'}
 		stroke-width={7}
@@ -19,5 +34,3 @@
 	/>
 	<line stroke="white" stroke-width={7} x1="70" x2="30" y1="50" y2="50" />
 </svg>
-
-<style></style>

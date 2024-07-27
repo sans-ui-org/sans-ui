@@ -1,8 +1,13 @@
+<script lang="ts" context="module">
+	export type SpinnerKind = 'loader1' | 'loader2' | 'loader3';
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import { getSpinnerSlots, type SpinnerKind } from '$lib/spinner/Spinner';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
+	import { cn } from '$lib/utils/cn';
+	import { spinnerVariant, type SpinnerSlots } from '$lib/spinner/Spinner';
 
 	type $$BaseProps = HTMLBaseAttributes;
 
@@ -10,32 +15,41 @@
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		kind?: SpinnerKind;
+		classes?: SlotsToClasses<SpinnerSlots>;
 	}
 
 	/**
 	 * Property that define the variant of the button.
 	 */
 	export let variant: ComponentVariant = 'primary';
-
 	/**
 	 * Property that defines the size of the button.
 	 */
 	export let size: ComponentSize = 'md';
-
 	/**
 	 * Property that defines the kind of spinner.
 	 */
 	export let kind: SpinnerKind = 'loader1';
+	/**
+	 * Property that defines the classes of the spinner.
+	 */
+	export let classes: SlotsToClasses<SpinnerSlots> = {};
 
 	const dotList = [1.1, 1.0, 0.9, 0.8, 0.7, 0.6];
-	let className = $$props.class;
-	$: slots = getSpinnerSlots({ variant, size, kind, className });
+
+	// tailwind-variants
+	const slots = spinnerVariant({ size, variant, kind });
 </script>
 
-<div aria-busy="true" role="alert" {...$$restProps} class={slots.spinner}>
+<div
+	aria-busy="true"
+	role="alert"
+	{...$$restProps}
+	class={cn(slots.base({ size, variant, kind }), classes.base, $$restProps.class)}
+>
 	{#if kind === 'loader2'}
 		{#each dotList as dot}
-			<div class={slots.dot} style={`animation-delay: -${dot}s;`} />
+			<div class={cn(slots.dot({ variant }), classes.dot)} style={`animation-delay: -${dot}s;`} />
 		{/each}
 	{/if}
 </div>

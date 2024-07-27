@@ -1,37 +1,80 @@
+<script lang="ts" context="module">
+	type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
+	type ButtonRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
+</script>
+
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
-	import type { HTMLButtonAttributes } from 'svelte/elements';
-	import { getButtonSlots } from '$lib/button/Button';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { createRipple } from '$lib/actions/ripple';
+	import { cn } from '$lib/utils/cn';
+	import type { ButtonSlots } from '$lib/button/Button';
+	import { buttonVariant } from '$lib/button/Button';
 
-	interface $$Props extends HTMLButtonAttributes {
+	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;
 		size?: ComponentSize;
-	}
+		disabled?: boolean;
+		rippled?: boolean;
+		kind?: ButtonKind;
+		rounded?: ButtonRounded;
+		iconOnly?: boolean;
+		href?: string;
+		classes?: SlotsToClasses<ButtonSlots>;
+	};
 
 	/**
 	 * Property that define the variant of the button.
 	 */
 	export let variant: ComponentVariant = 'primary';
-
 	/**
 	 * Property that defines the size of the button.
 	 */
 	export let size: ComponentSize = 'md';
+	/**
+	 * Property that defines the rounded corners of the button.
+	 */
+	export let kind: ButtonKind = 'solid';
+	/**
+	 * Property that defines the rounded corners of the button.
+	 */
+	export let rounded: ButtonRounded = 'full';
+	/**
+	 * Property that defines if the button is disabled.
+	 */
+	export let disabled: boolean = false;
+	/**
+	 * Property that defines whether the ripple effect is enabled.
+	 */
+	export let rippled: boolean = true;
+	/**
+	 * Property that defines whether the button is an icon only button.
+	 */
+	export let iconOnly: boolean = false;
+	/**
+	 * Property that defines the href of the button.
+	 */
+	export let href: string | undefined = undefined;
+	/*
+	 * Property that defines the class names of the button.
+	 */
+	export let classes: SlotsToClasses<ButtonSlots> = {};
 
-	let className = $$restProps.class;
-	const disabled = $$restProps.disabled;
+	// tailwind-variants
+	const slots = buttonVariant({ variant, size, rounded, kind, iconOnly });
 
-	// slots
-	$: slots = getButtonSlots({ className, disabled, variant, size });
-
-	const ripple = createRipple();
+	// ripple effect
+	const ripple = disabled || !rippled ? () => {} : createRipple();
 </script>
 
-<button
+<svelte:element
+	this={href ? 'a' : 'button'}
 	{...$$restProps}
-	class={slots.base}
+	role={href ? 'link' : 'button'}
+	{href}
+	{disabled}
+	class={cn(slots.base({ variant, size }), classes.base, $$restProps.class)}
 	on:click
 	on:change
 	on:keydown
@@ -44,4 +87,4 @@
 	use:ripple
 >
 	<slot />
-</button>
+</svelte:element>

@@ -28,12 +28,12 @@ Flowbite Svelte is a free and open-source UI component library licensed under th
 
 ### Does S-UI use TypeScript?
 
-Yes. This UI library is written in TypeScript and Svelte.
+-> Yes. This UI library is written in TypeScript and Svelte.
 
 ### S-UI taking Tailwind classes conflicts into account?
 
-We also using a Tailwind extension library called `tailwind-variants` that automatically handles TailwindCSS class conflicts.
+-> We also using a Tailwind extension library called `tailwind-variants` that automatically handles TailwindCSS class conflicts.
 
 ### S-UI compiles CSS during runtime?
 
-No. We already have compiled CSS ready, so all you have to do is import each component from our library.
+-> No. We already have compiled CSS ready, so all you have to do is import each component from our library.

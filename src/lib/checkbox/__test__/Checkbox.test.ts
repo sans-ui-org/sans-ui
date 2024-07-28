@@ -8,64 +8,62 @@ describe('Checkbox component', async () => {
 		expect(screen.getByRole('checkbox')).toBeTruthy();
 	});
 
-	test('should have disabled attribute', async () => {
+	test('should have disabled attribute set to true when disabled is true', async () => {
 		const checkbox = render(Checkbox, { disabled: true });
-
 		expect(checkbox.getByRole('checkbox').getAttribute('aria-disabled')).toBe('true');
 	});
 
-	test('should have checked attribute', async () => {
+	test('should have aria-checked set to fasle when disabled is false', async () => {
 		const checkbox = render(Checkbox, { disabled: false });
-
 		expect(checkbox.getByRole('checkbox').getAttribute('aria-checked')).toBe('false');
 	});
 });
 
-//indeterminate
+//TODO: indeterminate
 //describe('Checkbox indeterminate', async () => {
 //});
 
 describe('Checkbox variant', async () => {
-	test('should have correct variant', () => {
+	test('should have correct variant for primary', () => {
 		render(Checkbox, { variant: 'primary' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-blue-500')).toBeTruthy();
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for secodary', () => {
 		render(Checkbox, { variant: 'secondary' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-neutral-500')).toBeTruthy();
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for success', () => {
 		render(Checkbox, { variant: 'success' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-green-500')).toBeTruthy();
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for warning', () => {
 		render(Checkbox, { variant: 'warning' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-yellow-500')).toBeTruthy();
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for danger', () => {
 		render(Checkbox, { variant: 'danger' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-red-500')).toBeTruthy();
 	});
 });
 
 describe('Checkbox size', async () => {
-	test('should have correct size', () => {
+	test('should have correct size for sm', () => {
 		render(Checkbox, { size: 'sm' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('w-5')).toBeTruthy();
 	});
-	test('should have correct size', () => {
+	test('should have correct size for md', () => {
 		render(Checkbox, { size: 'md' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('w-7')).toBeTruthy();
 	});
-	test('should have correct size', () => {
+	test('should have correct size for lg', () => {
 		render(Checkbox, { size: 'lg' });
 		expect(screen.getByTestId('checkbox-svg').classList.contains('w-9')).toBeTruthy();
 	});
 });
 
-//label
+//TODO:label
 
-//value
+//TODO:value
 
 //disabled
 describe('Checkbox disabled', async () => {

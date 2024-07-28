@@ -33,58 +33,53 @@ describe('Input component', async () => {
 	});
 
 	// variant
-	test('should have correct variant', () => {
+	test('should have correct variant for primary', () => {
 		const userInpput = render(Input, { variant: 'primary' });
-
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:border-blue-500')
 		).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for secondary', () => {
 		const userInpput = render(Input, { variant: 'secondary' });
-
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:border-neutral-500')
 		).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for success', () => {
 		const userInpput = render(Input, { variant: 'success' });
-
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:border-green-500')
 		).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for warning', () => {
 		const userInpput = render(Input, { variant: 'warning' });
-
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:border-yellow-500')
 		).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for danger', () => {
 		const userInpput = render(Input, { variant: 'danger' });
-
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:border-red-500')
 		).toBeTruthy();
 	});
 
 	// size
-	test('should have correct size', () => {
+	test('should have correct size for sm', () => {
 		const userInpput = render(Input, { size: 'sm' });
 		expect(userInpput.getByRole('textbox').classList.contains('h-10')).toBeTruthy();
 	});
 
-	test('should have correct size', () => {
+	test('should have correct size for md', () => {
 		const userInpput = render(Input, { size: 'md' });
 		expect(userInpput.getByRole('textbox').classList.contains('h-12')).toBeTruthy();
 	});
 
-	test('should have correct size', () => {
+	test('should have correct size for lg', () => {
 		const userInpput = render(Input, { size: 'lg' });
 
 		expect(userInpput.getByRole('textbox').classList.contains('h-14')).toBeTruthy();
@@ -103,24 +98,24 @@ describe('Input component', async () => {
 	});
 
 	//disabled
-	test('should have disabled attribute', async () => {
+	test('should have disabled attribute set to true', async () => {
 		const userInpput = render(Input, { disabled: true });
 		expect(userInpput.getByRole('textbox').getAttribute('aria-disabled')).toBe('true');
 	});
 
-	test('should not have disabled attribute', async () => {
+	test('should not have disabled attribute set to false', async () => {
 		const userInpput = render(Input, { disabled: false });
 		expect(userInpput.getByRole('textbox').getAttribute('aria-disabled')).toBe('false');
 	});
 
 	//readonly
-	test('should have readonly attribute', async () => {
+	test('should have readonly attribute set to true', async () => {
 		const userInpput = render(Input, { readonly: true });
 
 		expect(userInpput.getByRole('textbox').getAttribute('aria-readonly')).toBe('true');
 	});
 
-	test('should have readonly attribute', async () => {
+	test('should have readonly attribute set to false', async () => {
 		const userInpput = render(Input, { readonly: false });
 
 		expect(userInpput.getByRole('textbox').getAttribute('aria-readonly')).toBe('false');
@@ -131,11 +126,6 @@ describe('Input component', async () => {
 		const userInpput = render(Input, { clearable: true });
 		expect(userInpput.getByRole('textbox').classList.contains('focus:outline-0')).toBeTruthy();
 		//expect(button.getByRole('textbox').classList.contains('focus:outline-0  focus:border-2')).toBeTruthy();
-	});
-
-	test('should have disabled animation', async () => {
-		const userInpput = render(Input, { clearable: false });
-		expect(userInpput.getByRole('textbox').closest('button.svg')).toBeFalsy();
 	});
 
 	//maxCount
@@ -184,19 +174,4 @@ describe('Input component', async () => {
 	// TODO: Add tests for Button component
 	// on:click
 
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseButton = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseButton);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseButton = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseButton);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
 });

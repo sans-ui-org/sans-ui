@@ -101,23 +101,23 @@ describe('Select component', async () => {
 	});
 
 	//disabled
-	test('should have disabled attribute', async () => {
+	test('should have disabled attribute set to true', async () => {
 		const button = render(Select, { disabled: true });
 		expect(button.getByRole('button').getAttribute('aria-disabled')).toBe('true');
 	});
 
-	test('should have disabled attribute', async () => {
+	test('should have disabled attribute set ti false', async () => {
 		const button = render(Select, { disabled: false });
 		expect(button.getByRole('button').getAttribute('aria-disabled')).toBe('false');
 	});
 
 	//readonly
-	test('should have readonly attribute', async () => {
+	test('should have readonly attribute set to true', async () => {
 		const button = render(Select, { readonly: true });
 		expect(button.getByRole('combobox').getAttribute('aria-readonly')).toBe('true');
 	});
 
-	test('should have readonly attribute', async () => {
+	test('should have readonly attribute set to false', async () => {
 		const button = render(Select, { readonly: false });
 		expect(button.getByRole('combobox').getAttribute('aria-readonly')).toBe('false');
 	});
@@ -153,22 +153,4 @@ describe('Select component', async () => {
 		expect(screen.getByText('This is invalid text')).toBeTruthy();
 	});
 
-	// TODO: Add tests for Select component
-	// on:click
-
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseButton = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseButton);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseButton = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseButton);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
 });

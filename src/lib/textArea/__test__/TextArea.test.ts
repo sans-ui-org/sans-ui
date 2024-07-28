@@ -50,43 +50,43 @@ describe('TextArea component', async () => {
 	//value
 
 	//variant
-	test('should have correct variant', () => {
+	test('should have correct variant for primary', () => {
 		const userTextarea = render(TextArea, { variant: 'primary' });
 		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-blue-500')).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for secondary', () => {
 		const userTextarea = render(TextArea, { variant: 'secondary' });
 		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-neutral-500')).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for success', () => {
 		const userTextarea = render(TextArea, { variant: 'success' });
 		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-green-500')).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant for warning', () => {
 		const userTextarea = render(TextArea, { variant: 'warning' });
 		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-yellow-500')).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
+	test('should have correct variant danger', () => {
 		const userTextarea = render(TextArea, { variant: 'danger' });
 		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-red-500')).toBeTruthy();
 	});
 
 	//size
-	test('should have correct size', () => {
+	test('should have correct size for sm', () => {
 		const userTextarea = render(TextArea, { size: 'sm' });
 		expect(userTextarea.getByRole('textbox').classList.contains('text-xs')).toBeTruthy();
 	});
 
-	test('should have correct size', () => {
+	test('should have correct size for md', () => {
 		const userTextarea = render(TextArea, { size: 'md' });
 		expect(userTextarea.getByRole('textbox').classList.contains('text-sm')).toBeTruthy();
 	});
 
-	test('should have correct size', () => {
+	test('should have correct size for lg', () => {
 		const userTextarea = render(TextArea, { size: 'lg' });
 		expect(userTextarea.getByRole('textbox').classList.contains('text-base')).toBeTruthy();
 	});
@@ -121,31 +121,4 @@ describe('TextArea component', async () => {
 		expect(screen.getByText('3/10')).toBeTruthy();
 	});
 
-	/*
-	test('should have ', async () => {
-		const button = render(TextArea, { maxCount: 1 });
-		await user.click(button.getByRole('textbox'));
-		await user.keyboard('foo');
-		expect(screen.getByText('1/1')).toBeTruthy();
-	});
-	*/
-
-	// TODO: Add tests for Button component
-	// on:click
-
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseButton = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseButton);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseButton = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseButton);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
 });

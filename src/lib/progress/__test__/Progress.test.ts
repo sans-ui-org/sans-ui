@@ -25,23 +25,23 @@ describe('Progress component', async () => {
 	});
 
 	//variant
-	test('should have correct variant', () => {
+	test('should have correct variant for primary', () => {
 		render(Progress, { variant: 'primary' });
 		expect(screen.getByTestId('bottom-circle').classList.contains('stroke-blue-500'));
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for secondary', () => {
 		render(Progress, { variant: 'secondary' });
 		expect(screen.getByTestId('bottom-circle').classList.contains('stroke-neutral-500'));
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for success', () => {
 		render(Progress, { variant: 'success' });
 		expect(screen.getByTestId('bottom-circle').classList.contains('stroke-green-500'));
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for warning', () => {
 		render(Progress, { variant: 'warning' });
 		expect(screen.getByTestId('bottom-circle').classList.contains('stroke-yellow-500'));
 	});
-	test('should have correct variant', () => {
+	test('should have correct variant for danger', () => {
 		render(Progress, { variant: 'danger' });
 		expect(screen.getByTestId('bottom-circle').classList.contains('stroke-red-500'));
 	});
@@ -64,20 +64,4 @@ describe('Progress component', async () => {
 		expect(screen.getByText('Label is here')).toBeTruthy();
 	});
 
-	// TODO: Add tests for Progress component
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseProgress = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseProgress);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseProgress = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseProgress);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
 });

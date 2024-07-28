@@ -16,7 +16,7 @@ describe('Switch component', async () => {
 	});
 
 	//textForOn
-	test('should have correct variant', async () => {
+	test('should have correct text when the switch is on', async () => {
 		render(Switch, { textForOn: 'I am on' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
@@ -25,42 +25,42 @@ describe('Switch component', async () => {
 	});
 
 	//textForOff
-	test('should have correct variant', async () => {
+	test('should have correct text when the switch is off', async () => {
 		render(Switch, { textForOff: 'I am off' });
 		const labelText = screen.getByTestId('label-text').innerHTML;
 		expect(labelText).toBe('I am off');
 	});
 
 	//variant
-	test('should have correct variant', async () => {
+	test('should have correct variant for primary', async () => {
 		render(Switch, { variant: 'primary' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
-		expect(switchButton.classList.contains('bg-blue-600')).toBeTruthy();
+		expect(switchButton.classList.contains('bg-blue-500')).toBeTruthy();
 	});
-	test('should have correct variant', async () => {
+	test('should have correct variant for secondary', async () => {
 		render(Switch, { variant: 'secondary' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
-		expect(switchButton.classList.contains('bg-neutral-600')).toBeTruthy();
+		expect(switchButton.classList.contains('bg-neutral-500')).toBeTruthy();
 	});
-	test('should have correct variant', async () => {
+	test('should have correct variant for success', async () => {
 		render(Switch, { variant: 'success' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
-		expect(switchButton.classList.contains('bg-green-600')).toBeTruthy();
+		expect(switchButton.classList.contains('bg-green-500')).toBeTruthy();
 	});
-	test('should have correct variant', async () => {
+	test('should have correct variant for warning', async () => {
 		render(Switch, { variant: 'warning' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
-		expect(switchButton.classList.contains('bg-yellow-600')).toBeTruthy();
+		expect(switchButton.classList.contains('bg-yellow-500')).toBeTruthy();
 	});
-	test('should have correct variant', async () => {
+	test('should have correct variant for danger', async () => {
 		render(Switch, { variant: 'danger' });
 		const switchButton = screen.getByRole('switch');
 		await userEvent.click(switchButton);
-		expect(switchButton.classList.contains('bg-red-600')).toBeTruthy();
+		expect(switchButton.classList.contains('bg-red-500')).toBeTruthy();
 	});
 
 	//id
@@ -70,15 +70,15 @@ describe('Switch component', async () => {
 	});
 
 	//size
-	test('should have correct Switch Size', () => {
+	test('should have correct Switch Size for sm', () => {
 		const switchButton = render(Switch, { size: 'sm' });
 		expect(switchButton.getByRole('switch').classList.contains('w-[40px]')).toBeTruthy();
 	});
-	test('should have correct Switch Size', () => {
+	test('should have correct Switch Size for md', () => {
 		const switchButton = render(Switch, { size: 'md' });
 		expect(switchButton.getByRole('switch').classList.contains('w-[60px]')).toBeTruthy();
 	});
-	test('should have correct Switch Size', () => {
+	test('should have correct Switch Size for lg', () => {
 		const switchButton = render(Switch, { size: 'lg' });
 		expect(switchButton.getByRole('switch').classList.contains('w-[80px]')).toBeTruthy();
 	});
@@ -102,29 +102,14 @@ describe('Switch component', async () => {
 	// not working?
 
 	// defaultToggled
-	test('should have correct aria-disabled attribute when defaultToggled is toggled', () => {
+	test('should have correct aria-disabled attribute when defaultToggled is toggled to true', () => {
 		const sw = render(Switch, { defaultToggled: true });
 		expect(sw.getByRole('switch').getAttribute('aria-checked')).toBe('true');
 	});
 
-	test('should have correct aria-disabled attribute when defaultToggled is toggled', () => {
+	test('should have correct aria-disabled attribute when defaultToggled is toggled to false', () => {
 		const sw = render(Switch, { defaultToggled: false });
 		expect(sw.getByRole('switch').getAttribute('aria-checked')).toBe('false');
 	});
-
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseSwitch = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseSwitch);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseSwitch = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseSwitch);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
+	
 });

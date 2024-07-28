@@ -49,64 +49,22 @@
 	setContext('hide', hide);
 </script>
 
-<<<<<<< HEAD
-<!-- {#if open} -->
-<!-- backdrop -->
-<div role="presentation" class={slots.overlay} />
-=======
 <!-- backdrop -->
 <div role="presentation" class={slots.overlay({ open })} />
->>>>>>> main
 <!-- dialog -->
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <div
 	role="dialog"
 	aria-modal="true"
 	tabindex="-1"
-<<<<<<< HEAD
-	class={slots.dialog}
-=======
 	class={slots.base({ open, size })}
->>>>>>> main
 	on:keydown={handleKeys}
 	on:mousedown={onOutsideClose}
 	use:focusTrap
 	use:autoFocus
 	{...$$restProps}
 >
-<<<<<<< HEAD
-	<!-- modal content -->
-	<div class={slots.modalContentWrapper} data-testid="modal-area">
-		<div class={slots.modalContent}>
-			<!-- Modal header -->
-			{#if title}
-				<div class={slots.modalHeaderWrapper}>
-					<h3 class={slots.modalHeader}>
-						{title}
-					</h3>
-					<CloseButtonIcon class={slots.modalHeaderCloseIcon} tabindex="1" on:click={hide} />
-				</div>
-			{/if}
-			<!-- Modal body -->
-			<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-			<div
-				role="document"
-				class={slots.modalBody}
-				on:keydown|stopPropagation={handleKeys}
-				on:wheel|stopPropagation|passive
-			>
-				{#if dismissible && !title}
-					<CloseButtonIcon name="Close modal" class={slots.modalBodyCloseIcon} on:click={hide} />
-				{/if}
-				<slot />
-			</div>
-		</div>
-	</div>
-</div>
-<!-- {/if} -->
-=======
-	<div class={cn(slots.wrapper({ size, open }))}>
+	<div class={cn(slots.wrapper({ size, open }))} data-testid="modal-area">
 		<slot />
 	</div>
 </div>
->>>>>>> main

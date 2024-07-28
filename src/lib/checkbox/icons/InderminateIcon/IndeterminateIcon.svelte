@@ -4,16 +4,9 @@
 
 <script lang="ts">
 	import { type ComponentVariant } from '$lib/utils/utils';
-<<<<<<< HEAD
-	import {
-		getIndeterminateIconSlots,
-		type CheckboxIconSize
-	} from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon';
-=======
 	import { cn } from '$lib/utils/cn';
 	import { indeterminateIconVariant } from '$lib/checkbox/Checkbox';
 
->>>>>>> main
 	export let disabled: boolean = false;
 	export let size: CheckboxIconSize = 'md';
 	export let variant: ComponentVariant = 'primary';

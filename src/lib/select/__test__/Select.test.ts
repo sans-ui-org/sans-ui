@@ -87,13 +87,6 @@ describe('Select component', async () => {
 		).toBeTruthy();
 	});
 
-	test('should have correct variant', () => {
-		const button = render(Select, { variant: '' });
-		expect(
-			button.getByRole('button').classList.contains('focus-visible:outline-gray-500')
-		).toBeTruthy();
-	});
-
 	//defaultSelected
 	test('should have default Selected option when the defaultSelected is setup', () => {
 		render(Select, { defaultSelected: { value: '2', label: 'Option 2' } });

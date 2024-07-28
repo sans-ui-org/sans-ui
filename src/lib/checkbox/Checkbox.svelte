@@ -108,7 +108,6 @@
 		{value}
 		{disabled}
 		{checked}
-		type="checkbox"
 		class="hidden"
 		on:change={onchange}
 	/>

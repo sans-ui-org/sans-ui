@@ -17,15 +17,12 @@
 	$: notChecked = !checked;
 </script>
 
-<<<<<<< HEAD
-<svg class={slots.base} class:notChecked viewBox="0 0 100 100" data-testid="checkbox-svg">
-=======
 <svg
 	class={cn(slots.base({ variant, size, disabled }), $$restProps.class)}
 	class:notChecked
 	viewBox="0 0 100 100"
+	data-testid="checkbox-svg"
 >
->>>>>>> main
 	<path
 		stroke-width={7}
 		stroke-dasharray={320}

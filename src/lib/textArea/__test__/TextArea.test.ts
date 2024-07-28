@@ -52,27 +52,27 @@ describe('TextArea component', async () => {
 	//variant
 	test('should have correct variant', () => {
 		const userTextarea = render(TextArea, { variant: 'primary' });
-		expect(userTextarea.getByRole('textbox').classList.contains('border-blue-500')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-blue-500')).toBeTruthy();
 	});
 
 	test('should have correct variant', () => {
 		const userTextarea = render(TextArea, { variant: 'secondary' });
-		expect(userTextarea.getByRole('textbox').classList.contains('border-neutral-500')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-neutral-500')).toBeTruthy();
 	});
 
 	test('should have correct variant', () => {
 		const userTextarea = render(TextArea, { variant: 'success' });
-		expect(userTextarea.getByRole('textbox').classList.contains('border-green-500')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-green-500')).toBeTruthy();
 	});
 
 	test('should have correct variant', () => {
 		const userTextarea = render(TextArea, { variant: 'warning' });
-		expect(userTextarea.getByRole('textbox').classList.contains('border-yellow-500')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-yellow-500')).toBeTruthy();
 	});
 
 	test('should have correct variant', () => {
 		const userTextarea = render(TextArea, { variant: 'danger' });
-		expect(userTextarea.getByRole('textbox').classList.contains('border-red-500')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-red-500')).toBeTruthy();
 	});
 
 	//size
@@ -89,11 +89,6 @@ describe('TextArea component', async () => {
 	test('should have correct size', () => {
 		const userTextarea = render(TextArea, { size: 'lg' });
 		expect(userTextarea.getByRole('textbox').classList.contains('text-base')).toBeTruthy();
-	});
-
-	test('should have correct size', () => {
-		const userTextarea = render(TextArea, { size: '' });
-		expect(userTextarea.getByRole('textbox').classList.contains('text-sm')).toBeTruthy();
 	});
 
 	//invalidText

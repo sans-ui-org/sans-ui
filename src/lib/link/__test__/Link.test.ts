@@ -183,11 +183,12 @@ test('should have correct underline Type', () => {
 
 //disabled
 test('should have correct underline Type', () => {
-	const linkBtn = render(Link, { disabled: 'true' });
+	const linkBtn = render(Link, { disabled: true });
 	expect(linkBtn.getByRole('link').classList.contains('cursor-not-allowed')).toBeTruthy();
 });
 
 test('should have disabled attribute', async () => {
-	const linkBtn = render(Link, { disabled: 'true' });
-	expect(linkBtn.getByRole('link').getAttribute('aria-disabled')).toBe('true');
+	const linkBtn = render(Link, { disabled: true });
+	expect(linkBtn.getByRole('link', { hidden: true }).getAttribute('aria-disabled')).toBe('true');
+	
 });

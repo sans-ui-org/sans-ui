@@ -2,7 +2,22 @@
 layout: componentLayout
 title: Input
 description: The input component is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'label', title: 'Label', level: 0 },
+			{ slug: 'value', title: 'Value', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'clearable', title: 'Clearable', level: 0 },
+			{ slug: 'max-count', title: 'Max Count', level: 0 },
+			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'input-props', title: 'Input Props', level: 1 },
+		]
 ---
 
 <script>

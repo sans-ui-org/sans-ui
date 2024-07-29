@@ -3,7 +3,7 @@
 	let slug: string = '';
 
 	function init(node: HTMLElement) {
-		content = node.firstChild?.childNodes[2].nodeValue ?? '';
+		content = node.firstChild?.childNodes[0].nodeValue ?? '';
 		slug = content.replace(/\s/g, '-').toLowerCase();
 	}
 </script>

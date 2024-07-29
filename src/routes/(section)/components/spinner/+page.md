@@ -2,7 +2,16 @@
 layout: componentLayout
 title: Spinner
 description: Spinner express an unspecified wait time or display the length of a process.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'kind', title: 'Kind', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },
+		]
 ---
 
 <script>

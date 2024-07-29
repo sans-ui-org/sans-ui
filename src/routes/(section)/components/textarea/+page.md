@@ -2,7 +2,20 @@
 layout: componentLayout
 title: TextArea
 description: Textarea component is a multi-line TextArea which allows you to write large texts.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'value', title: 'Value', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'max-count', title: 'Max Count', level: 0 },
+			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'textarea-props', title: 'Textarea Props', level: 1 },
+		]
 ---
 
 <script>

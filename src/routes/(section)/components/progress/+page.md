@@ -2,7 +2,17 @@
 layout: componentLayout
 title: Progress
 description: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'track-width', title: 'Track Width', level: 0 },
+			{ slug: 'custom-inner-label', title: 'Custom Inner Label', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'progress-props', title: 'Progress Props', level: 1 },
+		]
 ---
 
 <script>

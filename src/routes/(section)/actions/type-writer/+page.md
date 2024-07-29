@@ -2,7 +2,11 @@
 layout: componentLayout
 title: Type Writter
 description: An animation technique that makes a string of text appear on screen letter by letter, as if it's being typed out in real time by a typewriter
-category: Actions
+category: action
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+		]
 ---
 
 <script>

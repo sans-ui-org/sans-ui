@@ -2,7 +2,20 @@
 layout: componentLayout
 title: Button
 description: The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'kind', title: 'Kind', level: 0 },
+			{ slug: 'rounded', title: 'Rounded', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'rippled', title: 'Rippled', level: 0 },
+			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'button-props', title: 'Button Props', level: 1 },
+		]
 ---
 
 <script>

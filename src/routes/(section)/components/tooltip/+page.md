@@ -2,7 +2,15 @@
 layout: componentLayout
 title: Tooltip
 description: Tooltips display a brief informative message that appears when a user interacts with an element.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'tooltip-props', title: 'Tooltip Props', level: 1 },
+		]
 ---
 
 <script>

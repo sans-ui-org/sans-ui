@@ -2,7 +2,11 @@
 layout: componentLayout
 title: Focus
 description: Manipulating the focus order and intercepting certain keyboard events within a component such as Modal.
-category: Actions
+category: action
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+		]
 ---
 
 <script>

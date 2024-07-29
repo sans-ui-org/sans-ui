@@ -2,7 +2,20 @@
 layout: componentLayout
 title: Select
 description: A select displays a collapsible list of options and allows a user to select one or more of them.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'default-selected', title: 'Default Selected', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'select-props', title: 'Select Props', level: 1 },
+		]
 ---
 
 <script>

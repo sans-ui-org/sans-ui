@@ -1,78 +1,87 @@
 export async function load() {
-	const documentationMenu = [
+	const menu = [
 		{
-			title: 'Getting started',
-			slug: 'getting-started'
+			title: 'Documentation',
+			items: [
+				{
+					title: 'Getting started',
+					slug: '/docs/getting-started'
+				},
+				{
+					title: 'Installation',
+					slug: '/docs/installation'
+				}
+			]
 		},
 		{
-			title: 'Installation',
-			slug: 'installation'
-		}
-	];
-	const componentMenu = [
-		{
-			title: 'Button',
-			slug: 'button'
+			title: 'Component',
+			items: [
+				{
+					title: 'Button',
+					slug: '/components/button'
+				},
+				{
+					title: 'Checkbox',
+					slug: '/components/checkbox'
+				},
+				{
+					title: 'Input',
+					slug: '/components/input'
+				},
+				{
+					title: 'Link',
+					slug: '/components/link'
+				},
+				{
+					title: 'Modal',
+					slug: '/components/modal'
+				},
+				{
+					title: 'Progress',
+					slug: '/components/progress'
+				},
+				{
+					title: 'Select',
+					slug: '/components/select'
+				},
+				{
+					title: 'Spinner',
+					slug: '/components/spinner'
+				},
+				{
+					title: 'Switch',
+					slug: '/components/switch'
+				},
+				{
+					title: 'Textarea',
+					slug: '/components/textarea'
+				},
+				{
+					title: 'Tooltip',
+					slug: '/components/tooltip'
+				}
+			]
 		},
 		{
-			title: 'Checkbox',
-			slug: 'checkbox'
-		},
-		{
-			title: 'Input',
-			slug: 'input'
-		},
-		{
-			title: 'Link',
-			slug: 'link'
-		},
-		{
-			title: 'Modal',
-			slug: 'modal'
-		},
-		{
-			title: 'Progress',
-			slug: 'progress'
-		},
-		{
-			title: 'Select',
-			slug: 'select'
-		},
-		{
-			title: 'Spinner',
-			slug: 'spinner'
-		},
-		{
-			title: 'Switch',
-			slug: 'switch'
-		},
-		{
-			title: 'Textarea',
-			slug: 'textarea'
-		},
-		{
-			title: 'Tooltip',
-			slug: 'tooltip'
-		}
-	];
-	const actionsMenu = [
-		{
-			title: 'Focus',
-			slug: 'focus'
-		},
-		{
-			title: 'TypeWriter',
-			slug: 'type-writer'
-		},
-		{
-			title: 'Ripple',
-			slug: 'ripple'
+			title: 'Action',
+			items: [
+				{
+					title: 'Focus',
+					slug: '/actions/focus'
+				},
+				{
+					title: 'TypeWriter',
+					slug: '/actions/type-writer'
+				},
+				{
+					title: 'Ripple',
+					slug: '/actions/ripple'
+				}
+			]
 		}
 	];
 
 	return {
-		documentationMenu,
-		componentMenu,
-		actionsMenu
+		menu
 	};
 }

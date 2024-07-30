@@ -8,6 +8,7 @@
 	import { setContext } from 'svelte';
 	import { modalVariant } from './Modal';
 	import { cn } from '$lib/utils/cn';
+	import { fly } from 'svelte/transition';
 
 	interface $$Props {
 		open?: boolean;
@@ -52,19 +53,21 @@
 <!-- backdrop -->
 <div role="presentation" class={slots.overlay({ open })} />
 <!-- dialog -->
-<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-<div
-	role="dialog"
-	aria-modal="true"
-	tabindex="-1"
-	class={slots.base({ open, size })}
-	on:keydown={handleKeys}
-	on:mousedown={onOutsideClose}
-	use:focusTrap
-	use:autoFocus
-	{...$$restProps}
->
-	<div class={cn(slots.wrapper({ size, open }))} data-testid="modal-area">
-		<slot />
+{#if open}
+	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+	<div
+		role="dialog"
+		aria-modal="true"
+		class={slots.base({ open, size })}
+		on:keydown={handleKeys}
+		on:mousedown={onOutsideClose}
+		transition:fly={{ y: 200, duration: 600 }}
+		use:focusTrap
+		use:autoFocus
+		{...$$restProps}
+	>
+		<div class={cn(slots.wrapper({ size, open }))} data-testid="modal-area">
+			<slot />
+		</div>
 	</div>
-</div>
+{/if}

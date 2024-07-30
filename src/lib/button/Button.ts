@@ -3,7 +3,7 @@ import { tv } from '$lib/utils/tv';
 export const buttonVariant = tv({
 	slots: {
 		base: [
-			'relative inline-flex items-center outline-offset-4 transition duration-200',
+			'inline-flex items-center outline-offset-4 transition duration-200',
 			'disabled:bg-gray-400 disabled:text-neutral-350 disabled:cursor-not-allowed'
 		]
 	},

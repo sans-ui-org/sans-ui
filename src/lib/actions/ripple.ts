@@ -4,14 +4,19 @@
 function getRippleEffect(bgColor: string, centered?: boolean): (event: MouseEvent) => void {
 	return function (event: MouseEvent) {
 		const target = event.currentTarget as HTMLElement;
+
+		target.style.position = 'relative';
 		target.style.overflow = 'hidden'; // make sure the ripple effect is not going outside the parent
 
 		const circle = document.createElement('span');
 		const diameter = Math.max(target.clientWidth, target.clientHeight); // diameter of the circle
 
-		const removeCircle = () => {
-			// circle.removeEventListener('animationend', removeCircle);
+		const removeTemporaryCSS = () => {
+			// remove the ripple effect after the animation is finished
 			circle.remove();
+			// make sure to remove the temporary CSS
+			target.style.position = '';
+			target.style.overflow = '';
 		};
 
 		// circle.addEventListener('animationend', removeCircle);
@@ -39,7 +44,7 @@ function getRippleEffect(bgColor: string, centered?: boolean): (event: MouseEven
 
 		// remove the circle after the animation is finished
 		animationState.finished.then(() => {
-			removeCircle();
+			removeTemporaryCSS();
 		});
 
 		target.appendChild(circle);

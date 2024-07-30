@@ -3,6 +3,7 @@ layout: componentLayout
 title: Progress
 description: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
 category: component
+githubFolder: /progress/Progress.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -17,7 +18,7 @@ toc: [
 
 <script>
 	import { Progress } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import progressProps from "./progress-props.ts"
 

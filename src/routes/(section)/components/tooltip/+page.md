@@ -3,6 +3,7 @@ layout: componentLayout
 title: Tooltip
 description: Tooltips display a brief informative message that appears when a user interacts with an element.
 category: component
+githubFolder: /tooltip/Tooltip.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -15,7 +16,7 @@ toc: [
 
 <script>
 	import { Tooltip, Button } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import tooltipProps from "./tooltip-props.ts"
 

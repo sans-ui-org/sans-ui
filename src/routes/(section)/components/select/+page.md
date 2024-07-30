@@ -3,6 +3,7 @@ layout: componentLayout
 title: Select
 description: A select displays a collapsible list of options and allows a user to select one or more of them.
 category: component
+githubFolder: /select/Select.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -20,7 +21,7 @@ toc: [
 
 <script>
 	import { Button, Select } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import selectProps from "./select-props.ts"
 

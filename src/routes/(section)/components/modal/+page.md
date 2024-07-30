@@ -3,6 +3,7 @@ layout: componentLayout
 title: Modal
 description: Use the modal component to show interactive dialogs and notifications to your website users available in multiple sizes, colors, and styles.
 category: component
+githubFolder: /modal/Modal.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -15,7 +16,7 @@ toc: [
 
 <script>
 	import { Button, Modal } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import ModalTemplate from "../../../../stories/modal/examples/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import modalProps from "./modal-props.ts"

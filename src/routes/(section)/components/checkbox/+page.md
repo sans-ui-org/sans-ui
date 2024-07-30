@@ -3,6 +3,7 @@ layout: componentLayout
 title: Checkbox
 description: Checkbox component to allow the user to select one or more options in the form of a square box available in multiple sizes and colors
 category: component
+githubFolder: /checkbox/Checkbox.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -19,7 +20,7 @@ toc: [
 
 <script>
 	import { Checkbox } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import checkboxProps from "./checkbox-props.ts"
 

@@ -3,6 +3,7 @@ layout: componentLayout
 title: TextArea
 description: Textarea component is a multi-line TextArea which allows you to write large texts.
 category: component
+githubFolder: /textArea/TextArea.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -20,7 +21,7 @@ toc: [
 
 <script>
 	import { TextArea } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import textareaProps from "./textarea-props.ts"
 

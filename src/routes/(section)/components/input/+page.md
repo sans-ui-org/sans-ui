@@ -3,6 +3,7 @@ layout: componentLayout
 title: Input
 description: The input component is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available.
 category: component
+githubFolder: /input/Input.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -22,7 +23,7 @@ toc: [
 
 <script>
 	import { Input } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import inputProps from "./input-props.ts"
 

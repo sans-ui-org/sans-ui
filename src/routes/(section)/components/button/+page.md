@@ -3,6 +3,7 @@ layout: componentLayout
 title: Button
 description: The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
 category: component
+githubFolder: /button/Button.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -20,7 +21,7 @@ toc: [
 
 <script>
 	import { Button } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import buttonProps from "./button-props.ts"
 

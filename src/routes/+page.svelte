@@ -28,7 +28,7 @@
 				</span>
 			{/if}
 		</h3>
-		<Button size="lg" href="/components/button">See the documentation</Button>
+		<Button size="lg" href="/docs/installation">Let's get started</Button>
 		<!-- GitHub stars, NPM downloads, Figma duplicates -->
 		<div class="">
 			<div class="flex flex-row items-center gap-8">

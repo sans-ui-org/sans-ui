@@ -3,6 +3,7 @@ layout: componentLayout
 title: Switch
 description: Switch express an unspecified wait time or display the length of a process.
 category: component
+githubFolder: /switch/Switch.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -19,7 +20,7 @@ toc: [
 
 <script>
 	import { Switch } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import switchProps from "./switch-props.ts"
 </script>

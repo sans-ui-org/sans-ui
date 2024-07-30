@@ -11,7 +11,7 @@ toc: [
 
 <script>
 	import { createRipple } from '$lib';
-	import PropertyTable from "../../../global-components/PropertyTable.svelte"
+	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 
   const ripple = createRipple();

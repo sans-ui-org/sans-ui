@@ -36,7 +36,7 @@ export const linkVariant = tv({
 			'5xl': { base: 'text-5xl' },
 			'6xl': { base: 'text-6xl' },
 			'7xl': { base: 'text-7xl' },
-			'8xl': { base: 'text-xl' },
+			'8xl': { base: 'text-8xl' },
 			'9xl': { base: 'text-9xl' }
 		},
 		bold: {

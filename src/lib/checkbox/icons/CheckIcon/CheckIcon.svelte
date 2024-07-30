@@ -21,6 +21,7 @@
 	class={cn(slots.base({ variant, size, disabled }), $$restProps.class)}
 	class:notChecked
 	viewBox="0 0 100 100"
+	data-testid="checkbox-svg"
 >
 	<path
 		stroke-width={7}
@@ -37,6 +38,7 @@
 		stroke-dashoffset={checked ? 0 : 70}
 		points="25.5,53.5 39.5,67.5 72.5,34.5 "
 		class:animation
+		data-testid="checkbox-svg-polyline"
 	/>
 </svg>
 

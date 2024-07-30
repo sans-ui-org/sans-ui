@@ -64,7 +64,7 @@
 	use:autoFocus
 	{...$$restProps}
 >
-	<div class={cn(slots.wrapper({ size, open }))}>
+	<div class={cn(slots.wrapper({ size, open }))} data-testid="modal-area">
 		<slot />
 	</div>
 </div>

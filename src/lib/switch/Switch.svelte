@@ -111,7 +111,7 @@
 		>
 			<div class={cn(slots.switchChip({ size, disabled, toggled }), classes.switchChip)} />
 		</div>
-		<span class={cn(slots.switchText({}), classes.switchText)}>{toggleLabel}</span>
+		<span class={cn(slots.switchText({}), classes.switchText)} data-testid="label-text">{toggleLabel}</span>
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}

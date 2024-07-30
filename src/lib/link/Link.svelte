@@ -85,6 +85,7 @@
 		classes.base,
 		$$restProps.class
 	)}
+	role="link"
 	aria-disabled={disabled}
 	href={url}><slot /></a
 >

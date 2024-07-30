@@ -70,6 +70,7 @@
 				fill={'transparent'}
 				r={radius}
 				stroke-width={trackWidth}
+				data-testid="bottom-circle"
 			/>
 			<circle
 				class={''}

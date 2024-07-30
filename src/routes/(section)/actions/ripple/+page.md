@@ -2,7 +2,11 @@
 layout: componentLayout
 title: Ripple
 description: By creating a ripple-like animation that emanates from a user's interaction
-category: Actions
+category: action
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+		]
 ---
 
 <script>

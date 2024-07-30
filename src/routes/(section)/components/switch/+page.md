@@ -2,7 +2,19 @@
 layout: componentLayout
 title: Switch
 description: Switch express an unspecified wait time or display the length of a process.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'default-toggled', title: 'Default Toggled', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'switch-props', title: 'Switch Props', level: 1 },
+		]
 ---
 
 <script>
@@ -86,6 +98,26 @@ Switch has `variant` prop to decide the color theme of it.
 	textForOff="Off"
 	defaultToggled={true}
 />
+```
+
+## Size
+
+Switch has `size` prop to decide the sizes of it.
+
+<div class="flex flex-col gap-8">
+	<Switch size="sm" label="This is sm" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch size="md" label="This is md" textForOn="On" textForOff="Off" defaultToggled={true} />
+	<Switch size="lg" label="This is lg" textForOn="On" textForOff="Off" defaultToggled={true} />
+</div>
+
+```svelte
+<script>
+	import { Switch } from '$lib';
+</script>
+
+<Switch size="sm" label="This is sm" textForOn="On" textForOff="Off" defaultToggled={true} />
+<Switch size="md" label="This is md" textForOn="On" textForOff="Off" defaultToggled={true} />
+<Switch size="lg" label="This is lg" textForOn="On" textForOff="Off" defaultToggled={true} />
 ```
 
 ## Default Toggled

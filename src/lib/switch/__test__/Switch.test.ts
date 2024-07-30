@@ -72,15 +72,15 @@ describe('Switch component', async () => {
 	//size
 	test('should have correct Switch Size for sm', () => {
 		const switchButton = render(Switch, { size: 'sm' });
-		expect(switchButton.getByRole('switch').classList.contains('w-[40px]')).toBeTruthy();
+		expect(switchButton.getByRole('switch').classList.contains('w-[35px]')).toBeTruthy();
 	});
 	test('should have correct Switch Size for md', () => {
 		const switchButton = render(Switch, { size: 'md' });
-		expect(switchButton.getByRole('switch').classList.contains('w-[60px]')).toBeTruthy();
+		expect(switchButton.getByRole('switch').classList.contains('w-[45px]')).toBeTruthy();
 	});
 	test('should have correct Switch Size for lg', () => {
 		const switchButton = render(Switch, { size: 'lg' });
-		expect(switchButton.getByRole('switch').classList.contains('w-[80px]')).toBeTruthy();
+		expect(switchButton.getByRole('switch').classList.contains('w-[65px]')).toBeTruthy();
 	});
 
 	//readonly
@@ -111,5 +111,4 @@ describe('Switch component', async () => {
 		const sw = render(Switch, { defaultToggled: false });
 		expect(sw.getByRole('switch').getAttribute('aria-checked')).toBe('false');
 	});
-	
 });

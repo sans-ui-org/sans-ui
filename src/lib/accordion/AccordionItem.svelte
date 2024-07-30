@@ -7,7 +7,7 @@
 	import { accordionItemVariant, type AccordionItemSlots } from '$lib/accordion/AccordionItem';
 
 	type $$Props = HTMLLiAttributes & {
-		classes: SlotsToClasses<AccordionItemSlots>;
+		classes?: SlotsToClasses<AccordionItemSlots>;
 	};
 
 	/** Property that defines the class names of the accordion item. */

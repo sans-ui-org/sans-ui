@@ -19,7 +19,7 @@
 <main class="block">
 	<!-- Hero section -->
 	<div class="w-full flex flex-col items-center gap-16 p-8 my-36">
-		<h1 class="text-5xl font-light">Welcome to S-UI</h1>
+		<h1 class="text-5xl font-light">Welcome to S-UI.</h1>
 		<h3 class="text-xl font-light text-center">
 			This is an official S-UI library documentation.<br />
 			{#if showTitle}
@@ -56,7 +56,7 @@
 		</div>
 		<div class="flex flex-row items-center justify-center gap-8">
 			{#each data.contributors as contributor}
-				<Tooltip title={contributor.login} class="transition hover:scale-[1.1]">
+				<Tooltip variant="secondary" title={contributor.login} class="transition hover:scale-[1.1]">
 					<a href={contributor.html_url}>
 						<img
 							src={contributor.avatar_url}

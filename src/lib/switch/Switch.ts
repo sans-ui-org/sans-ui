@@ -5,8 +5,8 @@ export const switchVariant = tv({
 		label: ['font-normal'],
 		base: ['flex flex-col gap-2 font-normal'],
 		wrapper: ['flex flex-row gap-2 items-center'],
-		switch: ['rounded-full flex items-center p-1.5 transition-colors duration-300 ease-in-out'],
-		switchChip: ['rounded-full transition-all duration-300 ease'],
+		switch: ['rounded-full flex items-center transition-colors duration-300 ease-in-out'],
+		switchChip: ['border border-gray-400 rounded-full transition-all duration-300 ease'],
 		switchText: ['font-normal'],
 		invalidText: ['text-sm text-red-500 mt-1']
 	},
@@ -21,18 +21,18 @@ export const switchVariant = tv({
 		size: {
 			sm: {
 				label: ['text-xs'],
-				switch: ['w-[40px] h-[20px]'],
-				switchChip: ['w-[10px] h-[10px]']
+				switch: ['w-[35px] h-[20px] px-1'],
+				switchChip: ['w-[14px] h-[14px]']
 			},
 			md: {
 				label: ['text-sm'],
-				switch: ['w-[60px] h-[30px]'],
-				switchChip: ['w-[20px] h-[20px]']
+				switch: ['w-[45px] h-[25px] px-1'],
+				switchChip: ['w-[19px] h-[19px]']
 			},
 			lg: {
 				label: ['text-base'],
-				switch: ['w-[80px] h-[40px]'],
-				switchChip: ['w-[30px] h-[30px]']
+				switch: ['w-[65px] h-[35px] px-1.5'],
+				switchChip: ['w-[26px] h-[26px]']
 			}
 		},
 		disabled: {
@@ -55,17 +55,17 @@ export const switchVariant = tv({
 		{
 			toggled: true,
 			size: 'sm',
-			class: { switchChip: ['translate-x-[20px]'] }
+			class: { switchChip: ['translate-x-[13px]'] }
 		},
 		{
 			toggled: true,
 			size: 'md',
-			class: { switchChip: ['translate-x-[30px]'] }
+			class: { switchChip: ['translate-x-[18px]'] }
 		},
 		{
 			toggled: true,
 			size: 'lg',
-			className: { switchChip: ['translate-x-[40px]'] }
+			class: { switchChip: ['translate-x-[27px]'] }
 		}
 	]
 });

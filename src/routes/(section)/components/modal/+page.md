@@ -2,7 +2,15 @@
 layout: componentLayout
 title: Modal
 description: Use the modal component to show interactive dialogs and notifications to your website users available in multiple sizes, colors, and styles.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
+		]
 ---
 
 <script>

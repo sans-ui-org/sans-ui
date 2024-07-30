@@ -2,7 +2,19 @@
 layout: componentLayout
 title: Checkbox
 description: Checkbox component to allow the user to select one or more options in the form of a square box available in multiple sizes and colors
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'default-checked', title: 'Default Checked', level: 0 },
+			{ slug: 'indeterminate', title: 'Indeterminate', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'checkbox-props', title: 'Checkbox Props', level: 1 },
+		]
 ---
 
 <script>

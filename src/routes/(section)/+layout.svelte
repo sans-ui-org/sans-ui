@@ -7,54 +7,31 @@
 </script>
 
 <!-- Documentation -->
-
 <div class="flex flex-row">
 	<!-- Sidebar -->
-	<div class="fixed w-64 h-[calc(100vh-57px)] border-r bg-white overflow-y-auto">
-		<!-- Documentation -->
-		<Accordion title="Documentations">
-			{#each data.documentationMenu as item}
-				<AccordionItem>
-					<Link
-						underlineType="hover"
-						variant="primary"
-						href={`/docs/${item.slug}`}
-						class="w-full h-9 flex items-center pl-4">{item.title}</Link
-					>
-				</AccordionItem>
+	<aside
+		class="overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)] block sticky top-[57px] border-r bg-gray-100"
+	>
+		<nav>
+			{#each data.menu as menu}
+				<Accordion title={menu.title}>
+					{#each menu.items as item}
+						<AccordionItem>
+							<Link
+								underlineType="none"
+								variant="primary"
+								href={item.slug}
+								class="w-full h-9 flex items-center pl-4 border-l-4 border-transparent hover:border-blue-500 transition duration-300"
+								>{item.title}</Link
+							>
+						</AccordionItem>
+					{/each}
+				</Accordion>
 			{/each}
-		</Accordion>
-		<!-- Component -->
-		<Accordion title="Components">
-			{#each data.componentMenu as component}
-				<AccordionItem>
-					<Link
-						underlineType="hover"
-						variant="primary"
-						href={`/components/${component.slug}`}
-						class="w-full h-9 flex items-center pl-4">{component.title}</Link
-					>
-				</AccordionItem>
-			{/each}
-		</Accordion>
-		<!-- Actions -->
-		<Accordion title="Actions">
-			{#each data.actionsMenu as component}
-				<AccordionItem>
-					<Link
-						underlineType="hover"
-						variant="primary"
-						href={`/actions/${component.slug}`}
-						class="w-full h-9 flex items-center pl-4">{component.title}</Link
-					>
-				</AccordionItem>
-			{/each}
-		</Accordion>
-	</div>
+		</nav>
+	</aside>
 	<!-- Content -->
-	<div class="w-[calc(100%-256px)] ml-auto">
+	<div class="w-[calc(100%-256px)]">
 		<slot />
-		<!-- Footer -->
-		<Footer />
 	</div>
 </div>

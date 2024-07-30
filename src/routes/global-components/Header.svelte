@@ -13,8 +13,8 @@
 			<span>ver. 0.0.1</span>
 		</div>
 		<ul class="flex flex-row gap-7">
-			<li><Link href="/docs/getting-started">Docs</Link></li>
-			<li><Link href="/components/button">Components</Link></li>
+			<li><Link underlineType="hover" href="/docs/getting-started">Docs</Link></li>
+			<li><Link underlineType="hover" href="/components/button">Components</Link></li>
 			<li class="flex flex-row items-center gap-4">
 				<Link variant="secondary" href={SUI_GITHUB_URL} target="_blank">
 					<Github size="lg" />

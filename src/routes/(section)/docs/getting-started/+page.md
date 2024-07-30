@@ -1,8 +1,17 @@
 ---
 layout: componentLayout
-title: Introduction.
+title: Introduction
 description: This is the introduction section for you to start using S-UI library.
-category: Documentation
+category: documentation
+toc: [
+			{ slug: 'what-is-s-ui?', title: 'What is S-UI?', level: 0 },
+			{ slug: 'contributing', title: 'Contributing', level: 0 },
+			{ slug: 'license', title: 'License', level: 0 },
+			{ slug: 'faq', title: 'FAQ', level: 0 },
+			{ slug: 'does-s-ui-use-typescript?', title: 'S-UI & TypeScript', level: 1 },
+			{ slug: 's-ui-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
+			{ slug: 's-ui-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
+		]
 ---
 
 <script>

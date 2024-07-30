@@ -2,7 +2,20 @@
 layout: componentLayout
 title: Link
 description: Links allow users to click their way from page to page. This component is styled to resemble a hyperlink and semantically renders an anchor element.
-category: Components
+category: component
+toc: [
+			{ slug: 'set-up', title: 'Set Up', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 0 },
+			{ slug: 'font-size', title: 'Font Size', level: 0 },
+			{ slug: 'font-weight', title: 'Font Weight', level: 0 },
+			{ slug: 'underline-type', title: 'Underline Type', level: 0 },
+			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'api', title: 'API', level: 0 },
+			{ slug: 'link-props', title: 'Link Props', level: 1 },
+		]
+---
+
 ---
 
 <script>

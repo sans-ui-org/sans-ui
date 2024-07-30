@@ -8,6 +8,7 @@ describe('Spinner component', async () => {
 		expect(screen.getByRole('alert')).toBeTruthy();
 	});
 
+	// kind
 	test('should render spinner type 1', async () => {
 		render(Spinner);
 		expect(screen.getByRole('alert').classList.contains('spinner-type-1')).toBeTruthy();
@@ -22,20 +23,41 @@ describe('Spinner component', async () => {
 		render(Spinner, { kind: 'loader3' });
 		expect(screen.getByRole('alert').classList.contains('spinner-type-3')).toBeTruthy();
 	});
-	// TODO: Add tests for Spinner component
-	// EXAMPLE:
-	// test('減算処理', async () => {
-	// 	render(Counter);
-	// 	const decreaseSpinner = screen.getByLabelText('減算');
-	// 	await fireEvent.click(decreaseSpinner);
-	// 	const counter = await screen.findByText('-1');
-	// 	expect(counter).toBeTruthy();
-	// });
-	// test('加算処理', async () => {
-	// 	render(Counter);
-	// 	const increaseSpinner = screen.getByLabelText('加算');
-	// 	await fireEvent.click(increaseSpinner);
-	// 	const counter = await screen.findByText('1');
-	// 	expect(counter).toBeTruthy();
-	// });
+
+	// variant
+	test('should have correct variant for primary', () => {
+		const spinnerObj = render(Spinner, { variant: 'primary' });
+		expect(spinnerObj.getByRole('alert').classList.contains('border-blue-500')).toBeTruthy();
+	});
+	test('should have correct variant for secondary', () => {
+		const spinnerObj = render(Spinner, { variant: 'secondary' });
+		expect(spinnerObj.getByRole('alert').classList.contains('border-neutral-500')).toBeTruthy();
+	});
+	test('should have correct variant for success', () => {
+		const spinnerObj = render(Spinner, { variant: 'success' });
+		expect(spinnerObj.getByRole('alert').classList.contains('border-green-500')).toBeTruthy();
+	});
+	test('should have correct variant for warning', () => {
+		const spinnerObj = render(Spinner, { variant: 'warning' });
+		expect(spinnerObj.getByRole('alert').classList.contains('border-yellow-500')).toBeTruthy();
+	});
+	test('should have correct variant danger', () => {
+		const spinnerObj = render(Spinner, { variant: 'danger' });
+		expect(spinnerObj.getByRole('alert').classList.contains('border-red-500')).toBeTruthy();
+	});
+
+	// size
+	test('should have correct size for sm', () => {
+		const spinnerObj = render(Spinner, { size: 'sm' });
+		expect(spinnerObj.getByRole('alert').classList.contains('w-[32px]')).toBeTruthy();
+	});
+	test('should have correct size for md', () => {
+		const spinnerObj = render(Spinner, { size: 'md' });
+		expect(spinnerObj.getByRole('alert').classList.contains('w-[48px]')).toBeTruthy();
+	});
+	test('should have correct size for lg', () => {
+		const spinnerObj = render(Spinner, { size: 'lg' });
+		expect(spinnerObj.getByRole('alert').classList.contains('w-[64px]')).toBeTruthy();
+	});
+
 });

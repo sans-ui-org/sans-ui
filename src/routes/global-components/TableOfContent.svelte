@@ -4,7 +4,7 @@
 	export let toc: { slug: string; title: string; level: number }[] = [];
 </script>
 
-<aside class="sticky top-[57px] overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)]">
+<aside class="sticky top-[57px] overflow-y-auto scrolling-touch w-56 h-[calc(100vh-57px)]">
 	<nav class="py-8">
 		<h4 class="mb-4 font-semibold uppercase">On this page</h4>
 		<ul class="flex flex-col gap-2">

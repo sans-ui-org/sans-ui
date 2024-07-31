@@ -19,6 +19,7 @@ toc: [
 <script>
 	import { Progress } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import progressProps from "./progress-props.ts"
 
@@ -28,11 +29,15 @@ toc: [
 
 Import a Progress component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Progress } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -40,6 +45,8 @@ The Progress component allows you to express how much percentage/number by using
 
 <Progress value={70} />
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Progress } from '$lib';
@@ -47,6 +54,8 @@ The Progress component allows you to express how much percentage/number by using
 
 <Progress value={70} />
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -60,6 +69,8 @@ Progress has `variant` prop to decide the color theme of it.
 	<Progress variant="danger" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Progress } from '$lib';
@@ -72,11 +83,15 @@ Progress has `variant` prop to decide the color theme of it.
 <Progress variant="danger" />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Progress has `size` prop to decide the size theme of it. (Unlike any other components, Progress allows you to decide the size of itself by the number of the `px`)
 
 <Progress size={100} />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -86,11 +101,15 @@ Progress has `size` prop to decide the size theme of it. (Unlike any other compo
 <Progress size={100} />
 ```
 
+</CodeBlockWrapper>
+
 ## Track Width
 
 Progress has `trackWidth` prop to decide the tracker circle's width. (Progress allows you to decide the width of the tracker by the number of the `px`)
 
 <Progress trackWidth={10} />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -100,11 +119,15 @@ Progress has `trackWidth` prop to decide the tracker circle's width. (Progress a
 <Progress size={10} />
 ```
 
+</CodeBlockWrapper>
+
 ## Custom Inner Label
 
 Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 <Progress value={40} customInnerLabel="40 Mbps" />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -113,6 +136,8 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 <Progress value={40} customInnerLabel="40 Mbps" />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 /* code highlights */
-pre {
+/* pre {
 	@apply text-base rounded-xl overflow-auto w-full my-4 mx-auto bg-gradient-to-r text-black dark:text-gray-400 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-2 sm:p-6;
-}
+} */
 
 /* Github ref: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-vsc-dark-plus.css */
 /**
@@ -16,7 +16,7 @@ pre {
 pre[class*='language-'],
 code[class*='language-'] {
 	color: #d4d4d4;
-	font-size: 13px;
+	font-size: 14px;
 	text-shadow: none;
 	font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;
 	direction: ltr;
@@ -51,9 +51,10 @@ code[class*='language-'] *::selection {
 
 pre[class*='language-'] {
 	padding: 2em;
-	margin: 2em 0;
+	margin: 2.5em 0;
 	overflow: auto;
 	background: #1e1e1e;
+	border-radius: 5px;
 }
 
 :not(pre) > code[class*='language-'] {
@@ -278,10 +279,6 @@ code[class*='language-html'] {
 /*********************************************************
 * Line highlighting
 */
-pre[class*='language-'] > code[class*='language-'] {
-	position: relative;
-	z-index: 1;
-}
 
 .line-highlight.line-highlight {
 	background: #f7ebc6;

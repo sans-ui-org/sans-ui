@@ -18,6 +18,7 @@ toc: [
 <script>
 	import { Spinner } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import spinnerProps from "./spinner-props.ts"
 
@@ -27,15 +28,21 @@ toc: [
 
 Import a Spinner component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Spinner } from '$lib';
 </script>
 ```
 
+</CodeBlockWrapper>
+
 ## Usage
 
 <Spinner />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -45,17 +52,21 @@ Import a Spinner component in the script tag.
 <Spinner>Spinner</Spinner>
 ```
 
+</CodeBlockWrapper>
+
 ## Variant
 
 Spinners has `variant` prop to decide the color theme of it.
 
-<div class="flex flex-row gap-16">
+<div class="flex flex-row gap-16 flex-wrap">
 	<Spinner variant="primary" />
 	<Spinner variant="secondary" />
 	<Spinner variant="success" />
 	<Spinner variant="warning" />
 	<Spinner variant="danger" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -69,15 +80,19 @@ Spinners has `variant` prop to decide the color theme of it.
 <Spinner variant="danger" />
 ```
 
+</CodeBlockWrapper>
+
 ## Kind
 
 Spinners has `kind` prop to defines the kind of spinner.
 
-<div class="flex flex-row gap-16">
+<div class="flex flex-row gap-16 flex-wrap">
 	<Spinner kind="loader1" />
 	<Spinner kind="loader2" />
 	<Spinner kind="loader3" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -89,15 +104,19 @@ Spinners has `kind` prop to defines the kind of spinner.
 <Spinner kind="loader3" />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Spinners has `size` prop to defines the size of spinner.
 
-<div class="flex flex-row items-center gap-16">
+<div class="flex flex-row items-center gap-16 flex-wrap">
 	<Spinner size="sm" />
 	<Spinner size="md" />
 	<Spinner size="lg" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -108,6 +127,8 @@ Spinners has `size` prop to defines the size of spinner.
 <Spinner size="md" />
 <Spinner size="lg" />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

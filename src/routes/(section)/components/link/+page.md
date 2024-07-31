@@ -22,6 +22,7 @@ toc: [
 <script>
 	import { Link } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import linkProps from "./link-props.ts"
 
@@ -31,17 +32,23 @@ toc: [
 
 Import a Link component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Link } from '$lib';
 </script>
 ```
 
+</CodeBlockWrapper>
+
 ## Usage
 
 Buttons allow users to perform actions and choose with a single tap. You can deactivate the ripple effect, so we will state that later on.
 
 <Link href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -52,6 +59,8 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 	This is link to the our Github page
 </Link>
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -64,6 +73,8 @@ Link has `variant` prop to decide the color theme of it.
 	<Link variant="warning" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 	<Link variant="danger" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -87,6 +98,8 @@ Link has `variant` prop to decide the color theme of it.
 >
 ```
 
+</CodeBlockWrapper>
+
 ## Font Size
 
 Link has `size` prop to decide the font size of Link component.
@@ -96,6 +109,8 @@ Link has `size` prop to decide the font size of Link component.
 	<Link size="md" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 	<Link size="lg" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -113,6 +128,8 @@ Link has `size` prop to decide the font size of Link component.
 </Link>
 ```
 
+</CodeBlockWrapper>
+
 ## Font Weight
 
 Link has `bold` prop to decide the font weight of Link component.
@@ -122,6 +139,8 @@ Link has `bold` prop to decide the font weight of Link component.
 	<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 	<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -138,6 +157,8 @@ Link has `bold` prop to decide the font weight of Link component.
 	This is link to the our Github page
 </Link>
 ```
+
+</CodeBlockWrapper>
 
 ## Underline Type
 
@@ -158,6 +179,8 @@ Link has `underline` prop to decide the text decoration(underline) of the link.
 	>
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Link } from '$lib';
@@ -177,11 +200,15 @@ Link has `underline` prop to decide the text decoration(underline) of the link.
 </Link>
 ```
 
+</CodeBlockWrapper>
+
 ## Disabled
 
 Link has `disabled` prop to defines if the link is disalbe.
 
 <Link disabled href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -192,6 +219,8 @@ Link has `disabled` prop to defines if the link is disalbe.
 	This is link to the our Github page
 </Link>
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

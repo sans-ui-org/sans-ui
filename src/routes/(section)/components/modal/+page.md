@@ -17,6 +17,7 @@ toc: [
 <script>
 	import { Button, Modal } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import ModalTemplate from "../../../../stories/modal/examples/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import modalProps from "./modal-props.ts"
@@ -27,17 +28,23 @@ toc: [
 
 Import a Modal component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Modal } from '$lib';
 </script>
 ```
 
+</CodeBlockWrapper>
+
 ## Usage
 
 Modal visibility (open/close) is controlled by the `open` property. You can bind it to a variable that other element (usually button) will toggle.
 
 <ModalTemplate size="md" title="Modal Title" />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -58,11 +65,15 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 </Modal>
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Modal has `size` prop to decide the size of it.
 
 <ModalTemplate size="full" title="Modal Title" />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -83,11 +94,15 @@ Modal has `size` prop to decide the size of it.
 </Modal>
 ```
 
+</CodeBlockWrapper>
+
 ## Dismissible
 
 Set the `dismissible` property to `false` to prevent the modal from closing when clicking on the overlay.
 
 <ModalTemplate size="md" title="Modal Title" dismissible={false} />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -107,6 +122,8 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 	</ModalContent>
 </Modal>
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

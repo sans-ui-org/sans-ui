@@ -4,7 +4,7 @@
 	import Github from '../utils/icons/Github.svelte';
 </script>
 
-<header class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200">
+<header class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20">
 	<nav class="flex flex-row items-center justify-between py-4 px-8">
 		<div class="flex flex-row gap-4">
 			<!-- TODO: Icon? -->

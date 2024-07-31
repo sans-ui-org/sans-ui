@@ -22,6 +22,7 @@ toc: [
 <script>
 	import { Button } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import buttonProps from "./button-props.ts"
 
@@ -31,11 +32,15 @@ toc: [
 
 Import a button component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Button } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -43,6 +48,8 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 <Button>Button</Button>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Button } from '$lib';
@@ -51,17 +58,21 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 <Button>Button</Button>
 ```
 
+</CodeBlockWrapper>
+
 ## Variant
 
 Buttons has `variant` prop to decide the color theme of it.
 
-<div class="inline-flex flex-row gap-4">
+<div class="inline-flex flex-row gap-4 flex-wrap">
 	<Button variant="primary">Button</Button>
 	<Button variant="secondary">Button</Button>
 	<Button variant="success">Button</Button>
 	<Button variant="warning">Button</Button>
 	<Button variant="danger">Button</Button>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -75,6 +86,8 @@ Buttons has `variant` prop to decide the color theme of it.
 <Button variant="danger">Button</Button>
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Buttons has `size` prop to decide the size of it.
@@ -84,6 +97,8 @@ Buttons has `size` prop to decide the size of it.
 	<Button size="md">Button</Button>
 	<Button size="lg">Button</Button>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -95,16 +110,20 @@ Buttons has `size` prop to decide the size of it.
 <Button size="lg">Button</Button>
 ```
 
+</CodeBlockWrapper>
+
 ## Kind
 
 Buttons has `kind` prop to decide the kind of Button component.
 
-<div class="flex flex-row gap-2">
+<div class="flex flex-row gap-2 flex-wrap">
 	<Button kind="solid">Solid</Button>
 	<Button kind="bordered">Bordered</Button>
 	<Button kind="flat">Flat</Button>
 	<Button kind="shadow">Shadow</Button>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -117,17 +136,21 @@ Buttons has `kind` prop to decide the kind of Button component.
 <Button kind="shadow">Shadow</Button>
 ```
 
+</CodeBlockWrapper>
+
 ## Rounded
 
 Buttons has `rounded` prop to update Button component's border-radius.
 
-<div class="flex flex-row gap-2">
+<div class="flex flex-row gap-2 flex-wrap">
 	<Button rounded="none">rounded none</Button>
 	<Button rounded="sm">rounded sm</Button>
 	<Button rounded="md">rounded md</Button>
 	<Button rounded="lg">rounded lg</Button>
 	<Button rounded="full">rounded full</Button>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -141,11 +164,15 @@ Buttons has `rounded` prop to update Button component's border-radius.
 <Button rounded="full">rounded full</Button>
 ```
 
+</CodeBlockWrapper>
+
 ## Disabled
 
 Buttons has `disabled` prop to disable Button component.
 
 <Button disabled>Button</Button>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -154,6 +181,8 @@ Buttons has `disabled` prop to disable Button component.
 
 <Button disabled>Button</Button>
 ```
+
+</CodeBlockWrapper>
 
 ## Rippled
 
@@ -161,6 +190,8 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 <Button rippled={false}>Button</Button>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Button } from '$lib';
@@ -168,6 +199,8 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 <Button rippled={false}>Button</Button>
 ```
+
+</CodeBlockWrapper>
 
 ## Icon Button
 
@@ -181,6 +214,8 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 		</g>
 	</svg>
 </Button>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -213,6 +248,8 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 	</svg>
 </Button>
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

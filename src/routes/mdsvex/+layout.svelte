@@ -34,7 +34,7 @@
 <div class="flex w-full justify-center">
 	<!-- Component Documentation -->
 	<div
-		class="flex flex-col w-[calc(100%-256px)] max-w-4xl mx-auto p-8 overflow-y divide-y divide-gray-200 overflow-y-auto"
+		class="flex flex-col w-[calc(100%-256px)] max-w-4xl mx-auto p-8 divide-y divide-gray-200 overflow-y-auto"
 	>
 		<DocHeader {title} {description} {category} {githubFolder} />
 		<div id="mainContent" class="pb-24">

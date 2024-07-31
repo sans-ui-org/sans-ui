@@ -24,6 +24,7 @@ toc: [
 <script>
 	import { Input } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import inputProps from "./input-props.ts"
 
@@ -33,11 +34,15 @@ toc: [
 
 Import a Input component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Input } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -47,6 +52,8 @@ Use this example as a generic form element which includes multiple input fields 
 	<Input placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Input } from '$lib';
@@ -54,6 +61,8 @@ Use this example as a generic form element which includes multiple input fields 
 
 <Input placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -67,6 +76,8 @@ Input has `variant` prop to decide the color theme of it.
 	<Input variant="danger" placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Input } from '$lib';
@@ -79,6 +90,8 @@ Input has `variant` prop to decide the color theme of it.
 <Input variant="danger" placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Label
 
 Input has `label` prop defines the label of the input.
@@ -86,6 +99,8 @@ Input has `label` prop defines the label of the input.
 <div class="w-[350px]">
 	<Input label="This is label" placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -95,6 +110,8 @@ Input has `label` prop defines the label of the input.
 <Input label="This is label" placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Value
 
 Input has `value` prop that defines the value of the input.
@@ -102,6 +119,8 @@ Input has `value` prop that defines the value of the input.
 <div class="w-[350px]">
 	<Input value="hello world" placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -111,6 +130,8 @@ Input has `value` prop that defines the value of the input.
 <Input value="hello world" placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Input has `size` prop defines the size of the input.
@@ -118,6 +139,8 @@ Input has `size` prop defines the size of the input.
 <div class="w-[350px]">
 	<Input size="sm" placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -127,6 +150,8 @@ Input has `size` prop defines the size of the input.
 <Input size="sm" placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Disabled
 
 Input has `disabled` prop that defines if the input is disabled.
@@ -134,6 +159,8 @@ Input has `disabled` prop that defines if the input is disabled.
 <div class="w-[350px]">
 	<Input disabled={true} placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -143,6 +170,8 @@ Input has `disabled` prop that defines if the input is disabled.
 <Input disabled={true} placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## ReadOnly
 
 Input has `readonly` prop that defines if the input is readonly.
@@ -150,6 +179,8 @@ Input has `readonly` prop that defines if the input is readonly.
 <div class="w-[350px]">
 	<Input readonly={true} placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -159,6 +190,8 @@ Input has `readonly` prop that defines if the input is readonly.
 <Input readonly={true} placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Clearable
 
 Input has `clearable` prop that controls the clear button for Input component. (What is clear button? -> As soon as you start typing something in Input component, you will see x button on the left side of the component.)
@@ -166,6 +199,8 @@ Input has `clearable` prop that controls the clear button for Input component. (
 <div class="w-[350px]">
 	<Input clearable={false} placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -175,6 +210,8 @@ Input has `clearable` prop that controls the clear button for Input component. (
 <Input clearable={false} placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Max Count
 
 Input has `maxCount` prop that defines the text limitation of your Input component.
@@ -182,6 +219,8 @@ Input has `maxCount` prop that defines the text limitation of your Input compone
 <div class="w-[350px]">
 	<Input maxCount={25} placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -191,6 +230,8 @@ Input has `maxCount` prop that defines the text limitation of your Input compone
 <Input maxCount={25} placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Invalid
 
 Input has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
@@ -198,6 +239,8 @@ Input has `invalid` prop that defines if the input is invalid. And `invalidText`
 <div class="w-[350px]">
 	<Input invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -210,6 +253,8 @@ Input has `invalid` prop that defines if the input is invalid. And `invalidText`
 	placeholder="Please type something here"
 />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

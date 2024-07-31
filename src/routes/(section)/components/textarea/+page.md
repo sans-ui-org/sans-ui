@@ -22,6 +22,7 @@ toc: [
 <script>
 	import { TextArea } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import textareaProps from "./textarea-props.ts"
 
@@ -31,11 +32,15 @@ toc: [
 
 Import a Textarea component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -45,6 +50,8 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 	<TextArea label="This is label" placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -52,6 +59,8 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 
 <TextArea label="This is label" placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -61,6 +70,8 @@ Textarea has `variant` prop to decide the color theme of it.
 	<TextArea variant="success" label="This is label" placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -68,6 +79,8 @@ Textarea has `variant` prop to decide the color theme of it.
 
 <TextArea variant="success" label="This is label" placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Value
 
@@ -77,6 +90,8 @@ TextArea has `value` prop that defines the value of the input.
 	<TextArea value="hello world" placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -84,6 +99,8 @@ TextArea has `value` prop that defines the value of the input.
 
 <TextArea value="hello world" placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Size
 
@@ -93,6 +110,8 @@ TextArea has `size` prop defines the font size of the input.
 	<TextArea size="sm" placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -100,6 +119,8 @@ TextArea has `size` prop defines the font size of the input.
 
 <TextArea size="sm" placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Disabled
 
@@ -109,6 +130,8 @@ TextArea has `disabled` prop that defines if the input is disabled.
 	<TextArea disabled={true} placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -116,6 +139,8 @@ TextArea has `disabled` prop that defines if the input is disabled.
 
 <TextArea disabled={true} placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## ReadOnly
 
@@ -125,6 +150,8 @@ TextArea has `readonly` prop that defines if the input is readonly.
 	<TextArea readonly={true} placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -132,6 +159,8 @@ TextArea has `readonly` prop that defines if the input is readonly.
 
 <TextArea readonly={true} placeholder="Please type something here" />
 ```
+
+</CodeBlockWrapper>
 
 ## Max Count
 
@@ -141,6 +170,8 @@ TextArea has `maxCount` prop that defines the text limitation of your TextArea c
 	<TextArea value="hello world" maxCount={25} placeholder="Please type something here" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { TextArea } from '$lib';
@@ -149,6 +180,8 @@ TextArea has `maxCount` prop that defines the text limitation of your TextArea c
 <TextArea value="hello world" maxCount={25} placeholder="Please type something here" />
 ```
 
+</CodeBlockWrapper>
+
 ## Invalid
 
 TextArea has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
@@ -156,6 +189,8 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 <div class="w-[350px]">
 	<TextArea label="This is label" invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -169,6 +204,8 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 	placeholder="Please type something here"
 />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

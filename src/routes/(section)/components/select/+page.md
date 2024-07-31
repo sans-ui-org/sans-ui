@@ -22,6 +22,7 @@ toc: [
 <script>
 	import { Button, Select } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import selectProps from "./select-props.ts"
 
@@ -39,11 +40,15 @@ toc: [
 
 Import a Select component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Select } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -52,6 +57,8 @@ The select input component can be used to gather information from users based on
 <div class="w-[350px]">
 	<Select {options} label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -69,6 +76,8 @@ The select input component can be used to gather information from users based on
 <Select {options} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Variant
 
 Select has `variant` prop to decide the color theme of it.
@@ -78,6 +87,8 @@ Select has `variant` prop to decide the color theme of it.
 		<Select variant="primary" {options} label='This is a label' placeholder='Select an option' />
 	</div>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -98,6 +109,8 @@ Select has `variant` prop to decide the color theme of it.
 <Select variant="danger" {options} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Select has `size` prop to decide the size of it.
@@ -113,6 +126,8 @@ Select has `size` prop to decide the size of it.
 		<Select {options} size="lg" label='This is lg' placeholder='Select an option' />
 	</div>
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -131,6 +146,8 @@ Select has `size` prop to decide the size of it.
 <Select {options} size="lg" label="This is lg" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Default Selected
 
 Select has `defaultSelected` prop that defines the default selected value of the select.
@@ -138,6 +155,8 @@ Select has `defaultSelected` prop that defines the default selected value of the
 <div class="w-[350px]">
 	<Select {options} defaultSelected={defaultSelected} label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -155,6 +174,8 @@ Select has `defaultSelected` prop that defines the default selected value of the
 <Select {options} {defaultSelected} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Disabled
 
 Select has `disabled` prop that defines if the select is disabled.
@@ -162,6 +183,8 @@ Select has `disabled` prop that defines if the select is disabled.
 <div class="w-[350px]">
 	<Select {options} disabled label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -178,6 +201,8 @@ Select has `disabled` prop that defines if the select is disabled.
 <Select {options} disabled={true} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Read Only
 
 Select has `readonly` prop that defines if the select is readonly.
@@ -185,6 +210,8 @@ Select has `readonly` prop that defines if the select is readonly.
 <div class="w-[350px]">
 	<Select {options} readonly label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -201,6 +228,8 @@ Select has `readonly` prop that defines if the select is readonly.
 <Select {options} readonly={true} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Animation
 
 Select has `animation` prop that defines if the select has animation.
@@ -208,6 +237,8 @@ Select has `animation` prop that defines if the select has animation.
 <div class="w-[350px]">
 	<Select {options} animation={false} label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -224,6 +255,8 @@ Select has `animation` prop that defines if the select has animation.
 <Select {options} animation={false} label="This is a label" placeholder="Select an option" />
 ```
 
+</CodeBlockWrapper>
+
 ## Invalid
 
 Select has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
@@ -231,6 +264,8 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 <div class="w-[350px]">
 	<Select {options} invalid invalidText="This is invalid text." label='This is a label' placeholder='Select an option' />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script lang="ts">
@@ -252,6 +287,8 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 	placeholder="Select an option"
 />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

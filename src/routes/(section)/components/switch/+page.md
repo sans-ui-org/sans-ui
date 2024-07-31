@@ -21,6 +21,7 @@ toc: [
 <script>
 	import { Switch } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import switchProps from "./switch-props.ts"
 </script>
@@ -29,16 +30,22 @@ toc: [
 
 Import a Switch component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Switch } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
 <Switch label="This is label" textForOn="On" textForOff="Off" />
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Switch } from '$lib';
@@ -46,6 +53,8 @@ Import a Switch component in the script tag.
 
 <Switch label="This is label" textForOn="On" textForOff="Off" />
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -58,6 +67,8 @@ Switch has `variant` prop to decide the color theme of it.
 	<Switch variant="warning" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
 	<Switch variant="danger" label="This is label" textForOn="On" textForOff="Off" defaultToggled={true} />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -101,6 +112,8 @@ Switch has `variant` prop to decide the color theme of it.
 />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Switch has `size` prop to decide the sizes of it.
@@ -110,6 +123,8 @@ Switch has `size` prop to decide the sizes of it.
 	<Switch size="md" label="This is md" textForOn="On" textForOff="Off" defaultToggled={true} />
 	<Switch size="lg" label="This is lg" textForOn="On" textForOff="Off" defaultToggled={true} />
 </div>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -121,11 +136,15 @@ Switch has `size` prop to decide the sizes of it.
 <Switch size="lg" label="This is lg" textForOn="On" textForOff="Off" defaultToggled={true} />
 ```
 
+</CodeBlockWrapper>
+
 ## Default Toggled
 
 Switch has `defaultToggled` prop that defines the default toggled value of the switch.
 
 <Switch defaultToggled={true} label="This is label" textForOn="On" textForOff="Off"  />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -135,11 +154,15 @@ Switch has `defaultToggled` prop that defines the default toggled value of the s
 <Switch defaultToggled={true} label="This is label" textForOn="On" textForOff="Off" />
 ```
 
+</CodeBlockWrapper>
+
 ## Disabled
 
 Switch has `disabled` prop that defines readonly state of the switch.
 
 <Switch disabled={true} label="This is label" textForOn="On" textForOff="Off"  />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -149,11 +172,15 @@ Switch has `disabled` prop that defines readonly state of the switch.
 <Switch disabled={true} label="This is label" textForOn="On" textForOff="Off" />
 ```
 
+</CodeBlockWrapper>
+
 ## Read Only
 
 Switch has `readonly` prop that defines readonly state of the switch.
 
 <Switch readonly={true} label="This is label" textForOn="On" textForOff="Off"  />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -163,11 +190,15 @@ Switch has `readonly` prop that defines readonly state of the switch.
 <Switch readonly={true} label="This is label" textForOn="On" textForOff="Off" />
 ```
 
+</CodeBlockWrapper>
+
 ## Invalid
 
 Switch has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
 
 <Switch invalid={true} invalidText="This is invalid text." label="This is label" textForOn="On" textForOff="Off"  />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -182,6 +213,8 @@ Switch has `invalid` prop that defines if the input is invalid. And `invalidText
 	textForOff="Off"
 />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

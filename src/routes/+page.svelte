@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { Button, Tooltip, typewriter } from '$lib';
 	import Footer from './global-components/Footer.svelte';
+	import CodeBlockWrapper from './mdsvex/components/CodeBlockWrapper.md';
 
 	export let data;
 
@@ -29,6 +30,11 @@
 			{/if}
 		</h3>
 		<Button size="lg" href="/docs/installation">Let's get started</Button>
+		<!-- <pre class="language-bash"><code class="language-bash"
+				><span class="token function">npm</span> <span class="token function">install</span
+				> s-ui</code
+			></pre> -->
+
 		<!-- GitHub stars, NPM downloads, Figma duplicates -->
 		<div class="">
 			<div class="flex flex-row items-center gap-8">
@@ -72,4 +78,6 @@
 </main>
 
 <!-- Footer -->
+
 <Footer />
+```

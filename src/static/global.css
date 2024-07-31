@@ -554,6 +554,10 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
 }
@@ -562,16 +566,24 @@ video {
   position: sticky;
 }
 
+.right-6 {
+  right: 1.5rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-4 {
+  top: 1rem;
 }
 
 .top-\[57px\] {
   top: 57px;
 }
 
-.z-50 {
-  z-index: 50;
+.z-20 {
+  z-index: 20;
 }
 
 .z-30 {
@@ -612,6 +624,10 @@ video {
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mt-16 {
@@ -678,6 +694,15 @@ video {
   height: calc(100vh - 57px);
 }
 
+.h-min {
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.h-\[50px\] {
+  height: 50px;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -688,6 +713,10 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .w-6 {
@@ -726,6 +755,18 @@ video {
   width: 100%;
 }
 
+.w-\[\] {
+  width: ;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -748,6 +789,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-start {
@@ -817,6 +862,10 @@ video {
   border-radius: 9999px;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -842,6 +891,11 @@ video {
   border-color: transparent;
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -857,9 +911,18 @@ video {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
@@ -868,6 +931,11 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-24 {
@@ -883,6 +951,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-12 {
@@ -1021,6 +1094,11 @@ video {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -1053,43 +1131,9 @@ video {
 
 /* code highlights */
 
-pre {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  overflow: auto;
-  border-radius: 0.75rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  padding: 0.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  pre {
-    padding: 1.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  pre {
-    --tw-border-opacity: 1;
-    border-color: rgb(55 65 81 / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
-  }
-}
+/* pre {
+	@apply text-base rounded-xl overflow-auto w-full my-4 mx-auto bg-gradient-to-r text-black dark:text-gray-400 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 p-2 sm:p-6;
+} */
 
 /* Github ref: https://github.com/PrismJS/prism-themes/blob/master/themes/prism-vsc-dark-plus.css */
 
@@ -1100,7 +1144,7 @@ pre {
 pre[class*='language-'],
 code[class*='language-'] {
   color: #d4d4d4;
-  font-size: 13px;
+  font-size: 14px;
   text-shadow: none;
   font-family: Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;
   direction: ltr;
@@ -1138,9 +1182,10 @@ code[class*='language-'] *::selection {
 
 pre[class*='language-'] {
   padding: 2em;
-  margin: 2em 0;
+  margin: 2.5em 0;
   overflow: auto;
   background: #1e1e1e;
+  border-radius: 5px;
 }
 
 :not(pre) > code[class*='language-'] {
@@ -1370,11 +1415,6 @@ code[class*='language-html'] {
 * Line highlighting
 */
 
-pre[class*='language-'] > code[class*='language-'] {
-  position: relative;
-  z-index: 1;
-}
-
 .line-highlight.line-highlight {
   background: #f7ebc6;
   box-shadow: inset 5px 0 0 #f7d87c;
@@ -1395,6 +1435,11 @@ pre[class*='language-'] > code[class*='language-'] {
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:opacity-100 {

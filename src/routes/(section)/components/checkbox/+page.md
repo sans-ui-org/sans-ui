@@ -21,6 +21,7 @@ toc: [
 <script>
 	import { Checkbox } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import checkboxProps from "./checkbox-props.ts"
 
@@ -30,11 +31,15 @@ toc: [
 
 Import a Checkbox component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -42,6 +47,8 @@ The checkbox component can be used to receive one or more selected options from 
 
 <Checkbox />
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
@@ -49,6 +56,8 @@ The checkbox component can be used to receive one or more selected options from 
 
 <Checkbox />
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -62,6 +71,8 @@ Checkbox has `variant` prop to decide the color theme of it.
 	<Checkbox defaultChecked variant="danger" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
@@ -74,6 +85,8 @@ Checkbox has `variant` prop to decide the color theme of it.
 <Checkbox defaultChecked variant="danger" />
 ```
 
+</CodeBlockWrapper>
+
 ## Size
 
 Checkbox has `size` prop to decide the size of it.
@@ -84,6 +97,8 @@ Checkbox has `size` prop to decide the size of it.
 	<Checkbox size="lg" />
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
@@ -96,11 +111,15 @@ Checkbox has `size` prop to decide the size of it.
 </div>
 ```
 
+</CodeBlockWrapper>
+
 ## Disable
 
 Checkbox has `disabled` prop to disable your Checkbox component
 
 <Checkbox disabled />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -109,6 +128,8 @@ Checkbox has `disabled` prop to disable your Checkbox component
 
 <Checkbox disabled />
 ```
+
+</CodeBlockWrapper>
 
 ## Default Checked
 
@@ -116,6 +137,8 @@ Checkbox has `defaultChecked` prop to have Checkbox component's default check st
 
 <Checkbox defaultChecked />
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
@@ -124,11 +147,15 @@ Checkbox has `defaultChecked` prop to have Checkbox component's default check st
 <Checkbox defaultChecked />
 ```
 
+</CodeBlockWrapper>
+
 ## Indeterminate
 
 Checkbox has `indeterminate` prop to get Checkbox component's check state to be `indeterminate`.
 
 <Checkbox indeterminate />
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -137,6 +164,8 @@ Checkbox has `indeterminate` prop to get Checkbox component's check state to be 
 
 <Checkbox indeterminate />
 ```
+
+</CodeBlockWrapper>
 
 ## Animation
 
@@ -144,6 +173,8 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 <Checkbox animation={false} />
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Checkbox } from '$lib';
@@ -151,6 +182,8 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 <Checkbox animation={false} />
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

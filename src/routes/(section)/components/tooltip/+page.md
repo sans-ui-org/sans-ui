@@ -17,6 +17,7 @@ toc: [
 <script>
 	import { Tooltip, Button } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import tooltipProps from "./tooltip-props.ts"
 
@@ -26,17 +27,23 @@ toc: [
 
 Import a Tooltip component in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
 Use the Tooltip component to show extra description when hovering or focusing on an element.
 
 <Tooltip title="This is title" size="md"><Button >Here is the Trigger</Button></Tooltip>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -47,6 +54,8 @@ Use the Tooltip component to show extra description when hovering or focusing on
 	<Button>Here is the Trigger</Button>
 </Tooltip>
 ```
+
+</CodeBlockWrapper>
 
 ## Variant
 
@@ -60,6 +69,8 @@ Tooltip has `variant` prop to decide the color theme of it.
 	<Tooltip title="This is title" variant="danger"><Button variant="danger">Here is danger</Button></Tooltip>
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Tooltip, Button } from '$lib';
@@ -81,6 +92,8 @@ Tooltip has `variant` prop to decide the color theme of it.
 	<Button variant="danger">Here is danger</Button>
 </Tooltip>
 ```
+
+</CodeBlockWrapper>
 
 ## Size
 
@@ -92,6 +105,8 @@ Tooltip has `size` prop to decide the size of it.
 	<Tooltip title="This is title" size="lg"><Button>Here is lg</Button></Tooltip>
 </div>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { Tooltip, Button } from '$lib';
@@ -113,6 +128,8 @@ Tooltip has `size` prop to decide the size of it.
 	<Button variant="danger">Here is danger</Button>
 </Tooltip>
 ```
+
+</CodeBlockWrapper>
 
 ## API
 

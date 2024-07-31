@@ -15,6 +15,7 @@ toc: [
 <script>
   import { Link } from "$lib"
 	import * as Component from "../../../mdsvex/+layout.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 </script>
 
 ## Before you install
@@ -26,27 +27,46 @@ Before you install S-UI into your project, make sure that your project is based 
 
 You can initiate your Svelte project with the following code.
 
-```
+<CodeBlockWrapper>
+
+```bash
 npm create vite@latest myapp -- --template svelte
 cd myapp
 ```
+
+</CodeBlockWrapper>
 
 ### For Svelte Kit
 
 You can initiate your Svelte Kit project with the following code.
 
-```
+<CodeBlockWrapper>
+
+```bash
 npm create svelte@latest my-app
 cd my-app
 ```
+
+</CodeBlockWrapper>
 
 ## Let's install S-UI
 
 To install S-UI into your project, we need to run this command.
 
+<CodeBlockWrapper>
+
+```bash
+# For NPM
+npm install s-ui
+
+# For YARN
+yarn add s-ui
+
+# For PNPM
+pnpm install s-ui
 ```
-npm i -D s-ui
-```
+
+</CodeBlockWrapper>
 
 ## You are ready!
 

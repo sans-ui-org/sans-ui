@@ -20,7 +20,7 @@
 
 	{#if githubFolder}
 		<a
-			class="inline-flex items-center gap-2 border rounded-full pl-4 pr-6 py-2 mt-8 text-sm font-semibold bg-gray-100 hover:bg-gray-200 transition duration-200"
+			class="inline-flex items-center gap-2 border rounded-full pl-4 pr-6 py-1 mt-8 text-sm font-semibold bg-gray-100 hover:bg-gray-200 transition duration-200"
 			href={SUI_GITHUB_URL + '/blob/main/src/lib' + githubFolder}
 			target="_blank"
 		>

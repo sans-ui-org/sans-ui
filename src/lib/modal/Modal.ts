@@ -3,7 +3,7 @@ import { tv } from '$lib/utils/tv';
 export const modalVariant = tv({
 	slots: {
 		overlay: [
-			'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20 text-base font-bold font-black transition-all duration-300 ease-out'
+			'fixed top-0 left-0 w-[100vw] h-[100vh] justify-center items-center bg-slate-950/20 text-base font-bold font-black transition-all duration-300 ease-out z-50'
 		],
 		base: [
 			'fixed top-0 start-0 end-0 h-modal md:inset-0 md:h-full z-50 w-full flex justify-center items-center'

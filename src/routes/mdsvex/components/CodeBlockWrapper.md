@@ -34,10 +34,10 @@
     <div class="absolute top-4 right-6">
     	<Tooltip variant="secondary" size="sm" title="Copy this code">
     		<button
-    			class="px-2 p-2 text-sm text-white border border-white rounded-lg bg-gray-700 hover:bg-gray-500 transition duration-200"
+    			class="p-1.5 text-sm text-white border-2 border-gray-300 rounded-lg bg-gray-700 hover:bg-gray-500 transition duration-200"
     			on:click={onCopyCodeBlock}
     		>
-    				<svg class="w-[14px] h-[14px] cursor-pointer" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+    				<svg class="w-[12px] h-[12px] cursor-pointer" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
     					<g clip-path="url(#clip0_1222_36543)">
     						<path d="M10 0.5H1.5C0.947715 0.5 0.5 0.947715 0.5 1.5V10C0.5 10.5523 0.947715 11 1.5 11H10C10.5523 11 11 10.5523 11 10V1.5C11 0.947715 10.5523 0.5 10 0.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
     						<path d="M13.5 3.5V12.5C13.5 12.7652 13.3946 13.0196 13.2071 13.2071C13.0196 13.3946 12.7652 13.5 12.5 13.5H3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />

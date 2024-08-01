@@ -1,14 +1,26 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import Link from '$lib/link/Link.svelte';
 	import { SUI_GITHUB_URL } from '../utils/constants';
 	import Github from '../utils/icons/Github.svelte';
+
+	const toggleTheme = (ev: MouseEvent) => {
+		const target = ev.target as HTMLElement;
+		const isDark = target.ownerDocument.documentElement.classList.toggle('dark');
+		if (target.ownerDocument === document)
+			// we are NOT in the iFrame
+			localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+	};
+	const onPushHome = () => {
+		goto('/', { invalidateAll: true });
+	};
 </script>
 
 <header class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20">
 	<nav class="flex flex-row items-center justify-between py-4 px-8">
 		<div class="flex flex-row gap-4">
 			<!-- TODO: Icon? -->
-			<Link variant="secondary" underlineType="none" href="/"><strong>S-UI</strong></Link>
+			<button on:click={onPushHome}><strong>S-UI</strong></button>
 			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
 			<span>ver. 0.0.1</span>
 		</div>

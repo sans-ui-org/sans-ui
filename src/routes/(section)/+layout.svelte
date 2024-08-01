@@ -1,9 +1,45 @@
+<script lang="ts" context="module">
+	type AccordionTitle = 'Documentation' | 'Component' | 'Action';
+	type AccordionData = {
+		menu: {
+			title: AccordionTitle;
+			items: {
+				title: string;
+				slug: string;
+			}[];
+		}[];
+	};
+</script>
+
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { Accordion, AccordionItem, Link } from '$lib';
-	import Footer from '../global-components/Footer.svelte';
+	import { twMerge } from 'tailwind-merge';
 
 	/** @type {import('./$types').PageData} */
-	export let data;
+	export let data: AccordionData;
+
+	let accordionOpen = {
+		Documentation: false,
+		Component: false,
+		Action: false
+	};
+
+	onMount(() => {
+		accordionOpen = {
+			Documentation: localStorage.getItem('Accordion-Documentation') === 'true',
+			Component: localStorage.getItem('Accordion-Component') === 'true',
+			Action: localStorage.getItem('Accordion-Action') === 'true'
+		};
+
+		return () => {};
+	});
+
+	// Cache the state in localStorage
+	const onClick = (title: AccordionTitle) => {
+		const currentState = !accordionOpen[title];
+		localStorage.setItem(`Accordion-${title}`, currentState.toString());
+	};
 </script>
 
 <!-- Documentation -->
@@ -14,15 +50,25 @@
 	>
 		<nav>
 			{#each data.menu as menu}
-				<Accordion title={menu.title}>
+				<Accordion
+					title={menu.title}
+					bind:open={accordionOpen[menu.title]}
+					on:click={() => onClick(menu.title)}
+				>
 					{#each menu.items as item}
-						<AccordionItem>
+						<AccordionItem
+							class={twMerge(
+								'border-l-4 transition duration-300 hover:bg-neutral-200',
+								window.location.pathname === item.slug
+									? 'border-blue-500 bg-neutral-200'
+									: 'border-transparent'
+							)}
+						>
 							<Link
 								underlineType="none"
 								variant="primary"
 								href={item.slug}
-								class="w-full h-9 flex items-center pl-4 border-l-4 border-transparent hover:border-blue-500 transition duration-300"
-								>{item.title}</Link
+								class={twMerge('w-full h-9 flex items-center pl-4')}>{item.title}</Link
 							>
 						</AccordionItem>
 					{/each}

@@ -2,7 +2,7 @@
 	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import AccordionChevronIcon from './icons/AccordionChevronIcon.svelte';
 	import { cn } from '$lib/utils/cn';
-	import { setContext } from 'svelte';
+	import { createEventDispatcher, setContext } from 'svelte';
 	import { accordionVariant, type AccoridonSlots } from '$lib/accordion/Accordion';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
@@ -43,7 +43,9 @@
 	setContext('size', size);
 
 	// handlers
+	const dispatcher = createEventDispatcher();
 	const onClick = () => {
+		dispatcher('click');
 		open = !open;
 	};
 </script>

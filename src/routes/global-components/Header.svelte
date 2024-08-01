@@ -2,6 +2,14 @@
 	import Link from '$lib/link/Link.svelte';
 	import { SUI_GITHUB_URL } from '../utils/constants';
 	import Github from '../utils/icons/Github.svelte';
+
+	const toggleTheme = (ev: MouseEvent) => {
+		const target = ev.target as HTMLElement;
+		const isDark = target.ownerDocument.documentElement.classList.toggle('dark');
+		if (target.ownerDocument === document)
+			// we are NOT in the iFrame
+			localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+	};
 </script>
 
 <header class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20">

@@ -13,14 +13,11 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { afterNavigate } from '$app/navigation';
 	import { Accordion, AccordionItem, Link } from '$lib';
 	import { twMerge } from 'tailwind-merge';
 
 	/** @type {import('./$types').PageData} */
 	export let data: AccordionData;
-
-	let activeHref = '';
 
 	let accordionOpen = {
 		Documentation: false,
@@ -34,10 +31,8 @@
 			Component: localStorage.getItem('Accordion-Component') === 'true',
 			Action: localStorage.getItem('Accordion-Action') === 'true'
 		};
-	});
 
-	afterNavigate((navigation) => {
-		activeHref = navigation.to?.url.pathname ?? '';
+		return () => {};
 	});
 
 	// Cache the state in localStorage
@@ -64,7 +59,9 @@
 						<AccordionItem
 							class={twMerge(
 								'border-l-4 transition duration-300 hover:bg-neutral-200',
-								activeHref === item.slug ? 'border-blue-500 bg-neutral-200' : 'border-transparent'
+								window.location.pathname === item.slug
+									? 'border-blue-500 bg-neutral-200'
+									: 'border-transparent'
 							)}
 						>
 							<Link

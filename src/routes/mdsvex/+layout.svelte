@@ -31,17 +31,12 @@
 
 <Meta title={`S-UI - ${title}`} {description} />
 
-<div class="flex w-full justify-center">
-	<!-- Component Documentation -->
-	<div
-		class="flex flex-col w-[calc(100%-256px)] max-w-4xl mx-auto p-8 divide-y divide-gray-200 overflow-y-auto"
-	>
-		<DocHeader {title} {description} {category} {githubFolder} />
-		<div id="mainContent" class="pb-24">
-			<slot />
-		</div>
-		<Footer />
+<div class="flex flex-col w-[calc(100%-480px)] px-12 py-8 divide-y divide-gray-200 overflow-y-auto">
+	<DocHeader {title} {description} {category} {githubFolder} />
+	<div id="mainContent" class="pb-24">
+		<slot />
 	</div>
-	<!-- TOC -->
-	<TableOfContent {toc} />
+	<Footer />
 </div>
+<!-- TOC -->
+<TableOfContent {toc} />

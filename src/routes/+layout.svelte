@@ -4,9 +4,11 @@
 	import Header from './global-components/Header.svelte';
 </script>
 
-<main>
-	<!-- Header -->
-	<Header />
-	<!-- Content -->
-	<slot />
+<main class="bg-white dark:bg-gray-700">
+	<div class="max-w-7xl mx-auto">
+		<!-- Header -->
+		<Header />
+		<!-- Content -->
+		<slot />
+	</div>
 </main>

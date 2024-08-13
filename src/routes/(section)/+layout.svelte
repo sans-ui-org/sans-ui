@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
-	type AccordionTitle = 'Documentation' | 'Component' | 'Action';
-	type AccordionData = {
+	export type AccordionTitle = 'Documentation' | 'Component' | 'Action';
+	export type AccordionData = {
 		menu: {
 			title: AccordionTitle;
 			items: {
@@ -12,72 +12,15 @@
 </script>
 
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { Accordion, AccordionItem, Link } from '$lib';
-	import { twMerge } from 'tailwind-merge';
+	import SideNav from '../global-components/SideNav.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data: AccordionData;
-
-	let accordionOpen = {
-		Documentation: false,
-		Component: false,
-		Action: false
-	};
-
-	onMount(() => {
-		accordionOpen = {
-			Documentation: localStorage.getItem('Accordion-Documentation') === 'true',
-			Component: localStorage.getItem('Accordion-Component') === 'true',
-			Action: localStorage.getItem('Accordion-Action') === 'true'
-		};
-
-		return () => {};
-	});
-
-	// Cache the state in localStorage
-	const onClick = (title: AccordionTitle) => {
-		const currentState = !accordionOpen[title];
-		localStorage.setItem(`Accordion-${title}`, currentState.toString());
-	};
 </script>
 
-<!-- Documentation -->
-<div class="flex flex-row">
+<div class="flex flex-row justify-between gap">
 	<!-- Sidebar -->
-	<aside
-		class="overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)] block sticky top-[57px] border-r bg-gray-100"
-	>
-		<nav>
-			{#each data.menu as menu}
-				<Accordion
-					title={menu.title}
-					bind:open={accordionOpen[menu.title]}
-					on:click={() => onClick(menu.title)}
-				>
-					{#each menu.items as item}
-						<AccordionItem
-							class={twMerge(
-								'border-l-4 transition duration-300 hover:bg-neutral-200',
-								window.location.pathname === item.slug
-									? 'border-blue-500 bg-neutral-200'
-									: 'border-transparent'
-							)}
-						>
-							<Link
-								underlineType="none"
-								variant="primary"
-								href={item.slug}
-								class={twMerge('w-full h-9 flex items-center pl-4')}>{item.title}</Link
-							>
-						</AccordionItem>
-					{/each}
-				</Accordion>
-			{/each}
-		</nav>
-	</aside>
+	<SideNav {data} />
 	<!-- Content -->
-	<div class="w-[calc(100%-256px)]">
-		<slot />
-	</div>
+	<slot />
 </div>

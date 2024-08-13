@@ -7,17 +7,12 @@
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
 	type $$Props = HTMLButtonAttributes & {
-		variant?: ComponentVariant;
 		size?: ComponentSize;
 		open?: boolean;
 		title?: string;
 		classes?: SlotsToClasses<AccoridonSlots>;
 	};
 
-	/**
-	 * Property that define the variant of the accordion.
-	 */
-	export let variant: ComponentVariant = 'secondary';
 	/**
 	 * Property that define the open state of the accordion.
 	 */
@@ -36,10 +31,9 @@
 	export let classes: SlotsToClasses<AccoridonSlots> = { base: '' };
 
 	// tailwind-variant
-	const slots = accordionVariant({ variant, size });
+	const slots = accordionVariant({ size });
 
 	// Store variant + size in the context
-	setContext('variant', variant);
 	setContext('size', size);
 
 	// handlers
@@ -53,8 +47,8 @@
 <!-- TODO: A11y is not okay now... -->
 <!-- Trigger -->
 <button
-	class={cn(slots.base({ variant, size }), classes.base, $$restProps.class)}
 	{...$$restProps}
+	class={cn(slots.base({ size }), classes.base, $$restProps.class)}
 	on:click={onClick}
 	on:change
 	on:keydown

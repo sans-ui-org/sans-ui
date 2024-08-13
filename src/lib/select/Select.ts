@@ -7,7 +7,7 @@ export const selectVariant = tv({
 		trigger: ['w-full flex px-4 py-2 justify-between items-center bg-white'],
 		placeholderWrapper: ['w-full truncate flex items-start'],
 		placeholder: ['placeholder:text-neutral-500 truncate'],
-		listbox: ['border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top'],
+		listbox: ['z-10 border absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top'],
 		option: [
 			'items-center px-4 py-2 justify-between gap-1 items-center border border-transparent bg-white ',
 			'hover:bg-gray-100'

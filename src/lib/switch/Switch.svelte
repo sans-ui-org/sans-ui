@@ -4,6 +4,7 @@
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 	import { switchVariant, type SwitchSlots } from '$lib/switch/Switch';
 	import { cn } from '$lib/utils/cn';
+	import { createEventDispatcher } from 'svelte';
 
 	type $$BaseProps = HTMLBaseAttributes;
 
@@ -78,15 +79,22 @@
 	const slots = switchVariant({ size, variant, disabled, readonly, toggled, invalid });
 
 	// handlers
-	const onToggle = () => {
+	const dispatcher = createEventDispatcher();
+	const onToggle = (event: MouseEvent) => {
 		if (!disabled && !readonly) {
 			toggled = !toggled;
 		}
+		dispatcher('toggle', { toggled });
+		dispatcher('click', { toggled, event });
 	};
 	const onKeyPress = (event: KeyboardEvent) => {
 		if (event.key === 'Enter' || event.key === ' ') {
-			onToggle();
+			if (!disabled && !readonly) {
+				toggled = !toggled;
+			}
 		}
+		dispatcher('toggle', { toggled });
+		dispatcher('click', { toggled, event });
 	};
 </script>
 
@@ -111,7 +119,11 @@
 		>
 			<div class={cn(slots.switchChip({ size, disabled, toggled }), classes.switchChip)} />
 		</div>
-		<span class={cn(slots.switchText({}), classes.switchText)} data-testid="label-text">{toggleLabel}</span>
+		{#if toggleLabel}
+			<span class={cn(slots.switchText({}), classes.switchText)} data-testid="label-text"
+				>{toggleLabel}</span
+			>
+		{/if}
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}

@@ -1,6 +1,6 @@
 ---
 layout: componentLayout
-title: Let's install
+title: Let's install.
 description: This is the installation procedure of S-UI library to make sure that you are ready to use this library!
 category: documentation
 toc: [
@@ -21,7 +21,7 @@ toc: [
 ## Before you install
 
 Before you install S-UI into your project, make sure that your project is based on Svelte/Svelte Kit.
-(You don't need to install Tailwind CSS at all, however our project is built with Tailwind CSS.)
+If you haven't initialized your Svelte project...
 
 ### For Svelte
 
@@ -70,6 +70,6 @@ pnpm install s-ui
 
 ## You are ready!
 
-You are pretty much ready to use S-UI! Let's take a look at each component so we can understand <Link href="/components/button">how to use them</Link>!
+You are ready to use S-UI! Let's take a look at each component so we can understand <Link href="/components/button">how to use them</Link>!
 
 <!-- TODO: Next page nevigator -> navigate the users to the page that you intended. -->

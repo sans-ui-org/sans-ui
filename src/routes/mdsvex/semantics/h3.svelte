@@ -8,7 +8,7 @@
 	}
 </script>
 
-<h2 class="text-gray-900 text-xl font-medium mt-8 mb-4" use:init>
+<h2 class="text-gray-900 text-xl font-medium mt-8 mb-4 dark:text-white" use:init>
 	<a id={slug} class="group" href="#{slug}" aria-label={content}>
 		<slot />
 		<span

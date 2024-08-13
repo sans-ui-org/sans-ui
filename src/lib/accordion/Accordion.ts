@@ -6,23 +6,6 @@ export const accordionVariant = tv({
 		base: ['w-full flex flex-row items-center justify-between p-4 cursor-pointer']
 	},
 	variants: {
-		variant: {
-			primary: {
-				base: 'bg-blue-100 text-blue-500'
-			},
-			secondary: {
-				base: 'bg-neutral-100 text-neutral-500'
-			},
-			success: {
-				base: 'bg-green-100 text-green-500'
-			},
-			warning: {
-				base: 'bg-yellow-100 text-yellow-500'
-			},
-			danger: {
-				base: 'bg-red-100 text-red-500'
-			}
-		},
 		size: {
 			sm: {
 				base: 'text-sm p-2'

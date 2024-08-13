@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { Button, Tooltip, typewriter } from '$lib';
 	import Footer from './global-components/Footer.svelte';
-	import CodeBlockWrapper from './mdsvex/components/CodeBlockWrapper.md';
+	import { goto } from '$app/navigation';
 
 	export let data;
 
@@ -20,31 +20,30 @@
 <main class="block">
 	<!-- Hero section -->
 	<div class="w-full flex flex-col items-center gap-16 p-8 my-36">
-		<h1 class="text-5xl font-light">Welcome to S-UI.</h1>
-		<h3 class="text-xl font-light text-center">
+		<h1 class="text-5xl font-light dark:text-white">Welcome to S-UI.</h1>
+		<h3 class="text-xl font-light text-cente dark:text-neutral-200">
 			This is an official S-UI library documentation.<br />
 			{#if showTitle}
-				<span class="text-xl font-light text-center" transition:typewriter={{ speed: 1.5 }}>
+				<span
+					class="text-xl font-light text-center dark:text-neutral-200"
+					transition:typewriter={{ speed: 1.5 }}
+				>
 					Contributions are more than welcome! ^_^
 				</span>
 			{/if}
 		</h3>
-		<Button size="lg" href="/docs/installation">Let's get started</Button>
-		<!-- <pre class="language-bash"><code class="language-bash"
-				><span class="token function">npm</span> <span class="token function">install</span
-				> s-ui</code
-			></pre> -->
+		<Button size="lg" on:click={() => goto('/docs/installation')}>Let's get started</Button>
 
 		<!-- GitHub stars, NPM downloads, Figma duplicates -->
-		<div class="">
+		<div>
 			<div class="flex flex-row items-center gap-8">
-				<div class="flex flex-col items-center gap-4">
+				<div class="flex flex-col items-center gap-4 dark:text-white">
 					<h3 class="text-4xl font-light">{data.repoInfo.stargazers_count}</h3>
-					<p class="text-xl text-gray-500">GitHub Stars</p>
+					<p class="text-xl text-gray-500 dark:text-neutral-200">GitHub Stars</p>
 				</div>
 				<div class="flex flex-col items-center gap-4">
-					<h3 class="text-4xl font-light">{data.repoInfo.stargazers_count}</h3>
-					<p class="text-xl text-gray-500">NPM Downloads</p>
+					<h3 class="text-4xl font-light dark:text-white">{data.repoInfo.stargazers_count}</h3>
+					<p class="text-xl text-gray-500 dark:text-neutral-200">NPM Downloads</p>
 				</div>
 			</div>
 		</div>
@@ -54,8 +53,8 @@
 	<!-- Contributors -->
 	<div class="flex flex-col items-center mx-32 my-16">
 		<div class="flex flex-col gap-8 mb-14 text-center">
-			<h3 class="text-4xl font-light">S-UI Contributors</h3>
-			<p class="text-xl text-gray-500">
+			<h3 class="text-4xl font-light dark:text-white">S-UI Contributors</h3>
+			<p class="text-xl text-gray-500 dark:text-neutral-200">
 				Let's join the open-source community by contributing to S-UI and become one of the
 				highlighted members.
 			</p>

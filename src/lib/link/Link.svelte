@@ -78,6 +78,7 @@
 	const slots = linkVariant({ variant, underlineType, size, bold, disabled });
 </script>
 
+<!-- svelte-ignore a11y-no-redundant-roles -->
 <a
 	{...$$restProps}
 	class={cn(

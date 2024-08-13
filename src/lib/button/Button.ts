@@ -100,7 +100,7 @@ export const buttonVariant = tv({
 		{
 			variant: 'primary',
 			kind: 'bordered',
-			class: { base: 'border-blue-500 text-blue-500 hover:bg-blue-100 active:bg-blue-100' }
+			class: { base: 'border-blue-500 text-blue-500 hover:bg-blue-100/10 active:bg-blue-100/10' }
 		},
 		{
 			variant: 'secondary',

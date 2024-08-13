@@ -1,15 +1,10 @@
 <script lang="ts">
-	export let size: "sm" | "md" | "lg" = "lg"
-
-	const sizes = {
-		sm: 'w-4 h-4',
-		md: 'w-5 h-5',
-		lg: 'w-6 h-6'
-	};
+	export let size: number = 14;
 </script>
 
 <svg
-	class={sizes[size]}
+	width={size}
+	height={size}
 	fill="currentColor"
 	viewBox="0 0 24 24"
 	aria-hidden="true"

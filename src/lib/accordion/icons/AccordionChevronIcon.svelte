@@ -15,7 +15,7 @@
 
 	// tailwind-variant
 	const chevronIconVariant = tv({
-		base: ['text-black duration-200'],
+		base: ['duration-200'],
 		variants: {
 			open: {
 				true: ['rotate-180'],

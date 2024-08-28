@@ -2,15 +2,15 @@ import { tv } from '$lib/utils/tv';
 
 export const checkboxVariant = tv({
 	slots: {
-		base: ['sui-checkbox--wrapper', 'inline-flex flex-row items-center gap-2'],
-		icon: []
+		base: ['s-ui--checkbox--base', 'inline-flex flex-row items-center gap-2'],
+		icon: ['s-ui--checkbox--icon']
 	},
 	variants: {}
 });
 
 export const indeterminateIconVariant = tv({
 	slots: {
-		base: ['sui--check-icon', 'rounded', 'hover:bg-gray-100']
+		base: ['sui--check-icon', 'rounded', 'hover:bg-gray-100/50']
 	},
 	variants: {
 		variant: {
@@ -34,7 +34,7 @@ export const indeterminateIconVariant = tv({
 
 export const checkIconVariant = tv({
 	slots: {
-		base: ['sui--check-icon', 'hover:bg-gray-100 rounded stroke-neutral-500']
+		base: ['sui--check-icon', 'rounded stroke-neutral-500 text-white  hover:bg-gray-100/40']
 	},
 	variants: {
 		variant: {

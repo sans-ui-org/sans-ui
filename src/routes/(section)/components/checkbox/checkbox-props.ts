@@ -1,4 +1,4 @@
-export default [
+export const checkboxProps = [
 	{
 		name: 'variant',
 		type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
@@ -39,4 +39,15 @@ export default [
 		type: 'boolean',
 		default: 'true'
 	}
+];
+
+export const checkboxSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to the div element(wrapper) for icon slot.'
+	},
+	{
+		name: 'icon',
+		description: 'This slot is applied to the svg element(check icon).'
+	},
 ];

@@ -13,15 +13,17 @@ toc: [
 			{ slug: 'custom-inner-label', title: 'Custom Inner Label', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'progress-props', title: 'Progress Props', level: 1 },
+			{ slug: 'progress-slots', title: 'Progress Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Progress } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import progressProps from "./progress-props.ts"
+	import { progressProps, progressSlots } from "./progress-props.ts"
 
 </script>
 
@@ -146,3 +148,7 @@ Progress provides APIs(Properties) that is necessary for you to configure a Prog
 ### Progress Props
 
 <PropertyTable properties={progressProps} />
+
+### Progress Slots
+
+<SlotTable slots={progressSlots} />

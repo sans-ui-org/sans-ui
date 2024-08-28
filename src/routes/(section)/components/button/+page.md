@@ -16,15 +16,17 @@ toc: [
 			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
+			{ slug: 'button-slots', title: 'Button Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import buttonProps from "./button-props.ts"
+	import { buttonProps, buttonSlots } from "./button-props.ts"
 
 </script>
 
@@ -258,3 +260,7 @@ Button provides APIs(Properties) that is necessary for you to configure a Button
 ### Button Props
 
 <PropertyTable properties={buttonProps} />
+
+### Button Slots
+
+<SlotTable slots={buttonSlots} />

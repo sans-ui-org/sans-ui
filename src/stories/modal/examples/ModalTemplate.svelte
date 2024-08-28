@@ -2,18 +2,10 @@
 	import { Button, Modal, ModalBody, ModalContent, ModalHeader } from '$lib';
 	import type { ModalSize } from '$lib/modal/Modal.svelte';
 
-	/**
-	 * Property that defines the size of the button.
-	 */
 	export let size: ModalSize = 'lg';
-	/**
-	 * Property that defines the title of the modal.
-	 */
 	export let title: string = '';
-	/**
-	 * Property that whether this modal is able to be closed by clicking outside of it.
-	 */
 	export let dismissible: boolean = true;
+	export let triggerTitle: string = 'Open Modal';
 
 	/**
 	 * The prop that only for this story.
@@ -21,7 +13,7 @@
 	let popupModal = false;
 </script>
 
-<Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
+<Button on:click={() => (popupModal = !popupModal)}>{triggerTitle}</Button>
 
 <Modal {size} {dismissible} bind:open={popupModal}>
 	<ModalContent>

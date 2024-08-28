@@ -4,7 +4,7 @@
 	import Header from './global-components/Header.svelte';
 </script>
 
-<main class="bg-white dark:bg-gray-700">
+<main class="bg-white dark:bg-neutral-800">
 	<div class="max-w-7xl mx-auto">
 		<!-- Header -->
 		<Header />

@@ -27,7 +27,7 @@ If you haven't initialized your Svelte project...
 
 You can initiate your Svelte project with the following code.
 
-<CodeBlockWrapper>
+<CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 npm create vite@latest myapp -- --template svelte
@@ -40,7 +40,7 @@ cd myapp
 
 You can initiate your Svelte Kit project with the following code.
 
-<CodeBlockWrapper>
+<CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 npm create svelte@latest my-app
@@ -53,7 +53,7 @@ cd my-app
 
 To install S-UI into your project, we need to run this command.
 
-<CodeBlockWrapper>
+<CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 # For NPM

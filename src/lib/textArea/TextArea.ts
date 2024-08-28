@@ -2,25 +2,42 @@ import { tv } from '$lib/utils/tv';
 
 export const textareaVariant = tv({
 	slots: {
-		labelWrapper: ['flex flex-row items-center justify-between w-full'],
-		label: ['font-normal'],
-		base: [
-			'font-normal bg-gray-100 hover:bg-gray-200 focus-visible:bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2 focus-visible:outline-0'
+		labelWrapper: [
+			's-ui--textarea--labelWrapper',
+			'flex flex-row items-center justify-between w-full'
 		],
-		invalidText: ['text-sm text-red-500 mt-1']
+		label: ['s-ui--textarea--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		base: [
+			's-ui--textarea--base',
+			'font-normal bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2',
+			'hover:bg-gray-200',
+			'focus-visible:bg-gray-100 focus-visible:outline-0',
+			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'
+		],
+		invalidText: ['s-ui--textarea--invalidText', 'text-red-500 mt-1']
 	},
 	variants: {
 		variant: {
-			primary: { base: 'focus-visible:border-blue-500' },
-			secondary: { base: 'focus-visible:border-neutral-500' },
-			success: { base: 'focus-visible:border-green-500' },
-			warning: { base: 'focus-visible:border-yellow-500' },
-			danger: { base: 'focus-visible:border-red-500' }
+			primary: {
+				base: 'focus-visible:border-blue-500 dark:focus-visible:border-blue-500'
+			},
+			secondary: {
+				base: 'focus-visible:border-neutral-500 dark:focus-visible:border-neutral-200'
+			},
+			success: {
+				base: 'focus-visible:border-green-500 dark:focus-visible:border-green-500'
+			},
+			warning: {
+				base: 'focus-visible:border-yellow-500 dark:focus-visible:border-yellow-500'
+			},
+			danger: {
+				base: 'focus-visible:border-red-500 dark:focus-visible:border-red-500'
+			}
 		},
 		size: {
-			sm: { labelWrapper: ['text-xs'], base: ['text-xs'] },
-			md: { labelWrapper: ['text-sm'], base: ['text-sm'] },
-			lg: { labelWrapper: ['text-base'], base: ['text-base'] }
+			sm: { labelWrapper: ['text-sm'], base: ['text-sm'], invalidText: ['text-sm'] },
+			md: { labelWrapper: ['text-sm'], base: ['text-sm'], invalidText: ['text-sm'] },
+			lg: { labelWrapper: ['text-base'], base: ['text-base'], invalidText: ['text-base'] }
 		},
 		invalid: {
 			true: { label: 'text-red-500', base: ['border-red-500', 'focus-visible:border-red-500'] }

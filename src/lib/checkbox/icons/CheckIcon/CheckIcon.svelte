@@ -32,7 +32,7 @@
 	/>
 	<polyline
 		class="check fill-none"
-		stroke="white"
+		stroke="currentColor"
 		stroke-width={7}
 		stroke-dasharray={70}
 		stroke-dashoffset={checked ? 0 : 70}
@@ -44,7 +44,7 @@
 
 <style>
 	.animation {
-		transition: stroke-dashoffset 0.4s linear;
+		transition: stroke-dashoffset 0.3s linear;
 	}
 	.notChecked {
 		fill: none;

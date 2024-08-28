@@ -98,13 +98,13 @@
 	};
 </script>
 
-<div class={cn(slots.base({}), classes.base)}>
+<div class={cn(slots.wrapper({}), classes.wrapper)}>
 	<!-- Label -->
 	{#if label}
 		<label class={cn(slots.label({ size, invalid }), classes.label)} for={id}>{label}</label>
 	{/if}
 	<!-- Switch -->
-	<div class={cn(slots.wrapper({}), classes.wrapper)}>
+	<div class={cn(slots.switchWrapper({}), classes.switchWrapper)}>
 		<div
 			{id}
 			aria-checked={toggled}
@@ -113,7 +113,7 @@
 			{...$$restProps}
 			role="switch"
 			tabindex="0"
-			class={cn(slots.switch({ size, variant, disabled, readonly, toggled }), classes.switch)}
+			class={cn(slots.base({ size, variant, disabled, readonly, toggled }), classes.base)}
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>
@@ -127,6 +127,6 @@
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}
-		<p class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</p>
+		<p class={cn(slots.invalid({}), classes.invalid)}>{invalidText}</p>
 	{/if}
 </div>

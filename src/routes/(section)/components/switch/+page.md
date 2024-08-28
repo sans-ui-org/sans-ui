@@ -15,15 +15,17 @@ toc: [
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'switch-props', title: 'Switch Props', level: 1 },
+			{ slug: 'switch-slots', title: 'Switch Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Switch } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import switchProps from "./switch-props.ts"
+	import { switchProps, switchSlots } from "./switch-props.ts"
 </script>
 
 ## Set Up
@@ -223,3 +225,7 @@ Switch provides APIs(Properties) that is necessary for you to configure a Switch
 ### Switch Props
 
 <PropertyTable properties={switchProps} id="switch-table" />
+
+### Switch Slots
+
+<SlotTable slots={switchSlots} id="switch-table" />

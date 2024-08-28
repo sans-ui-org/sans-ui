@@ -2,8 +2,9 @@ import { tv } from '$lib/utils/tv';
 
 export const spinnerVariant = tv({
 	slots: {
-		base: [],
+		base: ['s-ui--spinner-base'],
 		dot: [
+			's-ui--spinner-dot',
 			'loader2-dot w-full h-full absolute top-0 left-0 animate-[spinnerDot_2s_ease-in-out_infinite]',
 			'before:block before:w-[25%] before:h-[25%] before:rounded-full before: before:animate-[spinnerDotBefore_2s_ease-in-out_infinite]'
 		]

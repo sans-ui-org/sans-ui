@@ -62,7 +62,7 @@
 	export let classes: SlotsToClasses<ButtonSlots> = {};
 
 	// tailwind-variants
-	const slots = buttonVariant({ variant, size, rounded, kind, iconOnly });
+	const slots = buttonVariant({ variant, size, rounded, kind, iconOnly, disabled, href: !!href });
 
 	// ripple effect
 	const ripple = disabled || !rippled ? () => {} : createRipple();

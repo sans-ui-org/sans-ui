@@ -1,4 +1,4 @@
-export default [
+export const switchProps = [
 	{
 		name: 'id',
 		type: 'string | undefined',
@@ -60,3 +60,30 @@ export default [
 		default: 'false'
 	}
 ];
+
+export const switchSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to the div element(switch component).'
+	},
+	{
+		name: 'labelWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the label element.'
+	},
+	{
+		name: 'label',
+		description: 'This slot is applied to the label element.'
+	},
+	{
+		name: 'inputWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the input element(base).'
+	},
+	{
+		name: 'startContent',
+		description: 'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
+	},
+	{
+		name: 'endContent',
+		description: 'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
+	},
+]

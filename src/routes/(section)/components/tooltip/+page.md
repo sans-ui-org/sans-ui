@@ -9,17 +9,22 @@ toc: [
 			{ slug: 'usage', title: 'Usage', level: 0 },
 			{ slug: 'variant', title: 'Variant', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'position', title: 'Position', level: 0 },
+			{ slug: 'trackable', title: 'Trackable', level: 0 },
+			{ slug: 'delay-open-and-close', title: 'Delay Open And Close', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'tooltip-props', title: 'Tooltip Props', level: 1 },
+			{ slug: 'tooltip-slots', title: 'Tooltip Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Tooltip, Button } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import tooltipProps from "./tooltip-props.ts"
+	import { tooltipProps, tooltipSlots } from "./tooltip-props.ts"
 
 </script>
 
@@ -131,6 +136,74 @@ Tooltip has `size` prop to decide the size of it.
 
 </CodeBlockWrapper>
 
+## Position
+
+Tooltip has `position` prop to decide the position of it.
+
+<div class="inline-flex flex-col items-start gap-4">
+	<Tooltip title="This is title" position="top"><Button>top</Button></Tooltip>
+	<Tooltip title="This is title" position="left"><Button>left</Button></Tooltip>
+	<Tooltip title="This is title" position="right"><Button>right</Button></Tooltip>
+	<Tooltip title="This is title" position="bottom"><Button>bottom</Button></Tooltip>
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Tooltip, Button } from '$lib';
+</script>
+
+<Tooltip title="This is title" position="top"><Button>top</Button></Tooltip>
+<Tooltip title="This is title" position="left"><Button>left</Button></Tooltip>
+<Tooltip title="This is title" position="right"><Button>right</Button></Tooltip>
+<Tooltip title="This is title" position="bottom"><Button>bottom</Button></Tooltip>
+```
+
+</CodeBlockWrapper>
+
+## Trackable
+
+Tooltip has `trackable` prop to define if the tooltip is trackable.
+
+<div class="inline-flex flex-col items-start gap-4">
+	<Tooltip title="This is title" trackable><Button>trackable</Button></Tooltip>
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Tooltip, Button } from '$lib';
+</script>
+
+<Tooltip title="This is title" trackable><Button>trackable</Button></Tooltip>
+```
+
+</CodeBlockWrapper>
+
+## Delay Open And Close
+
+Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the tooltip.
+
+<div class="inline-flex flex-col items-start gap-4">
+	<Tooltip title="This is title" delayToOpen={300}><Button>Delay Open</Button></Tooltip>
+	<Tooltip title="This is title" delayToHide={300}><Button>Delay Close</Button></Tooltip>
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Tooltip, Button } from '$lib';
+</script>
+
+<Tooltip title="This is title" delayToOpen={300}><Button>Delay Open</Button></Tooltip>
+<Tooltip title="This is title" delayToHide={300}><Button>Delay Close</Button></Tooltip>
+```
+
+</CodeBlockWrapper>
+
 ## API
 
 Tooltip provides APIs(Properties) that is necessary for you to configure a Tooltip compponent.
@@ -138,3 +211,9 @@ Tooltip provides APIs(Properties) that is necessary for you to configure a Toolt
 ### Tooltip Props
 
 <PropertyTable properties={tooltipProps} />
+
+### Tooltip Slots
+
+Tooltip component consists of these elements and you have control over those elements. For example, you can override its Tailwind CSS by modifying some class names through `classes` props.
+
+<SlotTable slots={tooltipSlots} />

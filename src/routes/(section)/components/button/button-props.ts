@@ -1,4 +1,4 @@
-export default [
+export const buttonProps = [
 	{
 		name: 'variant',
 		type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
@@ -38,5 +38,12 @@ export default [
 		name: 'classes',
 		type: '{ base: string }',
 		default: '{}'
+	}
+];
+
+export const buttonSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to button element.'
 	}
 ];

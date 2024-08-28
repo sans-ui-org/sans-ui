@@ -33,7 +33,7 @@
 	</h3>
 	<CloseButtonIcon
 		class={cn(slots.closeIcon({}), classes.closeIcon, $$restProps.class)}
-		tabindex="1"
+		tabindex="0"
 		on:click={hide}
 	/>
 </div>

@@ -3,7 +3,7 @@ import { tv } from '$lib/utils/tv';
 export const buttonVariant = tv({
 	slots: {
 		base: [
-			'inline-flex items-center outline-offset-4 transition duration-200',
+			's-ui--button--base inline-flex items-center outline-offset-4 transition duration-200',
 			'disabled:bg-gray-400 disabled:text-neutral-350 disabled:cursor-not-allowed'
 		]
 	},
@@ -34,6 +34,14 @@ export const buttonVariant = tv({
 			shadow: { base: 'text-white' }
 		},
 		iconOnly: {
+			true: { base: '' },
+			false: { base: '' }
+		},
+		disabled: {
+			true: { base: '' },
+			false: { base: '' }
+		},
+		href: {
 			true: { base: '' },
 			false: { base: '' }
 		}
@@ -183,6 +191,15 @@ export const buttonVariant = tv({
 			class: {
 				class: { base: 'shadow-lg shadow-red-500/50' }
 			}
+		},
+		{
+			href: true,
+			disabled: true,
+			class: { base: 'pointer-events-none' }
+		},
+		{
+			disabled: true,
+			class: { base: 'bg-gray-400 cursor-not-allowed' }
 		}
 	]
 });

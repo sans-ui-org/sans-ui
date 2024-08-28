@@ -1,4 +1,4 @@
-export default [
+export const progressProps = [
 	{
 		name: 'variant',
 		type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
@@ -23,5 +23,12 @@ export default [
 		name: 'customInnerLabel',
 		type: 'string',
 		default: '""'
+	}
+];
+
+export const progressSlots = [
+	{
+		name: 'base',
+		description: 'this slot is applied to the div element(`progressbar` role).'
 	}
 ];

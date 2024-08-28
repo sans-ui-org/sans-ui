@@ -15,15 +15,17 @@ toc: [
 			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'checkbox-props', title: 'Checkbox Props', level: 1 },
+			{ slug: 'checkbox-slots', title: 'Checkbox Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Checkbox } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import checkboxProps from "./checkbox-props.ts"
+	import { checkboxSlots, checkboxProps } from "./checkbox-props.ts"
 
 </script>
 
@@ -113,7 +115,7 @@ Checkbox has `size` prop to decide the size of it.
 
 </CodeBlockWrapper>
 
-## Disable
+## Disabled
 
 Checkbox has `disabled` prop to disable your Checkbox component
 
@@ -192,3 +194,7 @@ Checkbox provides APIs(Properties) that is necessary for you to configure a Chec
 ### Checkbox Props
 
 <PropertyTable properties={checkboxProps} />
+
+### Checkbox Slots
+
+<SlotTable slots={checkboxSlots} />

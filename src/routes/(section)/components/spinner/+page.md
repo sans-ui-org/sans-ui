@@ -12,15 +12,17 @@ toc: [
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },
+			{ slug: 'spinner-slots', title: 'Spinner Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Spinner } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import spinnerProps from "./spinner-props.ts"
+	import { spinnerProps, spinnerSlots } from "./spinner-props.ts"
 
 </script>
 
@@ -137,3 +139,7 @@ Spinner provides APIs(Properties) that is necessary for you to configure a Spinn
 ### Spinner Props
 
 <PropertyTable properties={spinnerProps} />
+
+### Spinner Slots 
+
+<SlotTable slots={spinnerSlots} />

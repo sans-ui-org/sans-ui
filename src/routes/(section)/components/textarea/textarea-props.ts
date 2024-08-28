@@ -1,4 +1,4 @@
-export default [
+export const textareaProps = [
 	{
 		name: 'id',
 		type: 'string | undefined',
@@ -68,5 +68,24 @@ export default [
 		name: 'row',
 		type: 'number',
 		default: '4'
+	}
+];
+
+export const textareaSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to textarea element.'
+	},
+	{
+		name: 'labelWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the label element.'
+	},
+	{
+		name: 'label',
+		description: 'This slot is applied to the label element.'
+	},
+	{
+		name: 'invalidText',
+		description: 'This slot is applied to the span element for invalid.'
 	}
 ];

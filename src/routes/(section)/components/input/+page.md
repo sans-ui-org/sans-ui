@@ -18,15 +18,17 @@ toc: [
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'input-props', title: 'Input Props', level: 1 },
+			{ slug: 'input-slots', title: 'Input Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Input } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import inputProps from "./input-props.ts"
+	import { inputProps, inputSlots } from "./input-props.ts"
 
 </script>
 
@@ -49,7 +51,7 @@ Import a Input component in the script tag.
 Use this example as a generic form element which includes multiple input fields types such as text, email, password, number, URL, and phone number and use the grid layout to add multiple columns and rows.
 
 <div class="w-[350px]">
-	<Input placeholder="Please type something here" />
+	<Input label="This is label" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -59,7 +61,7 @@ Use this example as a generic form element which includes multiple input fields 
 	import { Input } from '$lib';
 </script>
 
-<Input placeholder="Please type something here" />
+<Input label="This is label" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
@@ -138,6 +140,8 @@ Input has `size` prop defines the size of the input.
 
 <div class="w-[350px]">
 	<Input size="sm" placeholder="Please type something here" />
+	<Input size="md" placeholder="Please type something here" />
+	<Input size="lg" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -148,6 +152,8 @@ Input has `size` prop defines the size of the input.
 </script>
 
 <Input size="sm" placeholder="Please type something here" />
+<Input size="md" placeholder="Please type something here" />
+<Input size="lg" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
@@ -217,7 +223,7 @@ Input has `clearable` prop that controls the clear button for Input component. (
 Input has `maxCount` prop that defines the text limitation of your Input component.
 
 <div class="w-[350px]">
-	<Input maxCount={25} placeholder="Please type something here" />
+	<Input label="This is label" maxCount={25} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -263,3 +269,7 @@ Input provides APIs(Properties) that is necessary for you to configure a Input c
 ### Input Props
 
 <PropertyTable properties={inputProps} />
+
+### Input Slots
+
+<SlotTable slots={inputSlots} />

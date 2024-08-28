@@ -37,7 +37,7 @@
 </script>
 
 <header
-	class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20 dark:bg-gray-700 dark:text-white"
+	class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20 dark:bg-neutral-800 dark:text-white"
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">

@@ -16,15 +16,17 @@ toc: [
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'textarea-props', title: 'Textarea Props', level: 1 },
+			{ slug: 'textarea-slots', title: 'Textarea Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { TextArea } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import textareaProps from "./textarea-props.ts"
+	import { textareaSlots, textareaProps } from "./textarea-props.ts"
 
 </script>
 
@@ -47,7 +49,11 @@ Import a Textarea component in the script tag.
 Use the Textarea component as a multi-line text field input and use it inside form elements available in multiple sizes, styles, and variants
 
 <div class="w-[350px]">
-	<TextArea label="This is label" placeholder="Please type something here" />
+	<TextArea label="This is label" variant="primary" placeholder="Please type something here" />
+	<TextArea label="This is label" variant="secondary" placeholder="Please type something here" />
+	<TextArea label="This is label" variant="success" placeholder="Please type something here" />
+	<TextArea label="This is label" variant="warning" placeholder="Please type something here" />
+	<TextArea label="This is label" variant="danger" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -57,7 +63,11 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 	import { TextArea } from '$lib';
 </script>
 
-<TextArea label="This is label" placeholder="Please type something here" />
+<TextArea label="This is label" variant="primary" placeholder="Please type something here" />
+<TextArea label="This is label" variant="secondary" placeholder="Please type something here" />
+<TextArea label="This is label" variant="success" placeholder="Please type something here" />
+<TextArea label="This is label" variant="warning" placeholder="Please type something here" />
+<TextArea label="This is label" variant="danger" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
@@ -108,6 +118,8 @@ TextArea has `size` prop defines the font size of the input.
 
 <div class="w-[350px]">
 	<TextArea size="sm" placeholder="Please type something here" />
+	<TextArea size="md" placeholder="Please type something here" />
+	<TextArea size="lg" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -118,6 +130,8 @@ TextArea has `size` prop defines the font size of the input.
 </script>
 
 <TextArea size="sm" placeholder="Please type something here" />
+<TextArea size="md" placeholder="Please type something here" />
+<TextArea size="lg" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
@@ -214,3 +228,7 @@ TextArea provides APIs(Properties) that is necessary for you to configure a Text
 ### TextArea Props
 
 <PropertyTable properties={textareaProps} />
+
+### TextArea Slots
+
+<SlotTable slots={textareaSlots} />

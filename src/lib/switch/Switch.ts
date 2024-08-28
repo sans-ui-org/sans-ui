@@ -2,50 +2,59 @@ import { tv } from '$lib/utils/tv';
 
 export const switchVariant = tv({
 	slots: {
-		label: ['font-normal'],
-		base: ['flex flex-col gap-2 font-normal'],
-		wrapper: ['flex flex-row gap-2 items-center'],
-		switch: ['rounded-full flex items-center transition-colors duration-300 ease-in-out'],
-		switchChip: ['border border-gray-400 rounded-full transition-all duration-300 ease'],
-		switchText: ['font-normal'],
-		invalidText: ['text-sm text-red-500 mt-1']
+		wrapper: ['s-ui--switch--wrapper', 'flex flex-col gap-2 font-normal'],
+		label: ['s-ui--switch--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		switchWrapper: ['s-ui--switch--swtichWrapper', 'flex flex-row gap-2 items-center'],
+		base: [
+			's-ui--switch--base',
+			'rounded-full flex items-center transition-colors duration-300 ease-in-out'
+		],
+		switchChip: [
+			's-ui--switch--switchChip',
+			'border border-gray-400 rounded-full transition-all duration-300 ease'
+		],
+		switchText: ['s-ui--switch--switchText', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		invalid: ['s-ui--switch--invalid', 'text-sm text-red-500 mt-1']
 	},
 	variants: {
 		variant: {
-			primary: { switch: ['bg-blue-500'] },
-			secondary: { switch: ['bg-neutral-500'] },
-			success: { switch: ['bg-green-500'] },
-			warning: { switch: ['bg-yellow-500'] },
-			danger: { switch: ['bg-red-500'] }
+			primary: { base: ['bg-blue-500'] },
+			secondary: { base: ['bg-neutral-500'] },
+			success: { base: ['bg-green-500'] },
+			warning: { base: ['bg-yellow-500'] },
+			danger: { base: ['bg-red-500'] }
 		},
 		size: {
 			sm: {
 				label: ['text-xs'],
-				switch: ['w-[35px] h-[20px] px-1'],
-				switchChip: ['w-[14px] h-[14px]']
+				base: ['w-[35px] h-[20px] px-1'],
+				switchChip: ['w-[14px] h-[14px]'],
+				switchText: ['text-sm']
 			},
 			md: {
 				label: ['text-sm'],
-				switch: ['w-[45px] h-[25px] px-1'],
-				switchChip: ['w-[19px] h-[19px]']
+				base: ['w-[45px] h-[25px] px-1'],
+				switchChip: ['w-[19px] h-[19px]'],
+				switchText: ['text-sm']
 			},
 			lg: {
 				label: ['text-base'],
-				switch: ['w-[65px] h-[35px] px-1.5'],
-				switchChip: ['w-[26px] h-[26px]']
+				base: ['w-[65px] h-[35px] px-1.5'],
+				switchChip: ['w-[26px] h-[26px]'],
+				switchText: ['text-base']
 			}
 		},
 		disabled: {
-			true: { switch: 'cursor-not-allowed bg-gray-300', switchChip: 'bg-gray-500' },
-			false: { switch: 'cursor-pointer', switchChip: 'bg-white' }
+			true: { base: 'cursor-not-allowed bg-gray-300', switchChip: 'bg-gray-500' },
+			false: { base: 'cursor-pointer', switchChip: 'bg-white' }
 		},
 		readonly: {
-			true: { switch: 'cursor-default' },
+			true: { base: 'cursor-default' },
 			false: ''
 		},
 		toggled: {
 			true: '',
-			false: { switch: 'bg-gray-400', switchChip: 'translate-x-0' }
+			false: { base: 'bg-gray-400', switchChip: 'translate-x-0' }
 		},
 		invalid: {
 			true: { label: ['text-red-500'] }

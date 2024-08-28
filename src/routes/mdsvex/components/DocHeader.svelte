@@ -24,7 +24,7 @@
 			class={cn(
 				'inline-flex items-center gap-2 rounded-full pl-4 pr-6 py-1 mt-8 text-sm font-semibold bg-gray-100 transition duration-200',
 				'hover:bg-gray-200',
-				'dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500'
+				'dark:text-white dark:bg-neutral-600 dark:hover:bg-gray-500'
 			)}
 			href={SUI_GITHUB_URL + '/blob/main/src/lib' + githubFolder}
 			target="_blank"

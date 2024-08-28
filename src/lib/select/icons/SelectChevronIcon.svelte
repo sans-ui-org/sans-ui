@@ -20,7 +20,7 @@
 
 	// tailwind-variant
 	const chevronIconVariant = tv({
-		base: ['text-black'],
+		base: [''],
 		variants: {
 			animation: {
 				true: ['transform transition-transform ease-in-out duration-200']

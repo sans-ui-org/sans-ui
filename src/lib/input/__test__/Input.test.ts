@@ -124,8 +124,10 @@ describe('Input component', async () => {
 	//clearable
 	test('should turn clearable button on', async () => {
 		const userInpput = render(Input, { clearable: true });
-		expect(userInpput.getByRole('textbox').classList.contains('focus:outline-0')).toBeTruthy();
-		//expect(button.getByRole('textbox').classList.contains('focus:outline-0  focus:border-2')).toBeTruthy();
+		expect(
+			userInpput.getByRole('textbox').classList.contains('focus-visible:outline-0')
+		).toBeTruthy();
+		//expect(button.getByRole('textbox').classList.contains('focus-visible:outline-0  focus-visible:border-2')).toBeTruthy();
 	});
 
 	//maxCount
@@ -173,5 +175,4 @@ describe('Input component', async () => {
 
 	// TODO: Add tests for Button component
 	// on:click
-
 });

@@ -16,15 +16,17 @@ toc: [
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'select-props', title: 'Select Props', level: 1 },
+			{ slug: 'select-slots', title: 'Select Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button, Select } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import selectProps from "./select-props.ts"
+	import { selectProps, selectSlots } from "./select-props.ts"
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -84,7 +86,19 @@ Select has `variant` prop to decide the color theme of it.
 
 <div class="flex flex-col gap-4">
 	<div class="w-[350px]">
-		<Select variant="primary" {options} label='This is a label' placeholder='Select an option' />
+		<Select variant="primary" {options} label="This is a label" placeholder="Select an option" />
+	</div>
+	<div class="w-[350px]">
+		<Select variant="secondary" {options} label="This is a label" placeholder="Select an option" />
+	</div>
+	<div class="w-[350px]">
+		<Select variant="success" {options} label="This is a label" placeholder="Select an option" />
+	</div>
+	<div class="w-[350px]">
+		<Select variant="warning" {options} label="This is a label" placeholder="Select an option" />
+	</div>
+	<div class="w-[350px]">
+		<Select variant="danger" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 </div>
 
@@ -92,7 +106,7 @@ Select has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Select } from '$lib';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -297,3 +311,7 @@ Select provides APIs(Properties) that is necessary for you to configure a Select
 ### Select Props
 
 <PropertyTable properties={selectProps} />
+
+### Select Slots
+
+<SlotTable slots={selectSlots} />

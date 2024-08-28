@@ -188,9 +188,12 @@
 		{#each options as option, i}
 			<li
 				role="option"
-				class={cn(slots.option({ open, readonly }), classes.option)}
-				class:selected={selected && selected.value === option.value}
-				class:focus={i === focus}
+				class={cn(
+					slots.option({ open, readonly }),
+					selected && selected.value === option.value && 'bg-neutral-200 dark:bg-neutral-700',
+					i === focus && 'border-blue-500 dark:border-blue-500',
+					classes.option
+				)}
 				aria-selected={selected && selected.value === option.value}
 				use:select={() => onSelectByClicking(option)}
 				data-testid="opt{i}"
@@ -210,13 +213,3 @@
 {#if invalid && invalidText && invalidText !== ''}
 	<p class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</p>
 {/if}
-
-<!-- Reactive CSS styles only *we want to eliminate these codes as much as possible... -->
-<style>
-	li.selected {
-		background-color: #f5f5f5;
-	}
-	li.focus {
-		border: solid 1px #3b82f6;
-	}
-</style>

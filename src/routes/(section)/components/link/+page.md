@@ -12,8 +12,11 @@ toc: [
 			{ slug: 'font-weight', title: 'Font Weight', level: 0 },
 			{ slug: 'underline-type', title: 'Underline Type', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
+			{ slug: 'external', title: 'External', level: 0 },
+			{ slug: 'window-icon', title: 'Window Icon', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'link-props', title: 'Link Props', level: 1 },
+			{ slug: 'link-slots', title: 'Link Slots', level: 1 },
 		]
 ---
 
@@ -21,10 +24,11 @@ toc: [
 
 <script>
 	import { Link } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import linkProps from "./link-props.ts"
+	import { linkProps, linkSlots } from "./link-props.ts"
 
 </script>
 
@@ -66,7 +70,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 Link has `variant` prop to decide the color theme of it.
 
-<div class="flex flex-col gap-2">
+<div class="inline-flex flex-col gap-2">
 	<Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 	<Link variant="secondary" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 	<Link variant="success" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
@@ -104,10 +108,17 @@ Link has `variant` prop to decide the color theme of it.
 
 Link has `size` prop to decide the font size of Link component.
 
-<div class="flex flex-col gap-2">
-	<Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
-	<Link size="md" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
-	<Link size="lg" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+<div class="inline-flex flex-col gap-2">
+	<Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is sm</Link>
+	<Link size="md" href="https://github.com/s-ui-org/s-ui" target="_blank">This is md</Link>
+	<Link size="lg" href="https://github.com/s-ui-org/s-ui" target="_blank">This is lg</Link>
+	<Link size="xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is xl</Link>
+	<Link size="2xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 2xl</Link>
+	<Link size="3xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 3xl</Link>
+	<Link size="4xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 4xl</Link>
+	<Link size="5xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 5xl</Link>
+	<Link size="6xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 6xl</Link>
+	<Link size="7xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 7xl</Link>
 </div>
 
 <CodeBlockWrapper>
@@ -117,15 +128,16 @@ Link has `size` prop to decide the font size of Link component.
 	import { Link } from '$lib';
 </script>
 
-<Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
-<Link size="md" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
-<Link size="lg" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
+<Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is sm</Link>
+<Link size="md" href="https://github.com/s-ui-org/s-ui" target="_blank">This is md</Link>
+<Link size="lg" href="https://github.com/s-ui-org/s-ui" target="_blank">This is lg</Link>
+<Link size="xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is xl</Link>
+<Link size="2xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 2xl</Link>
+<Link size="3xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 3xl</Link>
+<Link size="4xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 4xl</Link>
+<Link size="5xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 5xl</Link>
+<Link size="6xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 6xl</Link>
+<Link size="7xl" href="https://github.com/s-ui-org/s-ui" target="_blank">This is 7xl</Link>
 ```
 
 </CodeBlockWrapper>
@@ -134,10 +146,16 @@ Link has `size` prop to decide the font size of Link component.
 
 Link has `bold` prop to decide the font weight of Link component.
 
-<div class="flex flex-col gap-2">
-	<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
-	<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
-	<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
+<div class="inline-flex flex-col gap-2">
+	<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
+	<Link bold="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extralight</Link>
+	<Link bold="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link>
+	<Link bold="normal" href="https://github.com/s-ui-org/s-ui" target="_blank">This is normal</Link>
+	<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is medium</Link>
+	<Link bold="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is semibold</Link>
+	<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
+	<Link bold="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extrabold</Link>
+	<Link bold="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link>
 </div>
 
 <CodeBlockWrapper>
@@ -147,15 +165,20 @@ Link has `bold` prop to decide the font weight of Link component.
 	import { Link } from '$lib';
 </script>
 
-<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
-<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
-<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This is link to the our Github page
-</Link>
+<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
+<Link bold="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is extralight</Link
+>
+<Link bold="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link>
+<Link bold="normal" href="https://github.com/s-ui-org/s-ui" target="_blank">This is normal</Link>
+<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is medium</Link>
+<Link bold="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is semibold</Link
+>
+<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
+<Link bold="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is extrabold</Link
+>
+<Link bold="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link>
 ```
 
 </CodeBlockWrapper>
@@ -164,18 +187,18 @@ Link has `bold` prop to decide the font weight of Link component.
 
 Link has `underline` prop to decide the text decoration(underline) of the link.
 
-<div class="flex flex-col gap-2">
+<div class="inline-flex flex-col gap-2">
 	<Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
-		>This one's underlineType is "none"</Link
+		>underlineType is "none"</Link
 	>
 	<Link underlineType="hover" href="https://github.com/s-ui-org/s-ui" target="_blank"
-		>This one's underlineType is "hover"</Link
+		>underlineType is "hover"</Link
 	>
 	<Link underlineType="always" href="https://github.com/s-ui-org/s-ui" target="_blank"
-		>This one's underlineType is "always"</Link
+		>underlineType is "always"</Link
 	>
 	<Link underlineType="active" href="https://github.com/s-ui-org/s-ui" target="_blank"
-		>This one's underlineType is "active"</Link
+		>underlineType is "active"</Link
 	>
 </div>
 
@@ -186,18 +209,18 @@ Link has `underline` prop to decide the text decoration(underline) of the link.
 	import { Link } from '$lib';
 </script>
 
-<Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This one's underlineType is "none"
-</Link>
-<Link underlineType="hover" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This one's underlineType is "hover"
-</Link>
-<Link underlineType="always" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This one's underlineType is "always"
-</Link>
-<Link underlineType="active" href="https://github.com/s-ui-org/s-ui" target="_blank">
-	This one's underlineType is "active"
-</Link>
+<Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>underlineType is "none"</Link
+>
+<Link underlineType="hover" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>underlineType is "hover"</Link
+>
+<Link underlineType="always" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>underlineType is "always"</Link
+>
+<Link underlineType="active" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>underlineType is "active"</Link
+>
 ```
 
 </CodeBlockWrapper>
@@ -222,6 +245,46 @@ Link has `disabled` prop to defines if the link is disalbe.
 
 </CodeBlockWrapper>
 
+## External
+
+Link has `external` prop to defines if the Link is an extrnal link.
+
+<Link external={true} href="https://github.com/s-ui-org/s-ui">This is an External link to the our Github page</Link>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Link } from '$lib';
+</script>
+
+<Link external={true} href="https://github.com/s-ui-org/s-ui"
+	>This is an External link to the our Github page</Link
+>
+```
+
+</CodeBlockWrapper>
+
+## Window Icon
+
+Link has `windowIcon` prop to defines if the Link has a window icon.
+
+<Link windowIcon external href="https://github.com/s-ui-org/s-ui">This is link to the our Github page</Link>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Link } from '$lib';
+</script>
+
+<Link windowIcon external href="https://github.com/s-ui-org/s-ui"
+	>This is link to the our Github page</Link
+>
+```
+
+</CodeBlockWrapper>
+
 ## API
 
 Link provides APIs(Properties) that is necessary for you to configure a Link compponent.
@@ -229,3 +292,7 @@ Link provides APIs(Properties) that is necessary for you to configure a Link com
 ### Link Props
 
 <PropertyTable properties={linkProps} />
+
+### Link Slots
+
+<SlotTable slots={linkSlots} />

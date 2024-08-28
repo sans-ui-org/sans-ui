@@ -11,16 +11,18 @@ toc: [
 			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
+			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button, Modal } from '$lib';
+	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 	import ModalTemplate from "../../../../stories/modal/examples/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import modalProps from "./modal-props.ts"
+	import { modalProps, modalSlots } from "./modal-props.ts"
 
 </script>
 
@@ -71,7 +73,10 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 
 Modal has `size` prop to decide the size of it.
 
-<ModalTemplate size="full" title="Modal Title" />
+<ModalTemplate size="sm" title="Modal Title" triggerTitle="Modal sm" />
+<ModalTemplate size="md" title="Modal Title" triggerTitle="Modal md"/>
+<ModalTemplate size="lg" title="Modal Title" triggerTitle="Modal lg"/>
+<ModalTemplate size="full" title="Modal Title" triggerTitle="Modal full"/>
 
 <CodeBlockWrapper>
 
@@ -132,3 +137,7 @@ Modal provides APIs(Properties) that is necessary for you to configure a Modal c
 ### Modal Props
 
 <PropertyTable properties={modalProps} />
+
+### Modal Slots
+
+<SlotTable slots={modalSlots} />

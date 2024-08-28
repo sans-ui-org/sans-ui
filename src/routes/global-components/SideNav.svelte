@@ -31,7 +31,7 @@
 </script>
 
 <aside
-	class="overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)] block sticky top-[57px] border-r dark:text-neutral-100 dark:bg-gray-700"
+	class="overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)] block sticky top-[57px] border-r dark:text-neutral-100"
 >
 	<nav>
 		{#each data.menu as menu}
@@ -52,10 +52,10 @@
 					>
 						<Link
 							underlineType="none"
-							variant="primary"
+							variant="secondary"
 							href={item.slug}
 							class={cn(
-								'w-full h-9 flex items-center pl-4 dark:text-neutral-300 dark:hover:text-neutral-100 dark:visited:text-neutral-300',
+								'w-full h-8 flex items-center pl-4 dark:text-neutral-300 dark:hover:text-neutral-100 dark:visited:text-neutral-300',
 								window.location.pathname === item.slug
 									? 'dark:text-neutral-100  dark:hover:text-neutral-100 dark:visited:text-neutral-100'
 									: ''

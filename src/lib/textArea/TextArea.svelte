@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
 	import { textareaVariant, type TextareaSlots } from '$lib/textArea/TextArea';
@@ -11,6 +16,7 @@
 		value?: string | number;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
+		rounded?: ComponentRounded;
 		label?: string;
 		placeholder?: string;
 		disabled?: boolean;
@@ -40,6 +46,10 @@
 	 * Property that defines the size of the textarea.
 	 */
 	export let size: ComponentSize = 'md';
+	/**
+	 * Property that defines the roundness of the textarea.
+	 */
+	export let rounded: ComponentRounded = 'none';
 	/**
 	 * Property that defines the label of the textarea.
 	 */
@@ -91,7 +101,7 @@
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// slots
-	const slots = textareaVariant({ variant, size, invalid, animation, disabled });
+	const slots = textareaVariant({ variant, size, rounded, invalid, animation, disabled });
 
 	// handler
 	const onInput = (e: Event) => {

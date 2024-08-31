@@ -18,7 +18,7 @@ export const selectVariant = tv({
 		placeholder: ['s-ui--select-placeholder', 'placeholder:text-neutral-500 truncate'],
 		listbox: [
 			's-ui--select-listbox',
-			'z-10 absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top border',
+			'z-10 absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top border rounded-lg',
 			'dark:border-none'
 		],
 		option: [
@@ -48,6 +48,13 @@ export const selectVariant = tv({
 				placeholder: ['text-base'],
 				option: ['text-base']
 			}
+		},
+		rounded: {
+			none: { base: 'rounded-none', trigger: 'rounded-none' },
+			sm: { base: 'rounded-sm', trigger: 'rounded-sm' },
+			md: { base: 'rounded-md', trigger: 'rounded-md' },
+			lg: { base: 'rounded-lg', trigger: 'rounded-lg' },
+			full: { base: 'rounded-full', trigger: 'rounded-full' }
 		},
 		open: {
 			true: { listbox: 'scale-y-1 shadow-lg', option: 'flex' },

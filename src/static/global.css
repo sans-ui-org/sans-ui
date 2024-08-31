@@ -914,6 +914,11 @@ video {
   border-color: rgb(245 245 245 / var(--tw-border-opacity));
 }
 
+.border-neutral-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 212 / var(--tw-border-opacity));
+}
+
 .border-transparent {
   border-color: transparent;
 }

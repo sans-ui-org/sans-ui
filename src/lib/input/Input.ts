@@ -85,14 +85,14 @@ export const inputVariant = tv({
 		},
 		invalid: {
 			true: {
-				base: 'border-red-500 focus-visible:border-red-500',
-				label: 'text-red-500',
-				startContent: 'focus-visible:border-red-500',
-				endContent: 'focus-visible:border-red-500'
+				base: 'border-red-500 dark:border-red-500 focus-visible:border-red-500 dark:focus-visible:border-red-500',
+				label: 'text-red-500 dark:text-red-500',
+				startContent: 'focus-visible:border-red-500 dark:focus-visible:border-red-500',
+				endContent: 'focus-visible:border-red-500 dark:focus-visible:border-red-500'
 			},
-			false: { base: '' }
+			false: {}
 		},
-		animation: { true: { base: 'transition-all duration-300 ease-in' }, false: { base: '' } },
+		animation: { true: { base: 'transition-all duration-300 ease-in' }, false: {} },
 		disabled: {
 			true: {
 				base: 'cursor-not-allowed text-gray-500',

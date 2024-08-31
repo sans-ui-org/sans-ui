@@ -27,6 +27,9 @@
 		bold?: FontWeight;
 		underlineType?: UnderlineType;
 		disabled?: boolean;
+		external?: boolean;
+		windowIcon?: boolean;
+		animation?: boolean;
 		href?: string;
 		classes?: SlotsToClasses<LinkSlots>;
 	}
@@ -64,6 +67,10 @@
 	 */
 	export let external: boolean = false;
 	/**
+	 * Property that defines if the link has an animation.
+	 */
+	export let animation: boolean = true;
+	/**
 	 * Property that defines the class names of the link.
 	 */
 	export let classes: SlotsToClasses<LinkSlots> = {};
@@ -82,7 +89,7 @@
 <a
 	{...props}
 	class={cn(
-		slots.base({ variant, underlineType, size, bold, disabled }),
+		slots.base({ variant, underlineType, size, bold, disabled, animation }),
 		classes.base,
 		$$restProps.class
 	)}
@@ -92,6 +99,8 @@
 >
 	<slot />
 	{#if windowIcon}
-		<WindowIcon class={cn(slots.icon({ variant, underlineType, size, bold, disabled }))} />
+		<WindowIcon
+			class={cn(slots.icon({ variant, underlineType, size, bold, disabled, animation }))}
+		/>
 	{/if}
 </a>

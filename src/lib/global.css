@@ -2203,6 +2203,10 @@ video {
   border-color: rgb(64 64 64 / var(--tw-divide-opacity));
 }
 
+.dark\:border:is(.dark *) {
+  border-width: 1px;
+}
+
 .dark\:border-none:is(.dark *) {
   border-style: none;
 }
@@ -2260,6 +2264,10 @@ video {
 .dark\:text-neutral-400:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(163 163 163 / var(--tw-text-opacity));
+}
+
+.dark\:visited\:text-neutral-300:visited:is(.dark *) {
+  color: rgb(212 212 212 );
 }
 
 .dark\:hover\:bg-neutral-600:hover:is(.dark *) {

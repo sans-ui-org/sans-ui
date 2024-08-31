@@ -25,6 +25,7 @@
 		rounded?: ComponentRounded;
 		iconOnly?: boolean;
 		href?: string;
+		animation?: boolean;
 		classes?: SlotsToClasses<ButtonSlots>;
 	};
 
@@ -60,6 +61,10 @@
 	 * Property that defines the href of the button.
 	 */
 	export let href: string | undefined = undefined;
+	/**
+	 * Property that defines whether the button has an animation.
+	 */
+	export let animation: boolean = false;
 	/*
 	 * Property that defines the class names of the button.
 	 */
@@ -78,7 +83,11 @@
 	role={href ? 'link' : 'button'}
 	{href}
 	{disabled}
-	class={cn(slots.base({ variant, size }), classes.base, $$restProps.class)}
+	class={cn(
+		slots.base({ rounded, size, iconOnly, variant, kind, href: !!href, disabled, animation }),
+		classes.base,
+		$$restProps.class
+	)}
 	on:click
 	on:change
 	on:keydown

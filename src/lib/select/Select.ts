@@ -6,7 +6,7 @@ export const selectVariant = tv({
 		base: [
 			's-ui--base-label',
 			'relative border mt-1 bg-white',
-			'dark:bg-neutral-700 dark:border-none dark:text-neutral-100'
+			'dark:bg-neutral-700 dark:border dark:border-neutral-800 dark:text-neutral-100'
 		],
 		trigger: [
 			's-ui--select-trigger',
@@ -82,7 +82,11 @@ export const selectVariant = tv({
 			false: { listbox: '' }
 		},
 		invalid: {
-			true: { label: ['text-red-500'], base: ['border-red-500'], trigger: 'outline-none' },
+			true: {
+				label: ['text-red-500 dark:text-red-500'],
+				base: ['border-red-500 dark:border-red-500'],
+				trigger: ['outline-none']
+			},
 			false: {}
 		}
 	}

@@ -42,7 +42,7 @@
 	}
 </script>
 
-<div bind:this={codeContainer} {...$$restProps} class={cn("py-4 pl-6 pr-4 mt-4 rounded-lg border border-neutral-300 dark:border-neutral-500 bg-neutral-800", $$restProps.class)}>
+<div bind:this={codeContainer} {...$$restProps} class={cn("py-4 pl-6 pr-4 mt-4 rounded-lg border-2 border-neutral-300 dark:border-neutral-500 bg-neutral-800 dark:border-neutral-500", $$restProps.class)}>
 	<div class="flex justify-between items-center pb-3">
 		<div class="inline-flex gap-2 items-center text-red-500">
 			<svelte:component this={icons[icon]} class="w-[16px] h-[16px] text-red-500"/>

@@ -18,7 +18,7 @@ export const selectVariant = tv({
 		placeholder: ['s-ui--select-placeholder', 'placeholder:text-neutral-500 truncate'],
 		listbox: [
 			's-ui--select-listbox',
-			'z-10 absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top border',
+			'z-10 absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top border rounded-lg',
 			'dark:border-none'
 		],
 		option: [

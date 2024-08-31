@@ -15,6 +15,7 @@
 		title?: string;
 		size?: ModalSize;
 		dismissible?: boolean;
+		animation?: boolean;
 	}
 
 	/**
@@ -29,6 +30,10 @@
 	 * Property that whether this modal is able to be closed by clicking outside of it.
 	 */
 	export let dismissible: boolean = true;
+	/**
+	 * Property that whether this modal has animation.
+	 */
+	export let animation: boolean = true;
 
 	// tailwind-variants
 	const slots = modalVariant({ open, size });
@@ -61,7 +66,7 @@
 		class={slots.base({ open, size })}
 		on:keydown={handleKeys}
 		on:mousedown={onOutsideClose}
-		transition:fly={{ y: 200, duration: 600 }}
+		transition:fly={{ y: animation ? 200 : 0, duration: animation ? 600 : 0 }}
 		use:focusTrap
 		use:autoFocus
 		{...$$restProps}

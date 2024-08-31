@@ -13,6 +13,7 @@ toc: [
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'switch-props', title: 'Switch Props', level: 1 },
 			{ slug: 'switch-slots', title: 'Switch Slots', level: 1 },
@@ -214,6 +215,24 @@ Switch has `invalid` prop that defines if the input is invalid. And `invalidText
 	textForOn="On"
 	textForOff="Off"
 />
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Switch has `animation` prop that defines if the input has animation.
+
+<Switch animation={false} label="This is label" textForOn="On" textForOff="Off"  />
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Switch } from '$lib';
+</script>
+
+<Switch animation={false} label="This is label" textForOn="On" textForOff="Off" />
 ```
 
 </CodeBlockWrapper>

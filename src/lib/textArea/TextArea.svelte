@@ -132,11 +132,15 @@
 	aria-disabled={disabled}
 	aria-readonly={readonly}
 	aria-invalid={invalid}
-	class:animation={animation && !invalid}
-	class={cn(slots.base({ variant, size, invalid, animation, disabled }), classes.base)}
+	class={cn(slots.base({ size, variant, invalid, animation, disabled }), classes.base)}
 />
 
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</span>
+	<span
+		class={cn(
+			slots.invalidText({ size, variant, invalid, animation, disabled }),
+			classes.invalidText
+		)}>{invalidText}</span
+	>
 {/if}

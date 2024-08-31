@@ -10,7 +10,7 @@ export const linkVariant = tv({
 			primary: { base: 'text-blue-500 hover:text-blue-700 cursor-pointer' },
 			secondary: {
 				base: [
-					'text-neutral-500 hover:text-neutral-600  cursor-pointer',
+					'text-neutral-500 hover:text-neutral-600 cursor-pointer',
 					'dark:text-neutral-100 dark:hover:text-neutral-300'
 				]
 			},
@@ -53,6 +53,9 @@ export const linkVariant = tv({
 		},
 		disabled: {
 			true: { base: 'text-gray-500 hover:text-gray-500 cursor-not-allowed' }
+		},
+		animation: {
+			true: { base: 'transition-all duration-300' }
 		}
 	}
 });

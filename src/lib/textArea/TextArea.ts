@@ -40,7 +40,13 @@ export const textareaVariant = tv({
 			lg: { labelWrapper: ['text-base'], base: ['text-base'], invalidText: ['text-base'] }
 		},
 		invalid: {
-			true: { label: 'text-red-500', base: ['border-red-500', 'focus-visible:border-red-500'] }
+			true: {
+				label: 'text-red-500 dark:text-red-500',
+				base: [
+					'border-red-500 dark:border-red-500',
+					'focus-visible:border-red-500 dark:focus-visible:border-red-500'
+				]
+			}
 		},
 		animation: {
 			true: { base: ['transition-all duration-300 ease-in-out'] }

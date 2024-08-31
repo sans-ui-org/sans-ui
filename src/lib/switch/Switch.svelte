@@ -20,6 +20,7 @@
 		invalid?: boolean;
 		invalidText?: string;
 		defaultToggled?: boolean;
+		animation?: boolean;
 		classes?: SlotsToClasses<SwitchSlots>;
 	}
 
@@ -71,6 +72,10 @@
 	 * Property that defines the classes of the switch.
 	 */
 	export let classes: SlotsToClasses<SwitchSlots> = {};
+	/**
+	 * Property that defines the animation of the switch.
+	 */
+	export let animation: boolean = true;
 
 	$: toggled = defaultToggled;
 	$: toggleLabel = toggled ? textForOn : textForOff;
@@ -98,13 +103,29 @@
 	};
 </script>
 
-<div class={cn(slots.wrapper({}), classes.wrapper)}>
+<div
+	class={cn(
+		slots.wrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
+		classes.wrapper
+	)}
+>
 	<!-- Label -->
 	{#if label}
-		<label class={cn(slots.label({ size, invalid }), classes.label)} for={id}>{label}</label>
+		<label
+			class={cn(
+				slots.label({ size, variant, readonly, disabled, toggled, invalid, animation }),
+				classes.label
+			)}
+			for={id}>{label}</label
+		>
 	{/if}
 	<!-- Switch -->
-	<div class={cn(slots.switchWrapper({}), classes.switchWrapper)}>
+	<div
+		class={cn(
+			slots.switchWrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
+			classes.switchWrapper
+		)}
+	>
 		<div
 			{id}
 			aria-checked={toggled}
@@ -113,20 +134,39 @@
 			{...$$restProps}
 			role="switch"
 			tabindex="0"
-			class={cn(slots.base({ size, variant, disabled, readonly, toggled }), classes.base)}
+			class={cn(
+				slots.base({ size, variant, readonly, disabled, toggled, invalid, animation }),
+				classes.base
+			)}
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>
-			<div class={cn(slots.switchChip({ size, disabled, toggled }), classes.switchChip)} />
+			<div
+				class={cn(
+					slots.switchChip({ size, variant, readonly, disabled, toggled, invalid, animation }),
+					classes.switchChip
+				)}
+			/>
 		</div>
 		{#if toggleLabel}
-			<span class={cn(slots.switchText({}), classes.switchText)} data-testid="label-text"
-				>{toggleLabel}</span
+			<span
+				class={cn(
+					slots.switchText({ size, variant, readonly, disabled, toggled, invalid, animation }),
+					classes.switchText
+				)}
+				data-testid="label-text">{toggleLabel}</span
 			>
 		{/if}
 	</div>
 	<!-- Invalid -->
 	{#if invalid && invalidText && invalidText !== ''}
-		<p class={cn(slots.invalid({}), classes.invalid)}>{invalidText}</p>
+		<p
+			class={cn(
+				slots.invalid({ size, variant, readonly, disabled, toggled, invalid, animation }),
+				classes.invalid
+			)}
+		>
+			{invalidText}
+		</p>
 	{/if}
 </div>

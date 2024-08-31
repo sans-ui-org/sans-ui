@@ -12,6 +12,7 @@ toc: [
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
@@ -172,6 +173,26 @@ TextArea has `readonly` prop that defines if the input is readonly.
 </script>
 
 <TextArea readonly={true} placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+TextArea has `animation` prop that defines if the input has animation or not.
+
+<div class="w-[350px]">
+	<TextArea animation={false} placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { TextArea } from '$lib';
+</script>
+
+<TextArea animation={false} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

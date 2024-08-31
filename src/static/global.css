@@ -446,6 +446,11 @@ video {
   display: none;
 }
 
+*:focus-visible {
+  /* @apply outline; */
+  outline-width: 2px;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1516,6 +1521,11 @@ code[class*='language-html'] {
 
 .group:focus .group-focus\:opacity-100 {
   opacity: 1;
+}
+
+.dark\:border-neutral-500:is(.dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(115 115 115 / var(--tw-border-opacity));
 }
 
 .dark\:bg-gray-600:is(.dark *) {

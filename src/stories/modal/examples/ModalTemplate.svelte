@@ -5,6 +5,7 @@
 	export let size: ModalSize = 'lg';
 	export let title: string = '';
 	export let dismissible: boolean = true;
+	export let animation: boolean = true;
 	export let triggerTitle: string = 'Open Modal';
 
 	/**
@@ -15,7 +16,7 @@
 
 <Button on:click={() => (popupModal = !popupModal)}>{triggerTitle}</Button>
 
-<Modal {size} {dismissible} bind:open={popupModal}>
+<Modal {size} {dismissible} {animation} bind:open={popupModal}>
 	<ModalContent>
 		<ModalHeader {title} />
 		<ModalBody>

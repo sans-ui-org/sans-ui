@@ -14,6 +14,7 @@ toc: [
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'clearable', title: 'Clearable', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
@@ -214,6 +215,26 @@ Input has `clearable` prop that controls the clear button for Input component. (
 </script>
 
 <Input clearable={false} placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Input has `animation` prop that controls whether the input has animation or not.
+
+<div class="w-[350px]">
+	<Input animation={false} placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Input } from '$lib';
+</script>
+
+<Input animation={false} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

@@ -13,6 +13,7 @@ toc: [
 			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'rippled', title: 'Rippled', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
@@ -21,7 +22,7 @@ toc: [
 ---
 
 <script>
-	import { Button } from '$lib';
+	import { Button, Link } from '$lib';
 	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
@@ -200,6 +201,24 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 </script>
 
 <Button rippled={false}>Button</Button>
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Buttons has `animation` prop to control the Button's background color transition animation.(Ripple effect can't be disabled by this prop. Please refer to <Link href="#rippled">rippled property</Link>.)
+
+<Button animation={false}>Button</Button>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Button animation={false}>Button</Button>
 ```
 
 </CodeBlockWrapper>

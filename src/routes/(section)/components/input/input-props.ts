@@ -42,7 +42,12 @@ export const inputProps = [
 	{
 		name: 'clearable',
 		type: 'boolean',
-		default: 'true'
+		default: 'false'
+	},
+	{
+		name: 'rounded',
+		type: "'none' | 'sm' | 'md' | 'lg' | 'full",
+		default: 'none'
 	},
 	{
 		name: 'animation',
@@ -100,10 +105,12 @@ export const inputSlots = [
 	},
 	{
 		name: 'startContent',
-		description: 'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
+		description:
+			'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
 	},
 	{
 		name: 'endContent',
-		description: 'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
-	},
+		description:
+			'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
+	}
 ];

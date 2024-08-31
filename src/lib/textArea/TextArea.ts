@@ -39,6 +39,13 @@ export const textareaVariant = tv({
 			md: { labelWrapper: ['text-sm'], base: ['text-sm'], invalidText: ['text-sm'] },
 			lg: { labelWrapper: ['text-base'], base: ['text-base'], invalidText: ['text-base'] }
 		},
+		rounded: {
+			none: { base: 'rounded-none' },
+			sm: { base: 'rounded-sm' },
+			md: { base: 'rounded-md' },
+			lg: { base: 'rounded-lg' },
+			full: { base: 'rounded-2xl' }
+		},
 		invalid: {
 			true: { label: 'text-red-500', base: ['border-red-500', 'focus-visible:border-red-500'] }
 		},

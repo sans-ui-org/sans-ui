@@ -4,7 +4,7 @@ export const inputVariant = tv({
 	slots: {
 		base: [
 			's-ui--input--base',
-			'font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 border-2',
+			'font-normal bg-gray-100 w-full pl-4 pr-10 border-gray-200 border-2 items-center truncate',
 			'focus-visible:outline-0',
 			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'
 		],
@@ -75,6 +75,13 @@ export const inputVariant = tv({
 				endContent: 'h-10 w-10',
 				invalid: 'text-base'
 			}
+		},
+		rounded: {
+			none: { base: 'rounded-none' },
+			sm: { base: 'rounded-sm' },
+			md: { base: 'rounded-md' },
+			lg: { base: 'rounded-lg' },
+			full: { base: 'rounded-full' }
 		},
 		invalid: {
 			true: {

@@ -7,7 +7,12 @@
 
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import { close, select, listbox } from '$lib/select/actions/select';
 	import SelectCheckIcon from '$lib/select/icons/SelectCheckIcon.svelte';
 	import SelectChevronIcon from '$lib/select/icons/SelectChevronIcon.svelte';
@@ -21,6 +26,7 @@
 		id?: string;
 		size?: ComponentSize;
 		variant?: ComponentVariant;
+		rounded?: ComponentRounded;
 		defaultSelected?: Option;
 		options: Option[];
 		label?: string;
@@ -67,6 +73,10 @@
 	 */
 	export let disabled: boolean = false;
 	/**
+	 * Property that defines the roundness of the select.
+	 */
+	export let rounded: ComponentRounded = 'none';
+	/**
 	 * Property that defines if the select is readonly.
 	 */
 	export let readonly: boolean = false;
@@ -101,7 +111,16 @@
 	$: focus = null;
 
 	// tailwind-variants
-	const slots = selectVariant({ variant, size, open, readonly, disabled, animation, invalid });
+	const slots = selectVariant({
+		variant,
+		size,
+		rounded,
+		open,
+		readonly,
+		disabled,
+		animation,
+		invalid
+	});
 
 	// handlers
 	const onToggle = () => {

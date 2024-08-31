@@ -49,6 +49,13 @@ export const selectVariant = tv({
 				option: ['text-base']
 			}
 		},
+		rounded: {
+			none: { base: 'rounded-none', trigger: 'rounded-none' },
+			sm: { base: 'rounded-sm', trigger: 'rounded-sm' },
+			md: { base: 'rounded-md', trigger: 'rounded-md' },
+			lg: { base: 'rounded-lg', trigger: 'rounded-lg' },
+			full: { base: 'rounded-full', trigger: 'rounded-full' }
+		},
 		open: {
 			true: { listbox: 'scale-y-1 shadow-lg', option: 'flex' },
 			false: { listbox: 'scale-y-0 opacity-0', option: 'none' }

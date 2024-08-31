@@ -1,11 +1,15 @@
 <script lang="ts" context="module">
 	type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
-	type ButtonRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
 </script>
 
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { createRipple } from '$lib/actions/ripple';
 	import { cn } from '$lib/utils/cn';
@@ -18,7 +22,7 @@
 		disabled?: boolean;
 		rippled?: boolean;
 		kind?: ButtonKind;
-		rounded?: ButtonRounded;
+		rounded?: ComponentRounded;
 		iconOnly?: boolean;
 		href?: string;
 		classes?: SlotsToClasses<ButtonSlots>;
@@ -39,7 +43,7 @@
 	/**
 	 * Property that defines the rounded corners of the button.
 	 */
-	export let rounded: ButtonRounded = 'full';
+	export let rounded: ComponentRounded = 'full';
 	/**
 	 * Property that defines if the button is disabled.
 	 */

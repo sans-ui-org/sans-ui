@@ -11,6 +11,7 @@ toc: [
 			{ slug: 'label', title: 'Label', level: 0 },
 			{ slug: 'value', title: 'Value', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'clearable', title: 'Clearable', level: 0 },
@@ -158,6 +159,34 @@ Input has `size` prop defines the size of the input.
 
 </CodeBlockWrapper>
 
+## Rounded
+
+Input has `rounded` prop to update Input component's border-radius.
+
+<div class="w-[350px]">
+	<Input rounded="none" placeholder="Please type something here">rounded none</Input>
+	<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
+	<Input rounded="md" placeholder="Please type something here">rounded md</Input>
+	<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
+	<Input rounded="full" placeholder="Please type something here">rounded full</Input>
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Input rounded="none" placeholder="Please type something here">rounded none</Input>
+<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
+<Input rounded="md" placeholder="Please type something here">rounded md</Input>
+<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
+<Input rounded="full" placeholder="Please type something here">rounded full</Input>
+```
+
+</CodeBlockWrapper>
+
 ## Disabled
 
 Input has `disabled` prop that defines if the input is disabled.
@@ -203,7 +232,7 @@ Input has `readonly` prop that defines if the input is readonly.
 Input has `clearable` prop that controls the clear button for Input component. (What is clear button? -> As soon as you start typing something in Input component, you will see x button on the left side of the component.)
 
 <div class="w-[350px]">
-	<Input clearable={false} placeholder="Please type something here" />
+	<Input clearable={true} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -213,7 +242,7 @@ Input has `clearable` prop that controls the clear button for Input component. (
 	import { Input } from '$lib';
 </script>
 
-<Input clearable={false} placeholder="Please type something here" />
+<Input clearable={true} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

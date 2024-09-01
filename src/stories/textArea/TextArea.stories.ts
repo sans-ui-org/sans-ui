@@ -18,12 +18,52 @@ const meta = {
 			control: {
 				type: 'number'
 			}
+		},
+		placeholder: {
+			control: {
+				type: 'text'
+			}
+		},
+		label: {
+			control: {
+				type: 'text'
+			}
+		},
+		rounded: {
+			control: {
+				type: 'select'
+			},
+			options: ['none', 'sm', 'md', 'lg', 'full']
+		},
+		animation: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		readonly: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		disabled: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalid: {
+			control: { type: 'boolean' }
+		},
+		invalidText: {
+			control: { type: 'text' }
+		},
+		classes: {
+			control: { type: 'object' }
 		}
 	},
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
 } satisfies Meta<TextArea>;
 
@@ -81,6 +121,13 @@ export const Rows: Story = {
 	args: {
 		...defaultArgs,
 		rows: 2
+	}
+};
+
+export const Rounded: Story = {
+	args: {
+		...defaultArgs,
+		rounded: 'full'
 	}
 };
 

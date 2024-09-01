@@ -40,7 +40,7 @@ function getRippleEffect(bgColor: string, centered?: boolean): (event: MouseEven
 			{ transform: 'scale(0)', opacity: 1 },
 			{ transform: 'scale(1)', opacity: 0 }
 		];
-		const animationState = circle.animate(keyframes, 500);
+		const animationState = circle.animate(keyframes, 300);
 
 		// remove the circle after the animation is finished
 		animationState.finished.then(() => {

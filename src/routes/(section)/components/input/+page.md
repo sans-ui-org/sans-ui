@@ -165,11 +165,11 @@ Input has `size` prop defines the size of the input.
 Input has `rounded` prop to update Input component's border-radius.
 
 <div class="w-[350px]">
-	<Input rounded="none" placeholder="Please type something here">rounded none</Input>
-	<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
-	<Input rounded="md" placeholder="Please type something here">rounded md</Input>
-	<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
-	<Input rounded="full" placeholder="Please type something here">rounded full</Input>
+	<Input rounded="none" placeholder="Please type something here" />
+	<Input rounded="sm" placeholder="Please type something here" />
+	<Input rounded="md" placeholder="Please type something here" />
+	<Input rounded="lg" placeholder="Please type something here" />
+	<Input rounded="full" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -179,11 +179,11 @@ Input has `rounded` prop to update Input component's border-radius.
 	import { Button } from '$lib';
 </script>
 
-<Input rounded="none" placeholder="Please type something here">rounded none</Input>
-<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
-<Input rounded="md" placeholder="Please type something here">rounded md</Input>
-<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
-<Input rounded="full" placeholder="Please type something here">rounded full</Input>
+<Input rounded="none" placeholder="Please type something here" />
+<Input rounded="sm" placeholder="Please type something here" />
+<Input rounded="md" placeholder="Please type something here" />
+<Input rounded="lg" placeholder="Please type something here" />
+<Input rounded="full" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

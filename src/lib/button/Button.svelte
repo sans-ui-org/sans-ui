@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
+	export type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
 </script>
 
 <script lang="ts">

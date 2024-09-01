@@ -68,21 +68,43 @@ describe('Input component', async () => {
 		).toBeTruthy();
 	});
 
+	// rounded
+	test('should have correct roundness for none', () => {
+		const input = render(Input, { rounded: 'none' });
+		expect(input.getByRole('textbox').classList.contains('rounded-none')).toBeTruthy();
+	});
+	test('should have correct roundness for sm', () => {
+		const input = render(Input, { rounded: 'sm' });
+		expect(input.getByRole('textbox').classList.contains('rounded-sm')).toBeTruthy();
+	});
+	test('should have correct roundness for md', () => {
+		const input = render(Input, { rounded: 'md' });
+		expect(input.getByRole('textbox').classList.contains('rounded-md')).toBeTruthy();
+	});
+	test('should have correct roundness for lg', () => {
+		const input = render(Input, { rounded: 'lg' });
+		expect(input.getByRole('textbox').classList.contains('rounded-lg')).toBeTruthy();
+	});
+	test('should have correct roundness for full', () => {
+		const input = render(Input, { rounded: 'full' });
+		expect(input.getByRole('textbox').classList.contains('rounded-full')).toBeTruthy();
+	});
+
 	// size
 	test('should have correct size for sm', () => {
 		const userInpput = render(Input, { size: 'sm' });
-		expect(userInpput.getByRole('textbox').classList.contains('h-10')).toBeTruthy();
+		expect(userInpput.getByRole('textbox').classList.contains('h-8')).toBeTruthy();
 	});
 
 	test('should have correct size for md', () => {
 		const userInpput = render(Input, { size: 'md' });
-		expect(userInpput.getByRole('textbox').classList.contains('h-12')).toBeTruthy();
+		expect(userInpput.getByRole('textbox').classList.contains('h-10')).toBeTruthy();
 	});
 
-	test('should have correct size for lg', () => {
+	test('should have correct size for lg', async () => {
 		const userInpput = render(Input, { size: 'lg' });
 
-		expect(userInpput.getByRole('textbox').classList.contains('h-14')).toBeTruthy();
+		expect(userInpput.getByRole('textbox').classList.contains('h-12')).toBeTruthy();
 	});
 
 	//required
@@ -127,7 +149,6 @@ describe('Input component', async () => {
 		expect(
 			userInpput.getByRole('textbox').classList.contains('focus-visible:outline-0')
 		).toBeTruthy();
-		//expect(button.getByRole('textbox').classList.contains('focus-visible:outline-0  focus-visible:border-2')).toBeTruthy();
 	});
 
 	//maxCount

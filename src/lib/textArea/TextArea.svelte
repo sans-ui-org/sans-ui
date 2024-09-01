@@ -21,7 +21,7 @@
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
-		required?: boolean;
+		// required?: boolean;
 		animation?: boolean;
 		maxCount?: number;
 		invalid?: boolean;
@@ -61,7 +61,7 @@
 	/**
 	 * Property that defines if the textarea is required.
 	 */
-	export let required: boolean = false;
+	// export let required: boolean = false;
 	/**
 	 * Property that defines if the textarea is disabled.
 	 */

@@ -3,12 +3,16 @@ description: 'Prepare Pnpm and Node.js environment'
 
 runs:
   using: composite
+
+  strategy:
+    matrix:
+      node-version: [18.x, 20.x, 22.x]
+
   steps:
-    - name: Setup Node.js and Pnpm
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
-        node-version-file: 20.x
-        registry-url: 'https://registry.npmjs.org'
+        node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
     - name: Install Dependencies
       shell: bash

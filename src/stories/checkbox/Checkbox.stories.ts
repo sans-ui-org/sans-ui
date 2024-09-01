@@ -1,10 +1,10 @@
-import { Checkbox } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import CheckboxTemplate from './template/CheckboxTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Checkbox',
-	component: Checkbox,
+	component: CheckboxTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -14,7 +14,7 @@ const meta = {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		},
-		defaultChecked: {
+		checked: {
 			control: { type: 'boolean' }
 		},
 		value: {
@@ -35,7 +35,7 @@ const meta = {
 			page: null
 		}
 	}
-} satisfies Meta<Checkbox>;
+} satisfies Meta<CheckboxTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -45,9 +45,19 @@ export const Default: Story = {
 	args: {}
 };
 
+export const Size: Story = {
+	args: {
+		size: 'sm'
+	}
+};
+
+export const WithLabel: Story = {
+	args: {}
+};
+
 export const DefaultChecked: Story = {
 	args: {
-		defaultChecked: true
+		checked: true
 	}
 };
 
@@ -60,5 +70,12 @@ export const Indeterminate: Story = {
 export const NoAnimation: Story = {
 	args: {
 		animation: false
+	}
+};
+
+export const Disabled: Story = {
+	args: {
+		checked: true,
+		disabled: true
 	}
 };

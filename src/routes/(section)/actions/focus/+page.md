@@ -13,6 +13,7 @@ toc: [
 	import { Button, focusTrap, autoFocus } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 
 	let open = false
 	const toggle = () => {
@@ -24,11 +25,15 @@ toc: [
 
 We offer `focusTrap` and `autoFocus` action in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { focusTrap, autoFocus } from '$lib';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -47,6 +52,8 @@ We offer `focusTrap` and `autoFocus` action in the script tag.
 	<Button variant="secondary" on:click={toggle}>Cancel</Button>
 	<Button on:click={toggle}>Close</Button>
 </dialog>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -72,3 +79,5 @@ We offer `focusTrap` and `autoFocus` action in the script tag.
 	<Button on:click={toggle}>Close</Button>
 </dialog>
 ```
+
+</CodeBlockWrapper>

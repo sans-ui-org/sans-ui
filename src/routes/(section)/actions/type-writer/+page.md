@@ -14,6 +14,7 @@ toc: [
 	import { typewriter } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 
 	let showTitle = false;
 	onMount(() => {
@@ -29,21 +30,27 @@ toc: [
 
 Import `typewriter` action in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { typewriter } from '$lib';
 </script>
 ```
 
+</CodeBlockWrapper>
+
 ## Usage
 
 For example, we can play `typewriter` transition effect when the message appears in the DOM.
 
 {#if showTitle}
-<span class="text-xl font-light text-center" transition:typewriter={{ speed: 1.5 }}>
+<span class="text-md font-light text-center dark:text-neutral-100" transition:typewriter={{ speed: 1.5 }}>
 Contributions are more than welcome! ^\_^
 </span>
 {/if}
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -61,8 +68,13 @@ Contributions are more than welcome! ^\_^
 </script>
 
 {#if showTitle}
-	<span class="text-xl font-light text-center" transition:typewriter={{ speed: 1.5 }}>
+	<span
+		class="text-xl font-light text-center dark:text-neutral-100"
+		transition:typewriter={{ speed: 1.5 }}
+	>
 		Contributions are more than welcome! ^\_^
 	</span>
 {/if}
 ```
+
+</CodeBlockWrapper>

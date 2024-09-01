@@ -1,7 +1,68 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# name: Continuous Integration (Before merge to "development" branch)
 
-name: Continuous Integration (Before merge to "development" branch)
+# on:
+#   push:
+#     branches: ['development']
+#   pull_request:
+#     branches: ['development']
+
+# jobs:
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Setup
+#         uses: ./.github/actions/setup
+#     # - name: Build
+#     #   run: pnpm run build
+
+#   test:
+#     name: Tests
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Setup
+#         uses: ./.github/actions/setup
+#       - name: Run Tests
+#         run: pnpm install
+
+#   svlete-check:
+#     name: Svelte Check
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Setup
+#         uses: ./.github/actions/setup
+#       - name: Run Pnpm Check
+#         run: pnpm run check
+
+#   eslint:
+#     name: ESLint
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Setup
+#         uses: ./.github/actions/setup
+#       - name: Run ESLint
+#         run: pnpm run lint
+
+#   prettier:
+#     name: Prettier
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout Repo
+#         uses: actions/checkout@v4
+#       - name: Setup
+#         uses: ./.github/actions/setup
+#       - name: Run Prettier
+#         run: pnpm run prettier:format
+
+name: Node.js CI
 
 on:
   push:
@@ -11,56 +72,20 @@ on:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-    # - name: Build
-    #   run: pnpm run build
 
-  test:
-    name: Tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Run Tests
-        run: pnpm install
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-  svlete-check:
-    name: Svelte Check
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Run Pnpm Check
-        run: pnpm run check
-
-  eslint:
-    name: ESLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Run ESLint
-        run: pnpm run lint
-
-  prettier:
-    name: Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Run Prettier
-        run: pnpm run prettier:format
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test

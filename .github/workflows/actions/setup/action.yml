@@ -1,0 +1,15 @@
+name: 'Setup'
+description: 'Prepare Pnpm and Node.js environment'
+
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js and Pnpm
+      uses: actions/setup-node@v4
+      with:
+        node-version-file: '.nvmrc'
+        registry-url: 'https://registry.npmjs.org'
+        cache: 'pnpm'
+    - name: Install Dependencies
+      shell: bash
+      run: pnpm install

@@ -33,7 +33,7 @@
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
-		required?: boolean;
+		// required?: boolean;
 		animation?: boolean;
 		invalid?: boolean;
 		invalidText?: string;
@@ -83,7 +83,7 @@
 	/**
 	 * Property that defines if the select is required.
 	 */
-	export let required: boolean = false;
+	// export let required: boolean = false;
 	/**
 	 * Property that defines if the select has animation.
 	 */

@@ -244,29 +244,7 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 </script>
 
 <Button iconOnly={true}>
-	<svg
-		class="w-[14px] h-[14px]"
-		viewBox="0 0 14 14"
-		fill="white"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<g clip-path="url(#clip0_1222_36554)">
-			<path
-				d="M7 0.5V13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-			<path
-				d="M0.5 6.95996H13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</g>
-	</svg>
+	<!-- You icon or image here -->
 </Button>
 ```
 

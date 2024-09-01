@@ -6,9 +6,25 @@
 	export let variant: ComponentVariant = 'primary';
 	export let size: FontSize = 'md';
 	export let bold: FontWeight = 'normal';
-	export let url: string = 'https://www.google.com';
+	export let href: string = 'https://www.google.com';
 	export let underlineType: UnderlineType = 'always';
 	export let disabled = false;
+	export let external = false;
+	export let windowIcon = false;
 </script>
 
-<Link href={url} target="_blank" {variant} {size} {bold} {disabled} {underlineType}>Google</Link>
+<div class="canvas">
+	<Link {href} {variant} {size} {bold} {disabled} {underlineType} {external} {windowIcon}
+		>Google</Link
+	>
+</div>
+
+<style>
+	.canvas {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+</style>

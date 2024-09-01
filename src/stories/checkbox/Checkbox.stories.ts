@@ -16,12 +16,24 @@ const meta = {
 		},
 		defaultChecked: {
 			control: { type: 'boolean' }
+		},
+		value: {
+			control: { type: 'text' }
+		},
+		disabled: {
+			control: { type: 'boolean' }
+		},
+		indeterminate: {
+			control: { type: 'boolean' }
+		},
+		animation: {
+			control: { type: 'boolean' }
 		}
 	},
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
 } satisfies Meta<Checkbox>;
 

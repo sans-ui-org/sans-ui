@@ -2,7 +2,6 @@
 	import Button, { type ButtonKind } from '$lib/button/Button.svelte';
 	import type { ComponentRounded, ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
-	import { IconOnly } from '../Button.stories';
 
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;

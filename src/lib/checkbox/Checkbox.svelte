@@ -2,8 +2,6 @@
 	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
-	import CheckIcon from '$lib/checkbox/icons/CheckIcon/CheckIcon.svelte';
-	import IndeterminateIcon from '$lib/checkbox/icons/InderminateIcon/IndeterminateIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';
 	import { checkboxVariant, type CheckboxSlots } from '$lib/checkbox/Checkbox';
@@ -11,17 +9,21 @@
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
 	interface $$Props extends $$BaseProps {
+		id?: string;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
-		label?: string;
 		value?: string;
 		disabled?: boolean;
-		defaultChecked?: boolean;
+		checked?: boolean;
 		indeterminate?: boolean;
 		animation?: boolean;
 		classes?: SlotsToClasses<CheckboxSlots>;
 	}
 
+	/**
+	 * Property that define the id for the checkbox.
+	 */
+	export let id: string = '';
 	/**
 	 * Property that define the variant of the checkbox.
 	 */
@@ -35,13 +37,13 @@
 	 */
 	export let value: string = '';
 	/**
+	 * Property that defines the checked state of the checkbox.
+	 */
+	export let checked: boolean = false;
+	/**
 	 * Property that defines the disabled state of the checkbox.
 	 */
 	export let disabled: boolean = false;
-	/**
-	 * Specify whether the input should be checked by default.
-	 */
-	export let defaultChecked: boolean = false;
 	/**
 	 * Property that defines the indeterminate state of the checkbox.
 	 */
@@ -55,72 +57,62 @@
 	 */
 	export let classes: SlotsToClasses<CheckboxSlots> = {};
 
-	let checked = defaultChecked;
-	let inputElement: HTMLInputElement;
 	const dispatcher = createEventDispatcher();
 
 	// tailwind-variant
-	const slots = checkboxVariant({});
+	const slots = checkboxVariant({ size, variant, disabled, checked, indeterminate });
 
 	// --- Stateful logic ---
-	const onclick = (e: MouseEvent) => {
-		e.preventDefault(); // prevent the cascade of onchange event.
-		if (disabled || indeterminate) return;
-		checked = !checked;
-		dispatcher('click', e);
-	};
-	const onkeydown = (
-		e: KeyboardEvent & {
-			currentTarget: EventTarget & HTMLDivElement;
-		}
-	) => {
-		if (disabled || indeterminate) return;
-		if (e.key == ' ' || e.code == 'Space' || e.keyCode == 32) {
-			inputElement && inputElement.click();
-		}
-		dispatcher('keydown', e);
-	};
 	const onchange = (
 		e: Event & {
 			currentTarget: EventTarget & HTMLInputElement;
 		}
 	) => {
-		if (disabled || indeterminate) return;
+		if (disabled || indeterminate) {
+			return;
+		}
 		checked = !checked;
 		dispatcher('change', e);
 	};
 </script>
 
-<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
-<div
+<!-- <input type="checkbox" {indeterminate} {checked} /> -->
+<input
 	{...$$restProps}
-	role="checkbox"
-	class={cn(slots.base({}), classes.base, $$restProps.class)}
-	tabindex="0"
+	{id}
+	type="checkbox"
+	{disabled}
+	{checked}
+	{indeterminate}
+	{value}
 	aria-checked={checked}
 	aria-disabled={disabled}
-	on:click={onclick}
-	on:keydown={onkeydown}
->
-	<input
-		bind:this={inputElement}
-		{value}
-		{disabled}
-		{checked}
-		class="hidden"
-		on:change={onchange}
-	/>
-	{#if indeterminate}
-		<IndeterminateIcon {variant} {size} {disabled} class={cn(slots.icon(), classes.icon)} />
-	{:else}
-		<CheckIcon
-			{variant}
-			{size}
-			{disabled}
-			{animation}
-			{checked}
-			class={cn(slots.icon(), classes.icon)}
-		/>
-	{/if}
-</div>
+	on:change={onchange}
+	class:animation
+	class={cn(
+		slots.base({ size, variant, disabled, checked, indeterminate }),
+		classes.base,
+		$$restProps.class
+	)}
+/>
+
+<!-- TODO: Let's use Tailwind-->
+<style>
+	input::before {
+		clip-path: polygon(20% 50%, 40% 70%, 85% 20%, 100% 35%, 40% 90%, 0% 60%);
+		transform: scale(0);
+	}
+	input.animation::before {
+		transform-origin: bottom left;
+		transition: 200ms transform ease-in-out;
+		transition-delay: 75ms;
+	}
+	input:checked::before {
+		transform: scale(1);
+	}
+
+	input:indeterminate::before {
+		clip-path: polygon(15% 42%, 15% 60%, 85% 60%, 85% 42%);
+		transform: scale(1);
+	}
+</style>

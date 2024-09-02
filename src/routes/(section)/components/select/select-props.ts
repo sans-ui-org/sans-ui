@@ -105,6 +105,6 @@ export const selectSlots = [
 	},
 	{
 		name: 'invalidText',
-		description: "This slot is applied to the span elment for invalid text."
+		description: 'This slot is applied to the span elment for invalid text.'
 	}
 ];

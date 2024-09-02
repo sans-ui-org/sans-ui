@@ -1,5 +1,5 @@
 name: 'Setup'
-description: 'Prepare Pnpm and Node.js environment'
+description: 'Prepare npm and Node.js environment'
 
 runs:
   using: composite
@@ -9,7 +9,7 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
-        cache: 'pnpm'
+        cache: 'npm'
     - name: Install Dependencies
       shell: bash
-      run: pnpm install
+      run: npm install

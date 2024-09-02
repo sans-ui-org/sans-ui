@@ -80,10 +80,12 @@ export const switchSlots = [
 	},
 	{
 		name: 'startContent',
-		description: 'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
+		description:
+			'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
 	},
 	{
 		name: 'endContent',
-		description: 'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
-	},
-]
+		description:
+			'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
+	}
+];

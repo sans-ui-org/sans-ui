@@ -152,5 +152,4 @@ describe('Select component', async () => {
 		render(Select, { label: 'This is invalid text' });
 		expect(screen.getByText('This is invalid text')).toBeTruthy();
 	});
-
 });

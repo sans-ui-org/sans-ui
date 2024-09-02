@@ -1,15 +1,15 @@
 # Are You Ready?
 
-We are going to use `pnpm` or `npm`.
+We are going to use `npm` or `npm`.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `pnpm install`, start a development server:
+Once you've created a project and installed dependencies with `npm install`, start a development server:
 
 1. Documentation development
 
 ```bash
-pnpm run dev:doc
+npm run dev:doc
 # OR
 npm run dev:doc
 ```
@@ -17,7 +17,7 @@ npm run dev:doc
 2. SUI Component(Storybook) development
 
 ```bash
-pnpm run dev:storybook
+npm run dev:storybook
 # OR
 npm run dev:storybook
 ```
@@ -25,12 +25,12 @@ npm run dev:storybook
 3. You can just run both(1 and 2) by execuing this.
 
 ```bash
-pnpm run dev
+npm run dev
 # OR
 npm run dev
 ```
 
-\*Before you commit, make sure that `pnpm run check` to check your change with Svelte-Kit.
+\*Before you commit, make sure that `npm run check` to check your change with Svelte-Kit.
 
 ## Commit
 
@@ -51,5 +51,5 @@ test: add/fix test
 <p>Before submitting a PR, please run a test:</p>
 
 ```sh
-pnpm run test
+npm run test
 ```

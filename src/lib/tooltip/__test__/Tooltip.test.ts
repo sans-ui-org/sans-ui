@@ -76,5 +76,4 @@ describe('Tooltip component', async () => {
 		await userEvent.hover(trigger);
 		expect(screen.getByRole('tooltip').classList.contains('bg-red-500')).toBeTruthy();
 	});
-
 });

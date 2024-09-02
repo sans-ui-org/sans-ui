@@ -140,6 +140,6 @@ Spinner provides APIs(Properties) that is necessary for you to configure a Spinn
 
 <PropertyTable properties={spinnerProps} />
 
-### Spinner Slots 
+### Spinner Slots
 
 <SlotTable slots={spinnerSlots} />

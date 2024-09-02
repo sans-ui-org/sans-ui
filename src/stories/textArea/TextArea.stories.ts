@@ -23,7 +23,7 @@ const meta = {
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
 } satisfies Meta<TextArea>;
 

@@ -21,7 +21,7 @@ const meta = {
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
 } satisfies Meta<Checkbox>;
 

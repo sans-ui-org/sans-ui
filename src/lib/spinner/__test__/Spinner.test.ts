@@ -59,5 +59,4 @@ describe('Spinner component', async () => {
 		const spinnerObj = render(Spinner, { size: 'lg' });
 		expect(spinnerObj.getByRole('alert').classList.contains('w-[64px]')).toBeTruthy();
 	});
-
 });

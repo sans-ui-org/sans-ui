@@ -3,9 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "concurrently 'pnpm:dev:*'",
-		"dev:doc": "concurrently 'pnpm:watch:doc' 'pnpm:watch:tailwind-doc'",
-		"dev:storybook": "concurrently 'pnpm:watch:storybook' 'pnpm:watch:tailwind-comp'",
+		"dev": "concurrently 'npm:dev:*'",
+		"dev:doc": "concurrently 'npm:watch:doc' 'npm:watch:tailwind-doc'",
+		"dev:storybook": "concurrently 'npm:watch:storybook' 'npm:watch:tailwind-comp'",
 		"watch:doc": "vite dev",
 		"watch:storybook": "storybook dev -p 6006",
 		"watch:tailwind-comp": "tailwindcss -c ./tailwind.comp.config.js -i ./src/lib/index.css -o ./src/lib/global.css --watch",

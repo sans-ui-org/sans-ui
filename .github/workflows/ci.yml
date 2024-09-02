@@ -16,7 +16,7 @@
 #       - name: Setup
 #         uses: ./.github/actions/setup
 #     # - name: Build
-#     #   run: pnpm run build
+#     #   run: npm run build
 
 #   test:
 #     name: Tests
@@ -27,7 +27,7 @@
 #       - name: Setup
 #         uses: ./.github/actions/setup
 #       - name: Run Tests
-#         run: pnpm install
+#         run: npm install
 
 #   svlete-check:
 #     name: Svelte Check
@@ -37,8 +37,8 @@
 #         uses: actions/checkout@v4
 #       - name: Setup
 #         uses: ./.github/actions/setup
-#       - name: Run Pnpm Check
-#         run: pnpm run check
+#       - name: Run npm Check
+#         run: npm run check
 
 #   eslint:
 #     name: ESLint
@@ -49,7 +49,7 @@
 #       - name: Setup
 #         uses: ./.github/actions/setup
 #       - name: Run ESLint
-#         run: pnpm run lint
+#         run: npm run lint
 
 #   prettier:
 #     name: Prettier
@@ -60,7 +60,7 @@
 #       - name: Setup
 #         uses: ./.github/actions/setup
 #       - name: Run Prettier
-#         run: pnpm run prettier:format
+#         run: npm run prettier:format
 
 name: Node.js CI
 
@@ -85,7 +85,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'pnpm'
-      - run: npm ci
+          cache: 'npm'
       - run: npm run build --if-present
-      - run: npm test
+      - run: npm run test

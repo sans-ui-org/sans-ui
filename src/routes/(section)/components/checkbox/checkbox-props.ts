@@ -49,5 +49,5 @@ export const checkboxSlots = [
 	{
 		name: 'icon',
 		description: 'This slot is applied to the svg element(check icon).'
-	},
+	}
 ];

@@ -49,5 +49,4 @@ describe('Button component', async () => {
 		const button = render(Button, { size: 'lg' });
 		expect(button.getByRole('button').classList.contains('text-lg')).toBeTruthy();
 	});
-
 });

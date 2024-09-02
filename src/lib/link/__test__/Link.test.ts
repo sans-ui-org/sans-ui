@@ -190,5 +190,4 @@ test('should have cursor-not-allowed when the link is disabled', () => {
 test('should have aria-disabled attribute set to true when the link is disabled', async () => {
 	const linkBtn = render(Link, { disabled: true });
 	expect(linkBtn.getByRole('link', { hidden: true }).getAttribute('aria-disabled')).toBe('true');
-	
 });

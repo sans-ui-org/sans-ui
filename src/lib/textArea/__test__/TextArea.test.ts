@@ -52,27 +52,37 @@ describe('TextArea component', async () => {
 	//variant
 	test('should have correct variant for primary', () => {
 		const userTextarea = render(TextArea, { variant: 'primary' });
-		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-blue-500')).toBeTruthy();
+		expect(
+			userTextarea.getByRole('textbox').classList.contains('focus-visible:border-blue-500')
+		).toBeTruthy();
 	});
 
 	test('should have correct variant for secondary', () => {
 		const userTextarea = render(TextArea, { variant: 'secondary' });
-		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-neutral-500')).toBeTruthy();
+		expect(
+			userTextarea.getByRole('textbox').classList.contains('focus-visible:border-neutral-500')
+		).toBeTruthy();
 	});
 
 	test('should have correct variant for success', () => {
 		const userTextarea = render(TextArea, { variant: 'success' });
-		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-green-500')).toBeTruthy();
+		expect(
+			userTextarea.getByRole('textbox').classList.contains('focus-visible:border-green-500')
+		).toBeTruthy();
 	});
 
 	test('should have correct variant for warning', () => {
 		const userTextarea = render(TextArea, { variant: 'warning' });
-		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-yellow-500')).toBeTruthy();
+		expect(
+			userTextarea.getByRole('textbox').classList.contains('focus-visible:border-yellow-500')
+		).toBeTruthy();
 	});
 
 	test('should have correct variant danger', () => {
 		const userTextarea = render(TextArea, { variant: 'danger' });
-		expect(userTextarea.getByRole('textbox').classList.contains('focus-visible:border-red-500')).toBeTruthy();
+		expect(
+			userTextarea.getByRole('textbox').classList.contains('focus-visible:border-red-500')
+		).toBeTruthy();
 	});
 
 	//size
@@ -120,5 +130,4 @@ describe('TextArea component', async () => {
 		await user.keyboard('qqq');
 		expect(screen.getByText('3/10')).toBeTruthy();
 	});
-
 });

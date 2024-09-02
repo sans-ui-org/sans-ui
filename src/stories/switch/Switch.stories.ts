@@ -13,6 +13,51 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		textForOff: {
+			control: {
+				type: 'text'
+			}
+		},
+		textForOn: {
+			control: {
+				type: 'text'
+			}
+		},
+		label: {
+			control: {
+				type: 'text'
+			}
+		},
+		readonly: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		disabled: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalid: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalidText: {
+			control: {
+				type: 'text'
+			}
+		},
+		animation: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		classes: {
+			control: {
+				type: 'object'
+			}
 		}
 	},
 	parameters: {
@@ -63,6 +108,13 @@ export const Readonly: Story = {
 	args: {
 		...defaultArgs,
 		readonly: true
+	}
+};
+
+export const Animation: Story = {
+	args: {
+		...defaultArgs,
+		animation: true
 	}
 };
 

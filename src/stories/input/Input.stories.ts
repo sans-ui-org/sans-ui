@@ -13,6 +13,46 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		placeholder: {
+			control: {
+				type: 'text'
+			}
+		},
+		label: {
+			control: {
+				type: 'text'
+			}
+		},
+		rounded: {
+			control: {
+				type: 'select'
+			},
+			options: ['none', 'sm', 'md', 'lg', 'full']
+		},
+		animation: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		readonly: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		disabled: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalid: {
+			control: { type: 'boolean' }
+		},
+		invalidText: {
+			control: { type: 'text' }
+		},
+		classes: {
+			control: { type: 'object' }
 		}
 	},
 	parameters: {
@@ -62,6 +102,13 @@ export const Disabled: Story = {
 	args: {
 		...defaultArgs,
 		disabled: true
+	}
+};
+
+export const Rounded: Story = {
+	args: {
+		...defaultArgs,
+		rounded: 'full'
 	}
 };
 

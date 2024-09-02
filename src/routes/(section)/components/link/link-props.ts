@@ -25,6 +25,21 @@ export const linkProps = [
 		default: 'false'
 	},
 	{
+		name: 'windowIcon',
+		type: 'boolean',
+		default: 'false'
+	},
+	{
+		name: 'external',
+		type: 'boolean',
+		default: 'false'
+	},
+	{
+		name: 'animation',
+		type: 'boolean',
+		default: 'true'
+	},
+	{
 		name: 'href',
 		type: 'string',
 		default: '""'

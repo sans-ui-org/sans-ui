@@ -11,9 +11,11 @@ toc: [
 			{ slug: 'label', title: 'Label', level: 0 },
 			{ slug: 'value', title: 'Value', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'clearable', title: 'Clearable', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
@@ -158,6 +160,34 @@ Input has `size` prop defines the size of the input.
 
 </CodeBlockWrapper>
 
+## Rounded
+
+Input has `rounded` prop to update Input component's border-radius.
+
+<div class="w-[350px]">
+	<Input rounded="none" placeholder="Please type something here" />
+	<Input rounded="sm" placeholder="Please type something here" />
+	<Input rounded="md" placeholder="Please type something here" />
+	<Input rounded="lg" placeholder="Please type something here" />
+	<Input rounded="full" placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Input rounded="none" placeholder="Please type something here" />
+<Input rounded="sm" placeholder="Please type something here" />
+<Input rounded="md" placeholder="Please type something here" />
+<Input rounded="lg" placeholder="Please type something here" />
+<Input rounded="full" placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
 ## Disabled
 
 Input has `disabled` prop that defines if the input is disabled.
@@ -203,7 +233,7 @@ Input has `readonly` prop that defines if the input is readonly.
 Input has `clearable` prop that controls the clear button for Input component. (What is clear button? -> As soon as you start typing something in Input component, you will see x button on the left side of the component.)
 
 <div class="w-[350px]">
-	<Input clearable={false} placeholder="Please type something here" />
+	<Input clearable={true} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
@@ -213,7 +243,27 @@ Input has `clearable` prop that controls the clear button for Input component. (
 	import { Input } from '$lib';
 </script>
 
-<Input clearable={false} placeholder="Please type something here" />
+<Input clearable={true} placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Input has `animation` prop that controls whether the input has animation or not.
+
+<div class="w-[350px]">
+	<Input animation={false} placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Input } from '$lib';
+</script>
+
+<Input animation={false} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

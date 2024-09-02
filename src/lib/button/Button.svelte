@@ -1,11 +1,15 @@
 <script lang="ts" context="module">
-	type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
-	type ButtonRounded = 'none' | 'sm' | 'md' | 'lg' | 'full';
+	export type ButtonKind = 'solid' | 'bordered' | 'flat' | 'shadow';
 </script>
 
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 	import { createRipple } from '$lib/actions/ripple';
 	import { cn } from '$lib/utils/cn';
@@ -18,9 +22,10 @@
 		disabled?: boolean;
 		rippled?: boolean;
 		kind?: ButtonKind;
-		rounded?: ButtonRounded;
+		rounded?: ComponentRounded;
 		iconOnly?: boolean;
 		href?: string;
+		animation?: boolean;
 		classes?: SlotsToClasses<ButtonSlots>;
 	};
 
@@ -39,7 +44,7 @@
 	/**
 	 * Property that defines the rounded corners of the button.
 	 */
-	export let rounded: ButtonRounded = 'full';
+	export let rounded: ComponentRounded = 'full';
 	/**
 	 * Property that defines if the button is disabled.
 	 */
@@ -56,6 +61,10 @@
 	 * Property that defines the href of the button.
 	 */
 	export let href: string | undefined = undefined;
+	/**
+	 * Property that defines whether the button has an animation.
+	 */
+	export let animation: boolean = false;
 	/*
 	 * Property that defines the class names of the button.
 	 */
@@ -74,7 +83,11 @@
 	role={href ? 'link' : 'button'}
 	{href}
 	{disabled}
-	class={cn(slots.base({ variant, size }), classes.base, $$restProps.class)}
+	class={cn(
+		slots.base({ rounded, size, iconOnly, variant, kind, href: !!href, disabled, animation }),
+		classes.base,
+		$$restProps.class
+	)}
 	on:click
 	on:change
 	on:keydown

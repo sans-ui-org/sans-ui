@@ -13,6 +13,7 @@ toc: [
 			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'rippled', title: 'Rippled', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
@@ -21,7 +22,7 @@ toc: [
 ---
 
 <script>
-	import { Button } from '$lib';
+	import { Button, Link } from '$lib';
 	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
@@ -204,6 +205,24 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 </CodeBlockWrapper>
 
+## Animation
+
+Buttons has `animation` prop to control the Button's background color transition animation.(Ripple effect can't be disabled by this prop. Please refer to <Link href="#rippled">rippled property</Link>.)
+
+<Button animation={false}>Button</Button>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Button animation={false}>Button</Button>
+```
+
+</CodeBlockWrapper>
+
 ## Icon Button
 
 You can turn our Button component into Icon Button component by passing `iconOnly` as `true`.
@@ -225,29 +244,7 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 </script>
 
 <Button iconOnly={true}>
-	<svg
-		class="w-[14px] h-[14px]"
-		viewBox="0 0 14 14"
-		fill="white"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<g clip-path="url(#clip0_1222_36554)">
-			<path
-				d="M7 0.5V13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-			<path
-				d="M0.5 6.95996H13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</g>
-	</svg>
+	<!-- You icon or image here -->
 </Button>
 ```
 

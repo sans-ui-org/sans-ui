@@ -88,7 +88,7 @@ describe('TextArea component', async () => {
 	//size
 	test('should have correct size for sm', () => {
 		const userTextarea = render(TextArea, { size: 'sm' });
-		expect(userTextarea.getByRole('textbox').classList.contains('text-xs')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('text-sm')).toBeTruthy();
 	});
 
 	test('should have correct size for md', () => {
@@ -101,6 +101,28 @@ describe('TextArea component', async () => {
 		expect(userTextarea.getByRole('textbox').classList.contains('text-base')).toBeTruthy();
 	});
 
+	// rounded
+	test('should have correct roundness for none', () => {
+		const textarea = render(TextArea, { rounded: 'none' });
+		expect(textarea.getByRole('textbox').classList.contains('rounded-none')).toBeTruthy();
+	});
+	test('should have correct roundness for sm', () => {
+		const textarea = render(TextArea, { rounded: 'sm' });
+		expect(textarea.getByRole('textbox').classList.contains('rounded-sm')).toBeTruthy();
+	});
+	test('should have correct roundness for md', () => {
+		const textarea = render(TextArea, { rounded: 'md' });
+		expect(textarea.getByRole('textbox').classList.contains('rounded-md')).toBeTruthy();
+	});
+	test('should have correct roundness for lg', () => {
+		const textarea = render(TextArea, { rounded: 'lg' });
+		expect(textarea.getByRole('textbox').classList.contains('rounded-lg')).toBeTruthy();
+	});
+	test('should have correct roundness for full', () => {
+		const textarea = render(TextArea, { rounded: 'full' });
+		expect(textarea.getByRole('textbox').classList.contains('rounded-2xl')).toBeTruthy();
+	});
+
 	//invalidText
 	test('should render invalid text correctly', async () => {
 		render(TextArea, { label: 'This is invalid text' });
@@ -109,14 +131,14 @@ describe('TextArea component', async () => {
 
 	//rows
 	test('should render the number of rows correctly', async () => {
-		const userTextarea = render(TextArea, { row: '5' });
-		expect(userTextarea.getByRole('textbox').getAttribute('row')).toBe('5');
+		const userTextarea = render(TextArea, { rows: 5 });
+		expect(userTextarea.getByRole('textbox').getAttribute('rows')).toBe('5');
 	});
 
 	//animation
 	test('should turn animation on', async () => {
 		const userTextarea = render(TextArea, { animation: true });
-		expect(userTextarea.getByRole('textbox').classList.contains('animation')).toBeTruthy();
+		expect(userTextarea.getByRole('textbox').classList.contains('duration-300')).toBeTruthy();
 	});
 
 	//required

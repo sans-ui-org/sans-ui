@@ -42,7 +42,12 @@ export const inputProps = [
 	{
 		name: 'clearable',
 		type: 'boolean',
-		default: 'true'
+		default: 'false'
+	},
+	{
+		name: 'rounded',
+		type: "'none' | 'sm' | 'md' | 'lg' | 'full",
+		default: 'none'
 	},
 	{
 		name: 'animation',

@@ -41,11 +41,10 @@
 	 */
 	export let classes: SlotsToClasses<ProgressSlots> = {};
 
-	// mostly likely these values are constantly changing
 	$: center = size / 2;
 	$: radius = center - trackWidth;
-	$: dashArray = 2 * Math.PI * radius;
-	$: dashOffset = (dashArray * value) / 100;
+	$: circumference = 2 * Math.PI * radius;
+	$: dashOffset = (circumference * (value > 100 ? 100 : 100 - value)) / 100;
 	$: progressIconText = `${value > 100 ? 100 : value}%`;
 
 	// tailwind-variants
@@ -64,24 +63,23 @@
 			style={`width: ${size}px; height: ${size}px;`}
 		>
 			<circle
-				class={cn(slots.tracker({ variant }), classes.tracker)}
 				cx={center}
 				cy={center}
-				fill={'transparent'}
-				r={radius}
-				stroke-width={trackWidth}
-				data-testid="bottom-circle"
-			/>
-			<circle
-				class={''}
-				cx={center}
-				cy={center}
-				fill={'transparent'}
+				fill={'none'}
 				r={radius}
 				stroke={'#ddd'}
 				stroke-width={trackWidth}
-				stroke-dasharray={dashArray}
+			/>
+			<circle
+				class={cn(slots.tracker({ variant }), classes.tracker)}
+				cx={center}
+				cy={center}
+				fill={'none'}
+				r={radius}
+				stroke-width={trackWidth}
+				stroke-dasharray={circumference}
 				stroke-dashoffset={dashOffset}
+				data-testid="bottom-circle"
 			/>
 		</svg>
 		<div

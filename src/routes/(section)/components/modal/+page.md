@@ -9,6 +9,7 @@ toc: [
 			{ slug: 'usage', title: 'Usage', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
 			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
@@ -119,6 +120,35 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 <Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
 <Modal size="md" dismissible={false} bind:open={popupModal}>
+	<ModalContent>
+		<ModalHeader title="Modal Title" />
+		<ModalBody>
+			<!-- Here you can write your own code! -->
+		</ModalBody>
+	</ModalContent>
+</Modal>
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Set the `animation` property to control the modal's animation.
+
+<ModalTemplate size="md" title="Modal Title" animation={false} />
+
+<CodeBlockWrapper>
+
+```svelte
+<script lang="ts">
+	import { Button, Modal } from '$lib';
+
+	let popupModal = false;
+</script>
+
+<Button on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
+
+<Modal size="md" animation={false} bind:open={popupModal}>
 	<ModalContent>
 		<ModalHeader title="Modal Title" />
 		<ModalBody>

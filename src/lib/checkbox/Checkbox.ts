@@ -2,56 +2,42 @@ import { tv } from '$lib/utils/tv';
 
 export const checkboxVariant = tv({
 	slots: {
-		base: ['s-ui--checkbox--base', 'inline-flex flex-row items-center gap-2'],
-		icon: ['s-ui--checkbox--icon']
-	},
-	variants: {}
-});
-
-export const indeterminateIconVariant = tv({
-	slots: {
-		base: ['sui--check-icon', 'rounded', 'hover:bg-gray-100/50']
+		base: [
+			's-ui--checkbox--base',
+			'grid place-content-center appearance-none bg-transparent m-0 border border-solid border-neutral-500 rounded-md cursor-pointer -translate-y-[0.075em]',
+			'transition-colors duration-100 ease-out',
+			'before:content-[""] before:bg-neutral-100',
+			'focus:outline focus:outline-2 focus:outline-offset-2'
+		]
 	},
 	variants: {
 		variant: {
-			primary: { base: 'fill-blue-500' },
-			secondary: { base: 'fill-neutral-500' },
-			success: { base: 'fill-green-500' },
-			warning: { base: 'fill-yellow-500' },
-			danger: { base: 'fill-red-500' }
+			primary: { base: 'indeterminate:bg-blue-500 checked:bg-blue-500 focus:outline-blue-500' },
+			secondary: {
+				base: 'indeterminate:bg-neutral-500 checked:bg-neutral-500 focus:outline-neutral-500'
+			},
+			success: { base: 'indeterminate:bg-green-500 checked:bg-green-500 focus:outline-green-500' },
+			warning: {
+				base: 'indeterminate:bg-yellow-500 checked:bg-yellow-500 focus:outline-yellow-500'
+			},
+			danger: { base: 'indeterminate:bg-red-500 checked:bg-red-500 focus:outline-red-500' }
 		},
 		size: {
-			sm: { base: 'w-5 h-5' },
-			md: { base: 'w-7 h-7' },
-			lg: { base: 'w-9 h-9' }
+			sm: { base: 'w-4 h-4 before:w-[10px] before:h-[10px]' },
+			md: { base: 'w-5 h-5 before:w-[12px] before:h-[12px]' },
+			lg: { base: 'w-6 h-6 before:w-[14px] before:h-[14px]' }
 		},
 		disabled: {
-			true: { base: 'cursor-not-allowed fill-gray-400' },
+			true: { base: ['cursor-not-allowed bg-neutral-300 checked:bg-neutral'] },
 			false: { base: 'cursor-pointer' }
-		}
-	}
-});
-
-export const checkIconVariant = tv({
-	slots: {
-		base: ['sui--check-icon', 'rounded stroke-neutral-500 text-white  hover:bg-gray-100/40']
-	},
-	variants: {
-		variant: {
-			primary: { base: 'fill-blue-500' },
-			secondary: { base: 'fill-neutral-500' },
-			success: { base: 'fill-green-500' },
-			warning: { base: 'fill-yellow-500' },
-			danger: { base: 'fill-red-500' }
 		},
-		size: {
-			sm: { base: 'w-5 h-5' },
-			md: { base: 'w-7 h-7' },
-			lg: { base: 'w-9 h-9' }
+		checked: {
+			true: { base: ['fill-white'] },
+			false: { base: ['fill-transparent'] }
 		},
-		disabled: {
-			true: { base: 'cursor-not-allowed fill-gray-400' },
-			false: { base: 'cursor-pointer' }
+		indeterminate: {
+			true: { base: [''] },
+			false: { base: [''] }
 		}
 	}
 });

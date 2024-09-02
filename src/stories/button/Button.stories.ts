@@ -13,6 +13,29 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		kind: {
+			control: { type: 'select' },
+			options: ['solid', 'bordered', 'flat', 'shadow']
+		},
+		rounded: {
+			control: { type: 'select' },
+			options: ['none', 'sm', 'md', 'lg', 'full']
+		},
+		disabled: {
+			control: { type: 'boolean' }
+		},
+		rippled: {
+			control: { type: 'boolean' }
+		},
+		iconOnly: {
+			control: { type: 'boolean' }
+		},
+		href: {
+			control: { type: 'text' }
+		},
+		animation: {
+			control: { type: 'boolean' }
 		}
 	},
 	parameters: {
@@ -51,5 +74,68 @@ export const Size: Story = {
 	args: {
 		...defaultArgs,
 		size: 'lg'
+	}
+};
+
+export const Rounded: Story = {
+	args: {
+		...defaultArgs,
+		rounded: 'md'
+	}
+};
+
+export const Flat: Story = {
+	args: {
+		...defaultArgs,
+		kind: 'flat'
+	}
+};
+
+export const Shadow: Story = {
+	args: {
+		...defaultArgs,
+		kind: 'shadow'
+	}
+};
+
+export const Bordered: Story = {
+	args: {
+		...defaultArgs,
+		kind: 'bordered'
+	}
+};
+
+export const NoAnimation: Story = {
+	args: {
+		...defaultArgs,
+		animation: false
+	}
+};
+
+export const Disabled: Story = {
+	args: {
+		...defaultArgs,
+		disabled: true
+	}
+};
+
+export const NoRippled: Story = {
+	args: {
+		...defaultArgs,
+		rippled: false
+	}
+};
+
+export const IconOnly: Story = {
+	args: {
+		...defaultArgs,
+		iconOnly: true
+	}
+};
+
+export const ButtonAsLink: Story = {
+	args: {
+		...defaultArgs,
+		href: 'https://google.com'
 	}
 };

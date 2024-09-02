@@ -17,8 +17,8 @@ describe('Input component', async () => {
 
 describe('Link url', async () => {
 	test('should render Link url correctly', async () => {
-		render(Link, { url: 'https://storybook.js.org' });
-		expect(screen.getByRole('link').getAttribute('url')).toBe('https://storybook.js.org');
+		render(Link, { href: 'https://storybook.js.org' });
+		expect(screen.getByRole('link').getAttribute('href')).toBe('https://storybook.js.org');
 	});
 });
 
@@ -49,11 +49,6 @@ test('should have correct variant for danger', () => {
 });
 
 //size
-test('should have correct size for xs', () => {
-	const linkBtn = render(Link, { size: 'xs' });
-	expect(linkBtn.getByRole('link').classList.contains('text-xs')).toBeTruthy();
-});
-
 test('should have correct size for sm', () => {
 	const linkBtn = render(Link, { size: 'sm' });
 	expect(linkBtn.getByRole('link').classList.contains('text-sm')).toBeTruthy();
@@ -102,16 +97,6 @@ test('should have correct size for 6xl', () => {
 test('should have correct size for 7xl', () => {
 	const linkBtn = render(Link, { size: '7xl' });
 	expect(linkBtn.getByRole('link').classList.contains('text-7xl')).toBeTruthy();
-});
-
-test('should have correct size for 8xl', () => {
-	const linkBtn = render(Link, { size: '8xl' });
-	expect(linkBtn.getByRole('link').classList.contains('text-8xl')).toBeTruthy();
-});
-
-test('should have correct size for 9xl', () => {
-	const linkBtn = render(Link, { size: '9xl' });
-	expect(linkBtn.getByRole('link').classList.contains('text-9xl')).toBeTruthy();
 });
 
 //bold

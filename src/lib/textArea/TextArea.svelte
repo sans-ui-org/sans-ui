@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '$lib/global.css';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
 	import { textareaVariant, type TextareaSlots } from '$lib/textArea/TextArea';
@@ -11,11 +16,12 @@
 		value?: string | number;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
+		rounded?: ComponentRounded;
 		label?: string;
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
-		required?: boolean;
+		// required?: boolean;
 		animation?: boolean;
 		maxCount?: number;
 		invalid?: boolean;
@@ -41,6 +47,10 @@
 	 */
 	export let size: ComponentSize = 'md';
 	/**
+	 * Property that defines the roundness of the textarea.
+	 */
+	export let rounded: ComponentRounded = 'none';
+	/**
 	 * Property that defines the label of the textarea.
 	 */
 	export let label: string | undefined = undefined;
@@ -51,7 +61,7 @@
 	/**
 	 * Property that defines if the textarea is required.
 	 */
-	export let required: boolean = false;
+	// export let required: boolean = false;
 	/**
 	 * Property that defines if the textarea is disabled.
 	 */
@@ -91,7 +101,7 @@
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// slots
-	const slots = textareaVariant({ variant, size, invalid, animation, disabled });
+	const slots = textareaVariant({ variant, size, rounded, invalid, animation, disabled });
 
 	// handler
 	const onInput = (e: Event) => {
@@ -132,11 +142,15 @@
 	aria-disabled={disabled}
 	aria-readonly={readonly}
 	aria-invalid={invalid}
-	class:animation={animation && !invalid}
-	class={cn(slots.base({ variant, size, invalid, animation, disabled }), classes.base)}
+	class={cn(slots.base({ size, variant, invalid, animation, disabled }), classes.base)}
 />
 
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
-	<span class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</span>
+	<span
+		class={cn(
+			slots.invalidText({ size, variant, invalid, animation, disabled }),
+			classes.invalidText
+		)}>{invalidText}</span
+	>
 {/if}

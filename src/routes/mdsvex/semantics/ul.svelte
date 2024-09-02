@@ -1,3 +1,3 @@
-<ul style="list-disc">
+<ul class="list-disc">
 	<slot />
 </ul>

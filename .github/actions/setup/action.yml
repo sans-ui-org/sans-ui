@@ -5,11 +5,15 @@ runs:
   using: composite
 
   steps:
+    - name: Checkout Branch
+      uses: actions/checkout@v4
+
     - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:
         node-version: 20.x
         cache: 'npm'
+
     - name: Install Dependencies
       shell: bash
       run: npm install

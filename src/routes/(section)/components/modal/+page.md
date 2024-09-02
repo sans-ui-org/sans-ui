@@ -9,6 +9,7 @@ toc: [
 			{ slug: 'usage', title: 'Usage', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
 			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
@@ -129,6 +130,14 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Content outside the modal is hidden from assistive technologies while it is open.
+* The modal optionally closes when interacting outside, or pressing the `Esc` key.
+* Focus is moved into the modal on mount, and restored to the trigger element on unmount.
+* While open, focus is contained within the modal, preventing the user from tabbing outside.
+* Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.
 
 ## API
 

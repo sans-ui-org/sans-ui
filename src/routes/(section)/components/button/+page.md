@@ -14,6 +14,7 @@ toc: [
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'rippled', title: 'Rippled', level: 0 },
 			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
 			{ slug: 'button-slots', title: 'Button Slots', level: 1 },
@@ -252,6 +253,14 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Keyboard focus management and cross browser normalization.
+* Hover management and cross browser normalization.
+* Labeling support for screen readers (aria-describedby).
+* Exposed as a tooltip to assistive technology via ARIA.
+* Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.
 
 ## API
 

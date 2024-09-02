@@ -16,6 +16,7 @@ toc: [
 			{ slug: 'clearable', title: 'Clearable', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'input-props', title: 'Input Props', level: 1 },
 			{ slug: 'input-slots', title: 'Input Slots', level: 1 },
@@ -261,6 +262,14 @@ Input has `invalid` prop that defines if the input is invalid. And `invalidText`
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Built with a native `<input>` element.
+* Visual and ARIA labeling support.
+* Change, clipboard, composition, selection, and input event support.
+* Required and invalid states exposed to assistive technology via ARIA.
+* Support for description and error message help text linked to the input via ARI
 
 ## API
 

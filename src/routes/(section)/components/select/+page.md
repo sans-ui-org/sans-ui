@@ -14,6 +14,7 @@ toc: [
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'select-props', title: 'Select Props', level: 1 },
 			{ slug: 'select-slots', title: 'Select Slots', level: 1 },
@@ -303,6 +304,18 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Support for selecting a single option.
+* Support for disabled options.
+* Support for sections.
+* Labeling support for accessibility.
+* Support for description and error message help text linked to the input via ARIA.
+* Support for mouse, touch, and keyboard interactions.
+* Tab stop focus management.
+* Browser autofill integration via a hidden native `<select>` element.
+* Support for mobile form navigation via software keyboard.
 
 ## API
 

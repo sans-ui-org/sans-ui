@@ -13,6 +13,7 @@ toc: [
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'switch-props', title: 'Switch Props', level: 1 },
 			{ slug: 'switch-slots', title: 'Switch Slots', level: 1 },
@@ -217,6 +218,15 @@ Switch has `invalid` prop that defines if the input is invalid. And `invalidText
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Built with a native HTML `<input>` element.
+* Full support for browser features like form autofill.
+* Keyboard focus management and cross browser normalization.
+* Keyboard event support for `Tab` and `Space` keys.
+* Labeling support for assistive technology.
+* Exposed as a switch to assistive technology via ARIA
 
 ## API
 

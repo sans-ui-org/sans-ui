@@ -14,7 +14,8 @@ toc: [
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'external', title: 'External', level: 0 },
 			{ slug: 'window-icon', title: 'Window Icon', level: 0 },
-			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: ‘accessibility’, title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'link-props', title: 'Link Props', level: 1 },
 			{ slug: 'link-slots', title: 'Link Slots', level: 1 },
@@ -280,6 +281,26 @@ Link has `windowIcon` prop to defines if the Link has a window icon.
 </script>
 
 <Link windowIcon external href="https://github.com/s-ui-org/s-ui"
+	>This is link to the our Github page</Link
+>
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+Link has `animation` prop to defines if the link's animation is disabled or not.
+
+<Link href="https://github.com/s-ui-org/s-ui" animation={false}>This is link to the our Github page</Link>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Link } from '$lib';
+</script>
+
+<Link disabled href="https://github.com/s-ui-org/s-ui" animation={false}
 	>This is link to the our Github page</Link
 >
 ```

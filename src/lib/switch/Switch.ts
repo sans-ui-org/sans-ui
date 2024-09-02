@@ -5,14 +5,8 @@ export const switchVariant = tv({
 		wrapper: ['s-ui--switch--wrapper', 'flex flex-col gap-2 font-normal'],
 		label: ['s-ui--switch--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		switchWrapper: ['s-ui--switch--swtichWrapper', 'flex flex-row gap-2 items-center'],
-		base: [
-			's-ui--switch--base',
-			'rounded-full flex items-center transition-colors duration-300 ease-in-out'
-		],
-		switchChip: [
-			's-ui--switch--switchChip',
-			'border border-gray-400 rounded-full transition-all duration-300 ease'
-		],
+		base: ['s-ui--switch--base', 'rounded-full flex items-center'],
+		switchChip: ['s-ui--switch--switchChip', 'border border-gray-400 rounded-full'],
 		switchText: ['s-ui--switch--switchText', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		invalid: ['s-ui--switch--invalid', 'text-sm text-red-500 mt-1']
 	},
@@ -57,7 +51,11 @@ export const switchVariant = tv({
 			false: { base: 'bg-gray-400', switchChip: 'translate-x-0' }
 		},
 		invalid: {
-			true: { label: ['text-red-500'] }
+			true: { label: ['text-red-500 dark:text-red-500'] }
+		},
+		animation: {
+			true: { switchChip: 'transition-all duration-300 ease' },
+			false: {}
 		}
 	},
 	compoundVariants: [

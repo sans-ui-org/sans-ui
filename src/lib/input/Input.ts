@@ -4,7 +4,7 @@ export const inputVariant = tv({
 	slots: {
 		base: [
 			's-ui--input--base',
-			'font-normal bg-gray-100 w-full pl-3 pr-10 border-gray-200 border-2',
+			'font-normal bg-gray-100 w-full pl-4 pr-10 border-gray-200 border-2 items-center truncate',
 			'focus-visible:outline-0',
 			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'
 		],
@@ -76,16 +76,23 @@ export const inputVariant = tv({
 				invalid: 'text-base'
 			}
 		},
+		rounded: {
+			none: { base: 'rounded-none' },
+			sm: { base: 'rounded-sm' },
+			md: { base: 'rounded-md' },
+			lg: { base: 'rounded-lg' },
+			full: { base: 'rounded-full' }
+		},
 		invalid: {
 			true: {
-				base: 'border-red-500 focus-visible:border-red-500',
-				label: 'text-red-500',
-				startContent: 'focus-visible:border-red-500',
-				endContent: 'focus-visible:border-red-500'
+				base: 'border-red-500 dark:border-red-500 focus-visible:border-red-500 dark:focus-visible:border-red-500',
+				label: 'text-red-500 dark:text-red-500',
+				startContent: 'focus-visible:border-red-500 dark:focus-visible:border-red-500',
+				endContent: 'focus-visible:border-red-500 dark:focus-visible:border-red-500'
 			},
-			false: { base: '' }
+			false: {}
 		},
-		animation: { true: { base: 'transition-all duration-300 ease-in' }, false: { base: '' } },
+		animation: { true: { base: 'transition-all duration-300 ease-in' }, false: {} },
 		disabled: {
 			true: {
 				base: 'cursor-not-allowed text-gray-500',

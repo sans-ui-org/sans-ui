@@ -10,8 +10,10 @@ toc: [
 			{ slug: 'variant', title: 'Variant', level: 0 },
 			{ slug: 'value', title: 'Value', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
+			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
@@ -137,6 +139,34 @@ TextArea has `size` prop defines the font size of the input.
 
 </CodeBlockWrapper>
 
+## Rounded
+
+TextArea has `rounded` prop defines the roundness of the input.
+
+<div class="w-[350px]">
+	<TextArea rounded="none" placeholder="Please type something here" />
+	<TextArea rounded="sm" placeholder="Please type something here" />
+	<TextArea rounded="md" placeholder="Please type something here" />
+	<TextArea rounded="lg" placeholder="Please type something here" />
+	<TextArea rounded="full" placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { TextArea } from '$lib';
+</script>
+
+<TextArea rounded="none" placeholder="Please type something here" />
+<TextArea rounded="sm" placeholder="Please type something here" />
+<TextArea rounded="md" placeholder="Please type something here" />
+<TextArea rounded="lg" placeholder="Please type something here" />
+<TextArea rounded="full" placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
 ## Disabled
 
 TextArea has `disabled` prop that defines if the input is disabled.
@@ -173,6 +203,26 @@ TextArea has `readonly` prop that defines if the input is readonly.
 </script>
 
 <TextArea readonly={true} placeholder="Please type something here" />
+```
+
+</CodeBlockWrapper>
+
+## Animation
+
+TextArea has `animation` prop that defines if the input has animation or not.
+
+<div class="w-[350px]">
+	<TextArea animation={false} placeholder="Please type something here" />
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { TextArea } from '$lib';
+</script>
+
+<TextArea animation={false} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>

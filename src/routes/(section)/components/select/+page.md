@@ -9,6 +9,7 @@ toc: [
 			{ slug: 'usage', title: 'Usage', level: 0 },
 			{ slug: 'variant', title: 'Variant', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'rounded', title: 'Rounded', level: 0 },
 			{ slug: 'default-selected', title: 'Default Selected', level: 0 },
 			{ slug: 'disabled', title: 'Disabled', level: 0 },
 			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
@@ -159,6 +160,44 @@ Select has `size` prop to decide the size of it.
 <Select {options} size="sm" label="This is sm" placeholder="Select an option" />
 <Select {options} size="md" label="This is md" placeholder="Select an option" />
 <Select {options} size="lg" label="This is lg" placeholder="Select an option" />
+```
+
+</CodeBlockWrapper>
+
+## Rounded
+
+Select has `rounded` prop to update Select component's border-radius.
+
+<div class="flex flex-col gap-4">
+	<div class="w-[250px]">
+		<Select {options} rounded="none" label='This is rounded none' placeholder='Select an option' />
+	</div>
+	<div class="w-[250px]">
+		<Select {options} rounded="sm" label='This is rounded sm' placeholder='Select an option' />
+	</div>
+	<div class="w-[250px]">
+		<Select {options} rounded="md" label='This is rounded md' placeholder='Select an option' />
+	</div>
+	<div class="w-[250px]">
+		<Select {options} rounded="lg" label='This is rounded lg' placeholder='Select an option' />
+	</div>
+	<div class="w-[250px]">
+		<Select {options} rounded="full" label='This is rounded full' placeholder='Select an option' />
+	</div>
+</div>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '$lib';
+</script>
+
+<Input rounded="none" placeholder="Please type something here">rounded none</Input>
+<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
+<Input rounded="md" placeholder="Please type something here">rounded md</Input>
+<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
+<Input rounded="full" placeholder="Please type something here">rounded full</Input>
 ```
 
 </CodeBlockWrapper>

@@ -20,6 +20,11 @@ export const textareaProps = [
 		default: 'md'
 	},
 	{
+		name: 'rounded',
+		type: "'none' | 'sm' | 'md' | 'lg' | 'full",
+		default: 'none'
+	},
+	{
 		name: 'label',
 		type: 'string',
 		default: '""'

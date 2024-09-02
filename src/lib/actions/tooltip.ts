@@ -23,6 +23,7 @@ export function tooltip(
 
 		copy = document.createElement('div');
 		copy.setAttribute('data-tooltip', 'true');
+		copy.role = 'tooltip';
 		copy.textContent = title;
 		setTooltipColor(copy, variant);
 		setTooltipSize(copy, size);

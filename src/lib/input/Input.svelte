@@ -1,7 +1,12 @@
 <script lang="ts">
 	import '$lib/global.css';
 	import InputContent from '$lib/inputContent/InputContent.svelte';
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type {
+		ComponentRounded,
+		ComponentSize,
+		ComponentVariant,
+		SlotsToClasses
+	} from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import type { SvelteComponent } from 'svelte';
 	import { cn } from '$lib/utils/cn';
@@ -20,6 +25,7 @@
 		readonly?: boolean;
 		clearable?: boolean;
 		animation?: boolean;
+		rounded?: ComponentRounded;
 		placeholder?: string;
 		maxCount?: number;
 		invalid?: boolean;
@@ -46,6 +52,10 @@
 	 */
 	export let size: ComponentSize = 'md';
 	/**
+	 * Property that defines the rounded corners of the input.
+	 */
+	export let rounded: ComponentRounded = 'none';
+	/**
 	 * Property that defines the label of the input.
 	 */
 	export let label: string | undefined = undefined;
@@ -64,7 +74,7 @@
 	/**
 	 * Property that defines if the input is clearable.
 	 */
-	export let clearable: boolean = true;
+	export let clearable: boolean = false;
 	/**
 	 * Property that defines if the input has animation.
 	 */
@@ -103,7 +113,7 @@
 	$: counterText = `${charCounter}/${maxCount}`;
 
 	// tailwind-variant
-	const slots = inputVariant({ variant, size, invalid, animation, disabled });
+	const slots = inputVariant({ variant, size, invalid, rounded, animation, disabled });
 
 	// handlers
 	const onInput = (e: Event) => {
@@ -125,7 +135,7 @@
 {#if label || maxCount}
 	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
 		{#if label}
-			<label for={id} class={cn(slots.label({ invalid }), classes.label)}>{label}</label>
+			<label for={id} class={cn(slots.label({ invalid, rounded }), classes.label)}>{label}</label>
 		{:else}
 			<label for={id} />
 		{/if}

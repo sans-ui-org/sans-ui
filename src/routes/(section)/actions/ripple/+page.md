@@ -13,6 +13,7 @@ toc: [
 	import { createRipple } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 
   const ripple = createRipple();
 </script>
@@ -21,17 +22,23 @@ toc: [
 
 Import `createRipple` action in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
 	import { createRipple } from '$lib';
 </script>
 ```
 
+</CodeBlockWrapper>
+
 ## Usage
 
 For example, we can play `createRipple` transition effect, make sure that `position` is `relative` for the pareent component of your component gets passed `createRipple`'s return function.
 
 <button class="bg-gray-300 p-4 rounded-full relative" use:ripple>You button with Ripple Effect</button>
+
+<CodeBlockWrapper>
 
 ```svelte
 <script>
@@ -44,3 +51,5 @@ For example, we can play `createRipple` transition effect, make sure that `posit
 	You button with Ripple Effect
 </button>
 ```
+
+</CodeBlockWrapper>

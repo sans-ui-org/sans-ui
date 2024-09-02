@@ -6,6 +6,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { tooltip } from '$lib/actions/tooltip';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends HTMLButtonAttributes {
 		id?: string;
 		variant?: ComponentVariant;

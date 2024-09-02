@@ -3,6 +3,7 @@
 	import type { ComponentRounded, ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;
 		size?: ComponentSize;

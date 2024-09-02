@@ -1,11 +1,12 @@
 <script lang="ts">
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, SlotsToClasses } from '$lib/utils/utils';
 	import AccordionChevronIcon from './icons/AccordionChevronIcon.svelte';
 	import { cn } from '$lib/utils/cn';
 	import { createEventDispatcher, setContext } from 'svelte';
 	import { accordionVariant, type AccoridonSlots } from '$lib/accordion/Accordion';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLButtonAttributes & {
 		size?: ComponentSize;
 		open?: boolean;

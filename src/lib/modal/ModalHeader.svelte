@@ -6,6 +6,7 @@
 	import { cn } from '$lib/utils/cn';
 	import type { SlotsToClasses } from '$lib/utils/utils';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLBaseAttributes & {
 		title?: string;
 		classes?: SlotsToClasses<ModalHeaderSlots>;

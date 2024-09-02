@@ -2,6 +2,7 @@
 	import Tooltip from '$lib/tooltip/Tooltip.svelte';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props {
 		id?: string;
 		variant?: ComponentVariant;

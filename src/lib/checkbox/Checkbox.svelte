@@ -8,6 +8,7 @@
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		id?: string;
 		variant?: ComponentVariant;
@@ -76,7 +77,6 @@
 	};
 </script>
 
-<!-- <input type="checkbox" {indeterminate} {checked} /> -->
 <input
 	{...$$restProps}
 	{id}

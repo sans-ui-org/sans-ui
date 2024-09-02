@@ -6,6 +6,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { accordionItemVariant, type AccordionItemSlots } from '$lib/accordion/AccordionItem';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLLiAttributes & {
 		classes?: SlotsToClasses<AccordionItemSlots>;
 	};

@@ -20,50 +20,56 @@ describe('Checkbox component', async () => {
 });
 
 //TODO: indeterminate
-//describe('Checkbox indeterminate', async () => {
-//});
+// describe('should Checkbox has indeterminate attribute as true value', async () => {
+// 	render(Checkbox, { indeterminate: true });
+// 	expect(screen.getByRole('checkbox').indeterminate).toBe(true);
+// });
 
 describe('Checkbox variant', async () => {
 	test('should have correct variant for primary', () => {
-		render(Checkbox, { variant: 'primary' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-blue-500')).toBeTruthy();
+		render(Checkbox, { checked: true, variant: 'primary' });
+		expect(screen.getByRole('checkbox').classList.contains('checked:bg-blue-500')).toBeTruthy();
 	});
 	test('should have correct variant for secodary', () => {
-		render(Checkbox, { variant: 'secondary' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-neutral-500')).toBeTruthy();
+		render(Checkbox, { checked: true, variant: 'secondary' });
+		expect(screen.getByRole('checkbox').classList.contains('checked:bg-neutral-500')).toBeTruthy();
 	});
 	test('should have correct variant for success', () => {
-		render(Checkbox, { variant: 'success' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-green-500')).toBeTruthy();
+		render(Checkbox, { checked: true, variant: 'success' });
+		expect(screen.getByRole('checkbox').classList.contains('checked:bg-green-500')).toBeTruthy();
 	});
 	test('should have correct variant for warning', () => {
-		render(Checkbox, { variant: 'warning' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-yellow-500')).toBeTruthy();
+		render(Checkbox, { checked: true, variant: 'warning' });
+		expect(screen.getByRole('checkbox').classList.contains('checked:bg-yellow-500')).toBeTruthy();
 	});
 	test('should have correct variant for danger', () => {
-		render(Checkbox, { variant: 'danger' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('fill-red-500')).toBeTruthy();
+		render(Checkbox, { checked: true, variant: 'danger' });
+		expect(screen.getByRole('checkbox').classList.contains('checked:bg-red-500')).toBeTruthy();
 	});
 });
 
 describe('Checkbox size', async () => {
 	test('should have correct size for sm', () => {
 		render(Checkbox, { size: 'sm' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('w-5')).toBeTruthy();
+		expect(screen.getByRole('checkbox').classList.contains('w-4')).toBeTruthy();
 	});
 	test('should have correct size for md', () => {
 		render(Checkbox, { size: 'md' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('w-7')).toBeTruthy();
+		expect(screen.getByRole('checkbox').classList.contains('w-5')).toBeTruthy();
 	});
 	test('should have correct size for lg', () => {
 		render(Checkbox, { size: 'lg' });
-		expect(screen.getByTestId('checkbox-svg').classList.contains('w-9')).toBeTruthy();
+		expect(screen.getByRole('checkbox').classList.contains('w-6')).toBeTruthy();
 	});
 });
 
-//TODO:label
-
-//TODO:value
+// value
+describe('Checkbox value', async () => {
+	test('should have value when value is set', async () => {
+		const CheckboxInpput = render(Checkbox, { checked: true, value: 'test' });
+		expect(CheckboxInpput.getByRole('checkbox').getAttribute('value')).toBe('test');
+	});
+});
 
 //disabled
 describe('Checkbox disabled', async () => {
@@ -80,20 +86,18 @@ describe('Checkbox disabled', async () => {
 //defaultChecked
 describe('Checkbox defaultChecked', async () => {
 	test('should have aria-checked set to true when defaultChecked is true', async () => {
-		const CheckboxInpput = render(Checkbox, { defaultChecked: true });
+		const CheckboxInpput = render(Checkbox, { checked: true });
 		expect(CheckboxInpput.getByRole('checkbox').getAttribute('aria-checked')).toBe('true');
 	});
 	test('should have aria-checked set to false when disabled is false', async () => {
-		const CheckboxInpput = render(Checkbox, { defaultChecked: false });
+		const CheckboxInpput = render(Checkbox, { checked: false });
 		expect(CheckboxInpput.getByRole('checkbox').getAttribute('aria-checked')).toBe('false');
 	});
 });
 
 describe('Checkbox animation', async () => {
 	test('should have animation effect when animation set to true', () => {
-		render(Checkbox, { animation: 'true' });
-		expect(
-			screen.getByTestId('checkbox-svg-polyline').classList.contains('animation')
-		).toBeTruthy();
+		render(Checkbox, { animation: true });
+		expect(screen.getByRole('checkbox').classList.contains('animation')).toBeTruthy();
 	});
 });

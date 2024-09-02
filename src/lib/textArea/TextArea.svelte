@@ -11,6 +11,7 @@
 	import { textareaVariant, type TextareaSlots } from '$lib/textArea/TextArea';
 	import { cn } from '$lib/utils/cn';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends HTMLTextareaAttributes {
 		id?: string;
 		value?: string | number;

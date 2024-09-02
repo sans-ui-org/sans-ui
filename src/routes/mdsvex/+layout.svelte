@@ -2,7 +2,8 @@
 	import h2 from './semantics/h2.svelte';
 	import h3 from './semantics/h3.svelte';
 	import p from './semantics/p.svelte';
-	export { h2, h3, p };
+	import ul from './semantics/ul.svelte';
+	export { h2, h3, p, ul };
 </script>
 
 <script>

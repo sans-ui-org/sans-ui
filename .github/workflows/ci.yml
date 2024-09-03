@@ -27,20 +27,6 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-  # TODO: Generate global.css files 
-  generate-css:
-    name: Generate CSS
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Branch
-        uses: actions/checkout@v4
-      - name: Setup
-        uses: ./.github/actions/setup
-      - name: Generate global CSS for UI components
-        run: npm run tailwind-comp
-      - name: Generate global CSS for Documentation
-        run: npm run tailwind-doc
-
   svlete-check:
     name: Svelte Check
     runs-on: ubuntu-latest
@@ -74,14 +60,21 @@ jobs:
       - name: Run Prettier
         run: npm run prettier:format
 
-  # TODO: Commit global.css files to the repo
-  commit:
-    name: Commit Global CSS
+  # TODO: Generate global.css files 
+  generate-css:
+    name: Generate CSS
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Branch
         uses: actions/checkout@v4
       - name: Setup
         uses: ./.github/actions/setup
+      - name: Generate global CSS for UI components
+        run: npm run tailwind-comp
+      - name: Generate global CSS for Documentation
+        run: npm run tailwind-doc
       - name: Commit Global CSS
-        run: git add -A && git commit -m "chore: update global css" && git push
+        shell: bash
+        run: git add .
+        run: git commit -m 'chore: update global css'
+        run: git push

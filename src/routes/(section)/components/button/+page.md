@@ -253,11 +253,11 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 
 ## Accessibility
 
-* Keyboard focus management and cross browser normalization.
-* Hover management and cross browser normalization.
-* Labeling support for screen readers (aria-describedby).
-* Exposed as a tooltip to assistive technology via ARIA.
-* Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.
+- Keyboard focus management and cross browser normalization.
+- Hover management and cross browser normalization.
+- Labeling support for screen readers (aria-describedby).
+- Exposed as a tooltip to assistive technology via ARIA.
+- Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.
 
 ## API
 

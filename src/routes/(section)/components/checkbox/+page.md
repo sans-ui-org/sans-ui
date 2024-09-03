@@ -190,12 +190,12 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 ## Accessibility
 
-* Built with a native HTML `<input>` element.
-* Full support for browser features like form autofill.
-* Keyboard focus management and cross browser normalization.
-* Keyboard event support for `Tab` and `Space` keys.
-* Labeling support for assistive technology.
-* Indeterminate state support.
+- Built with a native HTML `<input>` element.
+- Full support for browser features like form autofill.
+- Keyboard focus management and cross browser normalization.
+- Keyboard event support for `Tab` and `Space` keys.
+- Labeling support for assistive technology.
+- Indeterminate state support.
 
 ## API
 

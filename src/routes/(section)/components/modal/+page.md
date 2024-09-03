@@ -163,11 +163,11 @@ Set the `animation` property to control the modal's animation.
 
 ## Accessibility
 
-* Content outside the modal is hidden from assistive technologies while it is open.
-* The modal optionally closes when interacting outside, or pressing the `Esc` key.
-* Focus is moved into the modal on mount, and restored to the trigger element on unmount.
-* While open, focus is contained within the modal, preventing the user from tabbing outside.
-* Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.
+- Content outside the modal is hidden from assistive technologies while it is open.
+- The modal optionally closes when interacting outside, or pressing the `Esc` key.
+- Focus is moved into the modal on mount, and restored to the trigger element on unmount.
+- While open, focus is contained within the modal, preventing the user from tabbing outside.
+- Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.
 
 ## API
 

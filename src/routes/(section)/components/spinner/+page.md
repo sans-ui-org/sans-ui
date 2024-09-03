@@ -135,7 +135,7 @@ Spinners has `size` prop to defines the size of spinner.
 
 ## Accessibility
 
-* Support `alert` role via ARIA.
+- Support `alert` role via ARIA.
 
 ## API
 

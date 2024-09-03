@@ -76,5 +76,5 @@ jobs:
       - name: Commit Global CSS
         shell: bash
         run: git add .
-        run: git commit -m 'chore: update global css'
+        run: git commit -m "chore: update global css"
         run: git push

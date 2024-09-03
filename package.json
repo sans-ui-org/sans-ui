@@ -8,6 +8,8 @@
 		"dev:storybook": "concurrently 'npm:watch:storybook' 'npm:watch:tailwind-comp'",
 		"watch:doc": "vite dev",
 		"watch:storybook": "storybook dev -p 6006",
+		"tailwind-comp": "tailwindcss -c ./tailwind.comp.config.js -i ./src/lib/index.css -o ./src/lib/global.css",
+		"tailwind-doc": "tailwindcss -c ./tailwind.doc.config.js -i ./src/app.css -o ./src/static/global.css",
 		"watch:tailwind-comp": "tailwindcss -c ./tailwind.comp.config.js -i ./src/lib/index.css -o ./src/lib/global.css --watch",
 		"watch:tailwind-doc": "tailwindcss -c ./tailwind.doc.config.js -i ./src/app.css -o ./src/static/global.css --watch",
 		"help": "tailwindcss --help",

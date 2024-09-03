@@ -16,6 +16,7 @@ toc: [
 			{ slug: 'animation', title: 'Animation', level: 0 },
 			{ slug: 'max-count', title: 'Max Count', level: 0 },
 			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'textarea-props', title: 'Textarea Props', level: 1 },
 			{ slug: 'textarea-slots', title: 'Textarea Slots', level: 1 },
@@ -270,6 +271,14 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Built with a native `<input>` element.
+* Visual and ARIA labeling support.
+* Change, clipboard, composition, selection, and input event support.
+* Required and invalid states exposed to assistive technology via ARIA.
+* Support for description and error message help text linked to the input via ARIA.
 
 ## API
 

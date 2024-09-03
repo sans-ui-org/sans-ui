@@ -13,6 +13,7 @@ toc: [
 			{ slug: 'default-checked', title: 'Default Checked', level: 0 },
 			{ slug: 'indeterminate', title: 'Indeterminate', level: 0 },
 			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'checkbox-props', title: 'Checkbox Props', level: 1 },
 			{ slug: 'checkbox-slots', title: 'Checkbox Slots', level: 1 },
@@ -186,6 +187,15 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Built with a native HTML `<input>` element.
+* Full support for browser features like form autofill.
+* Keyboard focus management and cross browser normalization.
+* Keyboard event support for `Tab` and `Space` keys.
+* Labeling support for assistive technology.
+* Indeterminate state support.
 
 ## API
 

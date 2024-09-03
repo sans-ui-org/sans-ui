@@ -15,6 +15,7 @@ toc: [
 			{ slug: 'external', title: 'External', level: 0 },
 			{ slug: 'window-icon', title: 'Window Icon', level: 0 },
 			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: ‘accessibility’, title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'link-props', title: 'Link Props', level: 1 },
 			{ slug: 'link-slots', title: 'Link Slots', level: 1 },
@@ -305,6 +306,14 @@ Link has `animation` prop to defines if the link's animation is disabled or not.
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+- Built with a native `<input>` element.
+- Visual and ARIA labeling support.
+- Change, clipboard, composition, selection, and input event support.
+- Required and invalid states exposed to assistive technology via ARIA.
+- Support for description and error message help text linked to the input via ARIA.
 
 ## API
 

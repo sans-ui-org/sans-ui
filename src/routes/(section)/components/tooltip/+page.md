@@ -12,6 +12,7 @@ toc: [
 			{ slug: 'position', title: 'Position', level: 0 },
 			{ slug: 'trackable', title: 'Trackable', level: 0 },
 			{ slug: 'delay-open-and-close', title: 'Delay Open And Close', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'tooltip-props', title: 'Tooltip Props', level: 1 },
 			{ slug: 'tooltip-slots', title: 'Tooltip Slots', level: 1 },
@@ -203,6 +204,13 @@ Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the too
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+* Keyboard focus management and cross browser normalization.
+* Hover management and cross browser normalization.
+* Labeling support for screen readers (aria-describedby).
+* Exposed as a tooltip to assistive technology via ARIA.
+* Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.
 
 ## API
 

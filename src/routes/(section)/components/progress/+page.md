@@ -11,6 +11,7 @@ toc: [
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'track-width', title: 'Track Width', level: 0 },
 			{ slug: 'custom-inner-label', title: 'Custom Inner Label', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'progress-props', title: 'Progress Props', level: 1 },
 			{ slug: 'progress-slots', title: 'Progress Slots', level: 1 },
@@ -140,6 +141,14 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Exposed to assistive technology as a progress bar via ARIA.
+* Labeling support for accessibility.
+* Internationalized number formatting as a percentage or value.
+* Determinate and indeterminate progress support.
+* Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`.
 
 ## API
 

@@ -10,6 +10,7 @@ toc: [
 			{ slug: 'variant', title: 'Variant', level: 0 },
 			{ slug: 'kind', title: 'Kind', level: 0 },
 			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },
 			{ slug: 'spinner-slots', title: 'Spinner Slots', level: 1 },
@@ -131,6 +132,10 @@ Spinners has `size` prop to defines the size of spinner.
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+* Support `alert` role via ARIA.
 
 ## API
 

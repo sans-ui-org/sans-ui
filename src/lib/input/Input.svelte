@@ -8,19 +8,19 @@
 		SlotsToClasses
 	} from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import type { SvelteComponent } from 'svelte';
 	import { cn } from '$lib/utils/cn';
 	import { inputVariant, type InputSlots } from '$lib/input/Input';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		id?: string;
 		value?: string | number | undefined;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		label?: string;
-		required?: boolean;
+		// required?: boolean;
 		disabled?: boolean;
 		readonly?: boolean;
 		clearable?: boolean;
@@ -30,8 +30,8 @@
 		maxCount?: number;
 		invalid?: boolean;
 		invalidText?: string;
-		startContent?: typeof SvelteComponent;
-		endContent?: typeof SvelteComponent;
+		// startContent?: typeof SvelteComponent;
+		// endContent?: typeof SvelteComponent;
 		classes?: SlotsToClasses<InputSlots>;
 	}
 
@@ -62,7 +62,7 @@
 	/**
 	 * Property that defines if the input is required.
 	 */
-	export let required: boolean = false;
+	// export let required: boolean = false;
 	/**
 	 * Property that defines if the input is disabled.
 	 */
@@ -98,11 +98,11 @@
 	/**
 	 * Property that defines the start content of the input.
 	 */
-	export let startContent: typeof SvelteComponent | undefined = undefined;
+	// export let startContent: typeof SvelteComponent | undefined = undefined;
 	/**
 	 * Property that defines the end content of the input.
 	 */
-	export let endContent: typeof SvelteComponent | undefined = undefined;
+	// export let endContent: typeof SvelteComponent | undefined = undefined;
 	/**
 	 * Property that defines the class names of the input.
 	 */
@@ -146,7 +146,7 @@
 {/if}
 <!-- Input -->
 <div class={cn(slots.inputWrapper({ disabled }), classes.inputWrapper)}>
-	{#if startContent}
+	<!-- {#if startContent}
 		<InputContent
 			class={cn(
 				slots.startContent({ variant, clearable, disabled, invalid }),
@@ -155,7 +155,7 @@
 			content={startContent}
 			{clearable}
 		/>
-	{/if}
+	{/if} -->
 	<input
 		{...$$restProps}
 		bind:value
@@ -174,13 +174,13 @@
 			$$restProps.class
 		)}
 	/>
-	{#if endContent}
+	<!-- {#if endContent}
 		<InputContent
 			class={cn(slots.endContent({ variant, clearable, disabled, invalid }), classes.endContent)}
 			content={endContent}
 			{clearable}
-		/>
-	{:else if clearable && value && value !== '' && !disabled && !readonly}
+		/> -->
+	{#if clearable && value && value !== '' && !disabled && !readonly}
 		<button
 			class={cn(slots.endContent({ variant, clearable, disabled, invalid }), classes.endContent)}
 			disabled={disabled || readonly}

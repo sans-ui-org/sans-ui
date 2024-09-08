@@ -33,5 +33,5 @@ export const modalSlots = [
 	{
 		name: 'wrapper',
 		description: 'this slot is applied to the div element(wrapper) for the modal body.'
-	},
+	}
 ];

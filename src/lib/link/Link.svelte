@@ -21,6 +21,7 @@
 	import { linkVariant, type LinkSlots } from '$lib/link/Link';
 	import WindowIcon from './WindowIcon.svelte';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;
 		size?: FontSize;

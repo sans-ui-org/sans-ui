@@ -67,7 +67,6 @@ describe('Button component', async () => {
 		const button = render(Button, { size: 'lg' });
 		expect(button.getByRole('button').classList.contains('text-lg')).toBeTruthy();
 	});
-
 	// rounded
 	test('should have correct roundness for none', () => {
 		const button = render(Button, { rounded: 'none' });

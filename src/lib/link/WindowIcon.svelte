@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLBaseAttributes;
 </script>
 

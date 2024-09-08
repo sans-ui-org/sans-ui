@@ -11,6 +11,7 @@
 
 	type $$BaseProps = HTMLBaseAttributes;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		size?: ComponentSize;

@@ -67,11 +67,11 @@ The checkbox component can be used to receive one or more selected options from 
 Checkbox has `variant` prop to decide the color theme of it.
 
 <div class="flex flex-row gap-2">
-	<Checkbox defaultChecked variant="primary" />
-	<Checkbox defaultChecked variant="secondary" />
-	<Checkbox defaultChecked variant="success" />
-	<Checkbox defaultChecked variant="warning" />
-	<Checkbox defaultChecked variant="danger" />
+	<Checkbox checked variant="primary" />
+	<Checkbox checked variant="secondary" />
+	<Checkbox checked variant="success" />
+	<Checkbox checked variant="warning" />
+	<Checkbox checked variant="danger" />
 </div>
 
 <CodeBlockWrapper>
@@ -81,11 +81,11 @@ Checkbox has `variant` prop to decide the color theme of it.
 	import { Checkbox } from '$lib';
 </script>
 
-<Checkbox defaultChecked variant="primary" />
-<Checkbox defaultChecked variant="secondary" />
-<Checkbox defaultChecked variant="success" />
-<Checkbox defaultChecked variant="warning" />
-<Checkbox defaultChecked variant="danger" />
+<Checkbox checked variant="primary" />
+<Checkbox checked variant="secondary" />
+<Checkbox checked variant="success" />
+<Checkbox checked variant="warning" />
+<Checkbox checked variant="danger" />
 ```
 
 </CodeBlockWrapper>
@@ -120,7 +120,7 @@ Checkbox has `size` prop to decide the size of it.
 
 Checkbox has `disabled` prop to disable your Checkbox component
 
-<Checkbox disabled />
+<Checkbox checked disabled />
 
 <CodeBlockWrapper>
 
@@ -129,16 +129,16 @@ Checkbox has `disabled` prop to disable your Checkbox component
 	import { Checkbox } from '$lib';
 </script>
 
-<Checkbox disabled />
+<Checkbox checked disabled />
 ```
 
 </CodeBlockWrapper>
 
 ## Default Checked
 
-Checkbox has `defaultChecked` prop to have Checkbox component's default check state to be checked.
+Checkbox has `checked` prop to have Checkbox component's default check state to be checked.
 
-<Checkbox defaultChecked />
+<Checkbox checked />
 
 <CodeBlockWrapper>
 
@@ -147,7 +147,7 @@ Checkbox has `defaultChecked` prop to have Checkbox component's default check st
 	import { Checkbox } from '$lib';
 </script>
 
-<Checkbox defaultChecked />
+<Checkbox checked />
 ```
 
 </CodeBlockWrapper>
@@ -190,12 +190,12 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 ## Accessibility
 
-* Built with a native HTML `<input>` element.
-* Full support for browser features like form autofill.
-* Keyboard focus management and cross browser normalization.
-* Keyboard event support for `Tab` and `Space` keys.
-* Labeling support for assistive technology.
-* Indeterminate state support.
+- Built with a native HTML `<input>` element.
+- Full support for browser features like form autofill.
+- Keyboard focus management and cross browser normalization.
+- Keyboard event support for `Tab` and `Space` keys.
+- Labeling support for assistive technology.
+- Indeterminate state support.
 
 ## API
 

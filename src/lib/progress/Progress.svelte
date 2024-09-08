@@ -7,6 +7,7 @@
 
 	type $$BaseProps = HTMLProgressAttributes;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		variant?: ComponentVariant;
 		value?: number;

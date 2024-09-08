@@ -25,4 +25,4 @@ export const spinnerSlots = [
 		name: 'dot',
 		description: 'this slot is applied to the div element(those circling dots for `loader2`).'
 	}
-]
+];

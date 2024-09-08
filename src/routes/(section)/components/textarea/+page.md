@@ -274,11 +274,11 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 
 ## Accessibility
 
-* Built with a native `<input>` element.
-* Visual and ARIA labeling support.
-* Change, clipboard, composition, selection, and input event support.
-* Required and invalid states exposed to assistive technology via ARIA.
-* Support for description and error message help text linked to the input via ARIA.
+- Built with a native `<input>` element.
+- Visual and ARIA labeling support.
+- Change, clipboard, composition, selection, and input event support.
+- Required and invalid states exposed to assistive technology via ARIA.
+- Support for description and error message help text linked to the input via ARIA.
 
 ## API
 

@@ -9,6 +9,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { fly } from 'svelte/transition';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props {
 		open?: boolean;
 		title?: string;

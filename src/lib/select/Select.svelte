@@ -21,6 +21,7 @@
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		id?: string;
 		size?: ComponentSize;

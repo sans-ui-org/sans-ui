@@ -144,11 +144,11 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 ## Accessibility
 
-* Exposed to assistive technology as a progress bar via ARIA.
-* Labeling support for accessibility.
-* Internationalized number formatting as a percentage or value.
-* Determinate and indeterminate progress support.
-* Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`.
+- Exposed to assistive technology as a progress bar via ARIA.
+- Labeling support for accessibility.
+- Internationalized number formatting as a percentage or value.
+- Determinate and indeterminate progress support.
+- Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`.
 
 ## API
 

@@ -1,12 +1,11 @@
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
 	import ClearableIcon from '$lib/inputContent/ClearableIcon.svelte';
-	type Component = $$Generic<typeof SvelteComponent>;
 
 	/**
 	 * Property that defines the content of the input.
 	 */
-	export let content: Component | null;
+	export let content: SvelteComponent | null;
 	/**
 	 * Property that defines if the input is clearable.
 	 */

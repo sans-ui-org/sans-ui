@@ -1,11 +1,6 @@
 <script lang="ts">
 	import { Link } from '$lib';
-	import {
-		SUI_GITHUB_URL,
-		SUI_FIGMA_URL,
-		SUI_DISCORD_URL,
-		SUI_LICENCE_URL
-	} from '../utils/constants';
+	import { SUI_GITHUB_URL, SUI_FIGMA_URL, SUI_LICENCE_URL } from '../utils/constants';
 </script>
 
 <footer>

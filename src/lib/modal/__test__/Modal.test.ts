@@ -48,5 +48,4 @@ describe('Modal component', async () => {
 	});
 
 	//TODO:dismissible
-
 });

@@ -7,6 +7,7 @@
 
 	type $$BaseProps = HTMLBaseAttributes;
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
 		id?: string;
 		textForOn?: string;

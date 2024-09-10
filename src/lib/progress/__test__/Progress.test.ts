@@ -63,5 +63,4 @@ describe('Progress component', async () => {
 		render(Progress, { customInnerLabel: 'Label is here' });
 		expect(screen.getByText('Label is here')).toBeTruthy();
 	});
-
 });

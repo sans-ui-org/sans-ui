@@ -346,15 +346,15 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ## Accessibility
 
-* Support for selecting a single option.
-* Support for disabled options.
-* Support for sections.
-* Labeling support for accessibility.
-* Support for description and error message help text linked to the input via ARIA.
-* Support for mouse, touch, and keyboard interactions.
-* Tab stop focus management.
-* Browser autofill integration via a hidden native `<select>` element.
-* Support for mobile form navigation via software keyboard.
+- Support for selecting a single option.
+- Support for disabled options.
+- Support for sections.
+- Labeling support for accessibility.
+- Support for description and error message help text linked to the input via ARIA.
+- Support for mouse, touch, and keyboard interactions.
+- Tab stop focus management.
+- Browser autofill integration via a hidden native `<select>` element.
+- Support for mobile form navigation via software keyboard.
 
 ## API
 

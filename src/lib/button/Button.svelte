@@ -15,6 +15,7 @@
 	import type { ButtonSlots } from '$lib/button/Button';
 	import { buttonVariant } from '$lib/button/Button';
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {
 		variant?: ComponentVariant;
 		size?: ComponentSize;

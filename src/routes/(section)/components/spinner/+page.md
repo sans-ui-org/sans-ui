@@ -135,7 +135,7 @@ Spinners has `size` prop to defines the size of spinner.
 
 ## Accessibility
 
-* Support `alert` role via ARIA.
+- Support `alert` role via ARIA.
 
 ## API
 
@@ -145,6 +145,6 @@ Spinner provides APIs(Properties) that is necessary for you to configure a Spinn
 
 <PropertyTable properties={spinnerProps} />
 
-### Spinner Slots 
+### Spinner Slots
 
 <SlotTable slots={spinnerSlots} />

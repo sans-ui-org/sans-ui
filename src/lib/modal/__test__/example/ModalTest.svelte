@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Button, Modal, ModalBody, ModalContent, ModalHeader } from '$lib';
-	import type { ComponentSize } from '$lib/utils/utils';
+	import type { ModalSize } from '$lib/modal/Modal.svelte';
 
 	export let title: string = 'This is Modal';
-	export let size: ComponentSize = 'md';
+	export let size: ModalSize = 'md';
 
 	/**
 	 * The prop that only for this story.

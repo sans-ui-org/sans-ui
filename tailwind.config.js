@@ -1,10 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/lib/**/*.{html,js,svelte,ts}'],
+	content: [
+		/* Components */
+		'./src/lib/**/*.{html,js,svelte,ts}',
+		/* Documentation */
+		'./src/routes/**/*.{html,js,svelte,ts,md}',
+		/* Storybook */
+		'./src/stories/**/*.{html,js,svelte,ts,md}'
+	],
 	darkMode: ['class'],
 	theme: {
 		extend: {
 			keyframes: {
+				/* Spinner component */
 				spinnerRotation: {
 					'0%': { transform: 'rotate(0deg)' },
 					'100%': { transform: 'rotate(360deg)' }
@@ -32,6 +40,7 @@ export default {
 					'0%': { transform: 'scale(1)' },
 					'100%': { transform: 'scale(1)' }
 				},
+				/* Ripple Effect */
 				ripple: {
 					from: { transform: 'scale(0)', opacity: 1 },
 					to: { transform: 'scale(1)', opacity: 0 }
@@ -39,5 +48,6 @@ export default {
 			}
 		}
 	},
+	// TODO: Add our own custom plugin.
 	plugins: []
 };

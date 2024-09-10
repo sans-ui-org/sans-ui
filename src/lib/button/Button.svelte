@@ -3,7 +3,6 @@
 </script>
 
 <script lang="ts">
-	import '$lib/global.css';
 	import type {
 		ComponentRounded,
 		ComponentSize,

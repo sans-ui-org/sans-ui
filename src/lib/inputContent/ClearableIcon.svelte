@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '$lib/global.css';
 </script>
 
 <svg aria-hidden="true" focusable="false" role="presentation" viewBox="0 0 24 24" class="w-4 h-4">

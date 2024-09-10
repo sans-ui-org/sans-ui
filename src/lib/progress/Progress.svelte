@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '$lib/global.css';
 	import type { ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLProgressAttributes } from 'svelte/elements';
 	import { progressVariant, type ProgressSlots } from '$lib/progress/Progress';

@@ -3,7 +3,6 @@
 </script>
 
 <script lang="ts">
-	import '$lib/global.css';
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
 	import { setContext } from 'svelte';
 	import { modalVariant } from './Modal';

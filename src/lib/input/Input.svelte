@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '$lib/global.css';
 	import InputContent from '$lib/inputContent/InputContent.svelte';
 	import type {
 		ComponentRounded,

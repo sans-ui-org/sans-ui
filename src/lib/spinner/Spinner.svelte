@@ -3,7 +3,6 @@
 </script>
 
 <script lang="ts">
-	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';

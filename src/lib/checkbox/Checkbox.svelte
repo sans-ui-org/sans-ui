@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '$lib/global.css';
 	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
 	import { createEventDispatcher } from 'svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';

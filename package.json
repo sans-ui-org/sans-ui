@@ -15,8 +15,9 @@
 		"package": "svelte-package --output ./package",
 		"eslint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
+		"test": "vitest run",
+		"test:watch": "vitest",
 		"test:integration": "playwright test",
-		"test": "vitest",
 		"chromatic": "npx chromatic --project-token=chpt_41caf10e35cdde6",
 		"prepare": "husky",
 		"postinstall": "husky"
@@ -71,8 +72,7 @@
 	},
 	"lint-staged": {
 		"*.{js,ts,svelte}": "eslint --fix",
-		"*": "prettier --ignore-unknown --write",
-		"*.svelte": "npm run check"
+		"*": "prettier --ignore-unknown --write"
 	},
 	"type": "module"
 }

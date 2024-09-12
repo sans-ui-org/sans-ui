@@ -1,1 +1,8 @@
+# linting
 npx lint-staged
+
+# npm check
+npm run check
+
+# testing
+npm run test

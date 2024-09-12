@@ -18,7 +18,8 @@
 		"test:integration": "playwright test",
 		"test": "vitest",
 		"chromatic": "npx chromatic --project-token=chpt_41caf10e35cdde6",
-		"prepare": "husky"
+		"prepare": "husky",
+		"postinstall": "husky"
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.3.3",

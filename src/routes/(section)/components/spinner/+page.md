@@ -19,9 +19,7 @@ toc: [
 
 <script>
 	import { Spinner } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { spinnerProps, spinnerSlots } from "./spinner-props.ts"
 
@@ -135,7 +133,7 @@ Spinners has `size` prop to defines the size of spinner.
 
 ## Accessibility
 
-- Support `alert` role via ARIA.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support `alert` role via ARIA.</div>
 
 ## API
 

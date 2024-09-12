@@ -10,7 +10,7 @@ toc: [
 			{ slug: 'size', title: 'Size', level: 0 },
 			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
 			{ slug: 'animation', title: 'Animation', level: 0 },
-			{ slug: ‘accessibility’, title: ‘Accessibility’, level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
 			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
@@ -19,9 +19,7 @@ toc: [
 
 <script>
 	import { Button, Modal } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import ModalTemplate from "../../../../stories/modal/examples/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { modalProps, modalSlots } from "./modal-props.ts"
@@ -163,11 +161,11 @@ Set the `animation` property to control the modal's animation.
 
 ## Accessibility
 
-- Content outside the modal is hidden from assistive technologies while it is open.
-- The modal optionally closes when interacting outside, or pressing the `Esc` key.
-- Focus is moved into the modal on mount, and restored to the trigger element on unmount.
-- While open, focus is contained within the modal, preventing the user from tabbing outside.
-- Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Content outside the modal is hidden from assistive technologies while it is open.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>The modal optionally closes when interacting outside, or pressing the `Esc` key.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Focus is moved into the modal on mount, and restored to the trigger element on unmount.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>While open, focus is contained within the modal, preventing the user from tabbing outside.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.</div>
 
 ## API
 

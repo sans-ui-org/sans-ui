@@ -116,24 +116,28 @@
 				slots.label({ size, variant, readonly, disabled, toggled, invalid, animation }),
 				classes.label
 			)}
-			for={id}>{label}</label
+			for={id}
+			aria-label={id}>{label}</label
 		>
 	{/if}
 	<!-- Switch -->
+	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<div
 		class={cn(
 			slots.switchWrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
 			classes.switchWrapper
 		)}
 	>
+		<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
 		<div
 			{id}
+			role="switch"
+			tabindex="0"
 			aria-checked={toggled}
 			aria-readonly={readonly}
 			aria-disabled={disabled}
+			aria-labelledby={label}
 			{...$$restProps}
-			role="switch"
-			tabindex="0"
 			class={cn(
 				slots.base({ size, variant, readonly, disabled, toggled, invalid, animation }),
 				classes.base
@@ -141,7 +145,7 @@
 			on:click={onToggle}
 			on:keypress={onKeyPress}
 		>
-			<div
+			<span
 				class={cn(
 					slots.switchChip({ size, variant, readonly, disabled, toggled, invalid, animation }),
 					classes.switchChip

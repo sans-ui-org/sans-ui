@@ -21,9 +21,7 @@ toc: [
 
 <script>
 	import { Tooltip, Button } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { tooltipProps, tooltipSlots } from "./tooltip-props.ts"
 
@@ -207,11 +205,9 @@ Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the too
 
 ## Accessibility
 
-- Keyboard focus management and cross browser normalization.
-- Hover management and cross browser normalization.
-- Labeling support for screen readers (aria-describedby).
-- Exposed as a tooltip to assistive technology via ARIA.
-- Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Hover management and cross browser normalization.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for screen readers (`aria-describedby`).</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</div>
 
 ## API
 

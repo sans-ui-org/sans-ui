@@ -15,7 +15,7 @@ toc: [
 			{ slug: 'external', title: 'External', level: 0 },
 			{ slug: 'window-icon', title: 'Window Icon', level: 0 },
 			{ slug: 'animation', title: 'Animation', level: 0 },
-			{ slug: ‘accessibility’, title: 'Accessibility', level: 0 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'link-props', title: 'Link Props', level: 1 },
 			{ slug: 'link-slots', title: 'Link Slots', level: 1 },
@@ -26,9 +26,7 @@ toc: [
 
 <script>
 	import { Link } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { linkProps, linkSlots } from "./link-props.ts"
 
@@ -309,11 +307,11 @@ Link has `animation` prop to defines if the link's animation is disabled or not.
 
 ## Accessibility
 
-- Built with a native `<input>` element.
-- Visual and ARIA labeling support.
-- Change, clipboard, composition, selection, and input event support.
-- Required and invalid states exposed to assistive technology via ARIA.
-- Support for description and error message help text linked to the input via ARIA.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native input element.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Visual and ARIA labeling support.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Change, clipboard, composition, selection, and input event support.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Required and invalid states exposed to assistive technology via ARIA.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
 
 ## API
 

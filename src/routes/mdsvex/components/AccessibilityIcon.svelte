@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { cn } from '$lib/utils/cn';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

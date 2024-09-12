@@ -121,14 +121,12 @@
 		>
 	{/if}
 	<!-- Switch -->
-	<!-- svelte-ignore a11y-label-has-associated-control -->
 	<div
 		class={cn(
 			slots.switchWrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
 			classes.switchWrapper
 		)}
 	>
-		<!-- svelte-ignore a11y-no-noninteractive-element-to-interactive-role -->
 		<div
 			{id}
 			role="switch"

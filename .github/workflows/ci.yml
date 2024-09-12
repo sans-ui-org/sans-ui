@@ -58,4 +58,4 @@ jobs:
       - name: Setup
         uses: ./.github/actions/setup
       - name: Run ESLint
-        run: npm run lint
+        run: npm run eslint

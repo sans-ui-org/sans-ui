@@ -3,18 +3,18 @@ import { tv } from '$lib/utils/tv';
 export const textareaVariant = tv({
 	slots: {
 		labelWrapper: [
-			's-ui--textarea--labelWrapper',
+			'sans-ui--textarea--labelWrapper',
 			'flex flex-row items-center justify-between w-full'
 		],
-		label: ['s-ui--textarea--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		label: ['sans-ui--textarea--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		base: [
-			's-ui--textarea--base',
+			'sans-ui--textarea--base',
 			'font-normal bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2',
 			'hover:bg-gray-200',
 			'focus-visible:bg-gray-100 focus-visible:outline-0',
 			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'
 		],
-		invalidText: ['s-ui--textarea--invalidText', 'text-red-500 mt-1']
+		invalidText: ['sans-ui--textarea--invalidText', 'text-red-500 mt-1']
 	},
 	variants: {
 		variant: {

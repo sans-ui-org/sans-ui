@@ -2,34 +2,34 @@ import { tv } from '$lib/utils/tv';
 
 export const selectVariant = tv({
 	slots: {
-		label: ['s-ui--select-label', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		label: ['sans-ui--select-label', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		base: [
-			's-ui--base-label',
+			'sans-ui--base-label',
 			'relative border mt-1 bg-white',
 			'dark:bg-neutral-700 dark:border dark:border-neutral-800 dark:text-neutral-100'
 		],
 		trigger: [
-			's-ui--select-trigger',
+			'sans-ui--select-trigger',
 			'w-full flex px-4 py-2 justify-between items-center',
 			'hover:bg-neutral-100',
 			'dark:hover:bg-neutral-600'
 		],
-		placeholderWrapper: ['s-ui--select-placeholderWrapper', 'w-full truncate flex items-start'],
-		placeholder: ['s-ui--select-placeholder', 'placeholder:text-neutral-500 truncate'],
+		placeholderWrapper: ['sans-ui--select-placeholderWrapper', 'w-full truncate flex items-start'],
+		placeholder: ['sans-ui--select-placeholder', 'placeholder:text-neutral-500 truncate'],
 		listbox: [
-			's-ui--select-listbox',
+			'sans-ui--select-listbox',
 			'z-10 absolute overflow-auto max-h-40 min-w-[160px] mt-1 w-full origin-top border rounded-lg',
 			'dark:border-none'
 		],
 		option: [
-			's-ui--select-option',
+			'sans-ui--select-option',
 			'items-center px-4 py-2 justify-between gap-1 items-center border border-transparent bg-white',
 			'hover:bg-gray-100',
 			'dark:bg-neutral-700 dark:text-neutral-100 dark:hover:bg-neutral-600'
 		],
-		optionTextWrapper: ['s-ui--select-optionTextWrapper', 'w-full truncate flex items-start'],
-		optionText: ['s-ui--select-optionText', 'truncate'],
-		invalidText: ['s-ui--select-invalid', 'text-sm text-red-500 mt-1']
+		optionTextWrapper: ['sans-ui--select-optionTextWrapper', 'w-full truncate flex items-start'],
+		optionText: ['sans-ui--select-optionText', 'truncate'],
+		invalidText: ['sans-ui--select-invalid', 'text-sm text-red-500 mt-1']
 	},
 	variants: {
 		variant: {

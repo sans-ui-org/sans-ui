@@ -3,27 +3,27 @@ import { tv } from '$lib/utils/tv';
 export const inputVariant = tv({
 	slots: {
 		base: [
-			's-ui--input--base',
+			'sans-ui--input--base',
 			'font-normal bg-gray-100 w-full pl-4 pr-10 border-gray-200 border-2 items-center truncate',
 			'focus-visible:outline-0',
 			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'
 		],
 		labelWrapper: [
-			's-ui--input--labelWrapper',
+			'sans-ui--input--labelWrapper',
 			'flex flex-row items-center justify-between w-full font-normal text-neutral-600 dark:text-neutral-200'
 		],
-		label: ['s-ui--input--label', 'font-medium'],
-		inputWrapper: ['s-ui--input--inputWrapper', 'relative mt-2 w-full'],
+		label: ['sans-ui--input--label', 'font-medium'],
+		inputWrapper: ['sans-ui--input--inputWrapper', 'relative mt-2 w-full'],
 		startContent: [
-			's-ui--input--startContent',
+			'sans-ui--input--startContent',
 			'absolute h-10 w-10 flex flex-row items-center justify-center top-1 left-0'
 		],
 		endContent: [
-			's-ui--input--endContent',
+			'sans-ui--input--endContent',
 			'absolute flex flex-row items-center justify-center top-1 right-1',
 			'dark:text-neutral-100 text-neutral-700'
 		],
-		invalid: ['s-ui--input--invalid', 'text-red-500 mt-1']
+		invalid: ['sans-ui--input--invalid', 'text-red-500 mt-1']
 	},
 	variants: {
 		variant: {

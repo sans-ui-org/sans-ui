@@ -24,9 +24,7 @@ toc: [
 
 <script>
 	import { Button, Select } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { selectProps, selectSlots } from "./select-props.ts"
 
@@ -346,15 +344,14 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ## Accessibility
 
-- Support for selecting a single option.
-- Support for disabled options.
-- Support for sections.
-- Labeling support for accessibility.
-- Support for description and error message help text linked to the input via ARIA.
-- Support for mouse, touch, and keyboard interactions.
-- Tab stop focus management.
-- Browser autofill integration via a hidden native `<select>` element.
-- Support for mobile form navigation via software keyboard.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for selecting a single option.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for disabled options.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for sections.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for accessibility.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for mouse, touch, and keyboard interactions.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Tab stop focus management.</div>
+  <!-- TODO: Support for mobile form navigation via software keyboard. -->
 
 ## API
 

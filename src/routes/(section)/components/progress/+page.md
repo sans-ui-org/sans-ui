@@ -20,9 +20,7 @@ toc: [
 
 <script>
 	import { Progress } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { progressProps, progressSlots } from "./progress-props.ts"
 
@@ -144,11 +142,9 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 ## Accessibility
 
-- Exposed to assistive technology as a progress bar via ARIA.
-- Labeling support for accessibility.
-- Internationalized number formatting as a percentage or value.
-- Determinate and indeterminate progress support.
-- Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Exposed to assistive technology as a progress bar via ARIA.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Internationalized number formatting as a percentage or value.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`</div>
 
 ## API
 

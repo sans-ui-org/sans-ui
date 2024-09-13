@@ -25,9 +25,7 @@ toc: [
 
 <script>
 	import { TextArea } from '$lib';
-	import SlotTable from "../../../mdsvex/components/SlotTable.svelte"
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { textareaSlots, textareaProps } from "./textarea-props.ts"
 
@@ -274,11 +272,11 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 
 ## Accessibility
 
-- Built with a native `<input>` element.
-- Visual and ARIA labeling support.
-- Change, clipboard, composition, selection, and input event support.
-- Required and invalid states exposed to assistive technology via ARIA.
-- Support for description and error message help text linked to the input via ARIA.
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native HTML input element.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Visual and ARIA labeling support.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Change, clipboard, composition, selection, and input event support.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Required and invalid states exposed to assistive technology via ARIA.</div>
+- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
 
 ## API
 

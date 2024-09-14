@@ -12,7 +12,7 @@
 </script>
 
 <script lang="ts">
-	import SideNav from '../global-components/SideNav.svelte';
+	import { SideNav } from '../global-components';
 
 	/** @type {import('./$types').PageData} */
 	export let data: AccordionData;

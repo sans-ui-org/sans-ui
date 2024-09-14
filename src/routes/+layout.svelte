@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from './global-components/Header.svelte';
+	import { Header } from './global-components';
 </script>
 
 <main class="bg-white dark:bg-neutral-800">

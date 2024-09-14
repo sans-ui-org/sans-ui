@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button, { type ButtonKind } from '$lib/button/Button.svelte';
+	import Button, { type ButtonKind } from '$lib/components/button/Button.svelte';
 	import type { ComponentRounded, ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 

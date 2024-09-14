@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import Link from '$lib/link/Link.svelte';
+	import Link from '$lib/components/link/Link.svelte';
 	import { SUI_GITHUB_URL } from '../utils/constants';
 	import Github from '../utils/icons/Github.svelte';
 	import Light from '../utils/icons/Light.svelte';

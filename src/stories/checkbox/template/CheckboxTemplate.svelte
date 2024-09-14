@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Checkbox from '$lib/checkbox/Checkbox.svelte';
+	import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 

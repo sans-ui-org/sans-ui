@@ -11,8 +11,7 @@
 	import { invalidateAll } from '$app/navigation';
 	import Meta from './components/Meta.svelte';
 	import DocHeader from './components/DocHeader.svelte';
-	import Footer from '../global-components/Footer.svelte';
-	import TableOfContent from '../global-components/TableOfContent.svelte';
+	import { Footer, TableOfContent } from '../global-components';
 
 	/** @type {string} */
 	export let title = '';

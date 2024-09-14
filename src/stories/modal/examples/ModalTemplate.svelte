@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button, Modal, ModalBody, ModalContent, ModalHeader } from '$lib';
-	import type { ModalSize } from '$lib/modal/Modal.svelte';
+	import type { ModalSize } from '$lib/components/modal/Modal.svelte';
 
 	export let size: ModalSize = 'lg';
 	export let title: string = '';

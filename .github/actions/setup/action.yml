@@ -5,6 +5,13 @@ runs:
   using: composite
 
   steps:
+    - name: 'Cleanup build folder'
+      run: |
+        ls -la ./
+        rm -rf ./* || true
+        rm -rf ./.??* || true
+        ls -la ./
+
     - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:

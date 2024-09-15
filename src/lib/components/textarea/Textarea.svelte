@@ -7,7 +7,7 @@
 	} from '$lib/utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
-	import { textareaVariant, type TextareaSlots } from '$lib/components/textArea/TextArea';
+	import { textareaVariant, type TextareaSlots } from '$lib/components/textarea/Textarea';
 	import { cn } from '$lib/utils/cn';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

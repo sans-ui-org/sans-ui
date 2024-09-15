@@ -7,7 +7,7 @@ import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
 import Link from '$lib/components/link/Link.svelte';
 import Select from '$lib/components/select/Select.svelte';
 import Input from '$lib/components/input/Input.svelte';
-import TextArea from '$lib/components/textArea/TextArea.svelte';
+import Textarea from '$lib/components/textarea/Textarea.svelte';
 import Switch from '$lib/components/switch/Switch.svelte';
 import Modal from '$lib/components/modal/Modal.svelte';
 import ModalContent from '$lib/components/modal/ModalContent.svelte';
@@ -28,7 +28,7 @@ export {
 	Link,
 	Select,
 	Input,
-	TextArea,
+	Textarea,
 	Switch,
 	Modal,
 	ModalContent,

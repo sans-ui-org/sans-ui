@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { Button, Tooltip, typewriter } from '$lib';
-	import Footer from './global-components/Footer.svelte';
+	import { Footer } from './global-components';
 	import { goto } from '$app/navigation';
 
 	export let data;

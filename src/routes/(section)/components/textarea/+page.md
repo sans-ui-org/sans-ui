@@ -1,9 +1,9 @@
 ---
 layout: componentLayout
-title: TextArea
-description: Textarea component is a multi-line TextArea which allows you to write large texts.
+title: Textarea
+description: Textarea component is a multi-line Textarea which allows you to write large texts.
 category: component
-githubFolder: /textArea/TextArea.svelte
+githubFolder: /textArea/Textarea.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
@@ -24,7 +24,7 @@ toc: [
 ---
 
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { textareaSlots, textareaProps } from "./textarea-props.ts"
@@ -39,7 +39,7 @@ Import a Textarea component in the script tag.
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 ```
 
@@ -50,25 +50,25 @@ Import a Textarea component in the script tag.
 Use the Textarea component as a multi-line text field input and use it inside form elements available in multiple sizes, styles, and variants
 
 <div class="w-[350px]">
-	<TextArea label="This is label" variant="primary" placeholder="Please type something here" />
-	<TextArea label="This is label" variant="secondary" placeholder="Please type something here" />
-	<TextArea label="This is label" variant="success" placeholder="Please type something here" />
-	<TextArea label="This is label" variant="warning" placeholder="Please type something here" />
-	<TextArea label="This is label" variant="danger" placeholder="Please type something here" />
+	<Textarea label="This is label" variant="primary" placeholder="Please type something here" />
+	<Textarea label="This is label" variant="secondary" placeholder="Please type something here" />
+	<Textarea label="This is label" variant="success" placeholder="Please type something here" />
+	<Textarea label="This is label" variant="warning" placeholder="Please type something here" />
+	<Textarea label="This is label" variant="danger" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea label="This is label" variant="primary" placeholder="Please type something here" />
-<TextArea label="This is label" variant="secondary" placeholder="Please type something here" />
-<TextArea label="This is label" variant="success" placeholder="Please type something here" />
-<TextArea label="This is label" variant="warning" placeholder="Please type something here" />
-<TextArea label="This is label" variant="danger" placeholder="Please type something here" />
+<Textarea label="This is label" variant="primary" placeholder="Please type something here" />
+<Textarea label="This is label" variant="secondary" placeholder="Please type something here" />
+<Textarea label="This is label" variant="success" placeholder="Please type something here" />
+<Textarea label="This is label" variant="warning" placeholder="Please type something here" />
+<Textarea label="This is label" variant="danger" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
@@ -78,189 +78,189 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 Textarea has `variant` prop to decide the color theme of it.
 
 <div class="w-[350px]">
-	<TextArea variant="success" label="This is label" placeholder="Please type something here" />
+	<Textarea variant="success" label="This is label" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea variant="success" label="This is label" placeholder="Please type something here" />
+<Textarea variant="success" label="This is label" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Value
 
-TextArea has `value` prop that defines the value of the input.
+Textarea has `value` prop that defines the value of the input.
 
 <div class="w-[350px]">
-	<TextArea value="hello world" placeholder="Please type something here" />
+	<Textarea value="hello world" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea value="hello world" placeholder="Please type something here" />
+<Textarea value="hello world" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Size
 
-TextArea has `size` prop defines the font size of the input.
+Textarea has `size` prop defines the font size of the input.
 
 <div class="w-[350px]">
-	<TextArea size="sm" placeholder="Please type something here" />
-	<TextArea size="md" placeholder="Please type something here" />
-	<TextArea size="lg" placeholder="Please type something here" />
+	<Textarea size="sm" placeholder="Please type something here" />
+	<Textarea size="md" placeholder="Please type something here" />
+	<Textarea size="lg" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea size="sm" placeholder="Please type something here" />
-<TextArea size="md" placeholder="Please type something here" />
-<TextArea size="lg" placeholder="Please type something here" />
+<Textarea size="sm" placeholder="Please type something here" />
+<Textarea size="md" placeholder="Please type something here" />
+<Textarea size="lg" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Rounded
 
-TextArea has `rounded` prop defines the roundness of the input.
+Textarea has `rounded` prop defines the roundness of the input.
 
 <div class="w-[350px]">
-	<TextArea rounded="none" placeholder="Please type something here" />
-	<TextArea rounded="sm" placeholder="Please type something here" />
-	<TextArea rounded="md" placeholder="Please type something here" />
-	<TextArea rounded="lg" placeholder="Please type something here" />
-	<TextArea rounded="full" placeholder="Please type something here" />
+	<Textarea rounded="none" placeholder="Please type something here" />
+	<Textarea rounded="sm" placeholder="Please type something here" />
+	<Textarea rounded="md" placeholder="Please type something here" />
+	<Textarea rounded="lg" placeholder="Please type something here" />
+	<Textarea rounded="full" placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea rounded="none" placeholder="Please type something here" />
-<TextArea rounded="sm" placeholder="Please type something here" />
-<TextArea rounded="md" placeholder="Please type something here" />
-<TextArea rounded="lg" placeholder="Please type something here" />
-<TextArea rounded="full" placeholder="Please type something here" />
+<Textarea rounded="none" placeholder="Please type something here" />
+<Textarea rounded="sm" placeholder="Please type something here" />
+<Textarea rounded="md" placeholder="Please type something here" />
+<Textarea rounded="lg" placeholder="Please type something here" />
+<Textarea rounded="full" placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Disabled
 
-TextArea has `disabled` prop that defines if the input is disabled.
+Textarea has `disabled` prop that defines if the input is disabled.
 
 <div class="w-[350px]">
-	<TextArea disabled={true} placeholder="Please type something here" />
+	<Textarea disabled={true} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea disabled={true} placeholder="Please type something here" />
+<Textarea disabled={true} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## ReadOnly
 
-TextArea has `readonly` prop that defines if the input is readonly.
+Textarea has `readonly` prop that defines if the input is readonly.
 
 <div class="w-[350px]">
-	<TextArea readonly={true} placeholder="Please type something here" />
+	<Textarea readonly={true} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea readonly={true} placeholder="Please type something here" />
+<Textarea readonly={true} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Animation
 
-TextArea has `animation` prop that defines if the input has animation or not.
+Textarea has `animation` prop that defines if the input has animation or not.
 
 <div class="w-[350px]">
-	<TextArea animation={false} placeholder="Please type something here" />
+	<Textarea animation={false} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea animation={false} placeholder="Please type something here" />
+<Textarea animation={false} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Max Count
 
-TextArea has `maxCount` prop that defines the text limitation of your TextArea component.
+Textarea has `maxCount` prop that defines the text limitation of your Textarea component.
 
 <div class="w-[350px]">
-	<TextArea value="hello world" maxCount={25} placeholder="Please type something here" />
+	<Textarea value="hello world" maxCount={25} placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea value="hello world" maxCount={25} placeholder="Please type something here" />
+<Textarea value="hello world" maxCount={25} placeholder="Please type something here" />
 ```
 
 </CodeBlockWrapper>
 
 ## Invalid
 
-TextArea has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
+Textarea has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
 
 <div class="w-[350px]">
-	<TextArea label="This is label" invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
+	<Textarea label="This is label" invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
 </div>
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { TextArea } from '$lib';
+	import { Textarea } from '$lib';
 </script>
 
-<TextArea
+<Textarea
 	label="This is label"
 	invalid={true}
 	invalidText="This is invalid text."
@@ -280,12 +280,12 @@ TextArea has `invalid` prop that defines if the input is invalid. And `invalidTe
 
 ## API
 
-TextArea provides APIs(Properties) that is necessary for you to configure a TextArea compponent.
+Textarea provides APIs(Properties) that is necessary for you to configure a Textarea compponent.
 
-### TextArea Props
+### Textarea Props
 
 <PropertyTable properties={textareaProps} />
 
-### TextArea Slots
+### Textarea Slots
 
 <SlotTable slots={textareaSlots} />

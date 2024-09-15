@@ -4,13 +4,13 @@ title: Introduction
 description: This is the introduction section for you to start using SanS-UI library.
 category: documentation
 toc: [
-			{ slug: 'what-is-s-ui?', title: 'What is SanS-UI?', level: 0 },
+			{ slug: 'what-is-SanS-UI?', title: 'What is SanS-UI?', level: 0 },
 			{ slug: 'contributing', title: 'Contributing', level: 0 },
 			{ slug: 'license', title: 'License', level: 0 },
 			{ slug: 'faq', title: 'FAQ', level: 0 },
-			{ slug: 'does-s-ui-use-typescript?', title: 'SanS-UI & TypeScript', level: 1 },
-			{ slug: 's-ui-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
-			{ slug: 's-ui-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
+			{ slug: 'does-SanS-UI-use-typescript?', title: 'SanS-UI & TypeScript', level: 1 },
+			{ slug: 'SanS-UI-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
+			{ slug: 'SanS-UI-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
 		]
 ---
 

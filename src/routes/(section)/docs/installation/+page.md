@@ -7,7 +7,7 @@ toc: [
 			{ slug: 'before-you-install', title: 'Before you install', level: 0 },
 			{ slug: 'for-svelte', title: 'For Svelte', level: 1 },
 			{ slug: 'for-svelte-kit', title: 'For SvelteKit', level: 1 },
-			{ slug: 'let’s-install-s-ui', title: "Let's install SanS-UI", level: 0 },
+			{ slug: 'let’s-install-SanS-UI', title: "Let's install SanS-UI", level: 0 },
 			{ slug: 'you-are-ready!', title: "You are ready!", level: 0 },
 		]
 ---
@@ -57,13 +57,13 @@ To install SanS-UI into your project, we need to run this command.
 
 ```bash
 # For NPM
-npm install s-ui
+npm install sans-ui
 
 # For YARN
-yarn add s-ui
+yarn add sans-ui
 
 # For PNPM
-pnpm install s-ui
+pnpm install sans-ui
 ```
 
 </CodeBlockWrapper>

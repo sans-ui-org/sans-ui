@@ -34,7 +34,7 @@ Import a Modal component in the script tag.
 
 ```svelte
 <script>
-	import { Modal } from '$lib';
+	import { Modal } from '@sans-ui';
 </script>
 ```
 
@@ -50,7 +50,7 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 
 ```svelte
 <script lang="ts">
-	import { Button, Modal } from '$lib';
+	import { Button, Modal } from '@sans-ui';
 
 	let popupModal = false;
 </script>
@@ -82,7 +82,7 @@ Modal has `size` prop to decide the size of it.
 
 ```svelte
 <script lang="ts">
-	import { Button, Modal } from '$lib';
+	import { Button, Modal } from '@sans-ui';
 
 	let popupModal = false;
 </script>
@@ -111,7 +111,7 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 
 ```svelte
 <script lang="ts">
-	import { Button, Modal } from '$lib';
+	import { Button, Modal } from '@sans-ui';
 
 	let popupModal = false;
 </script>
@@ -140,7 +140,7 @@ Set the `animation` property to control the modal's animation.
 
 ```svelte
 <script lang="ts">
-	import { Button, Modal } from '$lib';
+	import { Button, Modal } from '@sans-ui';
 
 	let popupModal = false;
 </script>

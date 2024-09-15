@@ -46,7 +46,7 @@ Import a Select component in the script tag.
 
 ```svelte
 <script>
-	import { Select } from '$lib';
+	import { Select } from '@sans-ui';
 </script>
 ```
 
@@ -64,7 +64,7 @@ The select input component can be used to gather information from users based on
 
 ```svelte
 <script lang="ts">
-	import { Select } from '$lib';
+	import { Select } from '@sans-ui';
 
 	let popupSelect = false;
 	let options = [
@@ -106,7 +106,7 @@ Select has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script lang="ts">
-	import { Select } from '$lib';
+	import { Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -145,7 +145,7 @@ Select has `size` prop to decide the size of it.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -188,7 +188,7 @@ Select has `rounded` prop to update Select component's border-radius.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Input rounded="none" placeholder="Please type something here">rounded none</Input>
@@ -212,7 +212,7 @@ Select has `defaultSelected` prop that defines the default selected value of the
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -240,7 +240,7 @@ Select has `disabled` prop that defines if the select is disabled.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -267,7 +267,7 @@ Select has `readonly` prop that defines if the select is readonly.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -294,7 +294,7 @@ Select has `animation` prop that defines if the select has animation.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -321,7 +321,7 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '$lib';
+	import { Button, Select } from '@sans-ui';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },

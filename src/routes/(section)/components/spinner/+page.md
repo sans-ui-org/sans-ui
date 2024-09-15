@@ -33,7 +33,7 @@ Import a Spinner component in the script tag.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 ```
 
@@ -47,7 +47,7 @@ Import a Spinner component in the script tag.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner>Spinner</Spinner>
@@ -71,7 +71,7 @@ Spinners has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner variant="primary" />
@@ -97,7 +97,7 @@ Spinners has `kind` prop to defines the kind of spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner kind="loader1" />
@@ -121,7 +121,7 @@ Spinners has `size` prop to defines the size of spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner size="sm" />

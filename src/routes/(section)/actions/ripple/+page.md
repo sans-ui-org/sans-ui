@@ -26,7 +26,7 @@ Import `createRipple` action in the script tag.
 
 ```svelte
 <script>
-	import { createRipple } from '$lib';
+	import { createRipple } from '@sans-ui/actions';
 </script>
 ```
 
@@ -42,7 +42,7 @@ For example, we can play `createRipple` transition effect, make sure that `posit
 
 ```svelte
 <script>
-	import { createRipple } from '$lib';
+	import { createRipple } from '@sans-ui/actions';
 
 	const ripple = createRipple();
 </script>

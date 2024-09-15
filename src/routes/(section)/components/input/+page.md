@@ -41,7 +41,7 @@ Import a Input component in the script tag.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 ```
 
@@ -59,7 +59,7 @@ Use this example as a generic form element which includes multiple input fields 
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input label="This is label" placeholder="Please type something here" />
@@ -83,7 +83,7 @@ Input has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input variant="primary" placeholder="Please type something here" />
@@ -107,7 +107,7 @@ Input has `label` prop defines the label of the input.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input label="This is label" placeholder="Please type something here" />
@@ -127,7 +127,7 @@ Input has `value` prop that defines the value of the input.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input value="hello world" placeholder="Please type something here" />
@@ -149,7 +149,7 @@ Input has `size` prop defines the size of the input.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input size="sm" placeholder="Please type something here" />
@@ -175,7 +175,7 @@ Input has `rounded` prop to update Input component's border-radius.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Input rounded="none" placeholder="Please type something here" />
@@ -199,7 +199,7 @@ Input has `disabled` prop that defines if the input is disabled.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input disabled={true} placeholder="Please type something here" />
@@ -219,7 +219,7 @@ Input has `readonly` prop that defines if the input is readonly.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input readonly={true} placeholder="Please type something here" />
@@ -239,7 +239,7 @@ Input has `clearable` prop that controls the clear button for Input component. (
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input clearable={true} placeholder="Please type something here" />
@@ -259,7 +259,7 @@ Input has `animation` prop that controls whether the input has animation or not.
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input animation={false} placeholder="Please type something here" />
@@ -279,7 +279,7 @@ Input has `maxCount` prop that defines the text limitation of your Input compone
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input maxCount={25} placeholder="Please type something here" />
@@ -299,7 +299,7 @@ Input has `invalid` prop that defines if the input is invalid. And `invalidText`
 
 ```svelte
 <script>
-	import { Input } from '$lib';
+	import { Input } from '@sans-ui';
 </script>
 
 <Input

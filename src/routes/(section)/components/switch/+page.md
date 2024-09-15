@@ -36,7 +36,7 @@ Import a Switch component in the script tag.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 ```
 
@@ -50,7 +50,7 @@ Import a Switch component in the script tag.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch label="This is label" textForOn="On" textForOff="Off" />
@@ -74,7 +74,7 @@ Switch has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch
@@ -130,7 +130,7 @@ Switch has `size` prop to decide the sizes of it.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch size="sm" label="This is sm" textForOn="On" textForOff="Off" defaultToggled={true} />
@@ -150,7 +150,7 @@ Switch has `defaultToggled` prop that defines the default toggled value of the s
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch defaultToggled={true} label="This is label" textForOn="On" textForOff="Off" />
@@ -168,7 +168,7 @@ Switch has `disabled` prop that defines readonly state of the switch.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch disabled={true} label="This is label" textForOn="On" textForOff="Off" />
@@ -186,7 +186,7 @@ Switch has `readonly` prop that defines readonly state of the switch.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch readonly={true} label="This is label" textForOn="On" textForOff="Off" />
@@ -204,7 +204,7 @@ Switch has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch
@@ -228,7 +228,7 @@ Switch has `animation` prop that defines if the input has animation.
 
 ```svelte
 <script>
-	import { Switch } from '$lib';
+	import { Switch } from '@sans-ui';
 </script>
 
 <Switch animation={false} label="This is label" textForOn="On" textForOff="Off" />

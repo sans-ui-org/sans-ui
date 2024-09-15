@@ -35,7 +35,7 @@ Import a Tooltip component in the script tag.
 
 ```svelte
 <script>
-	import { Tooltip } from '$lib';
+	import { Tooltip } from '@sans-ui';
 </script>
 ```
 
@@ -51,7 +51,7 @@ Use the Tooltip component to show extra description when hovering or focusing on
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" size="md">
@@ -77,7 +77,7 @@ Tooltip has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" variant="primary">
@@ -113,7 +113,7 @@ Tooltip has `size` prop to decide the size of it.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" variant="primary">
@@ -150,7 +150,7 @@ Tooltip has `position` prop to decide the position of it.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" position="top"><Button>top</Button></Tooltip>
@@ -173,7 +173,7 @@ Tooltip has `trackable` prop to define if the tooltip is trackable.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" trackable><Button>trackable</Button></Tooltip>
@@ -194,7 +194,7 @@ Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the too
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '$lib';
+	import { Tooltip, Button } from '@sans-ui';
 </script>
 
 <Tooltip title="This is title" delayToOpen={300}><Button>Delay Open</Button></Tooltip>

@@ -34,7 +34,7 @@ Import a Progress component in the script tag.
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 ```
 
@@ -50,7 +50,7 @@ The Progress component allows you to express how much percentage/number by using
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress value={70} />
@@ -74,7 +74,7 @@ Progress has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress variant="primary" />
@@ -96,7 +96,7 @@ Progress has `size` prop to decide the size theme of it. (Unlike any other compo
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress size={100} />
@@ -114,7 +114,7 @@ Progress has `trackWidth` prop to decide the tracker circle's width. (Progress a
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress size={10} />
@@ -132,7 +132,7 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress value={40} customInnerLabel="40 Mbps" />

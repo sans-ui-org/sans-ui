@@ -39,7 +39,7 @@ Import a Textarea component in the script tag.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 ```
 
@@ -61,7 +61,7 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea label="This is label" variant="primary" placeholder="Please type something here" />
@@ -85,7 +85,7 @@ Textarea has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea variant="success" label="This is label" placeholder="Please type something here" />
@@ -105,7 +105,7 @@ Textarea has `value` prop that defines the value of the input.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea value="hello world" placeholder="Please type something here" />
@@ -127,7 +127,7 @@ Textarea has `size` prop defines the font size of the input.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea size="sm" placeholder="Please type something here" />
@@ -153,7 +153,7 @@ Textarea has `rounded` prop defines the roundness of the input.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea rounded="none" placeholder="Please type something here" />
@@ -177,7 +177,7 @@ Textarea has `disabled` prop that defines if the input is disabled.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea disabled={true} placeholder="Please type something here" />
@@ -197,7 +197,7 @@ Textarea has `readonly` prop that defines if the input is readonly.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea readonly={true} placeholder="Please type something here" />
@@ -217,7 +217,7 @@ Textarea has `animation` prop that defines if the input has animation or not.
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea animation={false} placeholder="Please type something here" />
@@ -237,7 +237,7 @@ Textarea has `maxCount` prop that defines the text limitation of your Textarea c
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea value="hello world" maxCount={25} placeholder="Please type something here" />
@@ -257,7 +257,7 @@ Textarea has `invalid` prop that defines if the input is invalid. And `invalidTe
 
 ```svelte
 <script>
-	import { Textarea } from '$lib';
+	import { Textarea } from '@sans-ui';
 </script>
 
 <Textarea

@@ -34,7 +34,7 @@ Import `typewriter` action in the script tag.
 
 ```svelte
 <script>
-	import { typewriter } from '$lib';
+	import { typewriter } from '@sans-ui/actions';
 </script>
 ```
 
@@ -55,7 +55,7 @@ Contributions are more than welcome! ^\_^
 ```svelte
 <script>
 	import { onMount } from 'svelte';
-	import { typewriter } from '$lib';
+	import { typewriter } from '@sans-ui/actions';
 
 	let showTitle = false;
 	onMount(() => {

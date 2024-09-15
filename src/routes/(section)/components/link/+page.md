@@ -40,7 +40,7 @@ Import a Link component in the script tag.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 ```
 
@@ -56,7 +56,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link href="https://github.com/s-ui-org/s-ui" target="_blank">
@@ -82,7 +82,7 @@ Link has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank"
@@ -125,7 +125,7 @@ Link has `size` prop to decide the font size of Link component.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is sm</Link>
@@ -162,7 +162,7 @@ Link has `bold` prop to decide the font weight of Link component.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
@@ -206,7 +206,7 @@ Link has `underline` prop to decide the text decoration(underline) of the link.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
@@ -235,7 +235,7 @@ Link has `disabled` prop to defines if the link is disalbe.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link disabled={true} href="https://github.com/s-ui-org/s-ui" target="_blank">
@@ -255,7 +255,7 @@ Link has `external` prop to defines if the Link is an extrnal link.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link external={true} href="https://github.com/s-ui-org/s-ui"
@@ -275,7 +275,7 @@ Link has `windowIcon` prop to defines if the Link has a window icon.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link windowIcon external href="https://github.com/s-ui-org/s-ui"
@@ -295,7 +295,7 @@ Link has `animation` prop to defines if the link's animation is disabled or not.
 
 ```svelte
 <script>
-	import { Link } from '$lib';
+	import { Link } from '@sans-ui';
 </script>
 
 <Link disabled href="https://github.com/s-ui-org/s-ui" animation={false}

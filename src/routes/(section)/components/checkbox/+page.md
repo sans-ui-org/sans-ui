@@ -36,7 +36,7 @@ Import a Checkbox component in the script tag.
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 ```
 
@@ -52,7 +52,7 @@ The checkbox component can be used to receive one or more selected options from 
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox />
@@ -76,7 +76,7 @@ Checkbox has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox checked variant="primary" />
@@ -102,7 +102,7 @@ Checkbox has `size` prop to decide the size of it.
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <div class="flex flex-row gap-2">
@@ -124,7 +124,7 @@ Checkbox has `disabled` prop to disable your Checkbox component
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox checked disabled />
@@ -142,7 +142,7 @@ Checkbox has `checked` prop to have Checkbox component's default check state to 
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox checked />
@@ -160,7 +160,7 @@ Checkbox has `indeterminate` prop to get Checkbox component's check state to be 
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox indeterminate />
@@ -178,7 +178,7 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 ```svelte
 <script>
-	import { Checkbox } from '$lib';
+	import { Checkbox } from '@sans-ui';
 </script>
 
 <Checkbox animation={false} />

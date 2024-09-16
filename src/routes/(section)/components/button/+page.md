@@ -38,7 +38,7 @@ Import a button component in the script tag.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 ```
 
@@ -54,7 +54,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button>Button</Button>
@@ -78,7 +78,7 @@ Buttons has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button variant="primary">Button</Button>
@@ -104,7 +104,7 @@ Buttons has `size` prop to decide the size of it.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button size="sm">Button</Button>
@@ -129,7 +129,7 @@ Buttons has `kind` prop to decide the kind of Button component.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button kind="solid">Solid</Button>
@@ -156,7 +156,7 @@ Buttons has `rounded` prop to update Button component's border-radius.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button rounded="none">rounded none</Button>
@@ -178,7 +178,7 @@ Buttons has `disabled` prop to disable Button component.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button disabled>Button</Button>
@@ -196,7 +196,7 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button rippled={false}>Button</Button>
@@ -214,7 +214,7 @@ Buttons has `animation` prop to control the Button's background color transition
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button animation={false}>Button</Button>
@@ -239,7 +239,7 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button iconOnly={true}>

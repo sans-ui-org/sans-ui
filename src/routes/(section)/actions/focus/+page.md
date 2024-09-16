@@ -29,7 +29,7 @@ We offer `focusTrap` and `autoFocus` action in the script tag.
 
 ```svelte
 <script>
-	import { focusTrap, autoFocus } from '$lib';
+	import { focusTrap, autoFocus } from '@sans-ui/actions';
 </script>
 ```
 
@@ -57,7 +57,8 @@ We offer `focusTrap` and `autoFocus` action in the script tag.
 
 ```svelte
 <script>
-	import { Button, focusTrap } from '$lib';
+	import { Button } from '@sans-ui';
+	import { focusTrap } from '@sans-ui/actions';
 
 	let open = false;
 	const toggle = () => {

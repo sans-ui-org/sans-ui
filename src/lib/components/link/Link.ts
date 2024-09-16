@@ -2,8 +2,8 @@ import { tv } from '$lib/utils/tv';
 
 export const linkVariant = tv({
 	slots: {
-		base: ['s-ui--link--base', 'inline-flex flex-row items-center'],
-		icon: ['s-ui--link--icon']
+		base: ['sans-ui--link--base', 'inline-flex flex-row items-center'],
+		icon: ['sans-ui--link--icon']
 	},
 	variants: {
 		variant: {

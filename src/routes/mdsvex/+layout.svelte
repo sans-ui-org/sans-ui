@@ -29,7 +29,7 @@
 	});
 </script>
 
-<Meta title={`S-UI - ${title}`} {description} />
+<Meta title={`SanS-UI - ${title}`} {description} />
 
 <div class="flex flex-col w-[calc(100%-480px)] px-12 py-8 divide-y divide-gray-200 overflow-y-auto">
 	<DocHeader {title} {description} {category} {githubFolder} />

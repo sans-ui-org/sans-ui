@@ -2,13 +2,13 @@ import { tv } from '$lib/utils/tv';
 
 export const switchVariant = tv({
 	slots: {
-		wrapper: ['s-ui--switch--wrapper', 'flex flex-col gap-2 font-normal'],
-		label: ['s-ui--switch--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
-		switchWrapper: ['s-ui--switch--swtichWrapper', 'flex flex-row gap-2 items-center'],
-		base: ['s-ui--switch--base', 'rounded-full flex items-center'],
-		switchChip: ['s-ui--switch--switchChip', 'border border-gray-400 rounded-full'],
-		switchText: ['s-ui--switch--switchText', 'font-medium text-neutral-600 dark:text-neutral-200'],
-		invalid: ['s-ui--switch--invalid', 'text-sm text-red-500 mt-1']
+		wrapper: ['sans-ui--switch--wrapper', 'flex flex-col gap-2 font-normal'],
+		label: ['sans-ui--switch--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		switchWrapper: ['sans-ui--switch--swtichWrapper', 'flex flex-row gap-2 items-center'],
+		base: ['sans-ui--switch--base', 'rounded-full flex items-center'],
+		switchChip: ['sans-ui--switch--switchChip', 'border border-gray-400 rounded-full'],
+		switchText: ['sans-ui--switch--switchText', 'font-medium text-neutral-600 dark:text-neutral-200'],
+		invalid: ['sans-ui--switch--invalid', 'text-sm text-red-500 mt-1']
 	},
 	variants: {
 		variant: {

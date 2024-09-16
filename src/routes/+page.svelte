@@ -20,9 +20,9 @@
 <main class="block">
 	<!-- Hero section -->
 	<div class="w-full flex flex-col items-center gap-16 p-8 my-36">
-		<h1 class="text-5xl font-light dark:text-white">Welcome to S-UI.</h1>
+		<h1 class="text-5xl font-light dark:text-white">Welcome to SanS-UI.</h1>
 		<h3 class="text-xl font-light text-cente dark:text-neutral-200">
-			This is an official S-UI library documentation.<br />
+			This is an official SanS-UI library documentation.<br />
 			{#if showTitle}
 				<span
 					class="text-xl font-light text-center dark:text-neutral-200"
@@ -53,9 +53,9 @@
 	<!-- Contributors -->
 	<div class="flex flex-col items-center mx-32 my-16">
 		<div class="flex flex-col gap-8 mb-14 text-center">
-			<h3 class="text-4xl font-light dark:text-white">S-UI Contributors</h3>
+			<h3 class="text-4xl font-light dark:text-white">SanS-UI Contributors</h3>
 			<p class="text-xl text-gray-500 dark:text-neutral-200">
-				Let's join the open-source community by contributing to S-UI and become one of the
+				Let's join the open-source community by contributing to SanS-UI and become one of the
 				highlighted members.
 			</p>
 		</div>

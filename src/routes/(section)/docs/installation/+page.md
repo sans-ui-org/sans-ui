@@ -1,13 +1,13 @@
 ---
 layout: componentLayout
 title: Let's install.
-description: This is the installation procedure of S-UI library to make sure that you are ready to use this library!
+description: This is the installation procedure of SanS-UI library to make sure that you are ready to use this library!
 category: documentation
 toc: [
 			{ slug: 'before-you-install', title: 'Before you install', level: 0 },
 			{ slug: 'for-svelte', title: 'For Svelte', level: 1 },
 			{ slug: 'for-svelte-kit', title: 'For SvelteKit', level: 1 },
-			{ slug: 'let’s-install-s-ui', title: "Let's install S-UI", level: 0 },
+			{ slug: 'let’s-install-SanS-UI', title: "Let's install SanS-UI", level: 0 },
 			{ slug: 'you-are-ready!', title: "You are ready!", level: 0 },
 		]
 ---
@@ -20,7 +20,7 @@ toc: [
 
 ## Before you install
 
-Before you install S-UI into your project, make sure that your project is based on Svelte/Svelte Kit.
+Before you install SanS-UI into your project, make sure that your project is based on Svelte/Svelte Kit.
 If you haven't initialized your Svelte project...
 
 ### For Svelte
@@ -49,27 +49,27 @@ cd my-app
 
 </CodeBlockWrapper>
 
-## Let's install S-UI
+## Let's install SanS-UI
 
-To install S-UI into your project, we need to run this command.
+To install SanS-UI into your project, we need to run this command.
 
 <CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 # For NPM
-npm install s-ui
+npm install sans-ui
 
 # For YARN
-yarn add s-ui
+yarn add sans-ui
 
 # For PNPM
-pnpm install s-ui
+pnpm install sans-ui
 ```
 
 </CodeBlockWrapper>
 
 ## You are ready!
 
-You are ready to use S-UI! Let's take a look at each component so we can understand <Link href="/components/button">how to use them</Link>!
+You are ready to use SanS-UI! Let's take a look at each component so we can understand <Link href="/components/button">how to use them</Link>!
 
 <!-- TODO: Next page nevigator -> navigate the users to the page that you intended. -->

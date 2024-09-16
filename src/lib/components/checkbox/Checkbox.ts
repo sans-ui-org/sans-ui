@@ -3,7 +3,7 @@ import { tv } from '$lib/utils/tv';
 export const checkboxVariant = tv({
 	slots: {
 		base: [
-			's-ui--checkbox--base',
+			'sans-ui--checkbox--base',
 			'grid place-content-center appearance-none bg-transparent m-0 border-2 border-solid border-neutral-600 rounded-md cursor-pointer -translate-y-[0.075em]',
 			'transition-colors duration-100 ease-out',
 			'before:content-[""] before:bg-neutral-100',

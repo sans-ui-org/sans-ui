@@ -6,7 +6,7 @@ export default create({
 	fontBase: '"Raleway", "Roboto", "Helvetica Neue"',
 	fontCode: 'monospace',
 
-	brandTitle: 'S-UI release 0.0.1',
+	brandTitle: 'SanS-UI release 0.0.1',
 	brandUrl: 'https://example.com',
 	// TODO: Can be created by Canva: https://www.canva.com/
 	// brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',

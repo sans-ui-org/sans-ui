@@ -6,23 +6,24 @@ category: component
 githubFolder: /modal/Modal.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
-			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'dismissible', title: 'Dismissible', level: 0 },
-			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: 'usage', title: 'Usage', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'dismissible', title: 'Dismissible', level: 1 },
+			{ slug: 'animation', title: 'Animation', level: 1 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'modal-props', title: 'Modal Props', level: 1 },
+			{ slug: 'modal-handlers', title: 'Modal Handlers', level: 1 },
 			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button, Modal } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
-	import ModalTemplate from "../../../../stories/modal/examples/ModalTemplate.svelte"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import ModalTemplate from "../../../../stories/modal/templates/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import { modalProps, modalSlots } from "./modal-props.ts"
+	import { modalProps, modalHandlers, modalSlots } from "./modal-props.ts"
 
 </script>
 
@@ -174,6 +175,10 @@ Modal provides APIs(Properties) that is necessary for you to configure a Modal c
 ### Modal Props
 
 <PropertyTable properties={modalProps} />
+
+### Modal Handlers
+
+<HandlerTable handlers={modalHandlers} />
 
 ### Modal Slots
 

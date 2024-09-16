@@ -14,11 +14,6 @@ describe('Select component', async () => {
 		expect(screen.getByRole('combobox')).toBeTruthy();
 	});
 
-	test('should render select label correctly', async () => {
-		render(Select, { label: 'this is label', options });
-		expect(screen.getByText('this is label')).toBeTruthy();
-	});
-
 	test('should have disabled attribute', async () => {
 		const select = render(Select, { id: 'select_id', options, disabled: true });
 

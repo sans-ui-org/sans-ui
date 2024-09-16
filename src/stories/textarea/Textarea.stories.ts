@@ -1,10 +1,10 @@
-import { Textarea } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import TextareaTemplate from './templates/TextareaTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Textarea',
-	component: Textarea,
+	component: TextareaTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -20,11 +20,6 @@ const meta = {
 			}
 		},
 		placeholder: {
-			control: {
-				type: 'text'
-			}
-		},
-		label: {
 			control: {
 				type: 'text'
 			}
@@ -65,7 +60,7 @@ const meta = {
 			page: null
 		}
 	}
-} satisfies Meta<Textarea>;
+} satisfies Meta<TextareaTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

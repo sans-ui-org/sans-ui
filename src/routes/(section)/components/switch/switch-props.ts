@@ -61,6 +61,19 @@ export const switchProps = [
 	}
 ];
 
+export const switchHandlers = [
+	{
+		name: 'on:toggle',
+		type: '(toggled: boolean) => void',
+		description: "When the switch is toggled. The switch's state is passed as an argument."
+	},
+	{
+		name: 'on:click',
+		type: '(toggled: boolean, event: MouseEvent) => void',
+		description: "When the switch is clicked. The switch's value is passed as an argument."
+	}
+];
+
 export const switchSlots = [
 	{
 		name: 'base',

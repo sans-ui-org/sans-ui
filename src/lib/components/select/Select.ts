@@ -2,7 +2,6 @@ import { tv } from '$lib/utils/tv';
 
 export const selectVariant = tv({
 	slots: {
-		label: ['sans-ui--select-label', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		base: [
 			'sans-ui--base-label',
 			'relative border mt-1 bg-white',

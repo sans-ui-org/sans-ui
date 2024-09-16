@@ -9,15 +9,10 @@ describe('Input component', async () => {
 		expect(screen.getByRole('textbox')).toBeTruthy();
 	});
 
-	test('should render input label correctly', async () => {
-		render(Input, { label: 'Label is here' });
-		expect(screen.getByText('Label is here')).toBeTruthy();
-	});
-
 	//placeholder
 	test('should render input placeholder correctly', async () => {
-		render(Input, { label: 'Placeholder is here' });
-		expect(screen.getByText('Placeholder is here')).toBeTruthy();
+		render(Input, { placeholder: 'Placeholder is here' });
+		expect(screen.getByPlaceholderText('Placeholder is here')).toBeTruthy();
 	});
 
 	//animation
@@ -152,18 +147,11 @@ describe('Input component', async () => {
 	});
 
 	//maxCount
-	test('should display correct maxCount and show the number of digits that a user entered as long as it does exceed the limit', async () => {
-		const userInpput = render(Input, { maxCount: 12 });
-		await user.click(userInpput.getByRole('textbox'));
-		await user.keyboard('foo');
-		expect(userInpput.getByText('3/12')).toBeTruthy();
-	});
-
 	test('only show the maxcount even the input exceeds the maxCount will not show up', async () => {
-		const userInpput = render(Input, { maxCount: 1 });
+		const userInpput = render(Input, { maxCount: 3 });
 		await user.click(userInpput.getByRole('textbox'));
-		await user.keyboard('foo');
-		expect(userInpput.getByText('1/1')).toBeTruthy();
+		await user.keyboard('fooo');
+		expect(userInpput.getByDisplayValue('foo')).toBeTruthy();
 	});
 
 	//invalid
@@ -181,18 +169,12 @@ describe('Input component', async () => {
 
 	//invalidText
 	test('should render input invalidText correctly', async () => {
-		render(Input, { label: 'This is invalid text' });
+		render(Input, { invalid: true, invalidText: 'This is invalid text' });
 		expect(screen.getByText('This is invalid text')).toBeTruthy();
 	});
 
 	// TODO:
 	//value
-
-	// TODO:
-	//startContent
-
-	// TODO:
-	//endContent
 
 	// TODO: Add tests for Button component
 	// on:click

@@ -21,6 +21,19 @@ export const modalProps = [
 	}
 ];
 
+export const modalHandlers = [
+	{
+		name: 'on:keydown',
+		type: 'KeyboardEventHandler',
+		description: 'A key is pressed down.'
+	},
+	{
+		name: 'on:mousedown',
+		type: 'MouseEventHandler',
+		description: 'A pointing device button (usually a mouse) is pressed on an element.'
+	}
+];
+
 export const modalSlots = [
 	{
 		name: 'base',

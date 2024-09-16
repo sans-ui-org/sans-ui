@@ -7,26 +7,28 @@ githubFolder: /button/Button.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'kind', title: 'Kind', level: 0 },
-			{ slug: 'rounded', title: 'Rounded', level: 0 },
-			{ slug: 'disabled', title: 'Disabled', level: 0 },
-			{ slug: 'rippled', title: 'Rippled', level: 0 },
-			{ slug: 'animation', title: 'Animation', level: 0 },
-			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'kind', title: 'Kind', level: 1 },
+			{ slug: 'rounded', title: 'Rounded', level: 1 },
+			{ slug: 'disabled', title: 'Disabled', level: 1 },
+			{ slug: 'rippled', title: 'Rippled', level: 1 },
+			{ slug: 'animation', title: 'Animation', level: 1 },
+			{ slug: 'icon-button', title: 'Icon Button', level: 1 },
+			{ slug: 'button-as-link', title: 'Button as Link', level: 1 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
+			{ slug: 'button-handlers', title: 'Button Handlers', level: 1 },
 			{ slug: 'button-slots', title: 'Button Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button, Link } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import { buttonProps, buttonSlots } from "./button-props.ts"
+	import { buttonProps, buttonHandlers, buttonSlots } from "./button-props.ts"
 
 </script>
 
@@ -222,6 +224,26 @@ Buttons has `animation` prop to control the Button's background color transition
 
 </CodeBlockWrapper>
 
+## Button as Link
+
+If you provide `href` property, Button can be play a role as `link` element. Thus, even you can utilize a Button component as a link to navigate end users to another page or section.
+
+<Button href="https://github.com/sans-ui-org/sans-ui" rel='noopener noreferrer' target='_blank'>Link to External</Button>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '@sans-ui';
+</script>
+
+<Button href="https://github.com/sans-ui-org/sans-ui" rel="noopener noreferrer" target="_blank"
+	>Link to External</Button
+>
+```
+
+</CodeBlockWrapper>
+
 ## Icon Button
 
 You can turn our Button component into Icon Button component by passing `iconOnly` as `true`.
@@ -264,6 +286,10 @@ Button provides APIs(Properties) that is necessary for you to configure a Button
 ### Button Props
 
 <PropertyTable properties={buttonProps} />
+
+### Button Handlers
+
+<HandlerTable handlers={buttonHandlers} />
 
 ### Button Slots
 

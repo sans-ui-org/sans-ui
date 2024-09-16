@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	export type Option = {
 		label: string;
-		value: string | number | boolean | symbol;
+		value: string | number | boolean | symbol | object | null | undefined;
 	};
 </script>
 
@@ -18,6 +18,7 @@
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { selectVariant, type SelectSlots } from '$lib/components/select/Select';
 	import { cn } from '$lib/utils/cn';
+	import { createEventDispatcher } from 'svelte';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -29,7 +30,6 @@
 		rounded?: ComponentRounded;
 		defaultSelected?: Option;
 		options: Option[];
-		label?: string;
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
@@ -60,10 +60,6 @@
 	 * Property that defines the options of the select.
 	 */
 	export let options: Option[] = [];
-	/**
-	 * Property that defines the label of the select.
-	 */
-	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines the placeholder of the select.
 	 */
@@ -123,23 +119,20 @@
 	});
 
 	// handlers
+	const dispatcher = createEventDispatcher();
+	// on-toggle
 	const onToggle = () => {
 		open = !open;
 		if (!open) focus = null;
+		dispatcher('toggle', open);
 	};
-	const onCloseByClickingOutside = (e: MouseEvent) => {
-		if (open && !containerElement.contains(e.target as Node)) {
-			open = false;
-		}
-	};
+	// on-select
 	const onSelectByClicking = (option: Option) => {
 		if (readonly) return;
 		selected = selected !== option ? option : null;
 		open = false;
 		focus = null;
-	};
-	const onClose = () => {
-		open = false;
+		dispatcher('select', selected);
 	};
 	const onSelect = () => {
 		if (readonly) return;
@@ -147,28 +140,37 @@
 			const option = options[focus];
 			selected = selected !== option ? option : null;
 			focus = null;
+			dispatcher('select', selected);
 		}
 	};
+	// on-close
+	const onCloseByClickingOutside = (e: MouseEvent) => {
+		if (open && !containerElement.contains(e.target as Node)) {
+			open = false;
+			dispatcher('close', open);
+		}
+	};
+	const onClose = () => {
+		open = false;
+		dispatcher('close', open);
+	};
+	// on-mousedown, on-mouseup
 	const onMoveDown = () => {
 		if (!open) return;
 		const index =
 			focus !== null ? focus : options.findIndex((option) => option.value === selected?.value);
 		if (index < options.length - 1) focus = index + 1;
+		dispatcher('mousedown');
 	};
 	const onMoveUp = () => {
 		if (!open) return;
 		const index =
 			focus !== null ? focus : options.findIndex((option) => option.value === selected?.value);
 		if (index > 0) focus = index - 1;
+		dispatcher('mouseup');
 	};
 </script>
 
-<!-- Label -->
-{#if label && label !== ''}
-	<label class={cn(slots.label({ size, invalid }), classes.label)} for={id} aria-labelledby={id}
-		>{label}</label
-	>
-{/if}
 <div
 	{id}
 	aria-label={id}
@@ -228,6 +230,7 @@
 		{/each}
 	</ul>
 </div>
+
 <!-- Invalid -->
 {#if invalid && invalidText && invalidText !== ''}
 	<p class={cn(slots.invalidText({}), classes.invalidText)}>{invalidText}</p>

@@ -41,6 +41,40 @@ export const buttonProps = [
 	}
 ];
 
+export const buttonHandlers = [
+	{
+		name: 'on:click',
+		type: 'MouseEventHandler',
+		description: 'Button click handler'
+	},
+	{
+		name: 'on:change',
+		type: 'FormEventHandler',
+		description:
+			'The change event is fired for , , and elements when a change to the element value is committed by the user.'
+	},
+	{
+		name: 'on:keydown',
+		type: 'KeyboardEventHandler',
+		description: 'A key is pressed down.'
+	},
+	{
+		name: 'on:keyup',
+		type: 'KeyboardEventHandler',
+		description: 'A key is released.'
+	},
+	{
+		name: 'on:mouseenter',
+		type: 'MouseEventHandler',
+		description: 'A pointing device is moved onto the element that has the listener attached.'
+	},
+	{
+		name: 'on:mouseleave',
+		type: 'MouseEventHandler',
+		description: 'A pointing device is moved off the element that has the listener attached.'
+	}
+];
+
 export const buttonSlots = [
 	{
 		name: 'base',

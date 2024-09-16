@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import TooltipTemplate from './examples/TooltipTemplate.svelte';
+import TooltipTemplate from './templates/TooltipTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {

@@ -76,6 +76,15 @@ export const textareaProps = [
 	}
 ];
 
+export const textareaHandlers = [
+	{
+		name: 'on:input',
+		type: '(event: Event) => void',
+		description:
+			"Callback to invoke when user types in the textarea. It's used to update the value."
+	}
+];
+
 export const textareaSlots = [
 	{
 		name: 'base',

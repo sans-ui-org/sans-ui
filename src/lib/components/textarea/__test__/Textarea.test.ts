@@ -10,16 +10,10 @@ describe('Textarea component', async () => {
 		expect(screen.getByRole('textbox')).toBeTruthy();
 	});
 
-	//label
-	test('should render textarea label correctly', async () => {
-		render(Textarea, { label: 'Label' });
-		expect(screen.getByText('Label')).toBeTruthy();
-	});
-
 	//placeholder
 	test('should render input placeholder correctly', async () => {
-		render(Textarea, { label: 'Placeholder is here' });
-		expect(screen.getByText('Placeholder is here')).toBeTruthy();
+		render(Textarea, { placeholder: 'Placeholder is here' });
+		expect(screen.getByPlaceholderText('Placeholder is here')).toBeTruthy();
 	});
 
 	//disabled
@@ -125,7 +119,7 @@ describe('Textarea component', async () => {
 
 	//invalidText
 	test('should render invalid text correctly', async () => {
-		render(Textarea, { label: 'This is invalid text' });
+		render(Textarea, { invalid: true, invalidText: 'This is invalid text' });
 		expect(screen.getByText('This is invalid text')).toBeTruthy();
 	});
 
@@ -147,9 +141,10 @@ describe('Textarea component', async () => {
 	//maxCount
 	test('should display correct maxCount and show the number of digits that a user entered as long as it does exceed the limit', async () => {
 		const user = userEvent.setup();
-		const userTextarea = render(Textarea, { maxCount: 10 });
+		const userTextarea = render(Textarea, { maxCount: 5 });
 		await user.click(userTextarea.getByRole('textbox'));
-		await user.keyboard('qqq');
-		expect(screen.getByText('3/10')).toBeTruthy();
+		await user.keyboard('hello world');
+
+		expect(screen.getByDisplayValue('hello')).toBeTruthy();
 	});
 });

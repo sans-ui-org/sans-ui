@@ -16,15 +16,13 @@
 		indeterminate?: boolean;
 		animation?: boolean;
 	}
-
-	console.log($$props.checked);
 </script>
 
 <div class="canvas">
-	<div class="field">
+	<label class="field" for="my-checkbox">
 		<Checkbox id="my-checkbox" {...$$props} />
-		<label for="my-checkbox">Checkbox</label>
-	</div>
+		This is a checkbox
+	</label>
 </div>
 
 <style>

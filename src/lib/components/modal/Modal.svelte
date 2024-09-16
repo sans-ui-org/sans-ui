@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { autoFocus, focusTrap } from '$lib/actions/focus';
-	import { setContext } from 'svelte';
+	import { createEventDispatcher, setContext } from 'svelte';
 	import { modalVariant } from './Modal';
 	import { cn } from '$lib/utils/cn';
 	import { fly } from 'svelte/transition';
@@ -38,17 +38,26 @@
 	// tailwind-variants
 	const slots = modalVariant({ open, size });
 
+	const dispatcher = createEventDispatcher();
+
 	// handlers
-	const onOutsideClose = (e: MouseEvent) => {
-		const target: Element = e.target as Element;
-		if (target === e.currentTarget && dismissible) hide(e); // close on click outside
-	};
 	const hide = (e: Event) => {
 		e.preventDefault();
 		open = false;
 	};
-	const handleKeys = (e: KeyboardEvent) => {
-		if (e.key === 'Escape') return hide(e);
+
+	const onOutsideClose = (e: MouseEvent) => {
+		const target: Element = e.target as Element;
+		if (target === e.currentTarget && dismissible) {
+			hide(e); // close on click outside
+			dispatcher('mousedown', e);
+		}
+	};
+	const onKeyDown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			hide(e);
+			dispatcher('keydown', e);
+		}
 	};
 
 	// set context
@@ -64,7 +73,7 @@
 		role="dialog"
 		aria-modal="true"
 		class={slots.base({ open, size })}
-		on:keydown={handleKeys}
+		on:keydown={onKeyDown}
 		on:mousedown={onOutsideClose}
 		transition:fly={{ y: animation ? 200 : 0, duration: animation ? 600 : 0 }}
 		use:focusTrap

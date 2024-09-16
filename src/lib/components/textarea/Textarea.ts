@@ -9,7 +9,7 @@ export const textareaVariant = tv({
 		label: ['sans-ui--textarea--label', 'font-medium text-neutral-600 dark:text-neutral-200'],
 		base: [
 			'sans-ui--textarea--base',
-			'font-normal bg-gray-100 border-gray-200 px-3 py-2 mt-2 w-full resize-none border-2',
+			'font-normal bg-gray-100 border-gray-200 px-3 py-2 w-full resize-none border-2',
 			'hover:bg-gray-200',
 			'focus-visible:bg-gray-100 focus-visible:outline-0',
 			'dark:bg-neutral-600 dark:border-neutral-700 dark:text-neutral-100'

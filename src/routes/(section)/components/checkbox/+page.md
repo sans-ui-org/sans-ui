@@ -7,24 +7,25 @@ githubFolder: /checkbox/Checkbox.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'disabled', title: 'Disabled', level: 0 },
-			{ slug: 'default-checked', title: 'Default Checked', level: 0 },
-			{ slug: 'indeterminate', title: 'Indeterminate', level: 0 },
-			{ slug: 'animation', title: 'Animation', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'disabled', title: 'Disabled', level: 1 },
+			{ slug: 'default-checked', title: 'Default Checked', level: 1 },
+			{ slug: 'indeterminate', title: 'Indeterminate', level: 1 },
+			{ slug: 'animation', title: 'Animation', level: 1 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'checkbox-props', title: 'Checkbox Props', level: 1 },
+			{ slug: 'checkbox-handlers', title: 'Checkbox Handlers', level: 1 },
 			{ slug: 'checkbox-slots', title: 'Checkbox Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Checkbox } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import { checkboxSlots, checkboxProps } from "./checkbox-props.ts"
+	import { checkboxSlots, checkboxHandlers, checkboxProps } from "./checkbox-props.ts"
 
 </script>
 
@@ -202,6 +203,10 @@ Checkbox provides APIs(Properties) that is necessary for you to configure a Chec
 ### Checkbox Props
 
 <PropertyTable properties={checkboxProps} />
+
+### Checkbox Handlers
+
+<HandlerTable handlers={checkboxHandlers} />
 
 ### Checkbox Slots
 

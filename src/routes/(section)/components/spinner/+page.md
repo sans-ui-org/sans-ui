@@ -7,9 +7,9 @@ githubFolder: /spinner/Spinner.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'kind', title: 'Kind', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'kind', title: 'Kind', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },

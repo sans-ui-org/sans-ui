@@ -18,7 +18,6 @@
 		value?: string | number | undefined;
 		variant?: ComponentVariant;
 		size?: ComponentSize;
-		label?: string;
 		// required?: boolean;
 		disabled?: boolean;
 		readonly?: boolean;
@@ -54,10 +53,6 @@
 	 * Property that defines the rounded corners of the input.
 	 */
 	export let rounded: ComponentRounded = 'none';
-	/**
-	 * Property that defines the label of the input.
-	 */
-	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines if the input is required.
 	 */
@@ -107,10 +102,6 @@
 	 */
 	export let classes: SlotsToClasses<InputSlots> = {};
 
-	let charCounter: number;
-	$: charCounter = value ? value.toString().length : 0;
-	$: counterText = `${charCounter}/${maxCount}`;
-
 	// tailwind-variant
 	const slots = inputVariant({ variant, size, invalid, rounded, animation, disabled });
 
@@ -130,19 +121,6 @@
 	};
 </script>
 
-<!-- Label -->
-{#if label || maxCount}
-	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
-		{#if label}
-			<label for={id} class={cn(slots.label({ invalid, rounded }), classes.label)}>{label}</label>
-		{:else}
-			<label for={id} />
-		{/if}
-		{#if maxCount}
-			<span>{counterText}</span>
-		{/if}
-	</div>
-{/if}
 <!-- Input -->
 <div class={cn(slots.inputWrapper({ disabled }), classes.inputWrapper)}>
 	<!-- {#if startContent}

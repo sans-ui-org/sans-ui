@@ -66,6 +66,34 @@ export const selectProps = [
 	}
 ];
 
+export const selectHandlers = [
+	{
+		name: 'on:toggle',
+		type: '(open: boolean) => void',
+		description: 'When the dropdown is opened or closed.'
+	},
+	{
+		name: 'on:select',
+		type: '(selected: Option) => void',
+		description: "When an option is selected. The selected option's value is passed as an argument."
+	},
+	{
+		name: 'on:close',
+		type: '(open: boolean) => void',
+		description: "When the dropdown is closed. The dropdown's open state is passed as an argument."
+	},
+	{
+		name: 'on:mousedown',
+		type: '() => void',
+		description: 'A pointing device button (usually a mouse) is pressed on an element.'
+	},
+	{
+		name: 'on:mouseup',
+		type: '() => void',
+		description: 'A pointing device button (usually a mouse) is released over an element.'
+	}
+];
+
 export const selectSlots = [
 	{
 		name: 'base',

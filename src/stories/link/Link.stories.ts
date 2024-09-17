@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import LinkTemplate from './examples/LinkTemplate.svelte';
+import LinkTemplate from './templates/LinkTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 // one user clics "show the code" button

@@ -111,7 +111,7 @@
 	}
 
 	input:indeterminate::before {
-		clip-path: polygon(15% 42%, 15% 60%, 85% 60%, 85% 42%);
+		clip-path: polygon(15% 42%, 15% 64%, 85% 64%, 85% 42%);
 		transform: scale(1);
 	}
 </style>

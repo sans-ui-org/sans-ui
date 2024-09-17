@@ -4,7 +4,7 @@ export async function load() {
 			title: 'Documentation',
 			items: [
 				{
-					title: 'Getting started',
+					title: 'Getting Started',
 					slug: '/docs/getting-started'
 				},
 				{
@@ -66,11 +66,11 @@ export async function load() {
 			title: 'Action',
 			items: [
 				{
-					title: 'Focus',
+					title: 'Focus Trap',
 					slug: '/actions/focus'
 				},
 				{
-					title: 'TypeWriter',
+					title: 'Type Writer',
 					slug: '/actions/type-writer'
 				},
 				{

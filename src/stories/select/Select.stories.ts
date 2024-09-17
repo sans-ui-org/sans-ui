@@ -1,10 +1,10 @@
-import { Select } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import SelectTemplate from './templates/SelectTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Select',
-	component: Select,
+	component: SelectTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -60,7 +60,7 @@ const meta = {
 			page: null
 		}
 	}
-} satisfies Meta<Select>;
+} satisfies Meta<SelectTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

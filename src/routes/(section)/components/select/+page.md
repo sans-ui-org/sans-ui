@@ -7,26 +7,28 @@ githubFolder: /select/Select.svelte
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'rounded', title: 'Rounded', level: 0 },
-			{ slug: 'default-selected', title: 'Default Selected', level: 0 },
-			{ slug: 'disabled', title: 'Disabled', level: 0 },
-			{ slug: 'readonly', title: 'ReadOnly', level: 0 },
-			{ slug: 'animation', title: 'Animation', level: 0 },
-			{ slug: 'invalid', title: 'Invalid', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'rounded', title: 'Rounded', level: 1 },
+			{ slug: 'default-selected', title: 'Default Selected', level: 1 },
+			{ slug: 'disabled', title: 'Disabled', level: 1 },
+			{ slug: 'readonly', title: 'ReadOnly', level: 1 },
+			{ slug: 'animation', title: 'Animation', level: 1 },
+			{ slug: 'invalid', title: 'Invalid', level: 1 },
 			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'select-props', title: 'Select Props', level: 1 },
+			{ slug: 'select-handlers', title: 'Select Handlers', level: 1 },
 			{ slug: 'select-slots', title: 'Select Slots', level: 1 },
 		]
 ---
 
 <script>
 	import { Button, Select } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import SelectTemplate from "../../../../stories/select/templates/SelectTemplate.svelte"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import { selectProps, selectSlots } from "./select-props.ts"
+	import { selectProps, selectHandlers, selectSlots } from "./select-props.ts"
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -57,7 +59,7 @@ Import a Select component in the script tag.
 The select input component can be used to gather information from users based on multiple options in the form of a dropdown list
 
 <div class="w-[350px]">
-	<Select {options} label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} label='This is a label' placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -75,7 +77,10 @@ The select input component can be used to gather information from users based on
 	];
 </script>
 
-<Select {options} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -86,19 +91,19 @@ Select has `variant` prop to decide the color theme of it.
 
 <div class="flex flex-col gap-4">
 	<div class="w-[350px]">
-		<Select variant="primary" {options} label="This is a label" placeholder="Select an option" />
+		<SelectTemplate variant="primary" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 	<div class="w-[350px]">
-		<Select variant="secondary" {options} label="This is a label" placeholder="Select an option" />
+		<SelectTemplate variant="secondary" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 	<div class="w-[350px]">
-		<Select variant="success" {options} label="This is a label" placeholder="Select an option" />
+		<SelectTemplate variant="success" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 	<div class="w-[350px]">
-		<Select variant="warning" {options} label="This is a label" placeholder="Select an option" />
+		<SelectTemplate variant="warning" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 	<div class="w-[350px]">
-		<Select variant="danger" {options} label="This is a label" placeholder="Select an option" />
+		<SelectTemplate variant="danger" {options} label="This is a label" placeholder="Select an option" />
 	</div>
 </div>
 
@@ -116,11 +121,26 @@ Select has `variant` prop to decide the color theme of it.
 	];
 </script>
 
-<Select variant="primary" {options} label="This is a label" placeholder="Select an option" />
-<Select variant="secondary" {options} label="This is a label" placeholder="Select an option" />
-<Select variant="success" {options} label="This is a label" placeholder="Select an option" />
-<Select variant="warning" {options} label="This is a label" placeholder="Select an option" />
-<Select variant="danger" {options} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select variant="primary" {options} placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select variant="secondary" {options} placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select variant="success" {options} placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select variant="warning" {options} placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select variant="danger" {options} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -131,13 +151,13 @@ Select has `size` prop to decide the size of it.
 
 <div class="flex flex-row gap-4">
 	<div class="w-[250px]">
-		<Select {options} size="sm" label='This is sm' placeholder='Select an option' />
+		<SelectTemplate {options} size="sm" label='This is sm' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} size="md" label='This is md' placeholder='Select an option' />
+		<SelectTemplate {options} size="md" label='This is md' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} size="lg" label='This is lg' placeholder='Select an option' />
+		<SelectTemplate {options} size="lg" label='This is lg' placeholder='Select an option' />
 	</div>
 </div>
 
@@ -155,9 +175,18 @@ Select has `size` prop to decide the size of it.
 	];
 </script>
 
-<Select {options} size="sm" label="This is sm" placeholder="Select an option" />
-<Select {options} size="md" label="This is md" placeholder="Select an option" />
-<Select {options} size="lg" label="This is lg" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} size="sm" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="md" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="lg" placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -168,19 +197,19 @@ Select has `rounded` prop to update Select component's border-radius.
 
 <div class="flex flex-col gap-4">
 	<div class="w-[250px]">
-		<Select {options} rounded="none" label='This is rounded none' placeholder='Select an option' />
+		<SelectTemplate {options} rounded="none" label='This is rounded none' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} rounded="sm" label='This is rounded sm' placeholder='Select an option' />
+		<SelectTemplate {options} rounded="sm" label='This is rounded sm' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} rounded="md" label='This is rounded md' placeholder='Select an option' />
+		<SelectTemplate {options} rounded="md" label='This is rounded md' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} rounded="lg" label='This is rounded lg' placeholder='Select an option' />
+		<SelectTemplate {options} rounded="lg" label='This is rounded lg' placeholder='Select an option' />
 	</div>
 	<div class="w-[250px]">
-		<Select {options} rounded="full" label='This is rounded full' placeholder='Select an option' />
+		<SelectTemplate {options} rounded="full" label='This is rounded full' placeholder='Select an option' />
 	</div>
 </div>
 
@@ -191,11 +220,26 @@ Select has `rounded` prop to update Select component's border-radius.
 	import { Button } from '@sans-ui';
 </script>
 
-<Input rounded="none" placeholder="Please type something here">rounded none</Input>
-<Input rounded="sm" placeholder="Please type something here">rounded sm</Input>
-<Input rounded="md" placeholder="Please type something here">rounded md</Input>
-<Input rounded="lg" placeholder="Please type something here">rounded lg</Input>
-<Input rounded="full" placeholder="Please type something here">rounded full</Input>
+<label class="field">
+	"This is a label"
+	<Select {options} size="none" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="sm" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="md" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="lg" placeholder="Select an option" />
+</label>
+<label class="field">
+	"This is a label"
+	<Select {options} size="full" placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -205,7 +249,7 @@ Select has `rounded` prop to update Select component's border-radius.
 Select has `defaultSelected` prop that defines the default selected value of the select.
 
 <div class="w-[350px]">
-	<Select {options} defaultSelected={defaultSelected} label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} defaultSelected={defaultSelected} placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -223,7 +267,10 @@ Select has `defaultSelected` prop that defines the default selected value of the
 	let defaultSelected = options[0];
 </script>
 
-<Select {options} {defaultSelected} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} {defaultSelected} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -233,7 +280,7 @@ Select has `defaultSelected` prop that defines the default selected value of the
 Select has `disabled` prop that defines if the select is disabled.
 
 <div class="w-[350px]">
-	<Select {options} disabled label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} disabled label='This is a label' placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -250,7 +297,10 @@ Select has `disabled` prop that defines if the select is disabled.
 	];
 </script>
 
-<Select {options} disabled={true} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} disabled={true} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -260,7 +310,7 @@ Select has `disabled` prop that defines if the select is disabled.
 Select has `readonly` prop that defines if the select is readonly.
 
 <div class="w-[350px]">
-	<Select {options} readonly label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} readonly label='This is a label' placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -277,7 +327,10 @@ Select has `readonly` prop that defines if the select is readonly.
 	];
 </script>
 
-<Select {options} readonly={true} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} readonly={true} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -287,7 +340,7 @@ Select has `readonly` prop that defines if the select is readonly.
 Select has `animation` prop that defines if the select has animation.
 
 <div class="w-[350px]">
-	<Select {options} animation={false} label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} animation={false} label='This is a label' placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -304,7 +357,10 @@ Select has `animation` prop that defines if the select has animation.
 	];
 </script>
 
-<Select {options} animation={false} label="This is a label" placeholder="Select an option" />
+<label class="field">
+	"This is a label"
+	<Select {options} animation={false} placeholder="Select an option" />
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -314,7 +370,7 @@ Select has `animation` prop that defines if the select has animation.
 Select has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
 
 <div class="w-[350px]">
-	<Select {options} invalid invalidText="This is invalid text." label='This is a label' placeholder='Select an option' />
+	<SelectTemplate {options} invalid invalidText="This is invalid text." label='This is a label' placeholder='Select an option' />
 </div>
 
 <CodeBlockWrapper>
@@ -331,13 +387,15 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 	];
 </script>
 
-<Select
-	{options}
-	invalid={true}
-	invalidText="This is invalid text."
-	label="This is a label"
-	placeholder="Select an option"
-/>
+<label class="field">
+	"This is a label"
+	<Select
+		{options}
+		invalid={true}
+		invalidText="This is invalid text."
+		placeholder="Select an option"
+	/>
+</label>
 ```
 
 </CodeBlockWrapper>
@@ -360,6 +418,10 @@ Select provides APIs(Properties) that is necessary for you to configure a Select
 ### Select Props
 
 <PropertyTable properties={selectProps} />
+
+### Select Handlers
+
+<HandlerTable handlers={selectHandlers} />
 
 ### Select Slots
 

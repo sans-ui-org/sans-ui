@@ -86,6 +86,15 @@ export const inputProps = [
 	}
 ];
 
+export const inputHandlers = [
+	{
+		name: 'on:change',
+		type: 'ChangeEventHandler',
+		description:
+			'The change event is fired for , , and elements when a change to the element value is committed by the user.'
+	}
+];
+
 export const inputSlots = [
 	{
 		name: 'base',

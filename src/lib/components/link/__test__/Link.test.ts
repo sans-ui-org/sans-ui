@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/svelte';
 import { describe, expect, test } from 'vitest';
 import { Link } from '$lib';
-import LinkTest from './examples/LinkTest.svelte';
+import LinkTemplate from './templates/LinkTemplate.svelte';
 
 describe('Input component', async () => {
 	test('should render', async () => {
-		render(LinkTest);
+		render(LinkTemplate);
 		expect(screen.getByRole('link')).toBeTruthy();
 	});
 
 	test('should have disabled attribute', async () => {
-		render(LinkTest, { disabled: true });
+		render(LinkTemplate, { disabled: true });
 		expect(screen.getByRole('link', { hidden: true }).getAttribute('aria-disabled')).toBe('true');
 	});
 });

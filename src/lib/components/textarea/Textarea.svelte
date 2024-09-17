@@ -17,7 +17,6 @@
 		variant?: ComponentVariant;
 		size?: ComponentSize;
 		rounded?: ComponentRounded;
-		label?: string;
 		placeholder?: string;
 		disabled?: boolean;
 		readonly?: boolean;
@@ -50,10 +49,6 @@
 	 * Property that defines the roundness of the textarea.
 	 */
 	export let rounded: ComponentRounded = 'none';
-	/**
-	 * Property that defines the label of the textarea.
-	 */
-	export let label: string | undefined = undefined;
 	/**
 	 * Property that defines the placeholder of the textarea.
 	 */
@@ -97,9 +92,6 @@
 
 	const dispatch = createEventDispatcher();
 
-	$: charCounter = value ? value.toString().length : 0;
-	$: counterText = `${charCounter}/${maxCount}`;
-
 	// slots
 	const slots = textareaVariant({ variant, size, rounded, invalid, animation, disabled });
 
@@ -114,20 +106,6 @@
 		dispatch('input', e); // client event
 	};
 </script>
-
-<!-- Label -->
-{#if label || maxCount}
-	<div class={cn(slots.labelWrapper({ size }), classes.labelWrapper)}>
-		{#if label}
-			<label for={id} class={cn(slots.label({ invalid }), classes.label)}>{label}</label>
-		{:else}
-			<label for={id} />
-		{/if}
-		{#if maxCount}
-			<span>{counterText}</span>
-		{/if}
-	</div>
-{/if}
 
 <!-- Textarea -->
 <textarea

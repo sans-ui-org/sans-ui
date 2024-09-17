@@ -1,10 +1,10 @@
-import { Input } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import InputTemplate from './templates/InputTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Input',
-	component: Input,
+	component: InputTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -15,11 +15,6 @@ const meta = {
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
 		},
 		placeholder: {
-			control: {
-				type: 'text'
-			}
-		},
-		label: {
 			control: {
 				type: 'text'
 			}
@@ -60,7 +55,7 @@ const meta = {
 			page: null
 		}
 	}
-} satisfies Meta<Input>;
+} satisfies Meta<InputTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -123,6 +118,13 @@ export const Readonly: Story = {
 	args: {
 		...defaultArgs,
 		readonly: true
+	}
+};
+
+export const Clearable: Story = {
+	args: {
+		...defaultArgs,
+		clearable: true
 	}
 };
 

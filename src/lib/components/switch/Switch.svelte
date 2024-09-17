@@ -9,10 +9,6 @@
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends $$BaseProps {
-		id?: string;
-		textForOn?: string;
-		textForOff?: string;
-		label?: string;
 		size?: ComponentSize;
 		variant?: ComponentVariant;
 		readonly?: boolean;
@@ -24,22 +20,6 @@
 		classes?: SlotsToClasses<SwitchSlots>;
 	}
 
-	/**
-	 * Property that defines the id of the switch.
-	 */
-	export let id: string = '';
-	/**
-	 * Property that defines the label text for the switch is ON.
-	 */
-	export let textForOn: string = '';
-	/**
-	 * Property that defines the label text when the switch is OFF.
-	 */
-	export let textForOff: string = '';
-	/**
-	 * Provide the text that will be read by a screen reader when visiting this control.
-	 */
-	export let label: string | undefined = undefined;
 	/**
 	 * Specify the size of the Toggle.
 	 */
@@ -78,7 +58,6 @@
 	export let animation: boolean = true;
 
 	$: toggled = defaultToggled;
-	$: toggleLabel = toggled ? textForOn : textForOff;
 
 	// tailwind-variants
 	const slots = switchVariant({ size, variant, disabled, readonly, toggled, invalid });
@@ -92,81 +71,48 @@
 		dispatcher('toggle', { toggled });
 		dispatcher('click', { toggled, event });
 	};
-	const onKeyPress = (event: KeyboardEvent) => {
-		if (event.key === 'Enter' || event.key === ' ') {
-			if (!disabled && !readonly) {
-				toggled = !toggled;
-			}
-		}
-		dispatcher('toggle', { toggled });
-		dispatcher('click', { toggled, event });
-	};
 </script>
 
-<div
+<!-- Switch -->
+<label
+	data-testid="sans-ui--switch-base"
 	class={cn(
-		slots.wrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
-		classes.wrapper
+		slots.base({ size, variant, readonly, disabled, toggled, invalid, animation }),
+		classes.base
 	)}
 >
-	<!-- Label -->
-	{#if label}
-		<label
-			class={cn(
-				slots.label({ size, variant, readonly, disabled, toggled, invalid, animation }),
-				classes.label
-			)}
-			for={id}>{label}</label
-		>
-	{/if}
-	<!-- Switch -->
-	<div
+	<input
+		type="checkbox"
+		role="switch"
+		aria-checked={toggled}
+		aria-readonly={readonly}
+		aria-disabled={disabled}
+		aria-invalid={invalid}
 		class={cn(
-			slots.switchWrapper({ size, variant, readonly, disabled, toggled, invalid, animation }),
-			classes.switchWrapper
+			slots.switch({ size, variant, readonly, disabled, toggled, invalid, animation }),
+			classes.switch
+		)}
+		on:click={onToggle}
+	/>
+	<span
+		data-testid="sans-ui--switch-chip"
+		class={cn(slots.chip({ size, variant, readonly, disabled, toggled, invalid, animation }))}
+	/>
+</label>
+<!-- Invalid -->
+{#if invalid && invalidText && invalidText !== ''}
+	<p
+		class={cn(
+			slots.invalid({ size, variant, readonly, disabled, toggled, invalid, animation }),
+			classes.invalid
 		)}
 	>
-		<div
-			{id}
-			aria-checked={toggled}
-			aria-readonly={readonly}
-			aria-disabled={disabled}
-			{...$$restProps}
-			role="switch"
-			tabindex="0"
-			class={cn(
-				slots.base({ size, variant, readonly, disabled, toggled, invalid, animation }),
-				classes.base
-			)}
-			on:click={onToggle}
-			on:keypress={onKeyPress}
-		>
-			<div
-				class={cn(
-					slots.switchChip({ size, variant, readonly, disabled, toggled, invalid, animation }),
-					classes.switchChip
-				)}
-			/>
-		</div>
-		{#if toggleLabel}
-			<span
-				class={cn(
-					slots.switchText({ size, variant, readonly, disabled, toggled, invalid, animation }),
-					classes.switchText
-				)}
-				data-testid="label-text">{toggleLabel}</span
-			>
-		{/if}
-	</div>
-	<!-- Invalid -->
-	{#if invalid && invalidText && invalidText !== ''}
-		<p
-			class={cn(
-				slots.invalid({ size, variant, readonly, disabled, toggled, invalid, animation }),
-				classes.invalid
-			)}
-		>
-			{invalidText}
-		</p>
-	{/if}
-</div>
+		{invalidText}
+	</p>
+{/if}
+
+<style>
+	input:focus-visible + span:before {
+		outline: 2px solid #3b82f6;
+	}
+</style>

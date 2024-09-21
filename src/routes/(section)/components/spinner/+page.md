@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Spinner
-description: Spinner express an unspecified wait time or display the length of a process.
+description: The Spinner component indicates ongoing processes, typically used to express an unspecified wait time or display the length of a process.
 category: component
 githubFolder: /spinner/Spinner.svelte
 toc: [
@@ -19,7 +19,7 @@ toc: [
 
 <script>
 	import { Spinner } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { spinnerProps, spinnerSlots } from "./spinner-props.ts"
 
@@ -27,7 +27,7 @@ toc: [
 
 ## Set Up
 
-Import a Spinner component in the script tag.
+To use the Spinner component, import it into your Svelte file:
 
 <CodeBlockWrapper>
 
@@ -40,6 +40,8 @@ Import a Spinner component in the script tag.
 </CodeBlockWrapper>
 
 ## Usage
+
+The Spinner component is used to show a loading indicator.
 
 <Spinner />
 
@@ -57,7 +59,7 @@ Import a Spinner component in the script tag.
 
 ## Variant
 
-Spinners has `variant` prop to decide the color theme of it.
+The `variant` prop changes the color theme of the spinner.
 
 <div class="flex flex-row gap-16 flex-wrap">
 	<Spinner variant="primary" />
@@ -85,7 +87,7 @@ Spinners has `variant` prop to decide the color theme of it.
 
 ## Kind
 
-Spinners has `kind` prop to defines the kind of spinner.
+The `kind` prop defines the style of the spinner.
 
 <div class="flex flex-row gap-16 flex-wrap">
 	<Spinner kind="loader1" />
@@ -109,7 +111,7 @@ Spinners has `kind` prop to defines the kind of spinner.
 
 ## Size
 
-Spinners has `size` prop to defines the size of spinner.
+The `size` prop sets the size of the spinner.
 
 <div class="flex flex-row items-center gap-16 flex-wrap">
 	<Spinner size="sm" />
@@ -133,7 +135,9 @@ Spinners has `size` prop to defines the size of spinner.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support `alert` role via ARIA.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Supports 'alert' role via ARIA for better accessibility.</AccessibilityListItem>
+</ul>
 
 ## API
 

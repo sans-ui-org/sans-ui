@@ -22,6 +22,12 @@ html {
 /**
  * VS Code Dark+ (by tabuckner)
  */
+:not(pre) > code {
+	background: rgb(0, 0, 0, 0.06);
+	padding: 2px 4px;
+	border-radius: 4px;
+}
+
 pre[class*='language-'],
 code[class*='language-'] {
 	color: #d4d4d4;

@@ -1,13 +1,13 @@
-import AccessibilityIcon from './AccessibilityIcon.svelte';
 import CodeBlockWrapper from './CodeBlockWrapper.md';
 import DocHeader from './DocHeader.svelte';
 import Meta from './Meta.svelte';
 import PropertyTable from './PropertyTable.svelte';
 import HandlerTable from './HandlerTable.svelte';
 import SlotTable from './SlotTable.svelte';
+import AccessibilityListItem from './AccessibilityListItem.svelte';
 
 export {
-	AccessibilityIcon,
+	AccessibilityListItem,
 	CodeBlockWrapper,
 	DocHeader,
 	Meta,

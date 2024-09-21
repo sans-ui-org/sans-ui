@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Progress
-description: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
+description: The Progress component displays a circular progress indicator, useful for showing the status of a task or operation. It is commonly used to represent an undetermined wait time or to visualize the progress of a process.
 category: component
 githubFolder: /progress/Progress.svelte
 toc: [
@@ -20,7 +20,7 @@ toc: [
 
 <script>
 	import { Progress } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { progressProps, progressSlots } from "./progress-props.ts"
 
@@ -28,7 +28,7 @@ toc: [
 
 ## Set Up
 
-Import a Progress component in the script tag.
+To use the Progress component, import it into your Svelte file:
 
 <CodeBlockWrapper>
 
@@ -42,7 +42,7 @@ Import a Progress component in the script tag.
 
 ## Usage
 
-The Progress component allows you to express how much percentage/number by using the circular gage.
+The Progress component visualizes progress using a circular gauge. You can set the value prop to indicate the current progress percentage.
 
 <Progress value={70} />
 
@@ -60,7 +60,7 @@ The Progress component allows you to express how much percentage/number by using
 
 ## Variant
 
-Progress has `variant` prop to decide the color theme of it.
+Use the `variant` prop to change the color theme of the Progress component. The available variants include primary, secondary, success, warning, and danger.
 
 <div class="flex flex-row gap-2">
 	<Progress variant="primary" />
@@ -88,7 +88,7 @@ Progress has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Progress has `size` prop to decide the size theme of it. (Unlike any other components, Progress allows you to decide the size of itself by the number of the `px`)
+Adjust the size of the Progress component using the `size` prop, specified in pixels.
 
 <Progress size={100} />
 
@@ -106,7 +106,7 @@ Progress has `size` prop to decide the size theme of it. (Unlike any other compo
 
 ## Track Width
 
-Progress has `trackWidth` prop to decide the tracker circle's width. (Progress allows you to decide the width of the tracker by the number of the `px`)
+Customize the width of the progress track with the `trackWidth` prop, specified in pixels.
 
 <Progress trackWidth={10} />
 
@@ -124,7 +124,7 @@ Progress has `trackWidth` prop to decide the tracker circle's width. (Progress a
 
 ## Custom Inner Label
 
-Progress has `customInnerLabel` prop to decide the label inside of the spinner.
+The `customInnerLabel` prop allows you to display a custom label inside the progress circle.
 
 <Progress value={40} customInnerLabel="40 Mbps" />
 
@@ -142,9 +142,11 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Exposed to assistive technology as a progress bar via ARIA.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Internationalized number formatting as a percentage or value.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Exposes the `aria-valuenow`, `aria-valuemin`, `aria-valuemax` and `aria-valuetext` `attributes`</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Exposed to assistive technology as a progress bar via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Internationalized number formatting as a percentage or value.</AccessibilityListItem>
+	<AccessibilityListItem>Exposes the "aria-valuenow", "aria-valuemin", "aria-valuemax" and `aria-valuetext` `attributes`</AccessibilityListItem>
+</ul>
 
 ## API
 

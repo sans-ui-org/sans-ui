@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Switch
-description: Switch express an unspecified wait time or display the length of a process.
+description: The Switch component provides a toggle switch, allowing users to switch between two states. It is useful for settings and options.
 category: component
 githubFolder: /switch/Switch.svelte
 toc: [
@@ -25,14 +25,14 @@ toc: [
 <script>
 	import { Switch } from '$lib';
 	import SwitchTemplate from "../../../../stories/switch/templates/SwitchTemplate.svelte"
-	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { switchProps, switchHandlers, switchSlots } from "./switch-props.ts"
 </script>
 
 ## Set Up
 
-Import a Switch component in the script tag.
+Import the Switch component into your Svelte file:
 
 <CodeBlockWrapper>
 
@@ -45,6 +45,8 @@ Import a Switch component in the script tag.
 </CodeBlockWrapper>
 
 ## Usage
+
+Here’s a simple example of how to implement the Switch component:
 
 <SwitchTemplate  />
 
@@ -108,7 +110,7 @@ Switch has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Switch has `size` prop to decide the sizes of it.
+Adjust the `size` of the switch using the size prop.
 
 <div class="flex flex-col gap-4">
 	<SwitchTemplate size="sm" label="This is sm" defaultToggled={true} />
@@ -141,7 +143,7 @@ Switch has `size` prop to decide the sizes of it.
 
 ## Default Toggled
 
-Switch has `defaultToggled` prop that defines the default toggled value of the switch.
+Use the `defaultToggled` prop to set the initial toggled state of the switch.
 
 <SwitchTemplate defaultToggled={true} />
 
@@ -162,7 +164,7 @@ Switch has `defaultToggled` prop that defines the default toggled value of the s
 
 ## Disabled
 
-Switch has `disabled` prop that defines readonly state of the switch.
+The `disabled` prop makes the switch non-interactive.
 
 <SwitchTemplate disabled={true} />
 
@@ -183,7 +185,7 @@ Switch has `disabled` prop that defines readonly state of the switch.
 
 ## Read Only
 
-Switch has `readonly` prop that defines readonly state of the switch.
+The `readonly` prop makes the switch read-only, meaning it cannot be toggled.
 
 <SwitchTemplate readonly={true} />
 
@@ -204,7 +206,7 @@ Switch has `readonly` prop that defines readonly state of the switch.
 
 ## Invalid
 
-Switch has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
+Use the `invalid` prop to indicate that the switch's state is invalid. The `invalidText` prop allows you to provide an error message.
 
 <SwitchTemplate invalid={true} invalidText="This is invalid text." />
 
@@ -225,7 +227,7 @@ Switch has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ## Animation
 
-Switch has `animation` prop that defines if the input has animation.
+Control whether the switch has an animation with the `animation` prop.
 
 <SwitchTemplate animation={false} />
 
@@ -246,11 +248,13 @@ Switch has `animation` prop that defines if the input has animation.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native HTML input element.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Full support for browser features like form autofill.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Keyboard focus management and cross browser normalization.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Keyboard event support for `Tab` and `Space` keys.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for assistive technology.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
+	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
+	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Keyboard event support for "Tab" and "Space" keys.</AccessibilityListItem>
+	<AccessibilityListItem>Labeling support for assistive technology.</AccessibilityListItem>
+</ul>
 
 ## API
 

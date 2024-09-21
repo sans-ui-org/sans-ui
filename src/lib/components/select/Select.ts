@@ -3,8 +3,8 @@ import { tv } from '$lib/utils/tv';
 export const selectVariant = tv({
 	slots: {
 		base: [
-			'sans-ui--base-label',
-			'relative border mt-1 bg-white',
+			'sans-ui--select-base',
+			'relative border w-full bg-white',
 			'dark:bg-neutral-700 dark:border dark:border-neutral-800 dark:text-neutral-100'
 		],
 		trigger: [

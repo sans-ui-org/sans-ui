@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Tooltip
-description: Tooltips display a brief informative message that appears when a user interacts with an element.
+description: Tooltips provide brief, informative messages that appear when a user interacts with an element.
 category: component
 githubFolder: /tooltip/Tooltip.svelte
 toc: [
@@ -21,7 +21,7 @@ toc: [
 
 <script>
 	import { Tooltip, Button } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { tooltipProps, tooltipSlots } from "./tooltip-props.ts"
 
@@ -29,7 +29,7 @@ toc: [
 
 ## Set Up
 
-Import a Tooltip component in the script tag.
+To use the Tooltip component, import it into your script.
 
 <CodeBlockWrapper>
 
@@ -43,7 +43,7 @@ Import a Tooltip component in the script tag.
 
 ## Usage
 
-Use the Tooltip component to show extra description when hovering or focusing on an element.
+Display additional information when users hover over or focus on an element.
 
 <Tooltip title="This is title" size="md"><Button >Here is the Trigger</Button></Tooltip>
 
@@ -63,7 +63,7 @@ Use the Tooltip component to show extra description when hovering or focusing on
 
 ## Variant
 
-Tooltip has `variant` prop to decide the color theme of it.
+Customize the color theme of the Tooltip with the `variant` prop.
 
 <div class="inline-flex flex-col items-start gap-4">
 	<Tooltip title="This is title" variant="primary"><Button variant="primary" >Here is primary</Button></Tooltip>
@@ -101,7 +101,7 @@ Tooltip has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Tooltip has `size` prop to decide the size of it.
+Adjust the Tooltip size using the `size` prop.
 
 <div class="flex flex-row gap-4">
 	<Tooltip title="This is title" size="sm"><Button>Here is sm</Button></Tooltip>
@@ -137,7 +137,7 @@ Tooltip has `size` prop to decide the size of it.
 
 ## Position
 
-Tooltip has `position` prop to decide the position of it.
+Control the Tooltip's position with the `position` prop.
 
 <div class="inline-flex flex-col items-start gap-4">
 	<Tooltip title="This is title" position="top"><Button>top</Button></Tooltip>
@@ -163,7 +163,7 @@ Tooltip has `position` prop to decide the position of it.
 
 ## Trackable
 
-Tooltip has `trackable` prop to define if the tooltip is trackable.
+Make the Tooltip trackable with the `trackable` prop, so it follows the cursor.k
 
 <div class="inline-flex flex-col items-start gap-4">
 	<Tooltip title="This is title" trackable><Button>trackable</Button></Tooltip>
@@ -183,7 +183,7 @@ Tooltip has `trackable` prop to define if the tooltip is trackable.
 
 ## Delay Open And Close
 
-Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the tooltip.
+Set delays for opening and closing the Tooltip with `delayToOpen` and `delayToHide` props.
 
 <div class="inline-flex flex-col items-start gap-4">
 	<Tooltip title="This is title" delayToOpen={300}><Button>Delay Open</Button></Tooltip>
@@ -205,9 +205,11 @@ Tooltip has `delayToOpen` and `delayToHide` props the delay to open/hide the too
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Hover management and cross browser normalization.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for screen readers (`aria-describedby`).</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Labeling support for screen readers ("aria-describedby").</AccessibilityListItem>
+	<AccessibilityListItem>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</AccessibilityListItem>
+</ul>
 
 ## API
 

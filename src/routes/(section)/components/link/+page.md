@@ -26,7 +26,7 @@ toc: [
 
 <script>
 	import { Link } from '$lib';
-	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { linkProps, linkSlots } from "./link-props.ts"
 
@@ -48,7 +48,7 @@ Import a Link component in the script tag.
 
 ## Usage
 
-Buttons allow users to perform actions and choose with a single tap. You can deactivate the ripple effect, so we will state that later on.
+The Link component allows users to navigate between pages. Below is an example of a link pointing to a GitHub page:
 
 <Link href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 
@@ -68,7 +68,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ## Variant
 
-Link has `variant` prop to decide the color theme of it.
+You can control the color theme of the Link component using the `variant` prop:
 
 <div class="inline-flex flex-col gap-2">
 	<Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
@@ -106,7 +106,7 @@ Link has `variant` prop to decide the color theme of it.
 
 ## Font Size
 
-Link has `size` prop to decide the font size of Link component.
+Use the `size` prop to adjust the font size of the Link component. Available sizes range from `sm` to `7xl`:
 
 <div class="inline-flex flex-col gap-2">
 	<Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is sm</Link>
@@ -144,7 +144,7 @@ Link has `size` prop to decide the font size of Link component.
 
 ## Font Weight
 
-Link has `bold` prop to decide the font weight of Link component.
+Control the font weight using the `bold` prop, with options ranging from `thin` to `black`:
 
 <div class="inline-flex flex-col gap-2">
 	<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
@@ -185,7 +185,12 @@ Link has `bold` prop to decide the font weight of Link component.
 
 ## Underline Type
 
-Link has `underline` prop to decide the text decoration(underline) of the link.
+The `underlineType` prop defines when the link should be underlined. Options include:
+
+- `none`: No underline
+- `hover`: Underlined on hover
+- `always`: Always underlined
+- `active`: Underlined when active
 
 <div class="inline-flex flex-col gap-2">
 	<Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
@@ -227,7 +232,7 @@ Link has `underline` prop to decide the text decoration(underline) of the link.
 
 ## Disabled
 
-Link has `disabled` prop to defines if the link is disalbe.
+The `disabled` prop disables the link, making it non-clickable:
 
 <Link disabled href="https://github.com/s-ui-org/s-ui" target="_blank">This is link to the our Github page</Link>
 
@@ -247,7 +252,7 @@ Link has `disabled` prop to defines if the link is disalbe.
 
 ## External
 
-Link has `external` prop to defines if the Link is an extrnal link.
+Use the `external` prop to indicate an external link, which typically opens in a new tab:
 
 <Link external={true} href="https://github.com/s-ui-org/s-ui">This is an External link to the our Github page</Link>
 
@@ -267,7 +272,7 @@ Link has `external` prop to defines if the Link is an extrnal link.
 
 ## Window Icon
 
-Link has `windowIcon` prop to defines if the Link has a window icon.
+Enable the `windowIcon` prop to display an icon indicating that the link will open in a new window or tab:
 
 <Link windowIcon external href="https://github.com/s-ui-org/s-ui">This is link to the our Github page</Link>
 
@@ -287,7 +292,7 @@ Link has `windowIcon` prop to defines if the Link has a window icon.
 
 ## Animation
 
-Link has `animation` prop to defines if the link's animation is disabled or not.
+Control link animations using the `animation` prop. By default, animations are enabled. Set `animation={false}` to disable them:
 
 <Link href="https://github.com/s-ui-org/s-ui" animation={false}>This is link to the our Github page</Link>
 
@@ -307,11 +312,13 @@ Link has `animation` prop to defines if the link's animation is disabled or not.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native input element.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Visual and ARIA labeling support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Change, clipboard, composition, selection, and input event support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Required and invalid states exposed to assistive technology via ARIA.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Built with a native input element.</AccessibilityListItem>
+	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
+	<AccessibilityListItem>Change, clipboard, composition, selection, and input event support.</AccessibilityListItem>
+	<AccessibilityListItem>Required and invalid states exposed to assistive technology via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Support for description and error message help text linked to the input via ARIA.</AccessibilityListItem>
+</ul>
 
 ## API
 

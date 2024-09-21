@@ -26,7 +26,7 @@ toc: [
 
 <script>
 	import { Button, Link } from '$lib';
-	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { buttonProps, buttonHandlers, buttonSlots } from "./button-props.ts"
 
@@ -34,7 +34,7 @@ toc: [
 
 ## Set Up
 
-Import a button component in the script tag.
+To use the <code>Button</code> component, first import it in the script tag:
 
 <CodeBlockWrapper>
 
@@ -48,7 +48,7 @@ Import a button component in the script tag.
 
 ## Usage
 
-Buttons allow users to perform actions and choose with a single tap. You can deactivate the ripple effect, so we will state that later on.
+Buttons allow users to perform actions with a single click. You can also disable the ripple effect, which we will cover later on <Link href="#rippled">this rippled section</Link>.
 
 <Button>Button</Button>
 
@@ -66,7 +66,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ## Variant
 
-Buttons has `variant` prop to decide the color theme of it.
+The `variant` prop lets you customize the color theme of the button:
 
 <div class="inline-flex flex-row gap-4 flex-wrap">
 	<Button variant="primary">Button</Button>
@@ -94,7 +94,7 @@ Buttons has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Buttons has `size` prop to decide the size of it.
+Use the `size` prop to control the button's size:
 
 <div class="flex flex-row gap-4 items-center">
 	<Button size="sm">Button</Button>
@@ -118,7 +118,7 @@ Buttons has `size` prop to decide the size of it.
 
 ## Kind
 
-Buttons has `kind` prop to decide the kind of Button component.
+The `kind` prop determines the button's appearance:
 
 <div class="flex flex-row gap-2 flex-wrap">
 	<Button kind="solid">Solid</Button>
@@ -144,7 +144,7 @@ Buttons has `kind` prop to decide the kind of Button component.
 
 ## Rounded
 
-Buttons has `rounded` prop to update Button component's border-radius.
+Adjust the button's border-radius with the `rounded` prop:
 
 <div class="flex flex-row gap-2 flex-wrap">
 	<Button rounded="none">rounded none</Button>
@@ -172,7 +172,7 @@ Buttons has `rounded` prop to update Button component's border-radius.
 
 ## Disabled
 
-Buttons has `disabled` prop to disable Button component.
+Disable the button using the `disabled` prop:
 
 <Button disabled>Button</Button>
 
@@ -190,7 +190,7 @@ Buttons has `disabled` prop to disable Button component.
 
 ## Rippled
 
-Buttons has `rippled` prop to disable Button component's ripple effect.
+To disable the ripple effect, use the `rippled` prop:
 
 <Button rippled={false}>Button</Button>
 
@@ -208,7 +208,7 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 ## Animation
 
-Buttons has `animation` prop to control the Button's background color transition animation.(Ripple effect can't be disabled by this prop. Please refer to <Link href="#rippled">rippled property</Link>.)
+Control the background color transition animation with the `animation` prop. Note that this does not affect the ripple effect, which must be controlled separately via <Link href="#rippled">the rippled property</Link>.
 
 <Button animation={false}>Button</Button>
 
@@ -226,7 +226,7 @@ Buttons has `animation` prop to control the Button's background color transition
 
 ## Button as Link
 
-If you provide `href` property, Button can be play a role as `link` element. Thus, even you can utilize a Button component as a link to navigate end users to another page or section.
+The `href` prop allows the button to function as a `link`, making it behave like an anchor element:
 
 <Button href="https://github.com/sans-ui-org/sans-ui" rel='noopener noreferrer' target='_blank'>Link to External</Button>
 
@@ -246,7 +246,7 @@ If you provide `href` property, Button can be play a role as `link` element. Thu
 
 ## Icon Button
 
-You can turn our Button component into Icon Button component by passing `iconOnly` as `true`.
+To create an icon-only button, use the `iconOnly` prop:
 
 <Button iconOnly={true}>
 	<svg class="w-[14px] h-[14px]" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -273,15 +273,16 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/> Keyboard focus management and cross browser normalization.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/> Hover management and cross browser normalization. </div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/> Labeling support for screen readers `aria-describedby`. </div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/> Exposed as a tooltip to assistive technology via ARIA. </div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/> Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips. </div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Exposed as a tooltip to assistive technology via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</AccessibilityListItem>
+</ul>
 
 ## API
 
-Button provides APIs(Properties) that is necessary for you to configure a Button compponent.
+Button provides APIs(Properties) that is necessary for you to configure a <code>Button</code> compponent.
 
 ### Button Props
 

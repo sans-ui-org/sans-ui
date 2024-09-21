@@ -29,8 +29,8 @@ export const linkVariant = tv({
 			active: { base: 'active:underline' }
 		},
 		size: {
-			sm: { base: 'text-sm gap-2', icon: 'w-3 h-3' },
-			md: { base: 'text-base gap-2', icon: 'w-4 h-4' },
+			sm: { base: 'text-sm gap-1', icon: 'w-3 h-3' },
+			md: { base: 'text-base gap-1', icon: 'w-3.5 h-3.5' },
 			lg: { base: 'text-lg gap-2', icon: 'w-4 h-4' },
 			xl: { base: 'text-xl gap-2', icon: 'w-5 h-5' },
 			'2xl': { base: 'text-2xl gap-3', icon: 'w-5 h-5' },

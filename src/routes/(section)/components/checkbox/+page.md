@@ -23,7 +23,7 @@ toc: [
 
 <script>
 	import { Checkbox } from '$lib';
-	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityListItem}from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { checkboxSlots, checkboxHandlers, checkboxProps } from "./checkbox-props.ts"
 
@@ -31,7 +31,7 @@ toc: [
 
 ## Set Up
 
-Import a Checkbox component in the script tag.
+To use the Checkbox component, import it in the script tag:
 
 <CodeBlockWrapper>
 
@@ -45,7 +45,7 @@ Import a Checkbox component in the script tag.
 
 ## Usage
 
-The checkbox component can be used to receive one or more selected options from the user in the form of a square box available in multiple styles, sizes, colors, and variants
+The Checkbox component allows users to select one or more options in the form of a square box. It is available in multiple styles, sizes, colors, and variants.
 
 <Checkbox />
 
@@ -63,7 +63,7 @@ The checkbox component can be used to receive one or more selected options from 
 
 ## Variant
 
-Checkbox has `variant` prop to decide the color theme of it.
+The `variant` prop lets you customize the color theme of the Checkbox:
 
 <div class="flex flex-row gap-2">
 	<Checkbox checked variant="primary" />
@@ -91,7 +91,7 @@ Checkbox has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Checkbox has `size` prop to decide the size of it.
+Use the `size` prop to adjust the size of the Checkbox:
 
 <div class="flex flex-row gap-2">
 	<Checkbox size="sm" />
@@ -117,7 +117,7 @@ Checkbox has `size` prop to decide the size of it.
 
 ## Disabled
 
-Checkbox has `disabled` prop to disable your Checkbox component
+The `disabled` prop disables the Checkbox:
 
 <Checkbox checked disabled />
 
@@ -135,7 +135,7 @@ Checkbox has `disabled` prop to disable your Checkbox component
 
 ## Default Checked
 
-Checkbox has `checked` prop to have Checkbox component's default check state to be checked.
+Set the initial check state using the `checked` prop:
 
 <Checkbox checked />
 
@@ -153,7 +153,7 @@ Checkbox has `checked` prop to have Checkbox component's default check state to 
 
 ## Indeterminate
 
-Checkbox has `indeterminate` prop to get Checkbox component's check state to be `indeterminate`.
+Use the `indeterminate` prop to set the Checkbox to an indeterminate state:
 
 <Checkbox indeterminate />
 
@@ -171,7 +171,7 @@ Checkbox has `indeterminate` prop to get Checkbox component's check state to be 
 
 ## Animation
 
-Checkbox has `animation` prop to control Checkbox component's animation.
+Control the Checkbox animation using the `animation` prop:
 
 <Checkbox animation={false} />
 
@@ -189,12 +189,13 @@ Checkbox has `animation` prop to control Checkbox component's animation.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native HTML input element.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Full support for browser features like form autofill.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Keyboard focus management and cross browser normalization. </div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Keyboard event support for `Tab` and `Space` keys.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for assistive technology.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Indeterminate state support.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Built with native HTML input elements.</AccessibilityListItem>
+	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
+	<AccessibilityListItem>Keyboard event support for "Tab" and "Space" keys.</AccessibilityListItem>
+	<AccessibilityListItem>Labeling support for assistive technology.</AccessibilityListItem>
+	<AccessibilityListItem>Indeterminate state support.</AccessibilityListItem>
+</ul>
 
 ## API
 

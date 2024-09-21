@@ -29,7 +29,7 @@ toc: [
 <script>
 	import { Input } from '$lib';
 	import InputTemplate from "../../../../stories/input/templates/InputTemplate.svelte"
-	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { inputProps, inputHandlers, inputSlots } from "./input-props.ts"
 
@@ -37,7 +37,7 @@ toc: [
 
 ## Set Up
 
-Import a Input component in the script tag.
+To use the Input component, import it in the script tag:
 
 <CodeBlockWrapper>
 
@@ -51,7 +51,7 @@ Import a Input component in the script tag.
 
 ## Usage
 
-Use this example as a generic form element which includes multiple input fields types such as text, email, password, number, URL, and phone number and use the grid layout to add multiple columns and rows.
+This Input component can be used as a generic form element, supporting multiple input types such as text, email, password, number, URL, and phone number.
 
 <div class="w-[350px]">
 	<InputTemplate label="This is label" placeholder="Please type something here" />
@@ -74,7 +74,7 @@ Use this example as a generic form element which includes multiple input fields 
 
 ## Variant
 
-Input has `variant` prop to decide the color theme of it.
+The `variant` prop allows you to control the color theme of the input:
 
 <div class="w-[350px] flex flex-col gap-2">
 	<InputTemplate variant="primary" placeholder="Please type something here" />
@@ -117,7 +117,7 @@ Input has `variant` prop to decide the color theme of it.
 
 ## Label
 
-Input has `label` prop defines the label of the input.
+Use the `label` prop to set a label for the input:
 
 <div class="w-[350px]">
 	<InputTemplate label="This is label" placeholder="Please type something here" />
@@ -140,7 +140,7 @@ Input has `label` prop defines the label of the input.
 
 ## Value
 
-Input has `value` prop that defines the value of the input.
+The `value` prop allows you to define the input's current value:
 
 <div class="w-[350px]">
 	<InputTemplate value="hello world" placeholder="Please type something here" />
@@ -163,7 +163,7 @@ Input has `value` prop that defines the value of the input.
 
 ## Size
 
-Input has `size` prop defines the size of the input.
+The `size` prop lets you adjust the size of the input:
 
 <div class="w-[350px]">
 	<InputTemplate size="sm" placeholder="Please type something here" />
@@ -196,7 +196,7 @@ Input has `size` prop defines the size of the input.
 
 ## Rounded
 
-Input has `rounded` prop to update Input component's border-radius.
+The `rounded` prop adjusts the border-radius of the input:
 
 <div class="w-[350px] flex flex-col gap-2">
 	<InputTemplate rounded="none" placeholder="Please type something here" />
@@ -239,7 +239,7 @@ Input has `rounded` prop to update Input component's border-radius.
 
 ## Disabled
 
-Input has `disabled` prop that defines if the input is disabled.
+The `disabled` prop disables the input:
 
 <div class="w-[350px]">
 	<InputTemplate disabled={true} placeholder="Please type something here" />
@@ -262,7 +262,7 @@ Input has `disabled` prop that defines if the input is disabled.
 
 ## ReadOnly
 
-Input has `readonly` prop that defines if the input is readonly.
+Use the `readonly` prop to make the input field read-only:
 
 <div class="w-[350px]">
 	<InputTemplate readonly={true} placeholder="Please type something here" />
@@ -285,7 +285,7 @@ Input has `readonly` prop that defines if the input is readonly.
 
 ## Clearable
 
-Input has `clearable` prop that controls the clear button for Input component. (What is clear button? -> As soon as you start typing something in Input component, you will see x button on the left side of the component.)
+The `clearable` prop adds a clear button to the input field, allowing the user to clear its contents:
 
 <div class="w-[350px]">
 	<InputTemplate clearable={true} placeholder="Please type something here" />
@@ -308,7 +308,7 @@ Input has `clearable` prop that controls the clear button for Input component. (
 
 ## Animation
 
-Input has `animation` prop that controls whether the input has animation or not.
+Control input animation with the `animation` prop:
 
 <div class="w-[350px]">
 	<InputTemplate animation={false} placeholder="Please type something here" />
@@ -331,7 +331,7 @@ Input has `animation` prop that controls whether the input has animation or not.
 
 ## Max Count
 
-Input has `maxCount` prop that defines the text limitation of your Input component.
+The `maxCount` prop limits the number of characters the user can input:
 
 <div class="w-[350px]">
 	<InputTemplate label="This is label" maxCount={25} placeholder="Please type something here" />
@@ -354,7 +354,7 @@ Input has `maxCount` prop that defines the text limitation of your Input compone
 
 ## Invalid
 
-Input has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
+The `invalid` prop marks the input as invalid and displays an error message using `invalidText`. `invalidText` to set error message when `invalid` is `true`:
 
 <div class="w-[350px]">
 	<InputTemplate invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
@@ -381,11 +381,13 @@ Input has `invalid` prop that defines if the input is invalid. And `invalidText`
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native input element.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Visual and ARIA labeling support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Change, clipboard, composition, selection, and input event support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Required and invalid states exposed to assistive technology via ARIA.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Built with a native input element.</AccessibilityListItem>
+	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
+	<AccessibilityListItem>Handles events such as change, clipboard, composition, and input.</AccessibilityListItem>
+	<AccessibilityListItem>Provides ARIA-based support for required and invalid states.</AccessibilityListItem>
+	<AccessibilityListItem>Support for description and error message help text linked to the input via ARIA.</AccessibilityListItem>
+</ul>
 
 ## API
 

@@ -20,7 +20,7 @@ toc: [
 
 <script>
 	import { Button, Modal } from '$lib';
-	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import ModalTemplate from "../../../../stories/modal/templates/ModalTemplate.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { modalProps, modalHandlers, modalSlots } from "./modal-props.ts"
@@ -29,7 +29,7 @@ toc: [
 
 ## Set Up
 
-Import a Modal component in the script tag.
+To use the Modal component, first import it in your script tag:
 
 <CodeBlockWrapper>
 
@@ -43,7 +43,7 @@ Import a Modal component in the script tag.
 
 ## Usage
 
-Modal visibility (open/close) is controlled by the `open` property. You can bind it to a variable that other element (usually button) will toggle.
+The visibility of the modal is controlled by the `open` property, which you can bind to a variable that a button (or other element) will toggle.
 
 <ModalTemplate size="md" title="Modal Title" />
 
@@ -72,7 +72,7 @@ Modal visibility (open/close) is controlled by the `open` property. You can bind
 
 ## Size
 
-Modal has `size` prop to decide the size of it.
+The `size` prop allows you to control the size of the modal. Available options include `sm`, `md`, `lg`, and `full`.
 
 <ModalTemplate size="sm" title="Modal Title" triggerTitle="Modal sm" />
 <ModalTemplate size="md" title="Modal Title" triggerTitle="Modal md"/>
@@ -104,7 +104,7 @@ Modal has `size` prop to decide the size of it.
 
 ## Dismissible
 
-Set the `dismissible` property to `false` to prevent the modal from closing when clicking on the overlay.
+Set the `dismissible` property to `false` to prevent the modal from closing when clicking the overlay.
 
 <ModalTemplate size="md" title="Modal Title" dismissible={false} />
 
@@ -133,7 +133,7 @@ Set the `dismissible` property to `false` to prevent the modal from closing when
 
 ## Animation
 
-Set the `animation` property to control the modal's animation.
+Control the modal's animation by setting the `animation` property to `false` to disable it.
 
 <ModalTemplate size="md" title="Modal Title" animation={false} />
 
@@ -162,11 +162,13 @@ Set the `animation` property to control the modal's animation.
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Content outside the modal is hidden from assistive technologies while it is open.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>The modal optionally closes when interacting outside, or pressing the `Esc` key.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Focus is moved into the modal on mount, and restored to the trigger element on unmount.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>While open, focus is contained within the modal, preventing the user from tabbing outside.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Content outside the modal is hidden from assistive technologies while it is open.</AccessibilityListItem>
+	<AccessibilityListItem>The modal optionally closes when interacting outside, or pressing the "Esc" key.</AccessibilityListItem>
+	<AccessibilityListItem>Focus is moved into the modal on mount, and restored to the trigger element on unmount.</AccessibilityListItem>
+	<AccessibilityListItem>While open, focus is contained within the modal, preventing the user from tabbing outside.</AccessibilityListItem>
+	<AccessibilityListItem>Scrolling the page behind the modal is prevented while it is open, including in mobile browsers.</AccessibilityListItem>
+</ul>
 
 ## API
 

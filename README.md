@@ -1,23 +1,42 @@
-This is going to be a Svelte UI library that anyone can contribute and improve/propel Svelte community!
+<p align="center">
+  <a href="">
+      <!-- TODO: insert new our logo -->
+      <img width="15%" src="" alt="sans-ui-logo" />
+      <h1 align="center">SanS-UI</h1>
+  </a>
+</p>
+</br>
 
-# Are You Ready?
+<!-- TODO: insert new our logo -->
+<p align="center">
+  <a href="https://www.npmjs.com/package/@sans-ui-org/sans-ui">
+    <img src="https://img.shields.io/npm/dm/@sans-ui-org/sans-ui.svg?style=flat-round" alt="npm downloads">
+  </a>
+  <a href="https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE">
+    <img src="https://img.shields.io/npm/l/@sans-ui-org/sans-ui?style=flat" alt="License">
+  </a>
+</p>
 
-We use `npm`.
+## Documentations
 
-## Developing
+<!-- TODO: documentation -->
 
-Once you've created a project and installed dependencies with `npm install`, start a development server:
+- [SanS-UI official documentation]()
+<!-- TODO: storybook -->
+- [Storybook]()
 
-1. Documentation development
+## Contribution
 
-```bash
-npm run dev:docs
-```
+Refer to [CONTRIBUTING.md](https://github.com/sans-ui-org/sans-ui/blob/development/CONTRIBUTING.md) when you develop this.
 
-2. SUI Component development
+## License
 
-```bash
-npm run dev
-```
+[MIT](https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE)
 
-\*Before you commit, make sure that `npm run check` to check your change with Svelte-Kit.
+## Community Support
+
+- [X(Twitter)](https://x.com/sans_ui_org)
+<!-- TODO: discord link after we created -->
+- [Discord]()
+- [Medium](https://medium.com/@three.s.ui.org)
+- [DEV](https://dev.to/sans-ui)

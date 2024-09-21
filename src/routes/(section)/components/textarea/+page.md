@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Textarea
-description: Textarea component is a multi-line Textarea which allows you to write large texts.
+description: The Textarea component provides a multi-line text input field, allowing users to enter larger blocks of text.
 category: component
 githubFolder: /textArea/Textarea.svelte
 toc: [
@@ -27,7 +27,7 @@ toc: [
 <script>
 	import { Textarea } from '$lib';
 	import TextareaTemplate from "../../../../stories/textarea/templates/TextareaTemplate.svelte"
-	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { textareaSlots, textareaHandlers, textareaProps } from "./textarea-props.ts"
 
@@ -35,7 +35,7 @@ toc: [
 
 ## Set Up
 
-Import a Textarea component in the script tag.
+To start using the Textarea component, import it with the following code:
 
 <CodeBlockWrapper>
 
@@ -49,7 +49,7 @@ Import a Textarea component in the script tag.
 
 ## Usage
 
-Use the Textarea component as a multi-line text field input and use it inside form elements available in multiple sizes, styles, and variants
+Here’s a basic example of the Textarea component in use:
 
 <div class="w-[350px]">
 	<TextareaTemplate label="This is label" placeholder="Please type something here" />
@@ -72,7 +72,7 @@ Use the Textarea component as a multi-line text field input and use it inside fo
 
 ## Variant
 
-Textarea has `variant` prop to decide the color theme of it.
+Customize the color theme of the Textarea with the `variant` prop. Available options include:
 
 <div class="w-[350px] flex flex-col gap-4">
 	<TextareaTemplate label="This is label" variant="primary" placeholder="Please type something here" />
@@ -115,7 +115,7 @@ Textarea has `variant` prop to decide the color theme of it.
 
 ## Value
 
-Textarea has `value` prop that defines the value of the input.
+Set the initial text value of the Textarea using the `value` prop:
 
 <div class="w-[350px]">
 	<TextareaTemplate value="hello world" placeholder="Please type something here" />
@@ -138,7 +138,7 @@ Textarea has `value` prop that defines the value of the input.
 
 ## Size
 
-Textarea has `size` prop defines the font size of the input.
+Adjust the text area size with the `size` prop to fit your design needs:k
 
 <div class="w-[350px] flex flex-col gap-4">
 	<TextareaTemplate size="sm" placeholder="Please type something here" />
@@ -171,7 +171,7 @@ Textarea has `size` prop defines the font size of the input.
 
 ## Rounded
 
-Textarea has `rounded` prop defines the roundness of the input.
+Control the roundness of the Textarea corners with the `rounded` prop:
 
 <div class="w-[350px] flex flex-col gap-4">
 	<TextareaTemplate rounded="none" placeholder="Please type something here" />
@@ -214,7 +214,7 @@ Textarea has `rounded` prop defines the roundness of the input.
 
 ## Disabled
 
-Textarea has `disabled` prop that defines if the input is disabled.
+Make the Textarea non-interactive using the `disabled` prop:
 
 <div class="w-[350px]">
 	<TextareaTemplate disabled={true} placeholder="Please type something here" />
@@ -237,7 +237,7 @@ Textarea has `disabled` prop that defines if the input is disabled.
 
 ## ReadOnly
 
-Textarea has `readonly` prop that defines if the input is readonly.
+Set the Textarea to read-only mode with the `readonly` prop:
 
 <div class="w-[350px]">
 	<TextareaTemplate readonly={true} placeholder="Please type something here" />
@@ -260,7 +260,7 @@ Textarea has `readonly` prop that defines if the input is readonly.
 
 ## Animation
 
-Textarea has `animation` prop that defines if the input has animation or not.
+Control whether the Textarea has animation with the `animation` prop:
 
 <div class="w-[350px]">
 	<TextareaTemplate animation={false} placeholder="Please type something here" />
@@ -283,7 +283,7 @@ Textarea has `animation` prop that defines if the input has animation or not.
 
 ## Max Count
 
-Textarea has `maxCount` prop that defines the text limitation of your Textarea component.
+Limit the number of characters that can be entered using the `maxCount` prop:
 
 <div class="w-[350px]">
 	<TextareaTemplate value="hello world" maxCount={25} placeholder="Please type something here" />
@@ -306,7 +306,7 @@ Textarea has `maxCount` prop that defines the text limitation of your Textarea c
 
 ## Invalid
 
-Textarea has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
+Indicate an invalid state with the `invalid` prop and provide an error message using `invalidText`:
 
 <div class="w-[350px]">
 	<TextareaTemplate label="This is label" invalid={true} invalidText="This is invalid text." placeholder="Please type something here" />
@@ -333,11 +333,13 @@ Textarea has `invalid` prop that defines if the input is invalid. And `invalidTe
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Built with a native HTML input element.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Visual and ARIA labeling support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Change, clipboard, composition, selection, and input event support.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Required and invalid states exposed to assistive technology via ARIA.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
+	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
+	<AccessibilityListItem>Change, clipboard, composition, selection, and input event support.</AccessibilityListItem>
+	<AccessibilityListItem>Required and invalid states exposed to assistive technology via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Support for description and error message help text linked to the input via ARIA.</AccessibilityListItem>
+</ul>
 
 ## API
 

@@ -1,7 +1,7 @@
 ---
 layout: componentLayout
 title: Select
-description: A select displays a collapsible list of options and allows a user to select one or more of them.
+description: The Select component presents a collapsible list of options, enabling users to choose one or more items from a dropdown menu.
 category: component
 githubFolder: /select/Select.svelte
 toc: [
@@ -26,7 +26,7 @@ toc: [
 <script>
 	import { Button, Select } from '$lib';
 	import SelectTemplate from "../../../../stories/select/templates/SelectTemplate.svelte"
-	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityIcon }from "../../../mdsvex/components/index.ts"
+	import { PropertyTable, SlotTable, HandlerTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
 	import { selectProps, selectHandlers, selectSlots } from "./select-props.ts"
 
@@ -42,7 +42,7 @@ toc: [
 
 ## Set Up
 
-Import a Select component in the script tag.
+To use the Select component, import it into your Svelte file:
 
 <CodeBlockWrapper>
 
@@ -56,7 +56,7 @@ Import a Select component in the script tag.
 
 ## Usage
 
-The select input component can be used to gather information from users based on multiple options in the form of a dropdown list
+The Select component allows users to select from multiple options presented in a dropdown list.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} label='This is a label' placeholder='Select an option' />
@@ -87,7 +87,7 @@ The select input component can be used to gather information from users based on
 
 ## Variant
 
-Select has `variant` prop to decide the color theme of it.
+The Select component supports various color themes through the `variant` prop.
 
 <div class="flex flex-col gap-4">
 	<div class="w-[350px]">
@@ -147,9 +147,9 @@ Select has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Select has `size` prop to decide the size of it.
+The `size` prop determines the size of the Select component.
 
-<div class="flex flex-row gap-4">
+<div class="flex flex-col gap-4">
 	<div class="w-[250px]">
 		<SelectTemplate {options} size="sm" label='This is sm' placeholder='Select an option' />
 	</div>
@@ -193,7 +193,7 @@ Select has `size` prop to decide the size of it.
 
 ## Rounded
 
-Select has `rounded` prop to update Select component's border-radius.
+Adjust the border-radius of the Select component using the `rounded` prop.
 
 <div class="flex flex-col gap-4">
 	<div class="w-[250px]">
@@ -246,7 +246,7 @@ Select has `rounded` prop to update Select component's border-radius.
 
 ## Default Selected
 
-Select has `defaultSelected` prop that defines the default selected value of the select.
+Set a default selected value with the `defaultSelected` prop.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} defaultSelected={defaultSelected} placeholder='Select an option' />
@@ -277,7 +277,7 @@ Select has `defaultSelected` prop that defines the default selected value of the
 
 ## Disabled
 
-Select has `disabled` prop that defines if the select is disabled.
+The `disabled` prop can be used to disable the Select component.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} disabled label='This is a label' placeholder='Select an option' />
@@ -307,7 +307,7 @@ Select has `disabled` prop that defines if the select is disabled.
 
 ## Read Only
 
-Select has `readonly` prop that defines if the select is readonly.
+Use the `readonly` prop to make the Select component read-only.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} readonly label='This is a label' placeholder='Select an option' />
@@ -337,7 +337,7 @@ Select has `readonly` prop that defines if the select is readonly.
 
 ## Animation
 
-Select has `animation` prop that defines if the select has animation.
+Toggle animations for the Select component with the `animation` prop.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} animation={false} label='This is a label' placeholder='Select an option' />
@@ -367,7 +367,7 @@ Select has `animation` prop that defines if the select has animation.
 
 ## Invalid
 
-Select has `invalid` prop that defines if the input is invalid. And `invalidText` to set error message when `invalid` is `true`.
+Set the `invalid` prop to mark the Select component as invalid, and use `invalidText` to display an error message.
 
 <div class="w-[350px]">
 	<SelectTemplate {options} invalid invalidText="This is invalid text." label='This is a label' placeholder='Select an option' />
@@ -402,14 +402,15 @@ Select has `invalid` prop that defines if the input is invalid. And `invalidText
 
 ## Accessibility
 
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for selecting a single option.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for disabled options.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for sections.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Labeling support for accessibility.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for description and error message help text linked to the input via ARIA.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Support for mouse, touch, and keyboard interactions.</div>
-- <div class="flex flex-row items-center gap-4"><AccessibilityIcon class="w-5 h-5"/>Tab stop focus management.</div>
-  <!-- TODO: Support for mobile form navigation via software keyboard. -->
+<ul class="flex flex-col gap-2">
+	<AccessibilityListItem>Support for selecting a single option.</AccessibilityListItem>
+	<AccessibilityListItem>Support for disabled options.</AccessibilityListItem>
+	<AccessibilityListItem>Support for sections.</AccessibilityListItem>
+	<AccessibilityListItem>Labeling support for accessibility.</AccessibilityListItem>
+	<AccessibilityListItem>Support for description and error message help text linked to the input via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Support for mouse, touch, and keyboard interactions.</AccessibilityListItem>
+	<AccessibilityListItem>Tab stop focus management.</AccessibilityListItem>
+</ul>
 
 ## API
 

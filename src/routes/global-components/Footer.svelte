@@ -4,7 +4,7 @@
 </script>
 
 <footer>
-	<div class="flex flex-col justify-center items-center gap-4 pt-14 pb-24">
+	<div class="flex flex-col justify-center items-center gap-4 pt-14 pb-4">
 		<div class="flex flex-row gap-12 mb-12">
 			<!-- Contents -->
 			<div class="flex flex-col gap-2">
@@ -32,6 +32,8 @@
 			</div>
 		</div>
 		<!-- Copyright -->
-		<p class="text-sm text-gray-500 dark:text-gray-400">&copy; 2024 SanS-UI. All rights reserved.</p>
+		<p class="text-sm text-gray-500 dark:text-gray-400">
+			&copy; 2024 SanS-UI. All rights reserved.
+		</p>
 	</div>
 </footer>

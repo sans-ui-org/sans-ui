@@ -22,9 +22,7 @@
 			<th class="py-2 px-4 font-semibold w-[20%] rounded-bl-lg"
 				><span class="flex item-start">Name</span></th
 			>
-			<th class="py-2 px-4 font-semibold w-auto rounded-br-lg"
-				><span class="flex item-start">Type</span></th
-			>
+			<th class="py-2 px-4 font-semibold w-auto"><span class="flex item-start">Type</span></th>
 			<th class="py-2 px-4 font-semibold w-auto rounded-br-lg"
 				><span class="flex item-start">Description</span></th
 			>

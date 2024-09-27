@@ -248,7 +248,7 @@ Control whether the switch has an animation with the `animation` prop.
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
 	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
 	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>

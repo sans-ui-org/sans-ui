@@ -3,18 +3,18 @@ import { tv } from '$lib/utils/tv';
 // tailwind-variants
 export const accordionVariant = tv({
 	slots: {
-		base: ['w-full flex flex-row items-center justify-between p-4 cursor-pointer']
+		base: ['w-full flex flex-row items-center justify-between py-3 px-4 cursor-pointer']
 	},
 	variants: {
 		size: {
 			sm: {
-				base: 'text-sm p-2'
+				base: 'text-sm'
 			},
 			md: {
-				base: 'text-base p-4'
+				base: 'text-base'
 			},
 			lg: {
-				base: 'text-lg p6'
+				base: 'text-lg'
 			}
 		}
 	}

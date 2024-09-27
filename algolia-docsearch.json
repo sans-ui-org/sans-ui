@@ -1,0 +1,2534 @@
+[
+	{
+		"url": "/components/button",
+		"content": null,
+		"type": "lvl1",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "<mark>Button</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#kind",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "kind",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>kind</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#rounded",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "rounded",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>rounded</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#rippled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "rippled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>rippled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#icon-button",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "icon-button",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>icon button</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#button-as-link",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "button-as-link",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>button as link</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button",
+		"content": null,
+		"type": "lvl1",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "<mark>Button</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#kind",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Kind",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>kind</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#rounded",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Rounded",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>rounded</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#rippled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Rippled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>rippled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#icon-button",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Icon Button",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>icon button</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/button#button-as-link",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Button",
+			"lvl2": "Button As Link",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Button",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>button as link</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox",
+		"content": null,
+		"type": "lvl1",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "<mark>Checkbox</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#default-checked",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Default Checked",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>default-checked</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#indeterminate",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Indeterminate",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>indeterminate</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/checkbox#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Checkbox",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Checkbox",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input",
+		"content": null,
+		"type": "lvl1",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "<mark>Input</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#label",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Label",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Label</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#value",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Value",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Value</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#rounded",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Rounded",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Rounded</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#readonly",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Read Only",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Read Only</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#clearable",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Clearable",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Clearable</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#max-count",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Max Count",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Max Count</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/input#invalid",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Input",
+			"lvl2": "Invalid",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Input",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Invalid</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "<mark>Link</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#font-size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Font Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Font Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#font-weight",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Font Weight",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Font Weight</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#underline-type",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Underline Type",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Underline Type</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#external",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "External",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>External</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#window-icon",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Window Icon",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Window Icon</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/link#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Link",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Link",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/modal",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Modal",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Modal",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/modal#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Modal",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Modal",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/modal#dismissible",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Modal",
+			"lvl2": "Dismissible",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Modal",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Dismissible</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/modal#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Modal",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Modal",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/progress",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Progress",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Progress",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/progress#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Progress",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Progress",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/progress#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Progress",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Progress",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/progress#track-width",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Progress",
+			"lvl2": "Track Width",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Progress",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Track Width</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/progress#custom-inner-label",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Progress",
+			"lvl2": "Custom Inner Label",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Progress",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Custom Inner Label</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#rounded",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Rounded",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Rounded</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#deafult-checked",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Default Checked",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Default Checked</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#readonly",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Read Only",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Read Only</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/select#invalid",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Select",
+			"lvl2": "Invalid",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Select",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Invalid</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/spinner",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Spinner",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Spinner",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/spinner#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Spinner",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Spinner",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/spinner#kind",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Spinner",
+			"lvl2": "Kind",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Spinner",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Kind</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/spinner#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Spinner",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Spinner",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#default-toggled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Default Toggled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Default Toggled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#readonly",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Read Only",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Read Only</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#invalid",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Invalid",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Invalid</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/switch#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Switch",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Switch",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#value",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Value",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Value</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#value",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Value",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Value</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#rounded",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Rounded",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Rounded</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#disabled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Disabled",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Disabled</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#readonly",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Read Only",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Read Only</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#animation",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Animation",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Animation</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#max-count",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Max Count",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Max Count</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/textarea#invalid",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Textarea",
+			"lvl2": "Invalid",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Textarea",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Invalid</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip#variant",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": "Variant",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Variant</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip#size",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": "Size",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Size</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip#position",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": "Position",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Position</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip#trackable",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": "Trackable",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Trackable</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/components/tooltip#delay-open-and-close",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "COMPONENTS",
+			"lvl1": "Tooltip",
+			"lvl2": "Delay Open And Close",
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Tooltip",
+					"matchLevel": "none"
+				},
+				"lvl2": {
+					"value": "<mark>Delay Open And Close</mark>",
+					"matchLevel": "full"
+				}
+			}
+		}
+	},
+	{
+		"url": "/actions/focus",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "ACTIONS",
+			"lvl1": "Focus",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Focus",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/actions/type-writer",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "ACTIONS",
+			"lvl1": "Type Writer",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Type Writer",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/actions/rippled",
+		"content": null,
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "ACTIONS",
+			"lvl1": "Ripple Effect",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Ripple Effect",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/docs/getting-started",
+		"content": "This is the introduction section for you to start using SanS-UI library.",
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "DOCUMENTATIONS",
+			"lvl1": "Getting Started",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Getting Started",
+					"matchLevel": "none"
+				}
+			}
+		}
+	},
+	{
+		"url": "/docs/installation",
+		"content": "Follow this guide to install the SanS-UI library and ensure your environment is ready to use the library effectively.",
+		"type": "lvl2",
+		"hierarchy": {
+			"lvl0": "DOCUMENTATIONS",
+			"lvl1": "Let's Install",
+			"lvl2": null,
+			"lvl3": null,
+			"lvl4": null,
+			"lvl5": null,
+			"lvl6": null
+		},
+		"_snippetResult": {
+			"hierarchy": {
+				"lvl1": {
+					"value": "Let's Install",
+					"matchLevel": "none"
+				}
+			}
+		}
+	}
+]

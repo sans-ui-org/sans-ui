@@ -24,6 +24,8 @@
 	},
 	"devDependencies": {
 		"@chromatic-com/storybook": "^1.3.3",
+		"@docsearch/css": "^3.6.1",
+		"@docsearch/js": "^3.6.1",
 		"@jest/globals": "^29.7.0",
 		"@playwright/test": "^1.28.1",
 		"@storybook/addon-designs": "^8.0.2",

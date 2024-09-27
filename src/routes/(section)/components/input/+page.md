@@ -381,7 +381,7 @@ The `invalid` prop marks the input as invalid and displays an error message usin
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Built with a native input element.</AccessibilityListItem>
 	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
 	<AccessibilityListItem>Handles events such as change, clipboard, composition, and input.</AccessibilityListItem>

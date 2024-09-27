@@ -142,7 +142,7 @@ The `customInnerLabel` prop allows you to display a custom label inside the prog
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Exposed to assistive technology as a progress bar via ARIA.</AccessibilityListItem>
 	<AccessibilityListItem>Internationalized number formatting as a percentage or value.</AccessibilityListItem>
 	<AccessibilityListItem>Exposes the "aria-valuenow", "aria-valuemin", "aria-valuemax" and `aria-valuetext` `attributes`</AccessibilityListItem>

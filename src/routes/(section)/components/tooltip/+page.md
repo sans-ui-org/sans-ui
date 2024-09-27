@@ -205,7 +205,7 @@ Set delays for opening and closing the Tooltip with `delayToOpen` and `delayToHi
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Labeling support for screen readers ("aria-describedby").</AccessibilityListItem>
 	<AccessibilityListItem>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</AccessibilityListItem>

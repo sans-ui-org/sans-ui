@@ -273,7 +273,7 @@ To create an icon-only button, use the `iconOnly` prop:
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6 ml-6">
 	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Exposed as a tooltip to assistive technology via ARIA.</AccessibilityListItem>

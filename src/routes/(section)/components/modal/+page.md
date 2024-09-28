@@ -16,6 +16,8 @@ toc: [
 			{ slug: 'modal-handlers', title: 'Modal Handlers', level: 1 },
 			{ slug: 'modal-slots', title: 'Modal Slots', level: 1 },
 		]
+prevButton: { title: 'Link', slug: '/components/link' }
+nextButton: { title: 'Progress', slug: '/components/progress' }
 ---
 
 <script>
@@ -162,7 +164,7 @@ Control the modal's animation by setting the `animation` property to `false` to 
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Content outside the modal is hidden from assistive technologies while it is open.</AccessibilityListItem>
 	<AccessibilityListItem>The modal optionally closes when interacting outside, or pressing the "Esc" key.</AccessibilityListItem>
 	<AccessibilityListItem>Focus is moved into the modal on mount, and restored to the trigger element on unmount.</AccessibilityListItem>

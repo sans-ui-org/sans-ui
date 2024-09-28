@@ -7,6 +7,8 @@ toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
 		]
+prevButton: { title: 'Tooltip', slug: '/components/tooltip' }
+nextButton: { title: 'Type Writer', slug: '/actions/type-writer' }
 ---
 
 <script>

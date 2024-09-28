@@ -11,13 +11,18 @@
 		size?: ComponentSize;
 		open?: boolean;
 		title?: string;
+		keepOpen?: boolean;
 		classes?: SlotsToClasses<AccoridonSlots>;
 	};
 
 	/**
+	 * Property that defines if the accordion should keep open.
+	 */
+	export let keepOpen = false;
+	/**
 	 * Property that define the open state of the accordion.
 	 */
-	export let open: boolean = false;
+	export let open: boolean = keepOpen;
 	/**
 	 * Property that defines the size of the accordion.
 	 */
@@ -40,6 +45,7 @@
 	// handlers
 	const dispatcher = createEventDispatcher();
 	const onClick = () => {
+		if (keepOpen) return;
 		dispatcher('click');
 		open = !open;
 	};
@@ -61,7 +67,9 @@
 	on:mouseleave
 >
 	<span class="font-semibold">{title}</span>
-	<AccordionChevronIcon size={20} {open} />
+	{#if !keepOpen}
+		<AccordionChevronIcon size={20} {open} />
+	{/if}
 </button>
 <!-- Accordion Items -->
 {#if open}

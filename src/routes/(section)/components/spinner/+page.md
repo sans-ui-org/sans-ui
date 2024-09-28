@@ -15,6 +15,8 @@ toc: [
 			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },
 			{ slug: 'spinner-slots', title: 'Spinner Slots', level: 1 },
 		]
+prevButton: { title: 'Select', slug: '/components/select' }
+nextButton: { title: 'Switch', slug: '/components/switch' }
 ---
 
 <script>
@@ -135,7 +137,7 @@ The `size` prop sets the size of the spinner.
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Supports 'alert' role via ARIA for better accessibility.</AccessibilityListItem>
 </ul>
 

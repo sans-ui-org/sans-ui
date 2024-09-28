@@ -22,6 +22,8 @@ toc: [
 			{ slug: 'textarea-handlers', title: 'Textarea Handlers', level: 1 },
 			{ slug: 'textarea-slots', title: 'Textarea Slots', level: 1 },
 		]
+prevButton: { title: 'Switch', slug: '/components/switch' }
+nextButton: { title: 'Tooltip', slug: '/components/tooltip' }
 ---
 
 <script>
@@ -333,7 +335,7 @@ Indicate an invalid state with the `invalid` prop and provide an error message u
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
 	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
 	<AccessibilityListItem>Change, clipboard, composition, selection, and input event support.</AccessibilityListItem>

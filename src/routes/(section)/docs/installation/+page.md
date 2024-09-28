@@ -11,6 +11,8 @@ toc: [
 			{ slug: 'install-sans-ui', title: "Install SanS-UI", level: 0 },
 			{ slug: 'you-are-ready!', title: "You are ready!", level: 0 },
 		]
+nextButton: { title: 'Button', slug: '/components/button' }
+prevButton: { title: 'Getting Started', slug: '/docs/getting-started' }
 ---
 
 <script>

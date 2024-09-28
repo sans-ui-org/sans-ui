@@ -22,6 +22,8 @@ toc: [
 			{ slug: 'button-handlers', title: 'Button Handlers', level: 1 },
 			{ slug: 'button-slots', title: 'Button Slots', level: 1 },
 		]
+prevButton: { title: 'Installation', slug: '/docs/installation' }
+nextButton: { title: 'Checkbox', slug: '/components/checkbox' }
 ---
 
 <script>
@@ -273,7 +275,7 @@ To create an icon-only button, use the `iconOnly` prop:
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Exposed as a tooltip to assistive technology via ARIA.</AccessibilityListItem>

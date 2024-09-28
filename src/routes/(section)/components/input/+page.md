@@ -24,6 +24,8 @@ toc: [
 			{ slug: 'input-handlers', title: 'Input Handlers', level: 1 },
 			{ slug: 'input-slots', title: 'Input Slots', level: 1 },
 		]
+prevButton: { title: 'Checkbox', slug: '/components/checkbox' }
+nextButton: { title: 'Link', slug: '/components/link' }
 ---
 
 <script>
@@ -381,7 +383,7 @@ The `invalid` prop marks the input as invalid and displays an error message usin
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Built with a native input element.</AccessibilityListItem>
 	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
 	<AccessibilityListItem>Handles events such as change, clipboard, composition, and input.</AccessibilityListItem>

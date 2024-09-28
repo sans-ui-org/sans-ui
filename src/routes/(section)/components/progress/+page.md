@@ -16,6 +16,8 @@ toc: [
 			{ slug: 'progress-props', title: 'Progress Props', level: 1 },
 			{ slug: 'progress-slots', title: 'Progress Slots', level: 1 },
 		]
+prevButton: { title: 'Modal', slug: '/components/modal' }
+nextButton: { title: 'Select', slug: '/components/select' }
 ---
 
 <script>
@@ -142,7 +144,7 @@ The `customInnerLabel` prop allows you to display a custom label inside the prog
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Exposed to assistive technology as a progress bar via ARIA.</AccessibilityListItem>
 	<AccessibilityListItem>Internationalized number formatting as a percentage or value.</AccessibilityListItem>
 	<AccessibilityListItem>Exposes the "aria-valuenow", "aria-valuemin", "aria-valuemax" and `aria-valuetext` `attributes`</AccessibilityListItem>

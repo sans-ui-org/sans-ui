@@ -3,6 +3,7 @@
 	import { Button, Tooltip, typewriter } from '$lib';
 	import { Footer } from './global-components';
 	import { goto } from '$app/navigation';
+	import DocSearch from './global-components/DocSearch.svelte';
 
 	export let data;
 
@@ -32,7 +33,10 @@
 				</span>
 			{/if}
 		</h3>
-		<Button size="lg" on:click={() => goto('/docs/installation')}>Let's get started</Button>
+		<div class="flex items-center gap-4">
+			<Button size="lg" on:click={() => goto('/docs/installation')}>Get Started</Button>
+			<DocSearch class="h-12" />
+		</div>
 
 		<!-- GitHub stars, NPM downloads, Figma duplicates -->
 		<div>
@@ -79,4 +83,3 @@
 <!-- Footer -->
 
 <Footer />
-```

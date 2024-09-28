@@ -5,7 +5,7 @@
 	import Github from '../utils/icons/Github.svelte';
 	import Light from '../utils/icons/Light.svelte';
 	import Night from '../utils/icons/Night.svelte';
-	import Logo from '../utils/icons/Logo.svelte';
+	import Logo from '../utils/icons/LogoSans.svelte';
 
 	let mode: 'light' | 'dark' | null | undefined;
 

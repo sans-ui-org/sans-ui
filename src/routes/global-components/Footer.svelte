@@ -6,7 +6,7 @@
 		SUI_LICENCE_URL,
 		SUI_EMAIL_URL
 	} from '../utils/constants';
-	import Logo from '../utils/icons/Logo.svelte';
+	import Logo from '../utils/icons/LogoSans.svelte';
 </script>
 
 <footer>

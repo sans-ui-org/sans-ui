@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
 	import Link from '$lib/components/link/Link.svelte';
 	import { SUI_GITHUB_URL } from '../utils/constants';
 	import Github from '../utils/icons/Github.svelte';
@@ -31,10 +30,6 @@
 		document.documentElement.classList.remove(mode === 'light' ? 'dark' : 'light');
 		document.documentElement.classList.add(mode);
 	});
-
-	const onPushHome = () => {
-		goto('/', { invalidateAll: true });
-	};
 </script>
 
 <header
@@ -43,8 +38,7 @@
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
 			<Link href="/">
-				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" fill_rule="evenodd" size={140}
-				></Logo>
+				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" size={140}></Logo>
 			</Link>
 			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
 			<span>ver. 0.0.1</span>

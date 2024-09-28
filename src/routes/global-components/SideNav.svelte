@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import type { AccordionData, AccordionTitle } from '../(section)/+layout.svelte';
 	import { cn } from '$lib/utils/cn';
+	import DocSearch from './DocSearch.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data: AccordionData;
@@ -33,6 +34,7 @@
 <aside
 	class="overflow-y-auto scrolling-touch w-64 h-[calc(100vh-57px)] block sticky top-[57px] border-r dark:text-neutral-100"
 >
+	<DocSearch class="flex justify-center h-9 px-3 mr-1 mt-4 mb-2" />
 	<nav>
 		{#each data.menu as menu}
 			<Accordion

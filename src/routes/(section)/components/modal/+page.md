@@ -162,7 +162,7 @@ Control the modal's animation by setting the `animation` property to `false` to 
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Content outside the modal is hidden from assistive technologies while it is open.</AccessibilityListItem>
 	<AccessibilityListItem>The modal optionally closes when interacting outside, or pressing the "Esc" key.</AccessibilityListItem>
 	<AccessibilityListItem>Focus is moved into the modal on mount, and restored to the trigger element on unmount.</AccessibilityListItem>

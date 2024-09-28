@@ -135,7 +135,7 @@ The `size` prop sets the size of the spinner.
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Supports 'alert' role via ARIA for better accessibility.</AccessibilityListItem>
 </ul>
 

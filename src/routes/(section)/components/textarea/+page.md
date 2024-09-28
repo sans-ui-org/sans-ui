@@ -333,7 +333,7 @@ Indicate an invalid state with the `invalid` prop and provide an error message u
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
 	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
 	<AccessibilityListItem>Change, clipboard, composition, selection, and input event support.</AccessibilityListItem>

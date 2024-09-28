@@ -189,7 +189,7 @@ Control the Checkbox animation using the `animation` prop:
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Built with native HTML input elements.</AccessibilityListItem>
 	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
 	<AccessibilityListItem>Keyboard event support for "Tab" and "Space" keys.</AccessibilityListItem>

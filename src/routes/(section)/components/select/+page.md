@@ -402,7 +402,7 @@ Set the `invalid` prop to mark the Select component as invalid, and use `invalid
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2">
+<ul class="flex flex-col gap-2 ml-6">
 	<AccessibilityListItem>Support for selecting a single option.</AccessibilityListItem>
 	<AccessibilityListItem>Support for disabled options.</AccessibilityListItem>
 	<AccessibilityListItem>Support for sections.</AccessibilityListItem>

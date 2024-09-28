@@ -6,6 +6,7 @@
 	import Github from '../utils/icons/Github.svelte';
 	import Light from '../utils/icons/Light.svelte';
 	import Night from '../utils/icons/Night.svelte';
+	import Logo from '../utils/icons/Logo.svelte';
 
 	let mode: 'light' | 'dark' | null | undefined;
 
@@ -41,8 +42,10 @@
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
-			<!-- TODO: Icon? -->
-			<button on:click={onPushHome}><strong>SanS-UI</strong></button>
+			<Link href="/">
+				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" fill_rule="evenodd" size={140}
+				></Logo>
+			</Link>
 			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
 			<span>ver. 0.0.1</span>
 		</div>

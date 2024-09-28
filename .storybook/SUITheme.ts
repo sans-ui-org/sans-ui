@@ -10,6 +10,7 @@ export default create({
 	brandUrl: 'https://example.com',
 	// TODO: Can be created by Canva: https://www.canva.com/
 	// brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
+	brandImage: 'https://sans-ui-org.s3.amazonaws.com/SanS_nunito.svg',
 	brandTarget: '_self',
 
 	//

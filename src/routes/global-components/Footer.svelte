@@ -1,11 +1,27 @@
 <script lang="ts">
 	import { Link } from '$lib';
-	import { SUI_GITHUB_URL, SUI_FIGMA_URL, SUI_LICENCE_URL } from '../utils/constants';
+	import {
+		SUI_GITHUB_URL,
+		SUI_FIGMA_URL,
+		SUI_LICENCE_URL,
+		SUI_EMAIL_URL
+	} from '../utils/constants';
+	import Logo from '../utils/icons/Logo.svelte';
 </script>
 
 <footer>
-	<div class="flex flex-col justify-center items-center gap-4 pt-14 pb-4">
-		<div class="flex flex-row gap-12 mb-12">
+	<div class="flex flex-row justify-between items-end gap-4 pt-14 pb-4 px-8 mb-12">
+		<div class="flex flex-col gap-6">
+			<Link href="/">
+				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" fill_rule="evenodd" size={180}
+				></Logo>
+			</Link>
+			<p>
+				Email:
+				<Link href={SUI_EMAIL_URL}>three.s.ui.org@gmail.com</Link>
+			</p>
+		</div>
+		<div class="flex flex-row gap-12">
 			<!-- Contents -->
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
@@ -31,9 +47,9 @@
 				</ul>
 			</div>
 		</div>
-		<!-- Copyright -->
-		<p class="text-sm text-gray-500 dark:text-gray-400">
-			&copy; 2024 SanS-UI. All rights reserved.
-		</p>
 	</div>
+	<!-- Copyright -->
+	<p class="text-sm text-gray-500 dark:text-gray-400 border-t-2 py-2 text-center">
+		&copy; 2024 SanS-UI. All rights reserved.
+	</p>
 </footer>

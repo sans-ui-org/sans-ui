@@ -5,3 +5,4 @@ export const SUI_DISCORD_URL =
 	'https://www.figma.com/design/uXtJmwvaMFP8uYqb8ocWgm/S-UI-Designs?node-id=2337-3084&t=erTx2dAb5KbHXjcc-1';
 export const SUI_LICENCE_URL =
 	'https://www.figma.com/design/uXtJmwvaMFP8uYqb8ocWgm/S-UI-Designs?node-id=2337-3084&t=erTx2dAb5KbHXjcc-1';
+	export const SUI_EMAIL_URL = 'mailto:three.s.ui.org@gmail.com';

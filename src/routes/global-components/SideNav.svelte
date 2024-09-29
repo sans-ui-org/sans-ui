@@ -37,7 +37,6 @@
 	<nav>
 		{#each data.menu as menu}
 			<Accordion
-				keepOpen={true}
 				title={menu.title}
 				bind:open={accordionOpen[menu.title]}
 				on:click={() => onClick(menu.title)}

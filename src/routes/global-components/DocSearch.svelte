@@ -6,7 +6,6 @@
 
 	onMount(() => {
 		if (browser) {
-			console.log('Curious', import.meta.env.VITE_DOCSEARCH_API_KEY);
 			docsearch({
 				container: '#docsearch',
 				placeholder: 'Search documentations',

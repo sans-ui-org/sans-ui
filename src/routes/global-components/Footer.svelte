@@ -3,6 +3,11 @@
 	import {
 		SUI_GITHUB_URL,
 		SUI_FIGMA_URL,
+		SUI_DISCORD_URL,
+		SUI_X_URL,
+		SUI_DEVTO_URL,
+		SUI_MEDIUM_URL,
+		SUI_HASHNODE_URL,
 		SUI_LICENCE_URL,
 		SUI_EMAIL_URL
 	} from '../utils/constants';
@@ -24,9 +29,9 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_GITHUB_URL}>GitHub</Link></li>
+					<li><Link href={SUI_GITHUB_URL} external={true}>GitHub</Link></li>
 					<li>
-						<Link href={SUI_FIGMA_URL}>Figma</Link>
+						<Link href={SUI_FIGMA_URL} external={true}>Figma</Link>
 					</li>
 				</ul>
 			</div>
@@ -34,14 +39,18 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Community</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<!-- <li><Link href={SUI_DISCORD_URL}>Discord</Link></li> -->
+					<li><Link href={SUI_DISCORD_URL} external={true}>Discord</Link></li>
+					<li><Link href={SUI_X_URL} external={true}>X</Link></li>
+					<li><Link href={SUI_DEVTO_URL} external={true}>Dev</Link></li>
+					<li><Link href={SUI_MEDIUM_URL} external={true}>Medium</Link></li>
+					<li><Link href={SUI_HASHNODE_URL} external={true}>Hashnode</Link></li>
 				</ul>
 			</div>
 			<!-- LICENCE -->
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_LICENCE_URL}>Licence</Link></li>
+					<li><Link href={SUI_LICENCE_URL} external={true}>Licence</Link></li>
 				</ul>
 			</div>
 		</div>

@@ -20,6 +20,8 @@ toc: [
 			{ slug: 'link-props', title: 'Link Props', level: 1 },
 			{ slug: 'link-slots', title: 'Link Slots', level: 1 },
 		]
+prevButton: { title: 'Input', slug: '/components/input' }
+nextButton: { title: 'Modal', slug: '/components/modal' }
 ---
 
 ---
@@ -187,11 +189,6 @@ Control the font weight using the `bold` prop, with options ranging from `thin` 
 
 The `underlineType` prop defines when the link should be underlined. Options include:
 
-- `none`: No underline
-- `hover`: Underlined on hover
-- `always`: Always underlined
-- `active`: Underlined when active
-
 <div class="inline-flex flex-col gap-2">
 	<Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
 		>underlineType is "none"</Link
@@ -292,7 +289,7 @@ Enable the `windowIcon` prop to display an icon indicating that the link will op
 
 ## Animation
 
-Control link animations using the `animation` prop. By default, animations are enabled. Set `animation={false}` to disable them:
+Control link animations using the `animation` prop. By default, animations are enabled. Set `animation` to `false` to disable them:
 
 <Link href="https://github.com/s-ui-org/s-ui" animation={false}>This is link to the our Github page</Link>
 
@@ -312,7 +309,7 @@ Control link animations using the `animation` prop. By default, animations are e
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2 ml-6">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Built with a native input element.</AccessibilityListItem>
 	<AccessibilityListItem>Visual and ARIA labeling support.</AccessibilityListItem>
 	<AccessibilityListItem>Change, clipboard, composition, selection, and input event support.</AccessibilityListItem>

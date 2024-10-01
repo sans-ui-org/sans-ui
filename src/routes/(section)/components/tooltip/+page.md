@@ -17,6 +17,8 @@ toc: [
 			{ slug: 'tooltip-props', title: 'Tooltip Props', level: 1 },
 			{ slug: 'tooltip-slots', title: 'Tooltip Slots', level: 1 },
 		]
+prevButton: { title: 'Textarea', slug: '/components/textarea' }
+nextButton: { title: 'Focus Trap', slug: '/actions/focus' }
 ---
 
 <script>
@@ -205,7 +207,7 @@ Set delays for opening and closing the Tooltip with `delayToOpen` and `delayToHi
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2 ml-6">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
 	<AccessibilityListItem>Labeling support for screen readers ("aria-describedby").</AccessibilityListItem>
 	<AccessibilityListItem>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</AccessibilityListItem>

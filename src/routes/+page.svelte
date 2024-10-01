@@ -34,7 +34,7 @@
 			{/if}
 		</h3>
 		<div class="flex items-center gap-4">
-			<Button size="lg" on:click={() => goto('/docs/installation')}>Let's get started</Button>
+			<Button size="lg" on:click={() => goto('/docs/installation')}>Get Started</Button>
 			<DocSearch class="h-12" />
 		</div>
 

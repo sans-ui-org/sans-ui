@@ -21,6 +21,8 @@ toc: [
 			{ slug: 'select-handlers', title: 'Select Handlers', level: 1 },
 			{ slug: 'select-slots', title: 'Select Slots', level: 1 },
 		]
+prevButton: { title: 'Progress', slug: '/components/progress' }
+nextButton: { title: 'Spinner', slug: '/components/spinner' }
 ---
 
 <script>
@@ -402,7 +404,7 @@ Set the `invalid` prop to mark the Select component as invalid, and use `invalid
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2 ml-6">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Support for selecting a single option.</AccessibilityListItem>
 	<AccessibilityListItem>Support for disabled options.</AccessibilityListItem>
 	<AccessibilityListItem>Support for sections.</AccessibilityListItem>

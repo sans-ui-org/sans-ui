@@ -16,7 +16,6 @@
 				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" size={180}></Logo>
 			</Link>
 			<p>
-				Email:
 				<Link href={SUI_EMAIL_URL}>three.s.ui.org@gmail.com</Link>
 			</p>
 		</div>

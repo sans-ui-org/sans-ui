@@ -4,6 +4,7 @@ export const SUI_FIGMA_URL =
 export const SUI_DISCORD_URL =
 	'https://discord.com/channels/1287433802494251019/1287433881720586242';
 export const SUI_X_URL = 'https://x.com/sans_ui_org';
+export const SUI_SLACK_URL = 'https://sans-ui-org.slack.com/archives/C07PM271W92';
 export const SUI_DEVTO_URL = 'https://dev.to/sans-ui/';
 export const SUI_MEDIUM_URL = 'https://medium.com/@three.s.ui.org';
 export const SUI_HASHNODE_URL = 'https://hashnode.com/@SanSUI';

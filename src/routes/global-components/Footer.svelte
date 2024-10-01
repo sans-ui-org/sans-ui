@@ -4,6 +4,7 @@
 		SUI_GITHUB_URL,
 		SUI_FIGMA_URL,
 		SUI_DISCORD_URL,
+		SUI_SLACK_URL,
 		SUI_X_URL,
 		SUI_DEVTO_URL,
 		SUI_MEDIUM_URL,
@@ -40,6 +41,7 @@
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Community</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
 					<li><Link href={SUI_DISCORD_URL} external={true}>Discord</Link></li>
+					<li><Link href={SUI_SLACK_URL} external={true}>Slack</Link></li>
 					<li><Link href={SUI_X_URL} external={true}>X</Link></li>
 					<li><Link href={SUI_DEVTO_URL} external={true}>Dev</Link></li>
 					<li><Link href={SUI_MEDIUM_URL} external={true}>Medium</Link></li>

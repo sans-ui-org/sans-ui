@@ -38,7 +38,7 @@
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
 			<Link href="/">
-				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" size={140}></Logo>
+				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" size={100}></Logo>
 			</Link>
 			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
 			<span>ver. 0.0.1</span>

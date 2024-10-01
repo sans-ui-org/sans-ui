@@ -10,7 +10,7 @@
 </script>
 
 <footer>
-	<div class="flex flex-row justify-between items-end gap-4 pt-14 pb-4 px-8 mb-12">
+	<div class="flex flex-row justify-evenly items-end gap-4 pt-14 pb-4 px-8 mb-12">
 		<div class="flex flex-col gap-6">
 			<Link href="/">
 				<Logo fill_1="#231f20" fill_2="#427cbf" fill_3="#2e3192" size={140}></Logo>

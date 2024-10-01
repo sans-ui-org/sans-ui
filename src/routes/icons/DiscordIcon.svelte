@@ -1,22 +1,18 @@
 <script lang="ts">
-	export let size: 'sm' | 'md' | 'lg' = 'lg';
-
-	const sizes = {
-		sm: 'w-4 h-4',
-		md: 'w-5 h-5',
-		lg: 'w-6 h-6'
-	};
+	export let size: number = 14;
 </script>
 
 <svg
-	class={sizes[size]}
 	aria-hidden="true"
 	focusable="false"
 	data-prefix="fab"
 	data-icon="discord"
 	role="img"
+	width={size}
+	height={size}
 	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 640 512"
+	{...$$restProps}
 >
 	<path
 		fill="currentColor"

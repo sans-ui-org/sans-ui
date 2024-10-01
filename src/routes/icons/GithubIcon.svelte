@@ -11,6 +11,7 @@
 	focusable="false"
 	data-icon="github"
 	role="img"
+	{...$$restProps}
 >
 	<path
 		fill-rule="evenodd"

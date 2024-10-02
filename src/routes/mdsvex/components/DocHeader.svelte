@@ -1,6 +1,6 @@
 <script>
 	import { cn } from '$lib/utils/cn';
-	import { SUI_GITHUB_URL } from '../../utils/constants';
+	import { SANS_UI_GITHUB_URL } from '../../utils/constants';
 	import { GithubIcon } from '../../icons';
 
 	export let title = '';
@@ -26,7 +26,7 @@
 				'hover:bg-gray-200',
 				'dark:text-white dark:bg-neutral-600 dark:hover:bg-gray-500'
 			)}
-			href={SUI_GITHUB_URL + '/blob/development/src/lib/components' + githubFolder}
+			href={SANS_UI_GITHUB_URL + '/blob/development/src/lib/components' + githubFolder}
 			target="_blank"
 		>
 			<GithubIcon size={24} />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Link } from '$lib';
-	import { SUI_GITHUB_URL, SUI_FIGMA_URL, SUI_LICENCE_URL } from '../utils/constants';
+	import { SANS_UI_GITHUB_URL, SANS_UI_FIGMA_URL, SANS_UI_LICENCE_URL } from '../utils/constants';
 </script>
 
 <footer>
@@ -10,9 +10,9 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_GITHUB_URL}>GitHub</Link></li>
+					<li><Link href={SANS_UI_GITHUB_URL}>GitHub</Link></li>
 					<li>
-						<Link href={SUI_FIGMA_URL}>Figma</Link>
+						<Link href={SANS_UI_FIGMA_URL}>Figma</Link>
 					</li>
 				</ul>
 			</div>
@@ -27,7 +27,7 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_LICENCE_URL}>Licence</Link></li>
+					<li><Link href={SANS_UI_LICENCE_URL}>Licence</Link></li>
 				</ul>
 			</div>
 		</div>

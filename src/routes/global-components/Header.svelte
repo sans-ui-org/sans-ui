@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import { SUI_DISCORD_URL, SUI_GITHUB_URL } from '../utils/constants';
+	import { SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from '../utils/constants';
 	import { GithubIcon, TwitterIcon, DiscordIcon, MoonIcon, SunIcon } from '../icons';
 	import { Link } from '$lib';
 
@@ -76,7 +76,7 @@
 				<div class="flex">
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_GITHUB_URL}
+						href={SANS_UI_GITHUB_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 						><GithubIcon size={24} class="text-black dark:text-neutral-100" /></a

@@ -2,7 +2,7 @@
 	import { Button, Link, Tooltip } from '$lib';
 	import { Footer } from './global-components';
 	import { goto } from '$app/navigation';
-	import { SANS_TWITTER_URL, SUI_DISCORD_URL, SUI_GITHUB_URL } from './utils/constants';
+	import { SANS_TWITTER_URL, SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from './utils/constants';
 	import { DiscordIcon, GithubIcon, TwitterIcon } from './icons';
 
 	export let data;
@@ -157,7 +157,7 @@
 				<!-- Github -->
 				<div class="shadow border rounded-lg bg-white hover:bg-neutral-50">
 					<a
-						href={SUI_GITHUB_URL}
+						href={SANS_UI_GITHUB_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex flex-col gap-2 p-4 rounded"

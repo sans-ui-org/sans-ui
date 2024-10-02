@@ -95,7 +95,7 @@
 			<div class="flex flex-col gap-8 mb-14 text-center">
 				<h3 class="text-5xl text-center font-semibold dark:text-white">
 					Join the SanS UI <span
-						class="bg-gradient-to-r from-green-500 to-lime-400 inline-block text-transparent bg-clip-text"
+						class="bg-gradient-to-r from-blue-500 to-indigo-400 inline-block text-transparent bg-clip-text"
 						>Contributors</span
 					>
 				</h3>
@@ -144,8 +144,8 @@
 			<div class="flex flex-col gap-8 mb-14 text-center">
 				<h3 class="text-5xl text-center font-semibold dark:text-white">
 					Our <span
-						class="bg-gradient-to-r from-red-500 to-rose-400 inline-block text-transparent bg-clip-text"
-						>Community Support</span
+						class="bg-gradient-to-r from-blue-500 to-indigo-400 inline-block text-transparent bg-clip-text"
+						>Community</span
 					>
 				</h3>
 				<p class="text-xl font-light text-center dark:text-neutral-100">
@@ -155,7 +155,7 @@
 			<!-- Twitter, Discord, Github -->
 			<div class="flex flex-col gap-4">
 				<!-- Github -->
-				<div class="shadow border rounded-lg bg-neutral-50">
+				<div class="shadow border rounded-lg bg-white hover:bg-neutral-50">
 					<a
 						href={SUI_GITHUB_URL}
 						target="_blank"
@@ -174,7 +174,7 @@
 					</a>
 				</div>
 				<!-- Twitter -->
-				<div class="shadow border rounded-lg bg-neutral-50">
+				<div class="shadow border rounded-lg bg-white hover:bg-neutral-50">
 					<a
 						href={SANS_TWITTER_URL}
 						target="_blank"
@@ -184,14 +184,14 @@
 						<div class="flex flex-col gap-2">
 							<div class="flex items-center gap-2">
 								<TwitterIcon size={28} class="text-[#00ACEE]" />
-								<p class="text-xl font-semibold text-gray-500">Twitter</p>
+								<p class="text-xl font-semibold text-neutral-800">X (Twitter)</p>
 							</div>
 							<p class="text-sm font-light">For announcements, tips and general information.</p>
 						</div>
 					</a>
 				</div>
 				<!-- Discord -->
-				<div class="shadow border rounded-lg bg-neutral-50">
+				<div class="shadow border rounded-lg bg-white hover:bg-neutral-50">
 					<a
 						href={SUI_DISCORD_URL}
 						target="_blank"
@@ -201,7 +201,7 @@
 						<div class="flex flex-col gap-2">
 							<div class="flex items-center gap-2">
 								<DiscordIcon size={28} class="text-[#7289DA]" />
-								<p class="text-xl font-semibold text-gray-500">Discord</p>
+								<p class="text-xl font-semibold text-neutral-800">Discord</p>
 							</div>
 							<p class="text-sm font-light">
 								To get involved in the community, ask questions and share tips.

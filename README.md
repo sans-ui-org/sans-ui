@@ -2,7 +2,7 @@
   <a href="">
       <!-- TODO: insert new our logo -->
       <img width="15%" src="" alt="sans-ui-logo" />
-      <h1 align="center">SanS-UI</h1>
+      <h1 align="center">SanS UI</h1>
   </a>
 </p>
 </br>
@@ -21,7 +21,7 @@
 
 <!-- TODO: documentation -->
 
-- [SanS-UI official documentation]()
+- [SanS UI official documentation]()
 <!-- TODO: storybook -->
 - [Storybook]()
 

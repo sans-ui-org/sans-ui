@@ -40,7 +40,7 @@
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
 			<!-- TODO: Icon? -->
-			<button on:click={onPushHome}><strong>SanS-UI</strong></button>
+			<button on:click={onPushHome}><strong>SanS UI</strong></button>
 			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
 			<span>ver. 0.0.1</span>
 		</div>

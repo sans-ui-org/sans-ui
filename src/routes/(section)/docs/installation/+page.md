@@ -1,14 +1,14 @@
 ---
 layout: componentLayout
 title: Let's install.
-description: Follow this guide to install the SanS-UI library and ensure your environment is ready to use the library effectively.
+description: Follow this guide to install the SanS UI library and ensure your environment is ready to use the library effectively.
 category: documentation
 toc: [
 			{ slug: 'before-you-install', title: 'Before you install', level: 0 },
 			{ slug: 'for-svelte-kit', title: 'For SvelteKit', level: 1 },
 			{ slug: 'for-svelte-(not-recommended)', title: 'For Svelte', level: 1 },
 			{ slug: 'configure-tailwindcss', title: "Configure TailwindCSS", level: 0 },
-			{ slug: 'install-sans-ui', title: "Install SanS-UI", level: 0 },
+			{ slug: 'install-sans-ui', title: "Install SanS UI", level: 0 },
 			{ slug: 'you-are-ready!', title: "You are ready!", level: 0 },
 		]
 nextButton: { title: 'Button', slug: '/components/button' }
@@ -23,7 +23,7 @@ prevButton: { title: 'Getting Started', slug: '/docs/getting-started' }
 
 ## Before you install
 
-Before adding SanS-UI to your project, ensure it's based on either <Link href="https://svelte.dev/" external>Svelte</Link> or <Link href="https://svelte.dev/docs/introduction" external>SvelteKit</Link>. If you haven't initialized a Svelte project yet, follow the steps below.
+Before adding SanS UI to your project, ensure it's based on either <Link href="https://svelte.dev/" external>Svelte</Link> or <Link href="https://svelte.dev/docs/introduction" external>SvelteKit</Link>. If you haven't initialized a Svelte project yet, follow the steps below.
 
 ### For Svelte Kit
 
@@ -53,11 +53,11 @@ cd myapp
 
 ## Configure TailwindCSS
 
-SanS-UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/installation" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS-UI library.
+SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/installation" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS UI library.
 
-## Install SanS-UI
+## Install SanS UI
 
-After setting up Tailwind CSS, let's install SanS-UI using the appropriate command for your package manager:
+After setting up Tailwind CSS, let's install SanS UI using the appropriate command for your package manager:
 
 <CodeBlockWrapper title="On your terminal" icon="bash">
 
@@ -76,6 +76,6 @@ pnpm install sans-ui
 
 ## You are ready!
 
-You’ve successfully installed SanS-UI! Now, check out the <Link href="/components/button">Button component</Link> as an example to get started with using SanS-UI components.
+You’ve successfully installed SanS UI! Now, check out the <Link href="/components/button">Button component</Link> as an example to get started with using SanS UI components.
 
 <!-- TODO: Next page nevigator -> navigate the users to the page that you intended. -->

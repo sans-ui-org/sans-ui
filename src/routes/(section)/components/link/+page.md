@@ -146,7 +146,7 @@ Use the `size` prop to adjust the font size of the Link component. Available siz
 
 ## Font Weight
 
-Control the font weight using the `bold` prop, with options ranging from `thin` to `black`:
+Control the font weight using the `fontWeight` prop, with options ranging from `thin` to `black`:
 
 <div class="inline-flex flex-col gap-2">
 	<Link fontWeight="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>

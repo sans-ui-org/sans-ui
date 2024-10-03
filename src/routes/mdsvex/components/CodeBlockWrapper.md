@@ -47,10 +47,9 @@
 			<svelte:component this={icons[icon]} class="w-[16px] h-[16px] text-red-500"/>
 			<span class="text-neutral-300 text-sm">{title}</span>
 		</div>
-		<Tooltip variant="secondary" size="sm" title="Copy this code">
-			<button
+		<Tooltip variant="secondary" size="sm" title="Copy this code" on:click={onCopyCodeBlock}>
+			<div
 					class="p-1.5 text-sm text-white border-2 border-gray-300 rounded-lg bg-gray-700 hover:bg-gray-500 transition duration-200"
-					on:click={onCopyCodeBlock}
 				>
 				<svg class="w-[12px] h-[12px] cursor-pointer" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_1222_36543)">
@@ -58,7 +57,7 @@
 						<path d="M13.5 3.5V12.5C13.5 12.7652 13.3946 13.0196 13.2071 13.2071C13.0196 13.3946 12.7652 13.5 12.5 13.5H3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
 					</g>
 				</svg>
-			</button>
+			</div>
 		</Tooltip>
 	</div>
 

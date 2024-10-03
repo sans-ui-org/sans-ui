@@ -3,7 +3,7 @@
 	import { SANS_UI_GITHUB_URL, SANS_UI_FIGMA_URL, SANS_UI_LICENCE_URL } from '../utils/constants';
 </script>
 
-<footer>
+<footer class="border-t-2">
 	<div class="flex flex-col justify-center items-center gap-4 pt-14 pb-4">
 		<div class="flex flex-row gap-12 mb-12">
 			<!-- Contents -->
@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<!-- Copyright -->
-	<p class="text-sm text-gray-500 dark:text-gray-400 border-t-2 py-4 text-center">
+	<p class="text-sm text-gray-500 dark:text-gray-400 py-4 text-center">
 		&copy; 2024 SanS-UI. All rights reserved.
 	</p>
 </footer>

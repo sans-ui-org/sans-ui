@@ -64,6 +64,7 @@
 	aria-describedby={id}
 	class={cn(slots.base({}), classes.base)}
 	use:tooltip={{ title, size, position, variant, trackable, delayToHide, delayToOpen }}
+	on:click
 >
 	<slot />
 </button>

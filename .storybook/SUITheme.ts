@@ -7,10 +7,12 @@ export default create({
 	fontCode: 'monospace',
 
 	brandTitle: 'SanS-UI release 0.0.1',
+	//brandTitle: `<img src="../src/lib/stories/static/SanS_nuniti_icon.svg" width="50px" height="50px"/>`+'release 0.0.1',
 	brandUrl: 'https://example.com',
 	// TODO: Can be created by Canva: https://www.canva.com/
 	// brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
-	brandImage: 'https://sans-ui-org.s3.amazonaws.com/SanS_nunito.svg',
+	//brandImage: 'https://sans-ui-org.s3.amazonaws.com/SanS_nunito.svg',
+	brandImage: '../src/$liblib/stories/static/SanS_nuniti_icon.svg',
 	brandTarget: '_self',
 
 	//

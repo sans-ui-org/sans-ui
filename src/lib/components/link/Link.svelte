@@ -24,7 +24,7 @@
 	interface $$Props extends HTMLAnchorAttributes {
 		variant?: ComponentVariant;
 		size?: FontSize;
-		bold?: FontWeight;
+		fontWeight?: FontWeight;
 		underlineType?: UnderlineType;
 		disabled?: boolean;
 		external?: boolean;
@@ -45,7 +45,7 @@
 	/**
 	 * Property that defines the weight of the link.
 	 */
-	export let bold: FontWeight = 'medium';
+	export let fontWeight: FontWeight = 'medium';
 	/**
 	 * Property that defines the decoration(underline) of the link.
 	 */
@@ -78,7 +78,7 @@
 	let url = disabled ? undefined : href;
 
 	// tailwind-variants
-	const slots = linkVariant({ variant, underlineType, size, bold, disabled });
+	const slots = linkVariant({ variant, underlineType, size, fontWeight, disabled });
 
 	const props = external
 		? { rel: 'noopener noreferrer', target: '_blank', ...$$restProps }
@@ -89,7 +89,7 @@
 <a
 	{...props}
 	class={cn(
-		slots.base({ variant, underlineType, size, bold, disabled, animation }),
+		slots.base({ variant, underlineType, size, fontWeight, disabled, animation }),
 		classes.base,
 		$$restProps.class
 	)}
@@ -100,7 +100,7 @@
 	<slot />
 	{#if windowIcon}
 		<WindowIcon
-			class={cn(slots.icon({ variant, underlineType, size, bold, disabled, animation }))}
+			class={cn(slots.icon({ variant, underlineType, size, fontWeight, disabled, animation }))}
 		/>
 	{/if}
 </a>

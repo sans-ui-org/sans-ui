@@ -39,28 +39,27 @@
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
-			<!-- TODO: Icon? -->
-			<button on:click={onPushHome}><strong>SanS-UI</strong></button>
-			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
-			<span>ver. 0.0.1</span>
-		</div>
-		<ul class="flex gap-8">
 			<div class="flex gap-8">
-				<li class="flex items-center">
+				<button on:click={onPushHome}><strong>SanS-UI</strong></button>
+				<div class="flex gap-4">
 					<Link
+						size="sm"
+						fontWeight="semibold"
 						underlineType="hover"
 						href="/docs/getting-started"
 						class="dark:text-white dark:visited:text-white">Docs</Link
 					>
-				</li>
-				<li class="flex items-center">
 					<Link
+						size="sm"
+						fontWeight="semibold"
 						underlineType="hover"
 						href="/components/button"
 						class="dark:text-white dark:visited:text-white">Components</Link
 					>
-				</li>
+				</div>
 			</div>
+		</div>
+		<ul class="flex gap-8">
 			<li class="flex flex-row items-center justify-center gap-4">
 				{#if mode === 'light'}
 					<button

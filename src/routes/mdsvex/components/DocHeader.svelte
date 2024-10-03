@@ -1,7 +1,7 @@
 <script>
 	import { cn } from '$lib/utils/cn';
-	import { SUI_GITHUB_URL } from '../../utils/constants';
-	import Github from '../../utils/icons/Github.svelte';
+	import { SANS_UI_GITHUB_URL } from '../../utils/constants';
+	import { GithubIcon } from '../../icons';
 
 	export let title = '';
 	export let description = '';
@@ -26,10 +26,10 @@
 				'hover:bg-gray-200',
 				'dark:text-white dark:bg-neutral-600 dark:hover:bg-gray-500'
 			)}
-			href={SUI_GITHUB_URL + '/blob/development/src/lib/components' + githubFolder}
+			href={SANS_UI_GITHUB_URL + '/blob/development/src/lib/components' + githubFolder}
 			target="_blank"
 		>
-			<Github size={24} />
+			<GithubIcon size={24} />
 			<span>Source code in GitHub</span>
 		</a>
 	{/if}

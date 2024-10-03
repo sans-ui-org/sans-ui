@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	import Link from '$lib/components/link/Link.svelte';
-	import { SUI_GITHUB_URL } from '../utils/constants';
-	import Github from '../utils/icons/Github.svelte';
-	import Light from '../utils/icons/Light.svelte';
-	import Night from '../utils/icons/Night.svelte';
+	import { SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from '../utils/constants';
+	import { GithubIcon, TwitterIcon, DiscordIcon, MoonIcon, SunIcon } from '../icons';
+	import { Link } from '$lib';
 
 	let mode: 'light' | 'dark' | null | undefined;
 
@@ -67,24 +65,39 @@
 				{#if mode === 'light'}
 					<button
 						class="flex items-center justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						on:click={toggleTheme}><Night size={18} /></button
+						on:click={toggleTheme}><MoonIcon size={18} /></button
 					>
 				{:else}
 					<button
 						class="flex items-center justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						on:click={toggleTheme}><Light size={18} /></button
+						on:click={toggleTheme}><SunIcon size={18} /></button
 					>
 				{/if}
-				<a
-					class="flex items-center justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-					href={SUI_GITHUB_URL}
-					target="_blank"
-					rel="noopener noreferrer"><Github size={24} /></a
-				>
-				<!-- TODO: Github star number here? -->
-				<!-- <Link href={SUI_DISCORD_URL} target="_blank">
-						<Discord size="lg" />
-					</Link> -->
+				<div class="flex">
+					<a
+						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
+						href={SANS_UI_GITHUB_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+						><GithubIcon size={24} class="text-black dark:text-neutral-100" /></a
+					>
+					<a
+						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
+						href={SUI_DISCORD_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<DiscordIcon size={24} class="text-[#7289DA]" />
+					</a>
+					<a
+						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
+						href={SUI_DISCORD_URL}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<TwitterIcon size={24} class="text-[#00ACEE]" />
+					</a>
+				</div>
 			</li>
 		</ul>
 	</nav>

@@ -2,8 +2,7 @@
 	import { Tooltip } from "$lib";
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';
-	import SvelteIcon from "../../icons/SvelteIcon.svelte";
-	import BashIcon from "../../icons/BashIcon.svelte";
+	import { SvelteIcon, BashIcon } from "../../icons";
 
 	type $$Props = HTMLBaseAttributes & {
 		title?: string

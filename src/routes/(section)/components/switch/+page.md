@@ -20,6 +20,8 @@ toc: [
 			{ slug: 'switch-handlers', title: 'Switch Handlers', level: 1 },
 			{ slug: 'switch-slots', title: 'Switch Slots', level: 1 },
 		]
+prevButton: { title: 'Spinner', slug: '/components/spinner' }
+nextButton: { title: 'Textarea', slug: '/components/textarea' }
 ---
 
 <script>
@@ -248,7 +250,7 @@ Control whether the switch has an animation with the `animation` prop.
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2 ml-6">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Built with a native HTML input element.</AccessibilityListItem>
 	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
 	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>

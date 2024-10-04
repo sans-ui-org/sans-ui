@@ -19,6 +19,8 @@ toc: [
 			{ slug: 'checkbox-handlers', title: 'Checkbox Handlers', level: 1 },
 			{ slug: 'checkbox-slots', title: 'Checkbox Slots', level: 1 },
 		]
+prevButton: { title: 'Button', slug: '/components/button' }
+nextButton: { title: 'Input', slug: '/components/input' }
 ---
 
 <script>
@@ -189,7 +191,7 @@ Control the Checkbox animation using the `animation` prop:
 
 ## Accessibility
 
-<ul class="flex flex-col gap-2 ml-6">
+<ul class="flex flex-col gap-3 ml-10 mt-4">
 	<AccessibilityListItem>Built with native HTML input elements.</AccessibilityListItem>
 	<AccessibilityListItem>Full support for browser features like form autofill.</AccessibilityListItem>
 	<AccessibilityListItem>Keyboard event support for "Tab" and "Space" keys.</AccessibilityListItem>

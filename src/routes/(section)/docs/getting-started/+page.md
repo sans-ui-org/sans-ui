@@ -12,6 +12,8 @@ toc: [
 			{ slug: 'SanS-UI-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
 			{ slug: 'SanS-UI-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
 		]
+nextButton: { title: 'Installation', slug: '/docs/installation' }
+prevButton: null
 ---
 
 <script>

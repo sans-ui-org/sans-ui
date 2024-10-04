@@ -10,6 +10,11 @@ export async function load() {
 			login: 'kuri-sun',
 			avatar_url: 'https://avatars.githubusercontent.com/u/29252044?v=4',
 			html_url: ''
+		},
+		{
+			login: 'kuri-sun',
+			avatar_url: 'https://avatars.githubusercontent.com/u/29252044?v=4',
+			html_url: ''
 		}
 	];
 	const repoInfoData = {

@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { Link } from '$lib';
+	import { SANS_UI_GITHUB_URL, SANS_UI_FIGMA_URL, SANS_UI_LICENCE_URL } from '../utils/constants';
 	import {
-		SUI_GITHUB_URL,
-		SUI_FIGMA_URL,
 		SUI_DISCORD_URL,
 		SUI_SLACK_URL,
 		SUI_X_URL,
 		SUI_DEVTO_URL,
 		SUI_MEDIUM_URL,
 		SUI_HASHNODE_URL,
-		SUI_LICENCE_URL,
 		SUI_EMAIL_URL
 	} from '../utils/constants';
 	import Logo from '../utils/icons/LogoSans.svelte';
@@ -30,9 +28,9 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_GITHUB_URL} external={true}>GitHub</Link></li>
+					<li><Link href={SANS_UI_GITHUB_URL} external={true}>GitHub</Link></li>
 					<li>
-						<Link href={SUI_FIGMA_URL} external={true}>Figma</Link>
+						<Link href={SANS_UI_FIGMA_URL} external={true}>Figma</Link>
 					</li>
 				</ul>
 			</div>
@@ -52,13 +50,13 @@
 			<div class="flex flex-col gap-2">
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
-					<li><Link href={SUI_LICENCE_URL} external={true}>Licence</Link></li>
+					<li><Link href={SANS_UI_LICENCE_URL} external={true}>Licence</Link></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- Copyright -->
-	<p class="text-sm text-gray-500 dark:text-gray-400 border-t-2 py-2 text-center">
+	<p class="text-sm text-gray-500 dark:text-gray-400 border-t-2 py-4 text-center">
 		&copy; 2024 SanS-UI. All rights reserved.
 	</p>
 </footer>

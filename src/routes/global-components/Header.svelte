@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from '../utils/constants';
+	import { SANS_DISCORD_URL, SANS_UI_GITHUB_URL, SANS_TWITTER_URL } from '../utils/constants';
 	import { GithubIcon, TwitterIcon, DiscordIcon, MoonIcon, SunIcon } from '../icons';
 	import { Link } from '$lib';
 	import Logo from '../utils/icons/LogoSans.svelte';
@@ -80,7 +80,7 @@
 					>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_DISCORD_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -88,7 +88,7 @@
 					</a>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_TWITTER_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

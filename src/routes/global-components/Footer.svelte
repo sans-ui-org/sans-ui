@@ -3,7 +3,6 @@
 	import { SANS_UI_GITHUB_URL, SANS_UI_FIGMA_URL, SANS_UI_LICENCE_URL } from '../utils/constants';
 	import {
 		SANS_DISCORD_URL,
-		SANS_SLACK_URL,
 		SANS_TWITTER_URL,
 		SANS_DEVTO_URL,
 		SANS_MEDIUM_URL,
@@ -39,7 +38,6 @@
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Community</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
 					<li><Link href={SANS_DISCORD_URL} external={true}>Discord</Link></li>
-					<li><Link href={SANS_SLACK_URL} external={true}>Slack</Link></li>
 					<li><Link href={SANS_TWITTER_URL} external={true}>X</Link></li>
 					<li><Link href={SANS_DEVTO_URL} external={true}>Dev</Link></li>
 					<li><Link href={SANS_MEDIUM_URL} external={true}>Medium</Link></li>

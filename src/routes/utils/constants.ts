@@ -7,7 +7,6 @@ export const SANS_TWITTER_URL = 'https://x.com/sans_ui_org';
 export const SANS_UI_LICENCE_URL =
 	'https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE';
 ('https://discord.com/channels/1287433802494251019/1287433881720586242');
-export const SANS_SLACK_URL = 'https://sans-ui-org.slack.com/archives/C07PM271W92';
 export const SANS_DEVTO_URL = 'https://dev.to/sans-ui/';
 export const SANS_MEDIUM_URL = 'https://medium.com/@three.s.ui.org';
 export const SANS_HASHNODE_URL = 'https://hashnode.com/@SanSUI';

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
-	import { SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from '../utils/constants';
+	import { SANS_DISCORD_URL, SANS_UI_GITHUB_URL, SANS_TWITTER_URL } from '../utils/constants';
 	import { GithubIcon, TwitterIcon, DiscordIcon, MoonIcon, SunIcon } from '../icons';
 	import { Link } from '$lib';
+	import Logo from '../utils/icons/LogoSans.svelte';
 
 	let mode: 'light' | 'dark' | null | undefined;
 
@@ -28,10 +28,6 @@
 		document.documentElement.classList.remove(mode === 'light' ? 'dark' : 'light');
 		document.documentElement.classList.add(mode);
 	});
-
-	const onPushHome = () => {
-		goto('/', { invalidateAll: true });
-	};
 </script>
 
 <header
@@ -39,10 +35,9 @@
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
 		<div class="flex flex-row gap-4">
-			<!-- TODO: Icon? -->
-			<button on:click={onPushHome}><strong>SanS UI</strong></button>
-			<!-- TODO: Let's automate... i.e. GitHub API? release number fetching?? -->
-			<span>ver. 0.0.1</span>
+			<Link href="/">
+				<Logo size={100} class="dark:text-white text-black"></Logo>
+			</Link>
 		</div>
 		<ul class="flex gap-8">
 			<div class="flex gap-8">
@@ -83,7 +78,7 @@
 					>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_DISCORD_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -91,7 +86,7 @@
 					</a>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_TWITTER_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

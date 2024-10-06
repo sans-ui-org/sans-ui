@@ -1,4 +1,8 @@
 import { create } from '@storybook/theming/create';
+import logoUrl from './public/SanS_nunito.svg';
+
+// TODO: favicon
+// https://github.com/storybookjs/storybook/issues/6155
 
 export default create({
 	base: 'light',
@@ -7,9 +11,10 @@ export default create({
 	fontCode: 'monospace',
 
 	brandTitle: 'SanS UI release 0.0.1',
+
+	// TODO: put url
 	brandUrl: 'https://example.com',
-	// TODO: Can be created by Canva: https://www.canva.com/
-	// brandImage: 'https://storybook.js.org/images/placeholders/350x150.png',
+	brandImage: logoUrl,
 	brandTarget: '_self',
 
 	//

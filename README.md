@@ -1,7 +1,7 @@
 <p align="center">
   <a href="">
       <img width="15%" src="https://github.com/user-attachments/assets/590042db-97d1-4ed0-b4c8-cd76c8c15cd2" alt="sans-ui-logo" />
-      <h1 align="center">SanS-UI</h1>
+      <h1 align="center">SanS UI</h1>
   </a>
 </p>
 </br>

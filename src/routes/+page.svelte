@@ -110,7 +110,7 @@
 						class="text-xl font-light text-center dark:text-neutral-100"
 						>Contribute to the project</Link
 					>
-					and be recognized as one of our featured contributors.
+					and be recognized as one of our featured contributors. 🦸
 				</p>
 			</div>
 			<div class="flex flex-row items-center justify-center gap-2">
@@ -153,7 +153,7 @@
 					>
 				</h3>
 				<p class="text-xl font-light text-center dark:text-neutral-100">
-					Let's be part of our community! everyone is invited to contribute in your way!
+					Let's be part of our community! Everyone is invited to contribute! 🚀
 				</p>
 			</div>
 			<!-- Twitter, Discord, Github -->

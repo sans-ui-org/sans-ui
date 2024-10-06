@@ -10,7 +10,7 @@ export default create({
 	fontBase: '"Raleway", "Roboto", "Helvetica Neue"',
 	fontCode: 'monospace',
 
-	brandTitle: 'SanS-UI release 0.0.1',
+	brandTitle: 'SanS UI release 0.0.1',
 
 	// TODO: put url
 	brandUrl: 'https://example.com',

@@ -2489,7 +2489,7 @@
 	},
 	{
 		"url": "/docs/getting-started",
-		"content": "This is the introduction section for you to start using SanS-UI library.",
+		"content": "This is the introduction section for you to start using SanS UI library.",
 		"type": "lvl2",
 		"hierarchy": {
 			"lvl0": "DOCUMENTATIONS",
@@ -2511,7 +2511,7 @@
 	},
 	{
 		"url": "/docs/installation",
-		"content": "Follow this guide to install the SanS-UI library and ensure your environment is ready to use the library effectively.",
+		"content": "Follow this guide to install the SanS UI library and ensure your environment is ready to use the library effectively.",
 		"type": "lvl2",
 		"hierarchy": {
 			"lvl0": "DOCUMENTATIONS",

@@ -4,6 +4,7 @@ title: Progress
 description: The Progress component displays a circular progress indicator, useful for showing the status of a task or operation. It is commonly used to represent an undetermined wait time or to visualize the progress of a process.
 category: component
 githubFolder: /progress/Progress.svelte
+storybookFolder: progress
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

@@ -4,6 +4,7 @@ title: Spinner
 description: The Spinner component indicates ongoing processes, typically used to express an unspecified wait time or display the length of a process.
 category: component
 githubFolder: /spinner/Spinner.svelte
+storybookFolder: spinner
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

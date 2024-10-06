@@ -4,6 +4,7 @@ title: Tooltip
 description: Tooltips provide brief, informative messages that appear when a user interacts with an element.
 category: component
 githubFolder: /tooltip/Tooltip.svelte
+storybookFolder: tooltip
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

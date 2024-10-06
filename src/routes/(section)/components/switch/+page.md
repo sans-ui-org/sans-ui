@@ -4,6 +4,7 @@ title: Switch
 description: The Switch component provides a toggle switch, allowing users to switch between two states. It is useful for settings and options.
 category: component
 githubFolder: /switch/Switch.svelte
+storybookFolder: switch
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

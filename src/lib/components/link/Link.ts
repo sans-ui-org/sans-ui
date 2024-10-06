@@ -40,7 +40,7 @@ export const linkVariant = tv({
 			'6xl': { base: 'text-6xl gap-6', icon: 'w-11 h-11' },
 			'7xl': { base: 'text-7xl gap-6', icon: 'w-14 h-14' }
 		},
-		bold: {
+		fontWeight: {
 			thin: { base: 'font-thin' },
 			extralight: { base: 'font-extralight' },
 			light: { base: 'font-light' },

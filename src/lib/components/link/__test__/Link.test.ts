@@ -99,49 +99,49 @@ test('should have correct size for 7xl', () => {
 	expect(linkBtn.getByRole('link').classList.contains('text-7xl')).toBeTruthy();
 });
 
-//bold
+//fontWeight
 test('should have correct font weight for bold', () => {
-	const linkBtn = render(Link, { bold: 'bold' });
+	const linkBtn = render(Link, { fontWeight: 'bold' });
 	expect(linkBtn.getByRole('link').classList.contains('font-bold')).toBeTruthy();
 });
 
 test('should have correct font weight for thin', () => {
-	const linkBtn = render(Link, { bold: 'thin' });
+	const linkBtn = render(Link, { fontWeight: 'thin' });
 	expect(linkBtn.getByRole('link').classList.contains('font-thin')).toBeTruthy();
 });
 
 test('should have correct font weight for extralight', () => {
-	const linkBtn = render(Link, { bold: 'extralight' });
+	const linkBtn = render(Link, { fontWeight: 'extralight' });
 	expect(linkBtn.getByRole('link').classList.contains('font-extralight')).toBeTruthy();
 });
 
 test('should have correct font weight for light', () => {
-	const linkBtn = render(Link, { bold: 'light' });
+	const linkBtn = render(Link, { fontWeight: 'light' });
 	expect(linkBtn.getByRole('link').classList.contains('font-light')).toBeTruthy();
 });
 
 test('should have correct font weight for normal', () => {
-	const linkBtn = render(Link, { bold: 'normal' });
+	const linkBtn = render(Link, { fontWeight: 'normal' });
 	expect(linkBtn.getByRole('link').classList.contains('font-normal')).toBeTruthy();
 });
 
 test('should have correct font weight for medium', () => {
-	const linkBtn = render(Link, { bold: 'medium' });
+	const linkBtn = render(Link, { fontWeight: 'medium' });
 	expect(linkBtn.getByRole('link').classList.contains('font-medium')).toBeTruthy();
 });
 
 test('should have correct font weight for semibold', () => {
-	const linkBtn = render(Link, { bold: 'semibold' });
+	const linkBtn = render(Link, { fontWeight: 'semibold' });
 	expect(linkBtn.getByRole('link').classList.contains('font-semibold')).toBeTruthy();
 });
 
 test('should have correct font weight for extrabold', () => {
-	const linkBtn = render(Link, { bold: 'extrabold' });
+	const linkBtn = render(Link, { fontWeight: 'extrabold' });
 	expect(linkBtn.getByRole('link').classList.contains('font-extrabold')).toBeTruthy();
 });
 
 test('should have correct font weight for black', () => {
-	const linkBtn = render(Link, { bold: 'black' });
+	const linkBtn = render(Link, { fontWeight: 'black' });
 	expect(linkBtn.getByRole('link').classList.contains('font-black')).toBeTruthy();
 });
 

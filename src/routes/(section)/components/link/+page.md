@@ -4,6 +4,7 @@ title: Link
 description: Links allow users to click their way from page to page. This component is styled to resemble a hyperlink and semantically renders an anchor element.
 category: component
 githubFolder: /link/Link.svelte
+storybookFolder: link
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 1 },

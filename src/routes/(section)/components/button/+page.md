@@ -4,6 +4,7 @@ title: Button
 description: The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
 category: component
 githubFolder: /button/Button.svelte
+storybookFolder: button
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

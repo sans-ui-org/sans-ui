@@ -4,6 +4,7 @@ title: Select
 description: The Select component presents a collapsible list of options, enabling users to choose one or more items from a dropdown menu.
 category: component
 githubFolder: /select/Select.svelte
+storybookFolder: select
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

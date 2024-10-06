@@ -4,6 +4,7 @@ title: Checkbox
 description: Checkbox component to allow the user to select one or more options in the form of a square box available in multiple sizes and colors
 category: component
 githubFolder: /checkbox/Checkbox.svelte
+storybookFolder: checkbox
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

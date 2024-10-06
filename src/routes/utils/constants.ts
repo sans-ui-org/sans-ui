@@ -6,3 +6,4 @@ export const SUI_DISCORD_URL =
 export const SANS_TWITTER_URL = 'https://x.com/sans_ui_org';
 export const SANS_UI_LICENCE_URL =
 	'https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE';
+export const SANS_UI_STORYBOOK_URL = 'https://sans-ui-storybook.vercel.app';

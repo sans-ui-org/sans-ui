@@ -21,6 +21,8 @@
 	export let category = '';
 	/** @type {string} */
 	export let githubFolder = '';
+	/** @type {string} */
+	export let storybookFolder = '';
 	/** @type {{ slug: string, title: string, level: number }[]} */
 	export let toc = [];
 	/** @type {{ title: string, slug: string } | null} */
@@ -64,7 +66,7 @@
 <Meta title={`SanS-UI - ${title}`} {description} />
 
 <div class="flex flex-col w-[calc(100%-480px)] px-12 py-8 divide-y divide-gray-200 overflow-y-auto">
-	<DocHeader {title} {description} {category} {githubFolder} />
+	<DocHeader {title} {description} {category} {githubFolder} {storybookFolder} />
 	<div id="mainContent" class="pb-12">
 		<slot />
 		<div class="flex flex-row justify-between mt-24">

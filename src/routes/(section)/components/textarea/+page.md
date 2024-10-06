@@ -3,7 +3,8 @@ layout: componentLayout
 title: Textarea
 description: The Textarea component provides a multi-line text input field, allowing users to enter larger blocks of text.
 category: component
-githubFolder: /textArea/Textarea.svelte
+githubFolder: /textarea/Textarea.svelte
+storybookFolder: textarea
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },

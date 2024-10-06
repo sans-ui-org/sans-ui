@@ -13,19 +13,25 @@
 </script>
 
 <footer class="border-t-2">
-	<div class="flex flex-row justify-between items-end gap-4 pt-14 pb-4 px-8 mb-12">
-		<div class="flex flex-col gap-6">
+	<div class="flex flex-row justify-center gap-32 items-start pt-14 pb-4 px-8 mb-12">
+		<div class="flex flex-col gap-6 w-[300px]">
 			<Link href="/">
 				<LogoSans size={140} class="dark:text-white text-black"></LogoSans>
 			</Link>
-			<p>
-				<Link href={SANS_EMAIL_URL}>three.s.ui.org@gmail.com</Link>
-			</p>
+			<div class="flex flex-col gap-2">
+				<p class="text-sm text-gray-600 font-light dark:text-neutral-100">
+					We are still in the early stages of development, and we would greatly appreciate your
+					opinions or feedback. Please feel free to reach out to us.
+				</p>
+				<p>
+					<Link size="sm" href={SANS_EMAIL_URL}>Let us know your opinion</Link>
+				</p>
+			</div>
 		</div>
 		<div class="flex flex-row gap-12">
 			<!-- Contents -->
 			<div class="flex flex-col gap-2">
-				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
+				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Explore</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
 					<li><Link href={SANS_UI_GITHUB_URL} external={true}>GitHub</Link></li>
 					<li>
@@ -38,7 +44,7 @@
 				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Community</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
 					<li><Link href={SANS_DISCORD_URL} external={true}>Discord</Link></li>
-					<li><Link href={SANS_TWITTER_URL} external={true}>X</Link></li>
+					<li><Link href={SANS_TWITTER_URL} external={true}>X (Twitter)</Link></li>
 					<li><Link href={SANS_DEVTO_URL} external={true}>Dev</Link></li>
 					<li><Link href={SANS_MEDIUM_URL} external={true}>Medium</Link></li>
 					<li><Link href={SANS_HASHNODE_URL} external={true}>Hashnode</Link></li>
@@ -46,7 +52,7 @@
 			</div>
 			<!-- LICENCE -->
 			<div class="flex flex-col gap-2">
-				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Contents</h2>
+				<h2 class="text-sm font-semibold text-gray-900 uppercase dark:text-white">Policy</h2>
 				<ul class="inline-flex flex-col items-center gap-1">
 					<li><Link href={SANS_UI_LICENCE_URL} external={true}>Licence</Link></li>
 				</ul>

@@ -15,9 +15,19 @@ export const tooltipProps = [
 		default: 'md'
 	},
 	{
-		name: 'title',
-		type: 'string',
-		default: '""'
+		name: 'trackable',
+		type: 'boolean',
+		default: 'false'
+	},
+	{
+		name: 'delayToOpen',
+		type: 'number',
+		default: '0'
+	},
+	{
+		name: 'delayToHide',
+		type: 'number',
+		default: '300'
 	}
 ];
 

@@ -49,7 +49,7 @@
 	/**
 	 * Property that defines the delay to hide the tooltip.
 	 */
-	export let delayToHide: number = 0;
+	export let delayToHide: number = trackable ? 0 : 300;
 	/**
 	 * Property that defines the classes of the tooltip.
 	 */

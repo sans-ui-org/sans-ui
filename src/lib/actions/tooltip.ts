@@ -14,12 +14,11 @@ export function tooltip(
 	targetNode: HTMLElement,
 	{ title, size, position, variant, trackable, delayToHide, delayToOpen }: TooltipArgument
 ) {
-	let copy: HTMLElement;
+	let copy: HTMLElement | null | undefined = undefined;
 
 	const mouseOver = () => {
-		if (copy) {
-			copy.remove();
-		}
+		console.log('over', copy);
+		if (copy) return;
 
 		copy = document.createElement('div');
 		copy.setAttribute('data-tooltip', 'true');
@@ -38,9 +37,11 @@ export function tooltip(
 		copy.style.zIndex = '1000';
 
 		setTimeout(() => {
-			document.body.appendChild(copy);
-			if (!trackable) {
-				setTooltipPosition(targetNode, copy, position);
+			if (copy) {
+				document.body.appendChild(copy);
+				if (!trackable) {
+					setTooltipPosition(targetNode, copy, position);
+				}
 			}
 		}, delayToOpen);
 	};
@@ -53,11 +54,12 @@ export function tooltip(
 	};
 
 	const mouseLeave = () => {
-		if (copy) {
-			setTimeout(() => {
+		setTimeout(() => {
+			if (copy) {
 				copy.remove();
-			}, delayToHide);
-		}
+				copy = null;
+			}
+		}, delayToHide);
 	};
 
 	targetNode.addEventListener('mouseover', mouseOver);

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
-	import { SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from '../utils/constants';
+	import { SANS_DISCORD_URL, SANS_UI_GITHUB_URL, SANS_TWITTER_URL } from '../utils/constants';
 	import { GithubIcon, TwitterIcon, DiscordIcon, MoonIcon, SunIcon } from '../icons';
 	import { Link } from '$lib';
+	import Logo from '../utils/icons/LogoSans.svelte';
 
 	let mode: 'light' | 'dark' | null | undefined;
 
@@ -28,37 +28,34 @@
 		document.documentElement.classList.remove(mode === 'light' ? 'dark' : 'light');
 		document.documentElement.classList.add(mode);
 	});
-
-	const onPushHome = () => {
-		goto('/', { invalidateAll: true });
-	};
 </script>
 
 <header
 	class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20 dark:bg-neutral-800 dark:text-white"
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
-		<div class="flex flex-row gap-4">
-			<div class="flex gap-8">
-				<button on:click={onPushHome}><strong>SanS-UI</strong></button>
-				<div class="flex gap-4">
-					<Link
-						size="sm"
-						fontWeight="semibold"
-						underlineType="hover"
-						href="/docs/getting-started"
-						class="dark:text-white dark:visited:text-white">Docs</Link
-					>
-					<Link
-						size="sm"
-						fontWeight="semibold"
-						underlineType="hover"
-						href="/components/button"
-						class="dark:text-white dark:visited:text-white">Components</Link
-					>
-				</div>
+		<div class="flex gap-10">
+			<Link href="/">
+				<Logo size={100} class="dark:text-white text-black"></Logo>
+			</Link>
+			<div class="flex gap-4">
+				<Link
+					size="sm"
+					fontWeight="semibold"
+					underlineType="hover"
+					href="/docs/getting-started"
+					class="dark:text-white dark:visited:text-white">Docs</Link
+				>
+				<Link
+					size="sm"
+					fontWeight="semibold"
+					underlineType="hover"
+					href="/components/button"
+					class="dark:text-white dark:visited:text-white">Components</Link
+				>
 			</div>
 		</div>
+
 		<ul class="flex gap-8">
 			<li class="flex flex-row items-center justify-center gap-4">
 				{#if mode === 'light'}
@@ -82,7 +79,7 @@
 					>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_DISCORD_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -90,7 +87,7 @@
 					</a>
 					<a
 						class="justify-center p-2 rounded-full transition duration-200 hover:bg-gray-200 dark:hover:bg-neutral-500"
-						href={SUI_DISCORD_URL}
+						href={SANS_TWITTER_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 					>

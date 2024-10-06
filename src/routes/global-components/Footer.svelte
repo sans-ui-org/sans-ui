@@ -9,14 +9,14 @@
 		SANS_HASHNODE_URL,
 		SANS_EMAIL_URL
 	} from '../utils/constants';
-	import Logo from '../utils/icons/LogoSans.svelte';
+	import LogoSans from '../utils/icons/LogoSans.svelte';
 </script>
 
-<footer>
+<footer class="border-t-2">
 	<div class="flex flex-row justify-between items-end gap-4 pt-14 pb-4 px-8 mb-12">
 		<div class="flex flex-col gap-6">
 			<Link href="/">
-				<Logo size={140} class="dark:text-white text-black"></Logo>
+				<LogoSans size={140} class="dark:text-white text-black"></LogoSans>
 			</Link>
 			<p>
 				<Link href={SANS_EMAIL_URL}>three.s.ui.org@gmail.com</Link>
@@ -54,7 +54,7 @@
 		</div>
 	</div>
 	<!-- Copyright -->
-	<p class="text-sm text-gray-500 dark:text-gray-400 border-t-2 py-4 text-center">
+	<p class="text-sm text-gray-500 dark:text-gray-400 py-4 text-center">
 		&copy; 2024 SanS-UI. All rights reserved.
 	</p>
 </footer>

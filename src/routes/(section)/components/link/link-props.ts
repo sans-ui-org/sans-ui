@@ -10,7 +10,7 @@ export const linkProps = [
 		default: "'md'"
 	},
 	{
-		name: 'bold',
+		name: 'fontWeight',
 		type: "'thin' | 'extralight' | 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black'",
 		default: "'medium'"
 	},

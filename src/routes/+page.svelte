@@ -2,7 +2,7 @@
 	import { Button, Link, Tooltip } from '$lib';
 	import { Footer } from './global-components';
 	import { goto } from '$app/navigation';
-	import { SANS_TWITTER_URL, SUI_DISCORD_URL, SANS_UI_GITHUB_URL } from './utils/constants';
+	import { SANS_TWITTER_URL, SANS_DISCORD_URL, SANS_UI_GITHUB_URL } from './utils/constants';
 	import { DiscordIcon, GithubIcon, TwitterIcon } from './icons';
 
 	export let data;
@@ -56,10 +56,14 @@
 					<pre
 						class="language-svelte pt-2 pl-3 pr-3"
 						style="color: rgb(115 115 115)">$ npm install sans-ui</pre>
-					<Tooltip variant="secondary" size="sm" title="Copy this to get started!">
-						<button
+					<Tooltip
+						variant="secondary"
+						size="sm"
+						title="Copy this to get started!"
+						on:click={onCopyCodeBlock}
+					>
+						<div
 							class="p-1.5 text-sm text-white border-neutral-400 rounded-lg bg-neutral-100 hover:bg-neutral-200 transition duration-200"
-							on:click={onCopyCodeBlock}
 						>
 							<svg
 								class="w-[12px] h-[12px] cursor-pointer"
@@ -82,7 +86,7 @@
 									/>
 								</g>
 							</svg>
-						</button>
+						</div>
 					</Tooltip>
 				</div>
 			</div>
@@ -193,7 +197,7 @@
 				<!-- Discord -->
 				<div class="shadow border rounded-lg bg-white hover:bg-neutral-50">
 					<a
-						href={SUI_DISCORD_URL}
+						href={SANS_DISCORD_URL}
 						target="_blank"
 						rel="noopener noreferrer"
 						class="flex flex-col gap-2 p-4 rounded"

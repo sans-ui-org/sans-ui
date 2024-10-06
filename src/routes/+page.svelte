@@ -56,10 +56,14 @@
 					<pre
 						class="language-svelte pt-2 pl-3 pr-3"
 						style="color: rgb(115 115 115)">$ npm install sans-ui</pre>
-					<Tooltip variant="secondary" size="sm" title="Copy this to get started!">
-						<button
+					<Tooltip
+						variant="secondary"
+						size="sm"
+						title="Copy this to get started!"
+						on:click={onCopyCodeBlock}
+					>
+						<div
 							class="p-1.5 text-sm text-white border-neutral-400 rounded-lg bg-neutral-100 hover:bg-neutral-200 transition duration-200"
-							on:click={onCopyCodeBlock}
 						>
 							<svg
 								class="w-[12px] h-[12px] cursor-pointer"
@@ -82,7 +86,7 @@
 									/>
 								</g>
 							</svg>
-						</button>
+						</div>
 					</Tooltip>
 				</div>
 			</div>

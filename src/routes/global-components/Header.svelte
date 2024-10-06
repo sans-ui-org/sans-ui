@@ -34,28 +34,29 @@
 	class="sticky top-0 flex-none w-full mx-auto bg-white border-b border-gray-200 z-20 dark:bg-neutral-800 dark:text-white"
 >
 	<nav class="flex flex-row items-center justify-between py-2 px-8">
-		<div class="flex flex-row gap-4">
+		<div class="flex gap-10">
 			<Link href="/">
 				<Logo size={100} class="dark:text-white text-black"></Logo>
 			</Link>
-		</div>
-		<ul class="flex gap-8">
-			<div class="flex gap-8">
-				<li class="flex items-center">
-					<Link
-						underlineType="hover"
-						href="/docs/getting-started"
-						class="dark:text-white dark:visited:text-white">Docs</Link
-					>
-				</li>
-				<li class="flex items-center">
-					<Link
-						underlineType="hover"
-						href="/components/button"
-						class="dark:text-white dark:visited:text-white">Components</Link
-					>
-				</li>
+			<div class="flex gap-4">
+				<Link
+					size="sm"
+					fontWeight="semibold"
+					underlineType="hover"
+					href="/docs/getting-started"
+					class="dark:text-white dark:visited:text-white">Docs</Link
+				>
+				<Link
+					size="sm"
+					fontWeight="semibold"
+					underlineType="hover"
+					href="/components/button"
+					class="dark:text-white dark:visited:text-white">Components</Link
+				>
 			</div>
+		</div>
+
+		<ul class="flex gap-8">
 			<li class="flex flex-row items-center justify-center gap-4">
 				{#if mode === 'light'}
 					<button

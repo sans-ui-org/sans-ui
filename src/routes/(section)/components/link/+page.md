@@ -146,18 +146,18 @@ Use the `size` prop to adjust the font size of the Link component. Available siz
 
 ## Font Weight
 
-Control the font weight using the `bold` prop, with options ranging from `thin` to `black`:
+Control the font weight using the `fontWeight` prop, with options ranging from `thin` to `black`:
 
 <div class="inline-flex flex-col gap-2">
-	<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
-	<Link bold="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extralight</Link>
-	<Link bold="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link>
-	<Link bold="normal" href="https://github.com/s-ui-org/s-ui" target="_blank">This is normal</Link>
-	<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is medium</Link>
-	<Link bold="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is semibold</Link>
-	<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
-	<Link bold="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extrabold</Link>
-	<Link bold="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link>
+	<Link fontWeight="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
+	<Link fontWeight="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extralight</Link>
+	<Link fontWeight="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link>
+	<Link fontWeight="normal" href="https://github.com/s-ui-org/s-ui" target="_blank">This is normal</Link>
+	<Link fontWeight="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is medium</Link>
+	<Link fontWeight="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is semibold</Link>
+	<Link fontWeight="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
+	<Link fontWeight="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is extrabold</Link>
+	<Link fontWeight="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link>
 </div>
 
 <CodeBlockWrapper>
@@ -167,20 +167,27 @@ Control the font weight using the `bold` prop, with options ranging from `thin` 
 	import { Link } from '@sans-ui';
 </script>
 
-<Link bold="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
-<Link bold="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank"
+<Link fontWeight="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
+<Link fontWeight="extralight" href="https://github.com/s-ui-org/s-ui" target="_blank"
 	>This is extralight</Link
 >
-<Link bold="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link>
-<Link bold="normal" href="https://github.com/s-ui-org/s-ui" target="_blank">This is normal</Link>
-<Link bold="medium" href="https://github.com/s-ui-org/s-ui" target="_blank">This is medium</Link>
-<Link bold="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is semibold</Link
+<Link fontWeight="light" href="https://github.com/s-ui-org/s-ui" target="_blank">This is light</Link
 >
-<Link bold="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
-<Link bold="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank"
+<Link fontWeight="normal" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is normal</Link
+>
+<Link fontWeight="medium" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is medium</Link
+>
+<Link fontWeight="semibold" href="https://github.com/s-ui-org/s-ui" target="_blank"
+	>This is semibold</Link
+>
+<Link fontWeight="bold" href="https://github.com/s-ui-org/s-ui" target="_blank">This is bold</Link>
+<Link fontWeight="extrabold" href="https://github.com/s-ui-org/s-ui" target="_blank"
 	>This is extrabold</Link
 >
-<Link bold="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link>
+<Link fontWeight="black" href="https://github.com/s-ui-org/s-ui" target="_blank">This is black</Link
+>
 ```
 
 </CodeBlockWrapper>

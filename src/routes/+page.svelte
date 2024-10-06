@@ -35,14 +35,14 @@
 				> components
 			</h1>
 		</div>
-		<h3 class="text-xl font-light text-center dark:text-neutral-100">
+		<h3 class="text-xl text-gray-600 font-light text-center dark:text-neutral-100">
 			Boost your Svelte projects with modular UI components built on Tailwind CSS. <br />Create
 			smooth, responsive designs that fit perfectly with your development needs.
 		</h3>
 		<div class="flex flex-col items-center gap-8">
 			<Button
 				classes={{
-					base: 'bg-gradient-to-r from-blue-500 to-indigo-400 font-semibold'
+					base: 'font-semibold'
 				}}
 				size="lg"
 				on:click={() => goto('/docs/installation')}>Get Started</Button
@@ -103,14 +103,15 @@
 						>Contributors</span
 					>
 				</h3>
-				<p class="text-xl font-light text-center dark:text-neutral-100">
-					Become a part of the SanS UI open-source community! <Link
+				<p class="text-xl text-gray-600 font-light text-center dark:text-neutral-100">
+					Become a part of the SanS UI open-source community!<br />
+					<Link
 						href=""
 						variant="secondary"
 						class="text-xl font-light text-center dark:text-neutral-100"
 						>Contribute to the project</Link
 					>
-					and be recognized as one of our featured contributors. 🦸
+					and be recognized as one of our featured contributors.
 				</p>
 			</div>
 			<div class="flex flex-row items-center justify-center gap-2">
@@ -152,7 +153,7 @@
 						>Community</span
 					>
 				</h3>
-				<p class="text-xl font-light text-center dark:text-neutral-100">
+				<p class="text-xl text-gray-600 font-light text-center dark:text-neutral-100">
 					Let's be part of our community! Everyone is invited to contribute! 🚀
 				</p>
 			</div>
@@ -219,7 +220,5 @@
 		<hr />
 	</div>
 </main>
-
-<!-- Footer -->
 
 <Footer />

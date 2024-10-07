@@ -17,7 +17,7 @@
 		// Change text to "Copied!" temporarily.absolute
 		if (tooltip) {
 			const tooltipContent = tooltip.childNodes[0];
-			tooltipContent.textContent = 'Copied !';
+			tooltipContent.textContent = 'Copied the script!';
 			setTimeout(() => (tooltipContent.textContent = 'Copy this to get started!'), 3000);
 		}
 	};

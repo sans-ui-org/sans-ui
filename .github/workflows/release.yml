@@ -22,11 +22,9 @@ jobs:
 
     steps:
       - name: Checkout 🔔
-        working-directory: ./src/lib
         uses: actions/checkout@v4
 
       - name: Setup Node.js ${{ matrix.node-version }} 🔧
-        working-directory: ./src/lib
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}

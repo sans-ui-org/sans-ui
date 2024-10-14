@@ -66,7 +66,7 @@ After setting up Tailwind CSS, let's install SanS UI using the appropriate comma
 npm install @sans-ui/svelte
 
 # For YARN
-yarn add sans-ui
+yarn add @sans-ui/svelte
 
 # For PNPM
 pnpm install @sans-ui/svelte

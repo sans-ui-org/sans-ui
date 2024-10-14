@@ -3,7 +3,7 @@ name: Release
 # trigger when a release is created
 on:
   release:
-    types: []
+    types: [published]
 
 jobs:
   # publish to npm

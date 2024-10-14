@@ -2,14 +2,19 @@
 	import { Button, Link, Tooltip } from '$lib';
 	import { Footer } from './global-components';
 	import { goto } from '$app/navigation';
-	import { SANS_TWITTER_URL, SANS_DISCORD_URL, SANS_UI_GITHUB_URL } from './utils/constants';
+	import {
+		SANS_TWITTER_URL,
+		SANS_DISCORD_URL,
+		SANS_UI_GITHUB_URL,
+		SANS_UI_GITHUB_CONTRIBUTING_URL
+	} from './utils/constants';
 	import { DiscordIcon, GithubIcon, TwitterIcon } from './icons';
 
 	export let data;
 
 	const onCopyCodeBlock = async () => {
 		const tooltip = document.querySelector('[data-tooltip="true"]') as HTMLDivElement;
-		const code = 'npm install sans-ui';
+		const code = 'npm install @sans-ui/svelte';
 
 		// Copy and paste
 		await window.navigator.clipboard.writeText(code);
@@ -55,7 +60,7 @@
 				<div class="flex pr-1 justify-between items-center">
 					<pre
 						class="language-svelte pt-2 pl-3 pr-3"
-						style="color: rgb(115 115 115)">$ npm install sans-ui</pre>
+						style="color: rgb(115 115 115)">$ npm install @sans-ui/svelte</pre>
 					<Tooltip
 						variant="secondary"
 						size="sm"
@@ -106,8 +111,9 @@
 				<p class="text-xl text-gray-600 font-light text-center dark:text-neutral-100">
 					Become a part of the SanS UI open-source community!<br />
 					<Link
-						href=""
+						href={SANS_UI_GITHUB_CONTRIBUTING_URL}
 						variant="secondary"
+						external
 						class="text-xl font-light text-center dark:text-neutral-100"
 						>Contribute to the project</Link
 					>
@@ -116,7 +122,7 @@
 			</div>
 			<div class="flex flex-row items-center justify-center gap-2">
 				{#each data.contributors as contributor}
-					<Tooltip variant="secondary" title={contributor.login} class="transition">
+					<Tooltip variant="secondary" title={contributor.login ?? ''} class="transition">
 						<a class="transition hover:scale-[1.05]" href={contributor.html_url}>
 							<img
 								src={contributor.avatar_url}
@@ -128,18 +134,22 @@
 				{/each}
 			</div>
 			<!-- Contributors, Github stars -->
-			<div class="mt-24">
-				<div class="flex flex-row items-center gap-8">
-					<div class="flex flex-col items-center gap-4 dark:text-white">
-						<h3 class="text-4xl font-light">{data.repoInfo.stargazers_count}</h3>
-						<p class="text-xl text-gray-500 dark:text-neutral-200">GitHub Stars</p>
-					</div>
-					<div class="flex flex-col items-center gap-4">
-						<h3 class="text-4xl font-light dark:text-white">{data.repoInfo.stargazers_count}</h3>
-						<p class="text-xl text-gray-500 dark:text-neutral-200">NPM Downloads</p>
+			{#if data.repoInfo?.stargazers_count}
+				<div class="mt-24">
+					<div class="flex flex-row items-center gap-8">
+						<div class="flex flex-col items-center gap-4 dark:text-white">
+							<h3 class="text-4xl font-light">{data.repoInfo?.stargazers_count ?? 0}</h3>
+							<p class="text-xl text-gray-500 dark:text-neutral-200">GitHub Stars</p>
+						</div>
+						<div class="flex flex-col items-center gap-4">
+							<h3 class="text-4xl font-light dark:text-white">
+								{data.repoInfo?.stargazers_count ?? 0}
+							</h3>
+							<p class="text-xl text-gray-500 dark:text-neutral-200">NPM Downloads</p>
+						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 		</div>
 
 		<hr />

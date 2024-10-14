@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
+	import ChevronIcon from './ChevronIcon.svelte';
 	import { cn } from '$lib/utils/cn';
 	import { tv } from '$lib/utils/tv';
 

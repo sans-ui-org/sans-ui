@@ -1,0 +1,30 @@
+{
+	"name": "@sans-ui/svelte",
+	"version": "0.0.4",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"sans",
+		"sans ui",
+		"components",
+		"modern components",
+		"ui components",
+		"ui library",
+		"svelte",
+		"svelte-kit"
+	],
+	"author": "Haruki Kuriwada <harukikuriwada@gmail.com>",
+	"license": "MIT",
+	"description": "Let's create great Svelte UI library together :) 🚀",
+	"homepage": "https://www.sans-ui.org/",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sans-ui-org/sans-ui.git",
+		"directory": "src/lib"
+	},
+	"bugs": {
+		"url": "https://github.com/snas-ui-org/sans-ui/issues"
+	}
+}

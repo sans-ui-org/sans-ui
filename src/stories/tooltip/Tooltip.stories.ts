@@ -1,11 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import TooltipTemplate from './examples/TooltipTemplate.svelte';
+import TooltipTemplate from './templates/TooltipTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Tooltip',
 	component: TooltipTemplate,
 	argTypes: {
+		id: {
+			control: { type: 'text' }
+		},
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
@@ -13,6 +16,22 @@ const meta = {
 		size: {
 			control: { type: 'select' },
 			options: ['sm', 'md', 'lg']
+		},
+		title: {
+			control: { type: 'text' }
+		},
+		position: {
+			control: { type: 'select' },
+			options: ['top', 'bottom', 'left', 'right']
+		},
+		trackable: {
+			control: { type: 'boolean' }
+		},
+		delayToOpen: {
+			control: { type: 'number' }
+		},
+		delayToHide: {
+			control: { type: 'number' }
 		}
 	},
 	parameters: {
@@ -47,5 +66,33 @@ export const Size: Story = {
 	args: {
 		...defaultArgs,
 		size: 'sm'
+	}
+};
+
+export const Position: Story = {
+	args: {
+		...defaultArgs,
+		position: 'left'
+	}
+};
+
+export const Trackable: Story = {
+	args: {
+		...defaultArgs,
+		trackable: true
+	}
+};
+
+export const DelayToOpen: Story = {
+	args: {
+		...defaultArgs,
+		delayToOpen: 500
+	}
+};
+
+export const DelayToHide: Story = {
+	args: {
+		...defaultArgs,
+		delayToHide: 500
 	}
 };

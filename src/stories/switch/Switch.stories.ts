@@ -1,10 +1,10 @@
-import { Switch } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import SwitchTemplate from './templates/SwitchTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Switch',
-	component: Switch,
+	component: SwitchTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -13,14 +13,44 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		readonly: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		disabled: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalid: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalidText: {
+			control: {
+				type: 'text'
+			}
+		},
+		animation: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		classes: {
+			control: {
+				type: 'object'
+			}
 		}
 	},
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
-} satisfies Meta<Switch>;
+} satisfies Meta<SwitchTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -63,6 +93,13 @@ export const Readonly: Story = {
 	args: {
 		...defaultArgs,
 		readonly: true
+	}
+};
+
+export const Animation: Story = {
+	args: {
+		...defaultArgs,
+		animation: true
 	}
 };
 

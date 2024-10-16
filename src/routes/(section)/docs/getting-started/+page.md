@@ -1,48 +1,48 @@
 ---
 layout: componentLayout
 title: Introduction
-description: This is the introduction section for you to start using S-UI library.
+description: This is the introduction section for you to start using SanS UI library.
 category: documentation
 toc: [
-			{ slug: 'what-is-s-ui?', title: 'What is S-UI?', level: 0 },
+			{ slug: 'what-is-SanS UI?', title: 'What is SanS UI?', level: 0 },
 			{ slug: 'contributing', title: 'Contributing', level: 0 },
 			{ slug: 'license', title: 'License', level: 0 },
 			{ slug: 'faq', title: 'FAQ', level: 0 },
-			{ slug: 'does-s-ui-use-typescript?', title: 'S-UI & TypeScript', level: 1 },
-			{ slug: 's-ui-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
-			{ slug: 's-ui-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
+			{ slug: 'does-SanS UI-use-typescript?', title: 'SanS UI & TypeScript', level: 1 },
+			{ slug: 'SanS UI-taking-tailwind-classes-conflicts-into-account?', title: 'Tailwind Class Conflict', level: 1 },
+			{ slug: 'SanS UI-compiles-css-during-runtime?', title: 'CSS Compilation Time', level: 1 },
 		]
+nextButton: { title: 'Installation', slug: '/docs/installation' }
+prevButton: null
 ---
 
 <script>
+	import { Link } from '$lib';
 	import * as Component from "../../../mdsvex/+layout.svelte"
-
 </script>
 
-## What is S-UI?
+## What is SanS UI?
 
-S-UI is a UI library for Svelte that helps you build neat and accessible user interfaces by utilizing Tailwind CSS.
-S-UI is still young and undeveloped UI component library so more than welcome to your contribution of amazing and matured ideas to this library.
-Our main goal is expand our development community and being loved and used in Svelte community.
+SanS UI is a UI library for Svelte that empowers you to build clean and accessible user interfaces using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>. As a new and growing library, we eagerly invite contributions and innovative ideas from the community to enhance and expand our offerings. Our goal is to foster a vibrant development community and establish SanS UI as a cherished tool within the <Link href="https://svelte.dev/" external>Svelte</Link> ecosystem.
 
 ## Contributing
 
-S-UI is an open-source Svelte UI component library. If you haven't touched Svelte before your ideas and code contributions are always helpful. So, please check out contributing guide to learn how you can be a part of the open-source community 💪
+SanS UI is an open-source Svelte UI component library. Whether you're new to <Link href="https://svelte.dev/" external>Svelte</Link> or an experienced developer, your ideas and contributions are invaluable. Please refer to <Link href="https://github.com/sans-ui-org/sans-ui/blob/development/CONTRIBUTING.md">our contributing guide</Link> to discover how you can get involved and make a difference in our open-source community 💪
 
 ## License
 
-Flowbite Svelte is a free and open-source UI component library licensed under the MIT License.
+SanS UI is a free and open-source UI component library, licensed under <Link href="https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE">the MIT License</Link>.
 
 ## FAQ
 
-### Does S-UI use TypeScript?
+### Does SanS UI use TypeScript?
 
--> Yes. This UI library is written in TypeScript and Svelte.
+Yes, SanS UI is developed using TypeScript in conjunction with Svelte.
 
-### S-UI taking Tailwind classes conflicts into account?
+### SanS UI taking Tailwind classes conflicts into account?
 
--> We also using a Tailwind extension library called `tailwind-variants` that automatically handles TailwindCSS class conflicts.
+Yes, we utilize a Tailwind extension library called <Link href="https://www.tailwind-variants.org/" external>tailwind-variants</Link>, which automatically manages Tailwind CSS class conflicts. We would like to thank and send respect to <Link href="https://nextui.org/" external >NextUI</Link> community 🙌
 
-### S-UI compiles CSS during runtime?
+### SanS UI compiles CSS during runtime?
 
--> No. We already have compiled CSS ready, so all you have to do is import each component from our library.
+No, SanS UI is built on top of Tailwind CSS, TailwindCSS as its style engine, it generates CSS at build time. You need to set up Tailwind CSS first on your project in order to start to use SanS UI components library.

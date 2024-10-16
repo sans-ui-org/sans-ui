@@ -1,15 +1,18 @@
 ---
 layout: componentLayout
 title: Let's install.
-description: This is the installation procedure of S-UI library to make sure that you are ready to use this library!
+description: Follow this guide to install the SanS UI library and ensure your environment is ready to use the library effectively.
 category: documentation
 toc: [
 			{ slug: 'before-you-install', title: 'Before you install', level: 0 },
-			{ slug: 'for-svelte', title: 'For Svelte', level: 1 },
 			{ slug: 'for-svelte-kit', title: 'For SvelteKit', level: 1 },
-			{ slug: 'let’s-install-s-ui', title: "Let's install S-UI", level: 0 },
+			{ slug: 'for-svelte-(not-recommended)', title: 'For Svelte', level: 1 },
+			{ slug: 'configure-tailwindcss', title: "Configure TailwindCSS", level: 0 },
+			{ slug: 'install-sans-ui', title: "Install SanS UI", level: 0 },
 			{ slug: 'you-are-ready!', title: "You are ready!", level: 0 },
 		]
+nextButton: { title: 'Button', slug: '/components/button' }
+prevButton: { title: 'Getting Started', slug: '/docs/getting-started' }
 ---
 
 <script>
@@ -20,27 +23,13 @@ toc: [
 
 ## Before you install
 
-Before you install S-UI into your project, make sure that your project is based on Svelte/Svelte Kit.
-If you haven't initialized your Svelte project...
-
-### For Svelte
-
-You can initiate your Svelte project with the following code.
-
-<CodeBlockWrapper>
-
-```bash
-npm create vite@latest myapp -- --template svelte
-cd myapp
-```
-
-</CodeBlockWrapper>
+Before adding SanS UI to your project, ensure it's based on either <Link href="https://svelte.dev/" external>Svelte</Link> or <Link href="https://svelte.dev/docs/introduction" external>SvelteKit</Link>. If you haven't initialized a Svelte project yet, follow the steps below.
 
 ### For Svelte Kit
 
-You can initiate your Svelte Kit project with the following code.
+To initialize a SvelteKit project, use the following commands. You can also refer to <Link href="https://kit.svelte.dev/docs/creating-a-project" external >the official SvelteKit documentation</Link> for more details on getting started.
 
-<CodeBlockWrapper>
+<CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 npm create svelte@latest my-app
@@ -49,27 +38,44 @@ cd my-app
 
 </CodeBlockWrapper>
 
-## Let's install S-UI
+### For Svelte (Not recommended)
 
-To install S-UI into your project, we need to run this command.
+To initialize a Svelte project, use the following commands. Alternatively, you can refer to <Link href="https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit" external >the official Svelte documentation</Link>. However, it is recommended to use SvelteKit when you start building a new Svelte application.
 
-<CodeBlockWrapper>
+<CodeBlockWrapper title="On your terminal" icon="bash">
+
+```bash
+npm create vite@latest myapp -- --template svelte
+cd myapp
+```
+
+</CodeBlockWrapper>
+
+## Configure TailwindCSS
+
+SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/installation" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS UI library.
+
+## Install SanS UI
+
+After setting up Tailwind CSS, let's install SanS UI using the appropriate command for your package manager:
+
+<CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
 # For NPM
-npm install s-ui
+npm install @sans-ui/svelte
 
 # For YARN
-yarn add s-ui
+yarn add @sans-ui/svelte
 
 # For PNPM
-pnpm install s-ui
+pnpm install @sans-ui/svelte
 ```
 
 </CodeBlockWrapper>
 
 ## You are ready!
 
-You are ready to use S-UI! Let's take a look at each component so we can understand <Link href="/components/button">how to use them</Link>!
+You’ve successfully installed SanS UI! Now, check out the <Link href="/components/button">Button component</Link> as an example to get started with using SanS UI components.
 
 <!-- TODO: Next page nevigator -> navigate the users to the page that you intended. -->

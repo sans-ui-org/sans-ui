@@ -1,12 +1,13 @@
 <script>
 	import { cn } from '$lib/utils/cn';
-	import { SUI_GITHUB_URL } from '../../utils/constants';
-	import Github from '../../utils/icons/Github.svelte';
+	import { SANS_UI_GITHUB_URL, SANS_UI_STORYBOOK_URL } from '../../utils/constants';
+	import { GithubIcon, StorybookIcon } from '../../icons';
 
 	export let title = '';
 	export let description = '';
 	export let category = '';
 	export let githubFolder = '';
+	export let storybookFolder = '';
 </script>
 
 <div class="pb-8">
@@ -19,18 +20,34 @@
 
 	<p class="text-lg text-gray-600 dark:text-neutral-200">{description}</p>
 
-	{#if githubFolder}
-		<a
-			class={cn(
-				'inline-flex items-center gap-2 rounded-full pl-4 pr-6 py-1 mt-8 text-sm font-semibold bg-gray-100 transition duration-200',
-				'hover:bg-gray-200',
-				'dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500'
-			)}
-			href={SUI_GITHUB_URL + '/blob/main/src/lib' + githubFolder}
-			target="_blank"
-		>
-			<Github size={20} />
-			<span>Source code in GitHub</span>
-		</a>
-	{/if}
+	<div class="flex gap-2">
+		{#if githubFolder}
+			<a
+				class={cn(
+					'inline-flex items-center gap-2 rounded-full pl-3 pr-5 py-1.5 mt-6 text-sm font-semibold bg-gray-100 transition duration-200',
+					'hover:bg-gray-200',
+					'dark:text-white dark:bg-neutral-600 dark:hover:bg-gray-500'
+				)}
+				href={SANS_UI_GITHUB_URL + '/blob/development/src/lib/components' + githubFolder}
+				target="_blank"
+			>
+				<GithubIcon size={24} />
+				<span>Source code in GitHub</span>
+			</a>
+		{/if}
+		{#if storybookFolder}
+			<a
+				class={cn(
+					'inline-flex items-center gap-2 rounded-full pl-3 pr-5 py-1.5 mt-6 text-sm font-semibold bg-gray-100 transition duration-200',
+					'hover:bg-gray-200',
+					'dark:text-white dark:bg-neutral-600 dark:hover:bg-gray-500'
+				)}
+				href={SANS_UI_STORYBOOK_URL + `/?path=/story/components-${storybookFolder}--default`}
+				target="_blank"
+			>
+				<StorybookIcon size={24} class="leading-[24px]" />
+				<span>{title} in Storybook</span>
+			</a>
+		{/if}
+	</div>
 </div>

@@ -1,28 +1,43 @@
-const GITHUB_REPO_URL = 'https://api.github.com/repos/kuri-sun/portfolio';
-const GITHUB_API_URL = GITHUB_REPO_URL + '/contributors?per_page=2';
+// import { SANS_UI_GITHUB_API_URL, SANS_UI_GITHUB_REPO_URL } from './utils/constants';
 
-export async function load({ fetch }) {
-	// const contributors = await fetch(GITHUB_API_URL);
-	// const repoInfo = await fetch(GITHUB_REPO_URL);
+interface GitHubContributor {
+	login?: string;
+	id?: number;
+	avatar_url?: string;
+	html_url?: string;
+	contributions?: number;
+}
 
-	const contributorsData = [
-		{
-			login: 'kuri-sun',
-			avatar_url: 'https://avatars.githubusercontent.com/u/29252044?v=4',
-			html_url: ''
-		}
-	];
-	const repoInfoData = {
-		name: 'portfolio',
-		description: 'My portfolio site',
-		stargazers_count: 0,
-		forks_count: 0
+interface GitHubRepoInfo {
+	id?: number;
+	name?: string;
+	full_name?: string;
+	description?: string;
+	stargazers_count?: number;
+	forks_count?: number;
+	open_issues_count?: number;
+	owner?: {
+		login?: string;
+		id?: number;
+		avatar_url?: string;
+		html_url?: string;
 	};
+}
+
+export async function load() {
+	// const contributors: GitHubContributor[] = await fetch(SANS_UI_GITHUB_API_URL)
+	// 	.then((res) => res.json())
+	// 	.catch(() => {
+	// 		return [];
+	// 	});
+	// const repoInfo: GitHubRepoInfo = await fetch(SANS_UI_GITHUB_REPO_URL)
+	// 	.then((res) => res.json())
+	// 	.catch(() => {
+	// 		return {};
+	// 	});
 
 	return {
-		// contributors: await contributors.json(),
-		// repoInfo: await repoInfo.json()
-		contributors: contributorsData,
-		repoInfo: repoInfoData
+		contributors: [] as GitHubContributor[],
+		repoInfo: {} as GitHubRepoInfo
 	};
 }

@@ -1,38 +1,42 @@
 ---
 layout: componentLayout
 title: Spinner
-description: Spinner express an unspecified wait time or display the length of a process.
+description: The Spinner component indicates ongoing processes, typically used to express an unspecified wait time or display the length of a process.
 category: component
 githubFolder: /spinner/Spinner.svelte
+storybookFolder: spinner
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'kind', title: 'Kind', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'kind', title: 'Kind', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'spinner-props', title: 'Spinner Props', level: 1 },
+			{ slug: 'spinner-slots', title: 'Spinner Slots', level: 1 },
 		]
+prevButton: { title: 'Select', slug: '/components/select' }
+nextButton: { title: 'Switch', slug: '/components/switch' }
 ---
 
 <script>
 	import { Spinner } from '$lib';
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import spinnerProps from "./spinner-props.ts"
+	import { spinnerProps, spinnerSlots } from "./spinner-props.ts"
 
 </script>
 
 ## Set Up
 
-Import a Spinner component in the script tag.
+To use the Spinner component, import it into your Svelte file:
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 ```
 
@@ -40,13 +44,15 @@ Import a Spinner component in the script tag.
 
 ## Usage
 
+The Spinner component is used to show a loading indicator.
+
 <Spinner />
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner>Spinner</Spinner>
@@ -56,7 +62,7 @@ Import a Spinner component in the script tag.
 
 ## Variant
 
-Spinners has `variant` prop to decide the color theme of it.
+The `variant` prop changes the color theme of the spinner.
 
 <div class="flex flex-row gap-16 flex-wrap">
 	<Spinner variant="primary" />
@@ -70,7 +76,7 @@ Spinners has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner variant="primary" />
@@ -84,7 +90,7 @@ Spinners has `variant` prop to decide the color theme of it.
 
 ## Kind
 
-Spinners has `kind` prop to defines the kind of spinner.
+The `kind` prop defines the style of the spinner.
 
 <div class="flex flex-row gap-16 flex-wrap">
 	<Spinner kind="loader1" />
@@ -96,7 +102,7 @@ Spinners has `kind` prop to defines the kind of spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner kind="loader1" />
@@ -108,7 +114,7 @@ Spinners has `kind` prop to defines the kind of spinner.
 
 ## Size
 
-Spinners has `size` prop to defines the size of spinner.
+The `size` prop sets the size of the spinner.
 
 <div class="flex flex-row items-center gap-16 flex-wrap">
 	<Spinner size="sm" />
@@ -120,7 +126,7 @@ Spinners has `size` prop to defines the size of spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '$lib';
+	import { Spinner } from '@sans-ui';
 </script>
 
 <Spinner size="sm" />
@@ -130,6 +136,12 @@ Spinners has `size` prop to defines the size of spinner.
 
 </CodeBlockWrapper>
 
+## Accessibility
+
+<ul class="flex flex-col gap-3 ml-10 mt-4">
+	<AccessibilityListItem>Supports 'alert' role via ARIA for better accessibility.</AccessibilityListItem>
+</ul>
+
 ## API
 
 Spinner provides APIs(Properties) that is necessary for you to configure a Spinner compponent.
@@ -137,3 +149,7 @@ Spinner provides APIs(Properties) that is necessary for you to configure a Spinn
 ### Spinner Props
 
 <PropertyTable properties={spinnerProps} />
+
+### Spinner Slots
+
+<SlotTable slots={spinnerSlots} />

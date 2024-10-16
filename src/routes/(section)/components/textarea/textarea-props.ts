@@ -1,4 +1,4 @@
-export default [
+export const textareaProps = [
 	{
 		name: 'id',
 		type: 'string | undefined',
@@ -18,6 +18,11 @@ export default [
 		name: 'size',
 		type: "'sm' | 'md' | 'lg'",
 		default: 'md'
+	},
+	{
+		name: 'rounded',
+		type: "'none' | 'sm' | 'md' | 'lg' | 'full",
+		default: 'none'
 	},
 	{
 		name: 'label',
@@ -68,5 +73,33 @@ export default [
 		name: 'row',
 		type: 'number',
 		default: '4'
+	}
+];
+
+export const textareaHandlers = [
+	{
+		name: 'on:input',
+		type: '(event: Event) => void',
+		description:
+			"Callback to invoke when user types in the textarea. It's used to update the value."
+	}
+];
+
+export const textareaSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to textarea element.'
+	},
+	{
+		name: 'labelWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the label element.'
+	},
+	{
+		name: 'label',
+		description: 'This slot is applied to the label element.'
+	},
+	{
+		name: 'invalidText',
+		description: 'This slot is applied to the span element for invalid.'
 	}
 ];

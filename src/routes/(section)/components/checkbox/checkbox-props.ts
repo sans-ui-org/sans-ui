@@ -1,4 +1,4 @@
-export default [
+export const checkboxProps = [
 	{
 		name: 'variant',
 		type: "'primary' | 'secondary' | 'success' | 'warning' | 'danger'",
@@ -38,5 +38,25 @@ export default [
 		name: 'animation',
 		type: 'boolean',
 		default: 'true'
+	}
+];
+
+export const checkboxHandlers = [
+	{
+		name: 'on:change',
+		type: 'ChangeEventHandler',
+		description:
+			'The change event is fired for , , and elements when a change to the element value is committed by the user.'
+	}
+];
+
+export const checkboxSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to the div element(wrapper) for icon slot.'
+	},
+	{
+		name: 'icon',
+		description: 'This slot is applied to the svg element(check icon).'
 	}
 ];

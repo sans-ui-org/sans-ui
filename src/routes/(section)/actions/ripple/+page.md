@@ -7,12 +7,14 @@ toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
 		]
+prevButton: { title: 'Type Writer', slug: '/actions/type-writer' }
 ---
 
 <script>
 	import { createRipple } from '$lib';
 	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
 	import * as Component from "../../../mdsvex/+layout.svelte"
+	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
 
   const ripple = createRipple();
 </script>
@@ -21,11 +23,15 @@ toc: [
 
 Import `createRipple` action in the script tag.
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
-	import { createRipple } from '$lib';
+	import { createRipple } from '@sans-ui/actions';
 </script>
 ```
+
+</CodeBlockWrapper>
 
 ## Usage
 
@@ -33,9 +39,11 @@ For example, we can play `createRipple` transition effect, make sure that `posit
 
 <button class="bg-gray-300 p-4 rounded-full relative" use:ripple>You button with Ripple Effect</button>
 
+<CodeBlockWrapper>
+
 ```svelte
 <script>
-	import { createRipple } from '$lib';
+	import { createRipple } from '@sans-ui/actions';
 
 	const ripple = createRipple();
 </script>
@@ -44,3 +52,5 @@ For example, we can play `createRipple` transition effect, make sure that `posit
 	You button with Ripple Effect
 </button>
 ```
+
+</CodeBlockWrapper>

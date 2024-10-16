@@ -1,4 +1,4 @@
-export default [
+export const inputProps = [
 	{
 		name: 'id',
 		type: 'string | undefined',
@@ -42,7 +42,12 @@ export default [
 	{
 		name: 'clearable',
 		type: 'boolean',
-		default: 'true'
+		default: 'false'
+	},
+	{
+		name: 'rounded',
+		type: "'none' | 'sm' | 'md' | 'lg' | 'full",
+		default: 'none'
 	},
 	{
 		name: 'animation',
@@ -78,5 +83,43 @@ export default [
 		name: 'endContent',
 		type: 'SvelteComponent',
 		default: 'undefined'
+	}
+];
+
+export const inputHandlers = [
+	{
+		name: 'on:change',
+		type: 'ChangeEventHandler',
+		description:
+			'The change event is fired for , , and elements when a change to the element value is committed by the user.'
+	}
+];
+
+export const inputSlots = [
+	{
+		name: 'base',
+		description: 'This slot is applied to input element.'
+	},
+	{
+		name: 'labelWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the label element.'
+	},
+	{
+		name: 'label',
+		description: 'This slot is applied to the label element.'
+	},
+	{
+		name: 'inputWrapper',
+		description: 'This slot is applied to the div element(wrapper) for the input element(base).'
+	},
+	{
+		name: 'startContent',
+		description:
+			'This slot is applied to the start-content icon wrapper element if you pass some content through `startContent` prop.'
+	},
+	{
+		name: 'endContent',
+		description:
+			'This slot is applied to the end-content icon wrapper element if you pass some content through `endContent` prop.'
 	}
 ];

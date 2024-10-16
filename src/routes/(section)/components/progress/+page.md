@@ -1,39 +1,43 @@
 ---
 layout: componentLayout
 title: Progress
-description: Circular progress indicators are utilized to indicate an undetermined wait period or visually represent the duration of a process.
+description: The Progress component displays a circular progress indicator, useful for showing the status of a task or operation. It is commonly used to represent an undetermined wait time or to visualize the progress of a process.
 category: component
 githubFolder: /progress/Progress.svelte
+storybookFolder: progress
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'track-width', title: 'Track Width', level: 0 },
-			{ slug: 'custom-inner-label', title: 'Custom Inner Label', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'track-width', title: 'Track Width', level: 1 },
+			{ slug: 'custom-inner-label', title: 'Custom Inner Label', level: 1 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'progress-props', title: 'Progress Props', level: 1 },
+			{ slug: 'progress-slots', title: 'Progress Slots', level: 1 },
 		]
+prevButton: { title: 'Modal', slug: '/components/modal' }
+nextButton: { title: 'Select', slug: '/components/select' }
 ---
 
 <script>
 	import { Progress } from '$lib';
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { PropertyTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import progressProps from "./progress-props.ts"
+	import { progressProps, progressSlots } from "./progress-props.ts"
 
 </script>
 
 ## Set Up
 
-Import a Progress component in the script tag.
+To use the Progress component, import it into your Svelte file:
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 ```
 
@@ -41,7 +45,7 @@ Import a Progress component in the script tag.
 
 ## Usage
 
-The Progress component allows you to express how much percentage/number by using the circular gage.
+The Progress component visualizes progress using a circular gauge. You can set the value prop to indicate the current progress percentage.
 
 <Progress value={70} />
 
@@ -49,7 +53,7 @@ The Progress component allows you to express how much percentage/number by using
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress value={70} />
@@ -59,7 +63,7 @@ The Progress component allows you to express how much percentage/number by using
 
 ## Variant
 
-Progress has `variant` prop to decide the color theme of it.
+Use the `variant` prop to change the color theme of the Progress component. The available variants include primary, secondary, success, warning, and danger.
 
 <div class="flex flex-row gap-2">
 	<Progress variant="primary" />
@@ -73,7 +77,7 @@ Progress has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress variant="primary" />
@@ -87,7 +91,7 @@ Progress has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Progress has `size` prop to decide the size theme of it. (Unlike any other components, Progress allows you to decide the size of itself by the number of the `px`)
+Adjust the size of the Progress component using the `size` prop, specified in pixels.
 
 <Progress size={100} />
 
@@ -95,7 +99,7 @@ Progress has `size` prop to decide the size theme of it. (Unlike any other compo
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress size={100} />
@@ -105,7 +109,7 @@ Progress has `size` prop to decide the size theme of it. (Unlike any other compo
 
 ## Track Width
 
-Progress has `trackWidth` prop to decide the tracker circle's width. (Progress allows you to decide the width of the tracker by the number of the `px`)
+Customize the width of the progress track with the `trackWidth` prop, specified in pixels.
 
 <Progress trackWidth={10} />
 
@@ -113,7 +117,7 @@ Progress has `trackWidth` prop to decide the tracker circle's width. (Progress a
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress size={10} />
@@ -123,7 +127,7 @@ Progress has `trackWidth` prop to decide the tracker circle's width. (Progress a
 
 ## Custom Inner Label
 
-Progress has `customInnerLabel` prop to decide the label inside of the spinner.
+The `customInnerLabel` prop allows you to display a custom label inside the progress circle.
 
 <Progress value={40} customInnerLabel="40 Mbps" />
 
@@ -131,13 +135,21 @@ Progress has `customInnerLabel` prop to decide the label inside of the spinner.
 
 ```svelte
 <script>
-	import { Progress } from '$lib';
+	import { Progress } from '@sans-ui';
 </script>
 
 <Progress value={40} customInnerLabel="40 Mbps" />
 ```
 
 </CodeBlockWrapper>
+
+## Accessibility
+
+<ul class="flex flex-col gap-3 ml-10 mt-4">
+	<AccessibilityListItem>Exposed to assistive technology as a progress bar via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Internationalized number formatting as a percentage or value.</AccessibilityListItem>
+	<AccessibilityListItem>Exposes the "aria-valuenow", "aria-valuemin", "aria-valuemax" and `aria-valuetext` `attributes`</AccessibilityListItem>
+</ul>
 
 ## API
 
@@ -146,3 +158,7 @@ Progress provides APIs(Properties) that is necessary for you to configure a Prog
 ### Progress Props
 
 <PropertyTable properties={progressProps} />
+
+### Progress Slots
+
+<SlotTable slots={progressSlots} />

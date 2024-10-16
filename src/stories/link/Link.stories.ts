@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/svelte';
-import LinkTemplate from './examples/LinkTemplate.svelte';
+import LinkTemplate from './templates/LinkTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 // one user clics "show the code" button
@@ -14,23 +14,9 @@ const meta = {
 		},
 		size: {
 			control: { type: 'select' },
-			options: [
-				'xs',
-				'sm',
-				'md',
-				'lg',
-				'xl',
-				'2xl',
-				'3xl',
-				'4xl',
-				'5xl',
-				'6xl',
-				'7xl',
-				'8xl',
-				'9xl'
-			]
+			options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl']
 		},
-		bold: {
+		fontWeight: {
 			control: { type: 'select' },
 			options: [
 				'thin',
@@ -50,12 +36,18 @@ const meta = {
 		},
 		disabled: {
 			control: { type: 'boolean' }
+		},
+		external: {
+			control: { type: 'boolean' }
+		},
+		windowIcon: {
+			control: { type: 'boolean' }
 		}
 	},
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
 } satisfies Meta<LinkTemplate>;
 
@@ -63,7 +55,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const defaultArgs = {
-	url: 'https://storybook.js.org'
+	href: 'https://google.com'
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
@@ -76,7 +68,7 @@ export const Default: Story = {
 export const UnderlineType: Story = {
 	args: {
 		...defaultArgs,
-		underlineType: 'none'
+		underlineType: 'active'
 	}
 };
 
@@ -84,5 +76,20 @@ export const Disabled: Story = {
 	args: {
 		...defaultArgs,
 		disabled: true
+	}
+};
+
+export const External: Story = {
+	args: {
+		...defaultArgs,
+		external: true
+	}
+};
+
+export const WindowIcon: Story = {
+	args: {
+		...defaultArgs,
+		external: true,
+		windowIcon: true
 	}
 };

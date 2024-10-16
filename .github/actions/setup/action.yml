@@ -1,0 +1,15 @@
+name: 'Setup'
+description: 'Prepare npm and Node.js environment'
+
+runs:
+  using: composite
+
+  steps:
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+
+    - name: Install Dependencies
+      shell: bash
+      run: npm install

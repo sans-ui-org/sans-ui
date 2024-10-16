@@ -1,10 +1,10 @@
-import { Select } from '$lib';
 import type { Meta, StoryObj } from '@storybook/svelte';
+import SelectTemplate from './templates/SelectTemplate.svelte';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
 	title: 'Components/Select',
-	component: Select,
+	component: SelectTemplate,
 	argTypes: {
 		size: {
 			control: { type: 'select' },
@@ -13,14 +13,54 @@ const meta = {
 		variant: {
 			control: { type: 'select' },
 			options: ['primary', 'secondary', 'success', 'warning', 'danger']
+		},
+		placeholder: {
+			control: {
+				type: 'text'
+			}
+		},
+		label: {
+			control: {
+				type: 'text'
+			}
+		},
+		rounded: {
+			control: {
+				type: 'select'
+			},
+			options: ['none', 'sm', 'md', 'lg', 'full']
+		},
+		animation: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		readonly: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		disabled: {
+			control: {
+				type: 'boolean'
+			}
+		},
+		invalid: {
+			control: { type: 'boolean' }
+		},
+		invalidText: {
+			control: { type: 'text' }
+		},
+		classes: {
+			control: { type: 'object' }
 		}
 	},
 	parameters: {
 		docs: {
 			page: null
-		}	
+		}
 	}
-} satisfies Meta<Select>;
+} satisfies Meta<SelectTemplate>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -80,6 +120,13 @@ export const NoAnimation: Story = {
 	args: {
 		...defaultArgs,
 		animation: false
+	}
+};
+
+export const Rounded: Story = {
+	args: {
+		...defaultArgs,
+		rounded: 'full'
 	}
 };
 

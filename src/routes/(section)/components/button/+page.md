@@ -4,39 +4,46 @@ title: Button
 description: The button component is probably the most widely used element in any user interface or website as it can be used to launch an action but also to link to other pages.
 category: component
 githubFolder: /button/Button.svelte
+storybookFolder: button
 toc: [
 			{ slug: 'set-up', title: 'Set Up', level: 0 },
 			{ slug: 'usage', title: 'Usage', level: 0 },
-			{ slug: 'variant', title: 'Variant', level: 0 },
-			{ slug: 'size', title: 'Size', level: 0 },
-			{ slug: 'kind', title: 'Kind', level: 0 },
-			{ slug: 'rounded', title: 'Rounded', level: 0 },
-			{ slug: 'disabled', title: 'Disabled', level: 0 },
-			{ slug: 'rippled', title: 'Rippled', level: 0 },
-			{ slug: 'icon-button', title: 'Icon Button', level: 0 },
+			{ slug: 'variant', title: 'Variant', level: 1 },
+			{ slug: 'size', title: 'Size', level: 1 },
+			{ slug: 'kind', title: 'Kind', level: 1 },
+			{ slug: 'rounded', title: 'Rounded', level: 1 },
+			{ slug: 'disabled', title: 'Disabled', level: 1 },
+			{ slug: 'rippled', title: 'Rippled', level: 1 },
+			{ slug: 'animation', title: 'Animation', level: 1 },
+			{ slug: 'icon-button', title: 'Icon Button', level: 1 },
+			{ slug: 'button-as-link', title: 'Button as Link', level: 1 },
+			{ slug: 'accessibility', title: 'Accessibility', level: 0 },
 			{ slug: 'api', title: 'API', level: 0 },
 			{ slug: 'button-props', title: 'Button Props', level: 1 },
+			{ slug: 'button-handlers', title: 'Button Handlers', level: 1 },
+			{ slug: 'button-slots', title: 'Button Slots', level: 1 },
 		]
+prevButton: { title: 'Installation', slug: '/docs/installation' }
+nextButton: { title: 'Checkbox', slug: '/components/checkbox' }
 ---
 
 <script>
-	import { Button } from '$lib';
-	import PropertyTable from "../../../mdsvex/components/PropertyTable.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { Button, Link } from '$lib';
+	import { PropertyTable, HandlerTable, SlotTable, CodeBlockWrapper, AccessibilityListItem }from "../../../mdsvex/components/index.ts"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import buttonProps from "./button-props.ts"
+	import { buttonProps, buttonHandlers, buttonSlots } from "./button-props.ts"
 
 </script>
 
 ## Set Up
 
-Import a button component in the script tag.
+To use the <code>Button</code> component, first import it in the script tag:
 
 <CodeBlockWrapper>
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 ```
 
@@ -44,7 +51,7 @@ Import a button component in the script tag.
 
 ## Usage
 
-Buttons allow users to perform actions and choose with a single tap. You can deactivate the ripple effect, so we will state that later on.
+Buttons allow users to perform actions with a single click. You can also disable the ripple effect, which we will cover later on <Link href="#rippled">this rippled section</Link>.
 
 <Button>Button</Button>
 
@@ -52,7 +59,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button>Button</Button>
@@ -62,7 +69,7 @@ Buttons allow users to perform actions and choose with a single tap. You can dea
 
 ## Variant
 
-Buttons has `variant` prop to decide the color theme of it.
+The `variant` prop lets you customize the color theme of the button:
 
 <div class="inline-flex flex-row gap-4 flex-wrap">
 	<Button variant="primary">Button</Button>
@@ -76,7 +83,7 @@ Buttons has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button variant="primary">Button</Button>
@@ -90,7 +97,7 @@ Buttons has `variant` prop to decide the color theme of it.
 
 ## Size
 
-Buttons has `size` prop to decide the size of it.
+Use the `size` prop to control the button's size:
 
 <div class="flex flex-row gap-4 items-center">
 	<Button size="sm">Button</Button>
@@ -102,7 +109,7 @@ Buttons has `size` prop to decide the size of it.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button size="sm">Button</Button>
@@ -114,7 +121,7 @@ Buttons has `size` prop to decide the size of it.
 
 ## Kind
 
-Buttons has `kind` prop to decide the kind of Button component.
+The `kind` prop determines the button's appearance:
 
 <div class="flex flex-row gap-2 flex-wrap">
 	<Button kind="solid">Solid</Button>
@@ -127,7 +134,7 @@ Buttons has `kind` prop to decide the kind of Button component.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button kind="solid">Solid</Button>
@@ -140,7 +147,7 @@ Buttons has `kind` prop to decide the kind of Button component.
 
 ## Rounded
 
-Buttons has `rounded` prop to update Button component's border-radius.
+Adjust the button's border-radius with the `rounded` prop:
 
 <div class="flex flex-row gap-2 flex-wrap">
 	<Button rounded="none">rounded none</Button>
@@ -154,7 +161,7 @@ Buttons has `rounded` prop to update Button component's border-radius.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button rounded="none">rounded none</Button>
@@ -168,7 +175,7 @@ Buttons has `rounded` prop to update Button component's border-radius.
 
 ## Disabled
 
-Buttons has `disabled` prop to disable Button component.
+Disable the button using the `disabled` prop:
 
 <Button disabled>Button</Button>
 
@@ -176,7 +183,7 @@ Buttons has `disabled` prop to disable Button component.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button disabled>Button</Button>
@@ -186,7 +193,7 @@ Buttons has `disabled` prop to disable Button component.
 
 ## Rippled
 
-Buttons has `rippled` prop to disable Button component's ripple effect.
+To disable the ripple effect, use the `rippled` prop:
 
 <Button rippled={false}>Button</Button>
 
@@ -194,7 +201,7 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button rippled={false}>Button</Button>
@@ -202,9 +209,47 @@ Buttons has `rippled` prop to disable Button component's ripple effect.
 
 </CodeBlockWrapper>
 
+## Animation
+
+Control the background color transition animation with the `animation` prop. Note that this does not affect the ripple effect, which must be controlled separately via <Link href="#rippled">the rippled property</Link>.
+
+<Button animation={false}>Button</Button>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '@sans-ui';
+</script>
+
+<Button animation={false}>Button</Button>
+```
+
+</CodeBlockWrapper>
+
+## Button as Link
+
+The `href` prop allows the button to function as a `link`, making it behave like an anchor element:
+
+<Button href="https://github.com/sans-ui-org/sans-ui" rel='noopener noreferrer' target='_blank'>Link to External</Button>
+
+<CodeBlockWrapper>
+
+```svelte
+<script>
+	import { Button } from '@sans-ui';
+</script>
+
+<Button href="https://github.com/sans-ui-org/sans-ui" rel="noopener noreferrer" target="_blank"
+	>Link to External</Button
+>
+```
+
+</CodeBlockWrapper>
+
 ## Icon Button
 
-You can turn our Button component into Icon Button component by passing `iconOnly` as `true`.
+To create an icon-only button, use the `iconOnly` prop:
 
 <Button iconOnly={true}>
 	<svg class="w-[14px] h-[14px]" viewBox="0 0 14 14" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -219,42 +264,37 @@ You can turn our Button component into Icon Button component by passing `iconOnl
 
 ```svelte
 <script>
-	import { Button } from '$lib';
+	import { Button } from '@sans-ui';
 </script>
 
 <Button iconOnly={true}>
-	<svg
-		class="w-[14px] h-[14px]"
-		viewBox="0 0 14 14"
-		fill="white"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<g clip-path="url(#clip0_1222_36554)">
-			<path
-				d="M7 0.5V13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-			<path
-				d="M0.5 6.95996H13.5"
-				stroke="white"
-				stroke-width="2px"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			/>
-		</g>
-	</svg>
+	<!-- You icon or image here -->
 </Button>
 ```
 
 </CodeBlockWrapper>
 
+## Accessibility
+
+<ul class="flex flex-col gap-3 ml-10 mt-4">
+	<AccessibilityListItem>Keyboard focus management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Hover management and cross browser normalization.</AccessibilityListItem>
+	<AccessibilityListItem>Exposed as a tooltip to assistive technology via ARIA.</AccessibilityListItem>
+	<AccessibilityListItem>Matches native tooltip behavior with delay on hover of first tooltip and no delay on subsequent tooltips.</AccessibilityListItem>
+</ul>
+
 ## API
 
-Button provides APIs(Properties) that is necessary for you to configure a Button compponent.
+Button provides APIs(Properties) that is necessary for you to configure a <code>Button</code> compponent.
 
 ### Button Props
 
 <PropertyTable properties={buttonProps} />
+
+### Button Handlers
+
+<HandlerTable handlers={buttonHandlers} />
+
+### Button Slots
+
+<SlotTable slots={buttonSlots} />

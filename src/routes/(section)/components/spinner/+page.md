@@ -36,7 +36,7 @@ To use the Spinner component, import it into your Svelte file:
 
 ```svelte
 <script>
-	import { Spinner } from '@sans-ui';
+	import { Spinner } from '@sans-ui/svelte';
 </script>
 ```
 
@@ -52,7 +52,7 @@ The Spinner component is used to show a loading indicator.
 
 ```svelte
 <script>
-	import { Spinner } from '@sans-ui';
+	import { Spinner } from '@sans-ui/svelte';
 </script>
 
 <Spinner>Spinner</Spinner>
@@ -76,7 +76,7 @@ The `variant` prop changes the color theme of the spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '@sans-ui';
+	import { Spinner } from '@sans-ui/svelte';
 </script>
 
 <Spinner variant="primary" />
@@ -102,7 +102,7 @@ The `kind` prop defines the style of the spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '@sans-ui';
+	import { Spinner } from '@sans-ui/svelte';
 </script>
 
 <Spinner kind="loader1" />
@@ -126,7 +126,7 @@ The `size` prop sets the size of the spinner.
 
 ```svelte
 <script>
-	import { Spinner } from '@sans-ui';
+	import { Spinner } from '@sans-ui/svelte';
 </script>
 
 <Spinner size="sm" />

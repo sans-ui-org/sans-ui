@@ -53,7 +53,7 @@ cd myapp
 
 ## Configure TailwindCSS
 
-SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/installation" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS UI library.
+SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/guides/sveltekit" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS UI library.
 
 ## Install SanS UI
 

@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import user from '@testing-library/user-event';
-import { Input } from '$lib';
+import Input from '../Input.svelte';
 
 describe('Input component', async () => {
 	test('should render', async () => {

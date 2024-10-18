@@ -18,7 +18,7 @@ prevButton: { title: 'Getting Started', slug: '/docs/getting-started' }
 <script>
   import { Link } from "$lib"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { CodeBlockWrapper, Blockquote } from "../../../mdsvex/components"
 </script>
 
 ## Before you install
@@ -56,7 +56,7 @@ cd myapp
 SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/guides/sveltekit" external>the official Tailwind CSS installation guide</Link> for instructions. <br/><br/>
 Once TailwindCSS is configured, you need to add the following code to your tailwind.config.js file:
 
-<!-- TODO: Note section here -->
+<Blockquote content="If you are using pnpm and monorepo architecture, please make sure you are pointing to the ROOT node_modules" />
 
 <CodeBlockWrapper title="tailwind.config.js" icon="js">
 

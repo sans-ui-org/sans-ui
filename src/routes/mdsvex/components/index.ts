@@ -1,6 +1,7 @@
 import CodeBlockWrapper from './CodeBlockWrapper.md';
 import DocHeader from './DocHeader.svelte';
 import Meta from './Meta.svelte';
+import Blockquote from './Blockquote.svelte';
 import PropertyTable from './PropertyTable.svelte';
 import HandlerTable from './HandlerTable.svelte';
 import SlotTable from './SlotTable.svelte';
@@ -11,6 +12,7 @@ export {
 	CodeBlockWrapper,
 	DocHeader,
 	Meta,
+	Blockquote,
 	HandlerTable,
 	PropertyTable,
 	SlotTable

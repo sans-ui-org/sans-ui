@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Progress } from '$lib';
+import Progress from '../Progress.svelte';
 
 describe('Progress component', async () => {
 	test('should render', async () => {

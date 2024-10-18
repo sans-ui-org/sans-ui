@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Checkbox } from '$lib';
+import Checkbox from '../Checkbox.svelte';
 
 describe('Checkbox component', async () => {
 	test('should render Checkbox component', async () => {

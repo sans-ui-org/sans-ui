@@ -1,6 +1,6 @@
 import type { VariantProps } from 'tailwind-variants';
 import { createTV } from 'tailwind-variants';
-import { twMergeConfig } from '$lib/utils/tailwind-variants.config';
+import { twMergeConfig } from './tailwind-variants.config';
 
 export type { VariantProps };
 

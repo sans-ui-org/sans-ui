@@ -1,7 +1,7 @@
 <script lang="ts">
-	import ChevronIcon from '$lib/icons/ChevronIcon.svelte';
-	import { cn } from '$lib/utils/cn';
-	import { tv } from '$lib/utils/tv';
+	import ChevronIcon from '../../../icons/ChevronIcon.svelte';
+	import { cn } from '../../../utils/cn';
+	import { tv } from '../../../utils/tv';
 
 	/**
 	 * Property that defines the size of the icon.

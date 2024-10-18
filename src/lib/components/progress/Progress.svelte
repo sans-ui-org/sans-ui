@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import type { HTMLProgressAttributes } from 'svelte/elements';
-	import { progressVariant, type ProgressSlots } from '$lib/components/progress/Progress';
-	import { cn } from '$lib/utils/cn';
+	import { progressVariant, type ProgressSlots } from '../../components/progress/Progress';
+	import { cn } from '../../utils/cn';
 
 	type $$BaseProps = HTMLProgressAttributes;
 

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Button } from '$lib';
+import Button from '../Button.svelte';
 
 describe('Button component', async () => {
 	test('should render', async () => {

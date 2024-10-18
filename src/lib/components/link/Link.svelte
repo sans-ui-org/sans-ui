@@ -14,10 +14,10 @@
 </script>
 
 <script lang="ts">
-	import type { ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import type { HTMLAnchorAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils/cn';
-	import { linkVariant, type LinkSlots } from '$lib/components/link/Link';
+	import { cn } from '../../utils/cn';
+	import { linkVariant, type LinkSlots } from '../../components/link/Link';
 	import WindowIcon from './WindowIcon.svelte';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

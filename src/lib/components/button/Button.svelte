@@ -8,12 +8,12 @@
 		ComponentSize,
 		ComponentVariant,
 		SlotsToClasses
-	} from '$lib/utils/utils';
+	} from '../../utils/utils';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
-	import { createRipple } from '$lib/actions/ripple';
-	import { cn } from '$lib/utils/cn';
-	import type { ButtonSlots } from '$lib/components/button/Button';
-	import { buttonVariant } from '$lib/components/button/Button';
+	import { createRipple } from '../../actions/ripple';
+	import { cn } from '../../utils/cn';
+	import type { ButtonSlots } from '../../components/button/Button';
+	import { buttonVariant } from '../../components/button/Button';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = (HTMLAnchorAttributes | HTMLButtonAttributes) & {

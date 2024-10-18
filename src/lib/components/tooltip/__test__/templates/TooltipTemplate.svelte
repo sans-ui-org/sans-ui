@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Tooltip from '$lib/components/tooltip/Tooltip.svelte';
-	import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+	import Tooltip from '../../../../components/tooltip/Tooltip.svelte';
+	import type { ComponentSize, ComponentVariant } from '../../../../utils/utils';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props {

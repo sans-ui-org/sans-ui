@@ -1,38 +1,45 @@
-# Are You Ready?
+# Prerequisites
 
-We are going to use `npm` or `npm`.
+Make sure that you have `Node.js`(above `version 18`) installed along with your pacakge manager(i.e. `npm`, `yarn` or `pnpm`) ready on your local environment. (You can download Node.js from [here](https://nodejs.org/en))
 
-## Developing
+## Development
 
 Once you've created a project and installed dependencies with `npm install`, start a development server:
 
 1. Documentation development
 
 ```bash
+# npm
 npm run dev:doc
-# OR
-npm run dev:doc
+# yarn
+yarn run dev:doc
+# pnpm
+pnpm run dev:doc
 ```
 
 2. SUI Component(Storybook) development
 
 ```bash
+# npm
 npm run dev:storybook
-# OR
-npm run dev:storybook
+# yarn
+yarn run dev:storybook
+# pnpm
+pnpm run dev:storybook
 ```
 
-3. You can just run both(1 and 2) by execuing this.
+3. You can just run both(Doc and Storybook) by execuing this.
 
 ```bash
+# npm
 npm run dev
-# OR
-npm run dev
+# yarn
+yarn run dev
+# pnpm
+pnpm run dev
 ```
 
-\*Before you commit, make sure that `npm run check` to check your change with Svelte-Kit.
-
-## Commit
+## Commit Convensions
 
 <p>When we make a commit, we shall use <a href="https://www.conventionalcommits.org/en/v1.0.0/">conventional commits</a>.</p>
 
@@ -44,12 +51,21 @@ docs: add/fix the documentation
 test: add/fix test
 ```
 
-\*We will recommend you to not make a huge code amount commit... (It's going to be hard to review...)
+\*We recommend you to not make a huge code amount commit. (It's going to be hard to review.)
 
-## Testing
+## Pull Requests
 
-<p>Before submitting a PR, please run a test:</p>
+We have a template for the PR. I recommend that you fill in that with your own words.
+It's okay to leave empty(remove all text), CodeRabbit generate the Code change summary for you.
+
+## Unit Testings
+
+<p>If you would like to develop Unit test specifically, you can run:</p>
 
 ```sh
+# npm
 npm run test
+
+# If you would like to test specific component's unit tests...
+npm run test -- "path to your component test file"
 ```

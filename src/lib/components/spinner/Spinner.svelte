@@ -3,10 +3,10 @@
 </script>
 
 <script lang="ts">
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils/cn';
-	import { spinnerVariant, type SpinnerSlots } from '$lib/components/spinner/Spinner';
+	import { cn } from '../../utils/cn';
+	import { spinnerVariant, type SpinnerSlots } from '../../components/spinner/Spinner';
 
 	type $$BaseProps = HTMLBaseAttributes;
 

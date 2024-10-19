@@ -1,5 +1,10 @@
 <script lang="ts">
-	import { Button, Modal, ModalBody, ModalContent, ModalHeader } from '$lib';
+	import Button from '../../../../components/button/Button.svelte';
+	import Modal from '../../Modal.svelte';
+	import ModalBody from '../../ModalBody.svelte';
+	import ModalContent from '../../ModalContent.svelte';
+	import ModalHeader from '../../ModalHeader.svelte';
+
 	/**
 	 * The prop that only for this story.
 	 */

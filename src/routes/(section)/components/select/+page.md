@@ -51,7 +51,7 @@ To use the Select component, import it into your Svelte file:
 
 ```svelte
 <script>
-	import { Select } from '@sans-ui';
+	import { Select } from '@sans-ui/core';
 </script>
 ```
 
@@ -69,7 +69,7 @@ The Select component allows users to select from multiple options presented in a
 
 ```svelte
 <script lang="ts">
-	import { Select } from '@sans-ui';
+	import { Select } from '@sans-ui/core';
 
 	let popupSelect = false;
 	let options = [
@@ -114,7 +114,7 @@ The Select component supports various color themes through the `variant` prop.
 
 ```svelte
 <script lang="ts">
-	import { Select } from '@sans-ui';
+	import { Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -168,7 +168,7 @@ The `size` prop determines the size of the Select component.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -220,7 +220,7 @@ Adjust the border-radius of the Select component using the `rounded` prop.
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -259,7 +259,7 @@ Set a default selected value with the `defaultSelected` prop.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -290,7 +290,7 @@ The `disabled` prop can be used to disable the Select component.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -320,7 +320,7 @@ Use the `readonly` prop to make the Select component read-only.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -350,7 +350,7 @@ Toggle animations for the Select component with the `animation` prop.
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },
@@ -380,7 +380,7 @@ Set the `invalid` prop to mark the Select component as invalid, and use `invalid
 
 ```svelte
 <script lang="ts">
-	import { Button, Select } from '@sans-ui';
+	import { Button, Select } from '@sans-ui/core';
 
 	let options = [
 		{ value: '1', label: 'Option 1' },

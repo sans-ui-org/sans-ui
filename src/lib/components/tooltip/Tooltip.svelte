@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
-	import { tooltipVariant, type TooltipSlots } from '$lib/components/tooltip/Tooltip';
-	import { cn } from '$lib/utils/cn';
-	import { tooltip } from '$lib/actions/tooltip';
+	import { tooltipVariant, type TooltipSlots } from '../../components/tooltip/Tooltip';
+	import { cn } from '../../utils/cn';
+	import { tooltip } from '../../actions/tooltip';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends HTMLButtonAttributes {

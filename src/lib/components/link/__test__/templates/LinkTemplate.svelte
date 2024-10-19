@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Link } from '$lib';
+	import Link from '../../Link.svelte';
 
 	export let disabled = false;
 </script>

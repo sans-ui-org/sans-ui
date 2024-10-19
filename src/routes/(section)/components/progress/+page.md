@@ -37,7 +37,7 @@ To use the Progress component, import it into your Svelte file:
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 ```
 
@@ -53,7 +53,7 @@ The Progress component visualizes progress using a circular gauge. You can set t
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 
 <Progress value={70} />
@@ -77,7 +77,7 @@ Use the `variant` prop to change the color theme of the Progress component. The 
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 
 <Progress variant="primary" />
@@ -99,7 +99,7 @@ Adjust the size of the Progress component using the `size` prop, specified in pi
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 
 <Progress size={100} />
@@ -117,7 +117,7 @@ Customize the width of the progress track with the `trackWidth` prop, specified 
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 
 <Progress size={10} />
@@ -135,7 +135,7 @@ The `customInnerLabel` prop allows you to display a custom label inside the prog
 
 ```svelte
 <script>
-	import { Progress } from '@sans-ui';
+	import { Progress } from '@sans-ui/core';
 </script>
 
 <Progress value={40} customInnerLabel="40 Mbps" />

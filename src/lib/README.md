@@ -10,13 +10,13 @@
 
 ```bash
 # npm
-npm install @sans-ui/svelte
+npm install @sans-ui/core
 
 # yarn
-yarn add @sans-ui/svelte
+yarn add @sans-ui/core
 
 # pnpm
-pnpm install @sans-ui/svelte
+pnpm install @sans-ui/core
 ```
 
 ## Documentations

@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { ComponentSize, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, SlotsToClasses } from '../../utils/utils';
 	import { getContext } from 'svelte';
 	import type { HTMLLiAttributes } from 'svelte/elements';
 	import { slide } from 'svelte/transition';
-	import { cn } from '$lib/utils/cn';
+	import { cn } from '../../utils/cn';
 	import {
 		accordionItemVariant,
 		type AccordionItemSlots
-	} from '$lib/components/accordion/AccordionItem';
+	} from '../../components/accordion/AccordionItem';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLLiAttributes & {

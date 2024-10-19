@@ -13,7 +13,7 @@ export default create({
 	brandTitle: 'SanS UI',
 
 	// TODO: put url
-	brandUrl: 'https://example.com',
+	brandUrl: 'https://sans-ui.org',
 	brandImage: logoUrl,
 	brandTarget: '_self',
 

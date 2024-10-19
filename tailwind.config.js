@@ -2,7 +2,9 @@
 export default {
 	content: [
 		/* Components */
-		'./src/lib/**/*.{html,js,svelte,ts}',
+		'./src/lib/actions/**/*.{html,js,svelte,ts}',
+		'./src/lib/icons/**/*.{html,js,svelte,ts}',
+		'./src/lib/components/**/*.{html,js,svelte,ts}',
 		/* Documentation */
 		'./src/routes/**/*.{html,js,svelte,ts,md}',
 		/* Storybook */

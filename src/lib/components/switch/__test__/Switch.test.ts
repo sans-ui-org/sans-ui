@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Switch } from '$lib';
 import userEvent from '@testing-library/user-event';
+import Switch from '../Switch.svelte';
 
 describe('Switch component', async () => {
 	test('should render', async () => {

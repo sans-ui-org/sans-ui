@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/svelte';
 import { describe, expect, test } from 'vitest';
-import { Link } from '$lib';
 import LinkTemplate from './templates/LinkTemplate.svelte';
+import Link from '../Link.svelte';
 
 describe('Input component', async () => {
 	test('should render', async () => {

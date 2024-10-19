@@ -1,6 +1,10 @@
 <script lang="ts">
-	import { Button, Modal, ModalBody, ModalContent, ModalHeader } from '$lib';
-	import type { ModalSize } from '$lib/components/modal/Modal.svelte';
+	import Button from '../../../../components/button/Button.svelte';
+	import Modal from '../../Modal.svelte';
+	import ModalBody from '../../ModalBody.svelte';
+	import ModalContent from '../../ModalContent.svelte';
+	import ModalHeader from '../../ModalHeader.svelte';
+	import type { ModalSize } from '../../../../components/modal/Modal.svelte';
 
 	export let title: string = 'This is Modal';
 	export let size: ModalSize = 'md';
@@ -11,11 +15,7 @@
 	let popupModal = false;
 </script>
 
-<Button
-	rippled={false}
-	on:click={() => (popupModal = !popupModal)}
-	data-testid="popup-triggered-button">Pop-up modal</Button
->
+<Button rippled={false} on:click={() => (popupModal = !popupModal)}>Pop-up modal</Button>
 
 <Modal {size} dismissible={true} bind:open={popupModal}>
 	<ModalContent>

@@ -14,7 +14,7 @@
 
 	const onCopyCodeBlock = async () => {
 		const tooltip = document.querySelector('[data-tooltip="true"]') as HTMLDivElement;
-		const code = 'npm install @sans-ui/svelte';
+		const code = 'npm install @sans-ui/core';
 
 		// Copy and paste
 		await window.navigator.clipboard.writeText(code);
@@ -60,7 +60,7 @@
 				<div class="flex pr-1 justify-between items-center">
 					<pre
 						class="language-svelte pt-2 pl-3 pr-3"
-						style="color: rgb(115 115 115)">$ npm install @sans-ui/svelte</pre>
+						style="color: rgb(115 115 115)">$ npm install @sans-ui/core</pre>
 					<Tooltip
 						variant="secondary"
 						size="sm"

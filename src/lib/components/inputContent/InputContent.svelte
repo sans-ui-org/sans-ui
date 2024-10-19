@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
-	import ClearableIcon from '$lib/components/inputContent/ClearableIcon.svelte';
+	import ClearableIcon from '../../components/inputContent/ClearableIcon.svelte';
 
 	/**
 	 * Property that defines the content of the input.

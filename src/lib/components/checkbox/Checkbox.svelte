@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import { createEventDispatcher } from 'svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils/cn';
-	import { checkboxVariant, type CheckboxSlots } from '$lib/components/checkbox/Checkbox';
+	import { cn } from '../../utils/cn';
+	import { checkboxVariant, type CheckboxSlots } from '../../components/checkbox/Checkbox';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 
@@ -95,7 +95,6 @@
 	)}
 />
 
-<!-- TODO: Let's use Tailwind-->
 <style>
 	input::before {
 		clip-path: polygon(20% 50%, 40% 70%, 85% 20%, 100% 35%, 40% 90%, 0% 60%);

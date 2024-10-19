@@ -2,11 +2,11 @@
 	import { Tooltip } from "$lib";
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 	import { cn } from '$lib/utils/cn';
-	import { SvelteIcon, BashIcon } from "../../icons";
+	import { SvelteIcon, BashIcon, JSIcon } from "../../icons";
 
 	type $$Props = HTMLBaseAttributes & {
 		title?: string
-		icon?: "svelte" | "bash"
+		icon?: "svelte" | "bash" | "js"
 	};
 
 	export let title: $$Props["title"] = "Example.svelte"
@@ -14,7 +14,8 @@
 
 	const icons = { 
 		svelte: SvelteIcon,
-		bash: BashIcon 
+		bash: BashIcon,
+		js: JSIcon 
 	};
 
 	let codeContainer: HTMLElement;

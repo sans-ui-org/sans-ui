@@ -11,13 +11,13 @@
 		ComponentSize,
 		ComponentVariant,
 		SlotsToClasses
-	} from '$lib/utils/utils';
-	import { close, select, listbox } from '$lib/components/select/actions/select';
-	import SelectCheckIcon from '$lib/components/select/icons/SelectCheckIcon.svelte';
-	import SelectChevronIcon from '$lib/components/select/icons/SelectChevronIcon.svelte';
+	} from '../../utils/utils';
+	import { close, select, listbox } from '../../components/select/actions/select';
+	import SelectCheckIcon from '../../components/select/icons/SelectCheckIcon.svelte';
+	import SelectChevronIcon from '../../components/select/icons/SelectChevronIcon.svelte';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { selectVariant, type SelectSlots } from '$lib/components/select/Select';
-	import { cn } from '$lib/utils/cn';
+	import { selectVariant, type SelectSlots } from '../../components/select/Select';
+	import { cn } from '../../utils/cn';
 	import { createEventDispatcher } from 'svelte';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;

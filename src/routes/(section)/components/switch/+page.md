@@ -41,7 +41,7 @@ Import the Switch component into your Svelte file:
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 ```
 
@@ -57,7 +57,7 @@ Here’s a simple example of how to implement the Switch component:
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -84,7 +84,7 @@ Switch has `variant` prop to decide the color theme of it.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -125,7 +125,7 @@ Adjust the `size` of the switch using the size prop.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -154,7 +154,7 @@ Use the `defaultToggled` prop to set the initial toggled state of the switch.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -175,7 +175,7 @@ The `disabled` prop makes the switch non-interactive.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -196,7 +196,7 @@ The `readonly` prop makes the switch read-only, meaning it cannot be toggled.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -217,7 +217,7 @@ Use the `invalid` prop to indicate that the switch's state is invalid. The `inva
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -238,7 +238,7 @@ Control whether the switch has an animation with the `animation` prop.
 
 ```svelte
 <script>
-	import { Switch } from '@sans-ui';
+	import { Switch } from '@sans-ui/core';
 </script>
 
 <label class="field">

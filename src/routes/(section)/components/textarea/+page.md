@@ -44,7 +44,7 @@ To start using the Textarea component, import it with the following code:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 ```
 
@@ -62,7 +62,7 @@ Here’s a basic example of the Textarea component in use:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -89,7 +89,7 @@ Customize the color theme of the Textarea with the `variant` prop. Available opt
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -128,7 +128,7 @@ Set the initial text value of the Textarea using the `value` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -153,7 +153,7 @@ Adjust the text area size with the `size` prop to fit your design needs:k
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -188,7 +188,7 @@ Control the roundness of the Textarea corners with the `rounded` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -227,7 +227,7 @@ Make the Textarea non-interactive using the `disabled` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -250,7 +250,7 @@ Set the Textarea to read-only mode with the `readonly` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -273,7 +273,7 @@ Control whether the Textarea has animation with the `animation` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -296,7 +296,7 @@ Limit the number of characters that can be entered using the `maxCount` prop:
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">
@@ -319,7 +319,7 @@ Indicate an invalid state with the `invalid` prop and provide an error message u
 
 ```svelte
 <script>
-	import { Textarea } from '@sans-ui/svelte';
+	import { Textarea } from '@sans-ui/core';
 </script>
 
 <label class="field">

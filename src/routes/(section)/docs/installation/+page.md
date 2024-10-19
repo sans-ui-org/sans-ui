@@ -82,13 +82,13 @@ After setting up Tailwind CSS, let's install SanS UI using the appropriate comma
 
 ```bash
 # For NPM
-npm install @sans-ui/svelte
+npm install @sans-ui/core
 
 # For YARN
-yarn add @sans-ui/svelte
+yarn add @sans-ui/core
 
 # For PNPM
-pnpm install @sans-ui/svelte
+pnpm install @sans-ui/core
 ```
 
 </CodeBlockWrapper>

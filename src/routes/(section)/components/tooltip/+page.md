@@ -38,7 +38,7 @@ To use the Tooltip component, import it into your script.
 
 ```svelte
 <script>
-	import { Tooltip } from '@sans-ui/svelte';
+	import { Tooltip } from '@sans-ui/core';
 </script>
 ```
 
@@ -54,7 +54,7 @@ Display additional information when users hover over or focus on an element.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" size="md">
@@ -80,7 +80,7 @@ Customize the color theme of the Tooltip with the `variant` prop.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" variant="primary">
@@ -116,7 +116,7 @@ Adjust the Tooltip size using the `size` prop.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" variant="primary">
@@ -153,7 +153,7 @@ Control the Tooltip's position with the `position` prop.
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" position="top"><Button>top</Button></Tooltip>
@@ -176,7 +176,7 @@ Make the Tooltip trackable with the `trackable` prop, so it follows the cursor.k
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" trackable><Button>trackable</Button></Tooltip>
@@ -197,7 +197,7 @@ Set delays for opening and closing the Tooltip with `delayToOpen` and `delayToHi
 
 ```svelte
 <script>
-	import { Tooltip, Button } from '@sans-ui/svelte';
+	import { Tooltip, Button } from '@sans-ui/core';
 </script>
 
 <Tooltip title="This is title" delayToOpen={300}><Button>Delay Open</Button></Tooltip>

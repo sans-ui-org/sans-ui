@@ -46,7 +46,7 @@ To use the Input component, import it in the script tag:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 ```
 
@@ -64,7 +64,7 @@ This Input component can be used as a generic form element, supporting multiple 
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -91,7 +91,7 @@ The `variant` prop allows you to control the color theme of the input:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -130,7 +130,7 @@ Use the `label` prop to set a label for the input:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -153,7 +153,7 @@ The `value` prop allows you to define the input's current value:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -178,7 +178,7 @@ The `size` prop lets you adjust the size of the input:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -213,7 +213,7 @@ The `rounded` prop adjusts the border-radius of the input:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <label>
@@ -252,7 +252,7 @@ The `disabled` prop disables the input:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -275,7 +275,7 @@ Use the `readonly` prop to make the input field read-only:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -298,7 +298,7 @@ The `clearable` prop adds a clear button to the input field, allowing the user t
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -321,7 +321,7 @@ Control input animation with the `animation` prop:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -344,7 +344,7 @@ The `maxCount` prop limits the number of characters the user can input:
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>
@@ -367,7 +367,7 @@ The `invalid` prop marks the input as invalid and displays an error message usin
 
 ```svelte
 <script>
-	import { Input } from '@sans-ui/svelte';
+	import { Input } from '@sans-ui/core';
 </script>
 
 <label>

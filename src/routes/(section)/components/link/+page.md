@@ -43,7 +43,7 @@ Import a Link component in the script tag.
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 ```
 
@@ -59,7 +59,7 @@ The Link component allows users to navigate between pages. Below is an example o
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link href="https://github.com/s-ui-org/s-ui" target="_blank">
@@ -85,7 +85,7 @@ You can control the color theme of the Link component using the `variant` prop:
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link variant="primary" href="https://github.com/s-ui-org/s-ui" target="_blank"
@@ -128,7 +128,7 @@ Use the `size` prop to adjust the font size of the Link component. Available siz
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link size="sm" href="https://github.com/s-ui-org/s-ui" target="_blank">This is sm</Link>
@@ -165,7 +165,7 @@ Control the font weight using the `fontWeight` prop, with options ranging from `
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link fontWeight="thin" href="https://github.com/s-ui-org/s-ui" target="_blank">This is thin</Link>
@@ -216,7 +216,7 @@ The `underlineType` prop defines when the link should be underlined. Options inc
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link underlineType="none" href="https://github.com/s-ui-org/s-ui" target="_blank"
@@ -245,7 +245,7 @@ The `disabled` prop disables the link, making it non-clickable:
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link disabled={true} href="https://github.com/s-ui-org/s-ui" target="_blank">
@@ -265,7 +265,7 @@ Use the `external` prop to indicate an external link, which typically opens in a
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link external={true} href="https://github.com/s-ui-org/s-ui"
@@ -285,7 +285,7 @@ Enable the `windowIcon` prop to display an icon indicating that the link will op
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link windowIcon external href="https://github.com/s-ui-org/s-ui"
@@ -305,7 +305,7 @@ Control link animations using the `animation` prop. By default, animations are e
 
 ```svelte
 <script>
-	import { Link } from '@sans-ui/svelte';
+	import { Link } from '@sans-ui/core';
 </script>
 
 <Link disabled href="https://github.com/s-ui-org/s-ui" animation={false}

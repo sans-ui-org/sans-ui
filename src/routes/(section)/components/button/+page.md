@@ -43,7 +43,7 @@ To use the <code>Button</code> component, first import it in the script tag:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 ```
 
@@ -59,7 +59,7 @@ Buttons allow users to perform actions with a single click. You can also disable
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button>Button</Button>
@@ -83,7 +83,7 @@ The `variant` prop lets you customize the color theme of the button:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button variant="primary">Button</Button>
@@ -109,7 +109,7 @@ Use the `size` prop to control the button's size:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button size="sm">Button</Button>
@@ -134,7 +134,7 @@ The `kind` prop determines the button's appearance:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button kind="solid">Solid</Button>
@@ -161,7 +161,7 @@ Adjust the button's border-radius with the `rounded` prop:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button rounded="none">rounded none</Button>
@@ -183,7 +183,7 @@ Disable the button using the `disabled` prop:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button disabled>Button</Button>
@@ -201,7 +201,7 @@ To disable the ripple effect, use the `rippled` prop:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button rippled={false}>Button</Button>
@@ -219,7 +219,7 @@ Control the background color transition animation with the `animation` prop. Not
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button animation={false}>Button</Button>
@@ -237,7 +237,7 @@ The `href` prop allows the button to function as a `link`, making it behave like
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button href="https://github.com/sans-ui-org/sans-ui" rel="noopener noreferrer" target="_blank"
@@ -264,7 +264,7 @@ To create an icon-only button, use the `iconOnly` prop:
 
 ```svelte
 <script>
-	import { Button } from '@sans-ui/svelte';
+	import { Button } from '@sans-ui/core';
 </script>
 
 <Button iconOnly={true}>

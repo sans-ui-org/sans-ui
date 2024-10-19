@@ -40,7 +40,7 @@ To use the Checkbox component, import it in the script tag:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 ```
 
@@ -56,7 +56,7 @@ The Checkbox component allows users to select one or more options in the form of
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox />
@@ -80,7 +80,7 @@ The `variant` prop lets you customize the color theme of the Checkbox:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox checked variant="primary" />
@@ -106,7 +106,7 @@ Use the `size` prop to adjust the size of the Checkbox:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <div class="flex flex-row gap-2">
@@ -128,7 +128,7 @@ The `disabled` prop disables the Checkbox:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox checked disabled />
@@ -146,7 +146,7 @@ Set the initial check state using the `checked` prop:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox checked />
@@ -164,7 +164,7 @@ Use the `indeterminate` prop to set the Checkbox to an indeterminate state:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox indeterminate />
@@ -182,7 +182,7 @@ Control the Checkbox animation using the `animation` prop:
 
 ```svelte
 <script>
-	import { Checkbox } from '@sans-ui/svelte';
+	import { Checkbox } from '@sans-ui/core';
 </script>
 
 <Checkbox animation={false} />

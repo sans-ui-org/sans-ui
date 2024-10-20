@@ -1,8 +1,8 @@
-name: Continuous Integration (Before merge to "development" branch)
+# name: Continuous Integration (Before merge to "development" branch)
 
-on:
-  push:
-    branches: ['production']
+# on:
+#   push:
+#     branches: ['production']
 
-jobs:
+# jobs:
   # TODO: Add a job to run tests

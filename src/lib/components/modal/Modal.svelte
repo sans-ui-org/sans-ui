@@ -3,10 +3,10 @@
 </script>
 
 <script lang="ts">
-	import { autoFocus, focusTrap } from '$lib/actions/focus';
+	import { autoFocus, focusTrap } from '../../actions/focus';
 	import { createEventDispatcher, setContext } from 'svelte';
 	import { modalVariant } from './Modal';
-	import { cn } from '$lib/utils/cn';
+	import { cn } from '../../utils/cn';
 	import { fly } from 'svelte/transition';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

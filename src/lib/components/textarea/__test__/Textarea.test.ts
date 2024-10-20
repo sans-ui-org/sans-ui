@@ -1,8 +1,7 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
 import userEvent from '@testing-library/user-event';
-//import user from '@testing-library/user-event';
-import { Textarea } from '$lib';
+import Textarea from '../Textarea.svelte';
 
 describe('Textarea component', async () => {
 	test('should render', async () => {

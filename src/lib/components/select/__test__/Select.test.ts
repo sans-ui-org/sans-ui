@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen, within } from '@testing-library/svelte';
-import { Select } from '$lib';
+import Select from '../Select.svelte';
 
 const options = [
 	{ value: '1', label: 'Option 1' },

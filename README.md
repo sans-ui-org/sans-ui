@@ -8,10 +8,10 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@sans-ui-org/sans-ui">
-    <img src="https://img.shields.io/npm/dm/%40sans-ui%2Fsvelte" alt="npm downloads">
+    <img src="https://img.shields.io/npm/dm/%40sans-ui%2Fcore" alt="npm downloads">
   </a>
   <a href="https://github.com/sans-ui-org/sans-ui/blob/development/LICENSE">
-    <img src="https://img.shields.io/npm/l/%40sans-ui%2Fsvelte?style=flat" alt="License">
+    <img src="https://img.shields.io/npm/l/%40sans-ui%2Fcore?style=flat" alt="License">
   </a>
 </p>
 
@@ -19,13 +19,13 @@
 
 ```bash
 # npm
-npm install @sans-ui/svelte
+npm install @sans-ui/core
 
 # yarn
-yarn add @sans-ui/svelte
+yarn add @sans-ui/core
 
 # pnpm
-pnpm install @sans-ui/svelte
+pnpm install @sans-ui/core
 ```
 
 ## Documentations

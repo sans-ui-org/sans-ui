@@ -1,14 +1,14 @@
 <script lang="ts">
-	import InputContent from '$lib/components/inputContent/InputContent.svelte';
+	import InputContent from '../../components/inputContent/InputContent.svelte';
 	import type {
 		ComponentRounded,
 		ComponentSize,
 		ComponentVariant,
 		SlotsToClasses
-	} from '$lib/utils/utils';
+	} from '../../utils/utils';
 	import type { HTMLInputAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils/cn';
-	import { inputVariant, type InputSlots } from '$lib/components/input/Input';
+	import { cn } from '../../utils/cn';
+	import { inputVariant, type InputSlots } from '../../components/input/Input';
 
 	type $$BaseProps = Omit<HTMLInputAttributes, 'size'>;
 

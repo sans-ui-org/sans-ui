@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import CloseButtonIcon from '$lib/components/modal/icons/CloseButtonIcon.svelte';
-	import { modalHeaderVariant, type ModalHeaderSlots } from '$lib/components/modal/Modal';
+	import CloseButtonIcon from '../../components/modal/icons/CloseButtonIcon.svelte';
+	import { modalHeaderVariant, type ModalHeaderSlots } from '../../components/modal/Modal';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
-	import { cn } from '$lib/utils/cn';
-	import type { SlotsToClasses } from '$lib/utils/utils';
+	import { cn } from '../../utils/cn';
+	import type { SlotsToClasses } from '../../utils/utils';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	type $$Props = HTMLBaseAttributes & {

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/svelte';
-import { Spinner } from '$lib';
+import Spinner from '../Spinner.svelte';
 
 describe('Spinner component', async () => {
 	test('should render', async () => {

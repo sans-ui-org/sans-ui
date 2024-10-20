@@ -1,4 +1,4 @@
-import { tv } from '$lib/utils/tv';
+import { tv } from '../../utils/tv';
 
 // tailwind-variant
 export const accordionItemVariant = tv({

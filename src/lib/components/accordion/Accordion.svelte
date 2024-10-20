@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { ComponentSize, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, SlotsToClasses } from '../../utils/utils';
 	import AccordionChevronIcon from './icons/AccordionChevronIcon.svelte';
-	import { cn } from '$lib/utils/cn';
+	import { cn } from '../../utils/cn';
 	import { createEventDispatcher, setContext } from 'svelte';
-	import { accordionVariant, type AccoridonSlots } from '$lib/components/accordion/Accordion';
+	import { accordionVariant, type AccordionSlots } from '../../components/accordion/Accordion';
 	import type { HTMLButtonAttributes } from 'svelte/elements';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -12,7 +12,7 @@
 		open?: boolean;
 		title?: string;
 		keepOpen?: boolean;
-		classes?: SlotsToClasses<AccoridonSlots>;
+		classes?: SlotsToClasses<AccordionSlots>;
 	};
 
 	/**
@@ -34,7 +34,7 @@
 	/**
 	 * Property that defines the class names of the accordion.
 	 */
-	export let classes: SlotsToClasses<AccoridonSlots> = { base: '' };
+	export let classes: SlotsToClasses<AccordionSlots> = { base: '' };
 
 	// tailwind-variant
 	const slots = accordionVariant({ size });

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { modalContentVariant } from '$lib/components/modal/Modal';
-	import { cn } from '$lib/utils/cn';
+	import { modalContentVariant } from '../../components/modal/Modal';
+	import { cn } from '../../utils/cn';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

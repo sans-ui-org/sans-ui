@@ -18,7 +18,7 @@ prevButton: { title: 'Getting Started', slug: '/docs/getting-started' }
 <script>
   import { Link } from "$lib"
 	import * as Component from "../../../mdsvex/+layout.svelte"
-	import CodeBlockWrapper from "../../../mdsvex/components/CodeBlockWrapper.md"
+	import { CodeBlockWrapper, Blockquote } from "../../../mdsvex/components"
 </script>
 
 ## Before you install
@@ -53,7 +53,26 @@ cd myapp
 
 ## Configure TailwindCSS
 
-SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/installation" external >the official Tailwind CSS installation guide</Link> for instructions. Once Tailwind is configured, you can proceed to install the SanS UI library.
+SanS UI is built using <Link href="https://tailwindcss.com/" external>Tailwind CSS</Link>, so you'll need to install it first. Please refer to <Link href="https://tailwindcss.com/docs/guides/sveltekit" external>the official Tailwind CSS installation guide</Link> for instructions. <br/><br/>
+Once TailwindCSS is configured, you need to add the following code to your tailwind.config.js file:
+
+<Blockquote>Please make sure you are pointing to the ROOT <code>node_modules</code></Blockquote>
+
+<CodeBlockWrapper title="tailwind.config.js" icon="js">
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+	content: [
+		// ...
+		// TODO: Make sure it's pointing to the ROOT node_module
+		'./node_modules/sans-ui/**/*.{svelte,ts}'
+	]
+	// ...
+};
+```
+
+</CodeBlockWrapper>
 
 ## Install SanS UI
 
@@ -63,13 +82,13 @@ After setting up Tailwind CSS, let's install SanS UI using the appropriate comma
 
 ```bash
 # For NPM
-npm install @sans-ui/svelte
+npm install @sans-ui/core
 
 # For YARN
-yarn add @sans-ui/svelte
+yarn add @sans-ui/core
 
 # For PNPM
-pnpm install @sans-ui/svelte
+pnpm install @sans-ui/core
 ```
 
 </CodeBlockWrapper>

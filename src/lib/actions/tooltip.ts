@@ -1,4 +1,4 @@
-import type { ComponentSize, ComponentVariant } from '$lib/utils/utils';
+import type { ComponentSize, ComponentVariant } from '../utils/utils';
 
 type TooltipArgument = {
 	title: string;

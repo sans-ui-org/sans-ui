@@ -1,24 +1,22 @@
-// place files you want to import through the `$lib` alias in this folder.
-
-import Accordion from '$lib/components/accordion/Accordion.svelte';
-import AccordionItem from '$lib/components/accordion/AccordionItem.svelte';
-import Button from '$lib/components/button/Button.svelte';
-import Checkbox from '$lib/components/checkbox/Checkbox.svelte';
-import Link from '$lib/components/link/Link.svelte';
-import Select from '$lib/components/select/Select.svelte';
-import Input from '$lib/components/input/Input.svelte';
-import Textarea from '$lib/components/textarea/Textarea.svelte';
-import Switch from '$lib/components/switch/Switch.svelte';
-import Modal from '$lib/components/modal/Modal.svelte';
-import ModalContent from '$lib/components/modal/ModalContent.svelte';
-import ModalHeader from '$lib/components/modal/ModalHeader.svelte';
-import ModalBody from '$lib/components/modal/ModalBody.svelte';
-import Progress from '$lib/components/progress/Progress.svelte';
-import Spinner from '$lib/components/spinner/Spinner.svelte';
-import Tooltip from '$lib/components/tooltip/Tooltip.svelte';
-import { typewriter } from '$lib/actions/typewriter';
-import { createRipple } from '$lib/actions/ripple';
-import { focusTrap, autoFocus } from '$lib/actions/focus';
+import Accordion from './components/accordion/Accordion.svelte';
+import AccordionItem from './components/accordion/AccordionItem.svelte';
+import Button from './components/button/Button.svelte';
+import Checkbox from './components/checkbox/Checkbox.svelte';
+import Link from './components/link/Link.svelte';
+import Select from './components/select/Select.svelte';
+import Input from './components/input/Input.svelte';
+import Textarea from './components/textarea/Textarea.svelte';
+import Switch from './components/switch/Switch.svelte';
+import Modal from './components/modal/Modal.svelte';
+import ModalContent from './components/modal/ModalContent.svelte';
+import ModalHeader from './components/modal/ModalHeader.svelte';
+import ModalBody from './components/modal/ModalBody.svelte';
+import Progress from './components/progress/Progress.svelte';
+import Spinner from './components/spinner/Spinner.svelte';
+import Tooltip from './components/tooltip/Tooltip.svelte';
+import { typewriter } from './actions/typewriter';
+import { createRipple } from './actions/ripple';
+import { focusTrap, autoFocus } from './actions/focus';
 
 export {
 	Accordion,

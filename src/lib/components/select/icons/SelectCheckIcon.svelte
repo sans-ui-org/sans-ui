@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { ComponentVariant } from '$lib/utils/utils';
-	import { cn } from '$lib/utils/cn';
-	import { tv } from '$lib/utils/tv';
+	import type { ComponentVariant } from '../../../utils/utils';
+	import { cn } from '../../../utils/cn';
+	import { tv } from '../../../utils/tv';
 
 	/**
 	 * Property that defines the size of the icon.

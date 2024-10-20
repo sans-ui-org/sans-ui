@@ -1,4 +1,4 @@
-import { tv } from '$lib/utils/tv';
+import { tv } from '../../utils/tv';
 
 // tailwind-variants
 export const accordionVariant = tv({
@@ -20,4 +20,4 @@ export const accordionVariant = tv({
 	}
 });
 
-export type AccoridonSlots = keyof ReturnType<typeof accordionVariant>;
+export type AccordionSlots = keyof ReturnType<typeof accordionVariant>;

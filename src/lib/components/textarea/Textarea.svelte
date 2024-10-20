@@ -4,11 +4,11 @@
 		ComponentSize,
 		ComponentVariant,
 		SlotsToClasses
-	} from '$lib/utils/utils';
+	} from '../../utils/utils';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 	import { createEventDispatcher } from 'svelte';
-	import { textareaVariant, type TextareaSlots } from '$lib/components/textarea/Textarea';
-	import { cn } from '$lib/utils/cn';
+	import { textareaVariant, type TextareaSlots } from '../../components/textarea/Textarea';
+	import { cn } from '../../utils/cn';
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	interface $$Props extends HTMLTextareaAttributes {

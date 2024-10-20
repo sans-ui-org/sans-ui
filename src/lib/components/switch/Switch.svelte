@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '$lib/utils/utils';
+	import type { ComponentSize, ComponentVariant, SlotsToClasses } from '../../utils/utils';
 	import type { HTMLBaseAttributes } from 'svelte/elements';
-	import { switchVariant, type SwitchSlots } from '$lib/components/switch/Switch';
-	import { cn } from '$lib/utils/cn';
+	import { switchVariant, type SwitchSlots } from '../../components/switch/Switch';
+	import { cn } from '../../utils/cn';
 	import { createEventDispatcher } from 'svelte';
 
 	type $$BaseProps = HTMLBaseAttributes;

@@ -39,7 +39,7 @@
 		"@storybook/test": "^8.0.9",
 		"@storybook/theming": "^8.3.1",
 		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
+		"@sveltejs/kit": "^2.7.2",
 		"@sveltejs/package": "^2.3.1",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@testing-library/svelte": "^5.1.0",

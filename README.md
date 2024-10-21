@@ -3,6 +3,7 @@
       <img width="15%" src="https://github.com/user-attachments/assets/590042db-97d1-4ed0-b4c8-cd76c8c15cd2" alt="sans-ui-logo" />
       <h1 align="center">SanS UI</h1>
   </a>
+  <p>Boost your Svelte projects with modular UI components built on Tailwind CSS.</p>
 </p>
 </br>
 
@@ -16,6 +17,8 @@
 </p>
 
 ## Quick Start
+
+\*You need to set up [TailwindCSS configuration](https://www.sans-ui.org/docs/installation) first.
 
 ```bash
 # npm

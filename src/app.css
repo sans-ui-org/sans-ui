@@ -9,10 +9,14 @@
 	}
 }
 
-/* DocSearch style */
-.DocSearch.DocSearch-Button {
-	@apply m-0 w-full h-full px-4 py-4;
+html {
+	scroll-behavior: smooth;
 }
+
+/* DocSearch style */
+/* .DocSearch.DocSearch-Button {
+	@apply m-0 w-full h-full px-4 py-4;
+} */
 
 /* code highlights */
 /* pre {

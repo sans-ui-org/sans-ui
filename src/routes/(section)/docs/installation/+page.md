@@ -32,24 +32,17 @@ To initialize a SvelteKit project, use the following commands. You can also refe
 <CodeBlockWrapper title="On your terminal" icon="bash">
 
 ```bash
-npm create svelte@latest my-app
+npx sv create my-app
 cd my-app
+npm install
+npm run dev
 ```
 
 </CodeBlockWrapper>
 
 ### For Svelte (Not recommended)
 
-To initialize a Svelte project, use the following commands. Alternatively, you can refer to <Link href="https://svelte.dev/docs/introduction#start-a-new-project-alternatives-to-sveltekit" external >the official Svelte documentation</Link>. However, it is recommended to use SvelteKit when you start building a new Svelte application.
-
-<CodeBlockWrapper title="On your terminal" icon="bash">
-
-```bash
-npm create vite@latest myapp -- --template svelte
-cd myapp
-```
-
-</CodeBlockWrapper>
+According to <Link href="https://svelte.dev/docs/svelte/getting-started" external >the official Svelte documentation</Link>, using SvelteKit is recommended.
 
 ## Configure TailwindCSS
 

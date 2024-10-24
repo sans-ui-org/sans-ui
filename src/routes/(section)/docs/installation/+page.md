@@ -42,7 +42,7 @@ npm run dev
 
 ### For Svelte (Not recommended)
 
-According to <Link href="https://svelte.dev/docs/svelte/getting-started" external >the official Svelte documentation</Link>, using SvelteKit is recommended . .
+According to <Link href="https://svelte.dev/docs/svelte/getting-started" external >the official Svelte documentation</Link>, using SvelteKit is recommended.
 
 ## Configure TailwindCSS
 
